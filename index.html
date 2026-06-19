@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Microsoft 365 Copilot — End-User Training</title>
+<style>
+  :root {
+    --bg: #f3f2f1;
+    --surface: #ffffff;
+    --surface-alt: #faf9f8;
+    --ink: #201f1e;
+    --ink-soft: #4b4a48;
+    --ink-faint: #6e6d6b;
+    --line: #e1dfdd;
+    --brand: #0f6cbd;
+    --brand-deep: #115ea3;
+    --brand-soft: #eff6fc;
+    --accent: #8661c5;
+    --accent-soft: #f3effc;
+    --gold: #c19c00;
+    --green: #107c10;
+    --green-soft: #f1faf1;
+    --radius: 12px;
+    --shadow: 0 1.6px 3.6px rgba(0,0,0,.10), 0 0.3px 0.9px rgba(0,0,0,.07);
+    --shadow-lg: 0 6.4px 14.4px rgba(0,0,0,.13), 0 1.2px 3.6px rgba(0,0,0,.10);
+    --font: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1a19;
+      --surface: #252423;
+      --surface-alt: #2d2c2b;
+      --ink: #f3f2f1;
+      --ink-soft: #c8c6c4;
+      --ink-faint: #a19f9d;
+      --line: #3b3a39;
+      --brand: #479ef5;
+      --brand-deep: #62abf5;
+      --brand-soft: #0c2840;
+      --accent: #b4a0e3;
+      --accent-soft: #2a2342;
+      --green-soft: #102a10;
+      --shadow: 0 1.6px 3.6px rgba(0,0,0,.4);
+      --shadow-lg: 0 6.4px 14.4px rgba(0,0,0,.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: linear-gradient(135deg, #0f6cbd 0%, #115ea3 45%, #8661c5 100%);
+    color: #fff;
+    padding: 56px 24px 64px;
+    text-align: center;
+  }
+  .hero-inner { max-width: 980px; margin: 0 auto; }
+  .hero .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.35);
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
+    letter-spacing: .3px; margin-bottom: 20px;
+  }
+  .hero h1 { font-size: 38px; line-height: 1.15; margin: 0 0 12px; font-weight: 700; }
+  .hero p { font-size: 18px; margin: 0 auto; max-width: 640px; color: rgba(255,255,255,.92); }
+  .hero .meta { margin-top: 22px; font-size: 14px; color: rgba(255,255,255,.85); }
+
+  /* ---------- Section scaffolding ---------- */
+  section { margin-top: 48px; }
+  .eyebrow {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+    text-transform: uppercase; color: var(--brand); margin-bottom: 8px;
+  }
+  h2 { font-size: 27px; margin: 0 0 6px; font-weight: 700; line-height: 1.25; }
+  h3 { font-size: 20px; margin: 0 0 8px; font-weight: 600; }
+  .lead { font-size: 17px; color: var(--ink-soft); margin: 0 0 8px; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px;
+  }
+
+  footer {
+    margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+    text-align: center; font-size: 13px; color: var(--ink-faint);
+  }
+
+  @media (max-width: 760px) {
+    .hero h1 { font-size: 30px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .card { box-shadow: none; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="badge">✨ Latest Features</div>
+      <h1>Microsoft 365 Copilot — End-User Training</h1>
+      <p>Master the latest AI-powered features designed to transform how you work with Microsoft 365 applications.</p>
+      <div class="meta">v1.1 - Comprehensive Tutorial</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section>
+      <div class="eyebrow">Getting Started</div>
+      <h2>Welcome to M365 Copilot</h2>
+      <p class="lead">Learn how to leverage AI assistance across Word, Excel, PowerPoint, Teams, and Outlook.</p>
+      
+      <div class="card">
+        <h3>What You'll Learn</h3>
+        <p>This tutorial covers the essential skills and best practices for using Microsoft 365 Copilot in your daily work:</p>
+        <ul>
+          <li><strong>Core Copilot Features:</strong> Understand how to activate and use Copilot across different applications</li>
+          <li><strong>Writing & Editing:</strong> Use Copilot to draft, refine, and enhance your documents</li>
+          <li><strong>Data Analysis:</strong> Leverage AI insights for Excel data manipulation and visualization</li>
+          <li><strong>Presentations:</strong> Create compelling PowerPoint slides with AI assistance</li>
+          <li><strong>Collaboration:</strong> Enhance teamwork with Copilot in Teams meetings and chat</li>
+          <li><strong>Email Management:</strong> Streamline communication in Outlook with intelligent features</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Tutorial Modules</div>
+      <h2>Training Roadmap</h2>
+      
+      <div class="card">
+        <h3>Module 1: Introduction to Copilot</h3>
+        <p>Get acquainted with Copilot's interface, capabilities, and how to access it across Microsoft 365 apps. Learn the basics of prompting and best practices for getting the best results.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Module 2: Copilot in Word</h3>
+        <p>Discover how to use Copilot for drafting documents, brainstorming ideas, rewriting content, and improving clarity. Learn about the Copilot sidebar and how to refine your writing with AI assistance.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Module 3: Copilot in Excel</h3>
+        <p>Analyze data more efficiently with Copilot's analytical capabilities. Learn formula suggestions, data insights, and how to create visualizations with AI-powered recommendations.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Module 4: Copilot in PowerPoint</h3>
+        <p>Create professional presentations faster. Use Copilot to generate slide content, design suggestions, and speaker notes to enhance your presentations.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Module 5: Copilot in Teams</h3>
+        <p>Enhance collaboration with Copilot in Teams meetings. Summarize discussions, capture action items, and improve team communication and productivity.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Module 6: Copilot in Outlook</h3>
+        <p>Manage your inbox intelligently. Learn to draft emails, summarize conversations, and handle scheduling with Copilot's assistance in Outlook.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Key Features</div>
+      <h2>Copilot Capabilities</h2>
+      
+      <div class="card">
+        <h3>🤖 AI-Powered Assistance</h3>
+        <p>Get intelligent suggestions and insights that help you work smarter, not harder. Copilot learns your context and provides relevant recommendations.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>⚡ Productivity Boost</h3>
+        <p>Save time on routine tasks and focus on high-value work. Copilot automates repetitive processes and helps you accomplish more in less time.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>🔒 Enterprise Security</h3>
+        <p>Your data stays secure with Microsoft's enterprise-grade security and compliance features. Copilot respects your organization's data governance policies.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>🎯 Context-Aware</h3>
+        <p>Copilot understands your work context and provides tailored suggestions that are relevant to your specific tasks and objectives.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Tips & Best Practices</div>
+      <h2>Maximize Your Results</h2>
+      
+      <div class="card">
+        <h3>Write Clear Prompts</h3>
+        <p>The quality of your prompts directly impacts the quality of Copilot's responses. Be specific, provide context, and include any relevant details about what you need.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Iterate and Refine</h3>
+        <p>Don't settle for the first result. Use follow-up prompts to refine, expand, or modify Copilot's suggestions until they match your vision.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Review and Edit</h3>
+        <p>Always review Copilot's output for accuracy, tone, and alignment with your requirements. Edit as needed to ensure quality before finalizing.</p>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3>Explore Different Scenarios</h3>
+        <p>Experiment with Copilot across different applications and use cases. Each app has unique capabilities that can enhance specific types of work.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Microsoft 365 Copilot — End-User Training v1.1 | Last updated: 2026</p>
+      <p>For more information, visit the <a href="https://github.com/achindranata/m365copilot-tutorial" style="color: var(--brand);">GitHub repository</a></p>
+    </footer>
+  </div>
+</body>
+</html>
