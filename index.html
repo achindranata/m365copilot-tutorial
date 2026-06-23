@@ -909,6 +909,18 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
 .module h3 a:hover{color:var(--brand);}
 .subsub{display:flex;align-items:center;gap:9px;margin:12px 0 4px;margin-inline-start:14px;font-size:16px;font-weight:600;color:var(--ink-soft);}
 .subsub .sx{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;background:var(--surface-alt);color:var(--ink-faint);flex:none;}
+.tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px;}
+.tier{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;}
+.tier .tlabel{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px;}
+.tier h4{margin:0 0 6px;font-size:16px;font-weight:700;line-height:1.25;}
+.tier .tcreate{margin:0 0 9px;font-size:12px;font-weight:600;color:var(--ink-faint);}
+.tier > p{margin:0 0 10px;font-size:12.5px;color:var(--ink-soft);line-height:1.5;}
+.tier ul{margin:0;padding-inline-start:18px;color:var(--ink-soft);font-size:12.5px;}
+.tier ul li{margin-bottom:4px;}
+.tier.t1{border-top-color:var(--brand);} .tier.t1 h4{color:var(--brand);}
+.tier.t2{border-top-color:var(--green);} .tier.t2 h4{color:var(--green);}
+.tier.t3{border-top-color:var(--accent);} .tier.t3 h4{color:var(--accent);}
+@media(max-width:760px){.tiers{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -1363,9 +1375,7 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     </div>
     <p class="caption">It's one chat with a single Work IQ toggle — not two separate chat experiences.</p>
 
-    <!-- 2.4 Files -->
-    <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
-    <div class="lic-row" style="margin-top:0"><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m2-model"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Choosing your model in chat</div><p class="lead">With a Microsoft 365 Copilot (Premium) license you can choose which AI model answers your prompt. Leave it on <b>Auto</b> and Copilot picks the best one for the task, or select a specific model for the current conversation.</p><span class="handsbadge"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M5 3l14 7-6 2-2 6-6-15z" fill="#fff"></path></svg> Hands-On Session — open Copilot and follow along</span><p class="m2-intro">At the top of the chat, click the model selector (<b>Auto</b>) to see the available models.</p><div class="appwin">
+    <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m2-model"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Choosing your model in chat</div><p class="lead">You can choose which AI model answers your prompt. On <b>Copilot Chat (Basic)</b>, leave it on <b>Auto</b> — Copilot picks the best model for the task — or pick an <b>OpenAI GPT</b> model. With <b>Microsoft 365 Copilot (Premium)</b> you get more choices, including <b>Anthropic Claude</b> models. Some models may need to be enabled by your admin.</p><span class="handsbadge"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M5 3l14 7-6 2-2 6-6-15z" fill="#fff"></path></svg> Hands-On Session — open Copilot and follow along</span><p class="m2-intro">At the top of the chat, click the model selector (<b>Auto</b>) to see the available models.</p><div class="appwin">
         <div class="cpfull">
           <div class="cpf-side">
             <div class="cpf-logos"><span class="cplogo" style="width:20px;height:18px"></span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="5" r="1.6"></circle><circle cx="12" cy="5" r="1.6"></circle><circle cx="19" cy="5" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle><circle cx="5" cy="19" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle><circle cx="19" cy="19" r="1.6"></circle></svg></div>
@@ -1429,7 +1439,9 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
         <h4>Compare</h4>
         <p>Notice the differences in tone, depth and structure, and pick the model that best fits the task.</p>
       </div>
-    </div><div class="subhead" id="m2-files"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Bringing your files into Chat</div>
+    </div>
+    <!-- 2.4 Files -->
+    <div class="lic-row" style="margin-top:40px"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m2-files"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Bringing your files into Chat</div>
     <p class="m2-intro">Three ways to put OneDrive and SharePoint content in front of Copilot.</p>
     <div class="methods">
       <div class="method">
@@ -2460,7 +2472,50 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       <p><b>Rule of thumb.</b> Reach for a <b>knowledge source</b> when you're searching a big pile of documents for the right answer. <b>Attach the file(s)</b> when you need Copilot to read specific documents from top to bottom — like a legal or policy review where missing a line matters.</p>
     </div>
 
-  <div class="subhead" id="m6-copilot-studio"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> When to graduate to Copilot Studio</div><p class="m2-intro">Agent Builder is for simple, no-code agents. When you need more — multi-step logic, 1,400+ connectors to other systems, or agents published broadly across your organization — that's when you <b>graduate to Copilot Studio</b>, Microsoft's full agent-building platform. <span style="color:var(--ink-faint)">(Detailed walkthrough coming soon.)</span></p></section>
+  <div class="subhead" id="m6-copilot-studio"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> When to graduate to Copilot Studio</div><p class="m2-intro">Reach for the <b>lightest tool that does the job</b>. The same three tiers that power Copilot also decide <b>where you build an agent</b> and <b>what the agent you build can do</b> — you only <b>graduate to Copilot Studio</b> when an agent needs Tier-3 reach.</p>
+    <p class="m2-intro" style="font-style:italic;color:var(--ink-faint);font-size:12px;margin-top:2px">Capabilities and boundaries below are product-level facts — verify against current Microsoft documentation.</p>
+    <div class="tiers">
+      <div class="tier t1">
+        <div class="tlabel">Tier 1</div>
+        <h4>Microsoft 365 Copilot Chat (Basic)</h4>
+        <div class="tcreate">Build with: Agent Builder (Basic)</div>
+        <p>Create simple agents from instructions and the knowledge you attach. <b>No Work IQ</b> — the agent can't reach your wider M365 data on its own.</p>
+        <ul>
+          <li>Answers from instructions + the web</li>
+          <li>Grounds on files you attach or upload</li>
+          <li>One user, person-in-the-loop</li>
+        </ul>
+      </div>
+      <div class="tier t2">
+        <div class="tlabel">Tier 2</div>
+        <h4>Microsoft 365 Copilot (Premium)</h4>
+        <div class="tcreate">Build with: Agent Builder</div>
+        <p>Create no-code agents grounded on <b>Work IQ</b> — your files, emails, chats &amp; SharePoint — on <b>GPT</b> models.</p>
+        <ul>
+          <li>Reads &amp; acts over your own M365 data</li>
+          <li>Multi-step work within one identity</li>
+          <li>Generates documents, decks &amp; Excel; scheduled digests</li>
+          <li>Person-reviewed output</li>
+        </ul>
+      </div>
+      <div class="tier t3">
+        <div class="tlabel">Tier 3</div>
+        <h4>Copilot Studio (extensibility)</h4>
+        <div class="tcreate">Build with: Copilot Studio (low-code, IT-governed)</div>
+        <p>Build custom, centrally governed agents wired into line-of-business systems via <b>connectors</b> and <b>Power Automate</b>.</p>
+        <ul>
+          <li>Line-of-business system integration</li>
+          <li>Autonomous event-/schedule-triggered runs</li>
+          <li>Cross-entity / multi-user orchestration</li>
+          <li>External / non-tenant access (no Entra ID)</li>
+          <li>Choose <b>GPT or Anthropic</b> models in the agent's configuration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <svg class="n-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+      <p><b>The usual path — prototype, then harden.</b> Prove the idea fast in <b>Agent Builder</b> (Tier 1–2), then rebuild it in <b>Copilot Studio</b> (Tier 3) when it needs system connectors, autonomous triggers, multi-user orchestration or external reach. If a task stays within one person's identity and a human reviews the output, you usually <b>don't</b> need Copilot Studio at all.</p>
+    </div></section>
 
   <!-- ============ APPENDIX ============ -->
   <section id="extras">
