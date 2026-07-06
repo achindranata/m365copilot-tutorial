@@ -270,6 +270,25 @@
   .note p { margin: 0; font-size: 14px; color: var(--ink-soft); }
   .note b { color: var(--ink); }
 
+  /* In a Nutshell — peanut callout (design ported from the M365 study notes) */
+  .nutshell{margin:24px 0 8px;padding:18px 22px 16px;border:1px solid #ecdcbe;border-radius:12px;
+    background:linear-gradient(180deg,#fbf7ef,#f7efe1)}
+  .nut-head{display:flex;align-items:center;gap:10px;font-weight:800;font-size:12.5px;letter-spacing:.9px;
+    text-transform:uppercase;color:#8a5a12;margin-bottom:11px}
+  .nut-ic{width:26px;height:26px;border-radius:50%;background:#f3e5c8;display:flex;align-items:center;
+    justify-content:center;font-size:15px;line-height:1;flex:0 0 auto;box-shadow:inset 0 0 0 1px #e6d3a8}
+  .nut-text{margin:0 0 11px;color:var(--ink-soft);font-size:15px}
+  .nut-rows{display:flex;flex-direction:column;gap:8px}
+  .nut-row{padding:10px 13px;background:rgba(255,255,255,.6);border:1px solid #efe2c8;border-radius:9px}
+  .nut-label{display:block;font-weight:700;color:var(--ink);font-size:12px;letter-spacing:.2px;
+    text-transform:uppercase;margin-bottom:3px}
+  .nut-val{display:block;color:var(--ink-soft);font-size:15px;line-height:1.5}
+  .nut-note{margin:11px 0 0;font-size:12.5px;color:var(--ink-faint);font-style:italic;line-height:1.5}
+  @media (prefers-color-scheme: dark){
+    .nutshell{background:linear-gradient(180deg,#2a2620,#241f18);border-color:#4a4131}
+    .nut-head{color:#e2b978}.nut-ic{background:#3a3122;box-shadow:inset 0 0 0 1px #5a4c34}
+    .nut-row{background:rgba(255,255,255,.045);border-color:#4a4131}}
+
   .steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 20px; }
   .step-card {
     background: var(--surface-alt); border: 1px solid var(--line); border-radius: 10px; padding: 16px;
@@ -950,9 +969,10 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       <div class="module">
         <div class="num">1</div>
         <div>
-          <h3><a href="#part1">Where to Access Copilot</a></h3>
-          <p>The three front doors to Copilot and which license each one needs.</p>
+          <h3><a href="#part1">Meet Copilot &amp; Where to Access It</a></h3>
+          <p>What Copilot is in a nutshell, then the three front doors and the license each one needs.</p>
           <ul>
+            <li>What Copilot is — model + grounding + surfaces</li>
             <li>Browser — <b>m365.cloud.microsoft/chat</b></li>
             <li>Microsoft 365 Copilot app — Teams, Windows &amp; mobile</li>
             <li>In-app (Premium) — Word, Excel, PowerPoint, Outlook &amp; Teams</li>
@@ -1051,7 +1071,43 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
   <!-- ============ PART 1 ============ -->
   <section id="part1">
     <span class="eyebrow">Module 1</span>
-    <h2>Where to Access Copilot</h2>
+    <h2>Meet Microsoft 365 Copilot</h2>
+    <p class="lead">One minute on what Copilot actually is — then where to open it. A frontier AI model is only the engine; what makes Copilot <i style="color:var(--accent);font-weight:600;font-style:italic">Copilot</i> is the grounding wrapped around that engine and the surfaces it shows up in.</p>
+
+    <div class="tiers" style="grid-template-columns:1fr 1fr;margin-top:20px">
+      <div class="tier t1">
+        <div class="tlabel">The engine</div>
+        <h4>A large language model</h4>
+        <p>A frontier AI model does the reasoning, language understanding and writing — the part that actually produces the answer.</p>
+      </div>
+      <div class="tier t2">
+        <div class="tlabel">Your data</div>
+        <h4>Work IQ</h4>
+        <p>Microsoft's workplace-intelligence layer grounds answers in your emails, files, chats, meetings and people — always inside the permissions you already have.</p>
+      </div>
+      <div class="tier t3">
+        <div class="tlabel">Where it lives</div>
+        <h4>In your everyday apps</h4>
+        <p>Copilot shows up in a dedicated chat and inside the Office apps — working on the mail, document or meeting in front of you.</p>
+      </div>
+      <div class="tier t1">
+        <div class="tlabel">The world</div>
+        <h4>Web grounding</h4>
+        <p>Web search brings current, public facts that neither the model's training nor your own files contain.</p>
+      </div>
+    </div>
+
+    <aside class="nutshell">
+      <div class="nut-head"><span class="nut-ic">🥜</span><span>In a Nutshell — Microsoft 365 Copilot</span></div>
+      <p class="nut-text">Two lenses on the same product: the capabilities view is the quick picture of what Copilot does for you, and the building-blocks view shows how it's put together underneath — start with whichever you prefer.</p>
+      <div class="nut-rows">
+        <div class="nut-row"><span class="nut-label">By building blocks — the architecture</span><span class="nut-val">LLM + Work IQ + in-app experience + Web IQ</span></div>
+        <div class="nut-row"><span class="nut-label">By capabilities — how Microsoft frames it now</span><span class="nut-val">Work IQ + Agentic Work + Multi-model + Agent platform (Agent 365) + Security &amp; management</span></div>
+      </div>
+      <p class="nut-note">Verified against the M365 Copilot field decks and Ignite 2025. 'Work IQ', 'Agent 365' and multi-model (OpenAI + Anthropic) are official Nov-2025 terms; 'Web IQ' is a handy parallel for Copilot's web-grounding layer (Bing / web queries), not an official product name.</p>
+    </aside>
+
+    <h3 id="p1-access" style="margin-top:40px">Where to access it — three front doors</h3>
     <p class="lead">There are three ways to reach Copilot. Two are available to everyone with a Microsoft 365 sign-in; the third — Copilot working directly inside your documents — is unlocked by a Microsoft 365 Copilot (Premium) license.</p>
 
     <div class="access-grid">
@@ -2447,25 +2503,29 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     </div>
 
     <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="16" rx="1.5" stroke="currentColor" stroke-width="1.6" width="7" x="4" y="4"></rect><rect height="16" rx="1.5" stroke="currentColor" stroke-width="1.6" width="7" x="13" y="4"></rect></svg></span> Considerations: Grounded Knowledge vs. Attached Cloud Files</div>
-    <p class="m2-intro">When you hand Copilot documents to work from, there are two ways to do it — and they behave differently. A <b>knowledge source</b> (for example, a SharePoint folder you add) lets Copilot <i>find</i> the relevant bits across many documents. <b>Attaching a cloud file</b> points Copilot straight at specific files so it reads them thoroughly. In short: knowledge sources optimize for <b>relevance</b>; attached files optimize for <b>completeness</b>.</p>
+    <p class="m2-intro">When you hand Copilot documents to work from, there are two ways to do it — and they behave differently. <b>Grounded knowledge</b> is a <b>knowledge source you wire into the agent at build time</b> (for example, a SharePoint folder) — it lets Copilot <i>find</i> the relevant bits across many documents. <b>Attached cloud files</b> are files you <b>attach to the prompt at runtime</b> — they point Copilot straight at specific files so it reads them thoroughly. In short: grounded knowledge optimizes for <b>relevance</b> across a library; attached files optimize for <b>completeness</b> on the few you attach.</p>
     <div class="cmp2">
-      <div class="cbox brand"><div class="cb-h">Use a knowledge source when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li>You're searching a <b>large document library</b></li><li>You're answering <b>FAQ-style</b> questions</li><li>You're <b>discovering</b> things — "which policy mentions X?", "what are the common themes?"</li></ul></div>
-      <div class="cbox hi"><div class="cb-h">Attach cloud files when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li><b>Legal or policy review</b> and validation</li><li><b>Exception analysis</b></li><li>"<b>Make sure you don't miss anything</b>" tasks on specific files</li></ul></div>
+      <div class="cbox brand"><div class="cb-h">Grounded knowledge (build time) — use when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li>You're searching a <b>large document library</b></li><li>You're answering <b>FAQ-style</b> questions</li><li>You're <b>discovering</b> things — "which policy mentions X?", "what are the common themes?"</li></ul></div>
+      <div class="cbox hi"><div class="cb-h">Attached cloud files (at the prompt) — use when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li><b>Legal or policy review</b> and validation</li><li><b>Exception analysis</b></li><li>"<b>Make sure you don't miss anything</b>" tasks on specific files</li></ul></div>
     </div>
     <div style="overflow-x:auto;margin-top:16px">
     <table class="cmptable">
-      <tbody><tr><th>What to consider</th><th>Knowledge source (SharePoint folder)</th><th>Attached cloud file</th></tr>
+      <tbody><tr><th>What to consider</th><th>Grounded Knowledge <span style="font-weight:400;display:block;font-size:11px;opacity:.85">knowledge source · build time</span></th><th>Attached Cloud Files <span style="font-weight:400;display:block;font-size:11px;opacity:.85">attached at the prompt · runtime</span></th></tr>
       <tr><td>How it finds answers</td><td>Searches and pulls the most relevant pieces (semantic search)</td><td>Reads the file you point it at, directly</td></tr>
       <tr><td>Default behaviour</td><td>"Find what's relevant"</td><td>"This file is the source"</td></tr>
       <tr><td>Reads the whole file?</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M6 6l12 12M18 6L6 18" stroke="#c4314b" stroke-linecap="round" stroke-width="2.2"></path></svg> Not necessarily — it picks relevant parts</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Practically yes (in chunks)</span></td></tr>
       <tr><td>Risk of missing content</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Higher if your prompt is vague</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 13l4 4L19 7" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> Low</span></td></tr>
       <tr><td>How specific your prompt must be</td><td>High</td><td>Medium</td></tr>
       <tr><td>Best for</td><td>Q&amp;A across a large library</td><td>Deep analysis of one to a few files</td></tr>
+      <tr><td>How you provide files</td><td>At build time: upload files, or point at SharePoint/OneDrive files, folders or sites</td><td><b>Uploaded</b> — drop or upload into the chat &nbsp;·&nbsp; <b>From SharePoint/OneDrive</b> — the "Attach cloud files" picker (a file or a whole folder)</td></tr>
+      <tr><td>Max file size</td><td>Uploaded: <b>512 MB</b> (PDF/DOCX/PPTX), <b>150 MB</b> (TXT/CSV/XLSX &amp; others). SharePoint/OneDrive picks: no fixed size cap (supported types only)</td><td><b>Uploaded</b> — up to ~<b>512 MB</b>/file on licensed Copilot Chat (tenant admins may set lower caps) &nbsp;·&nbsp; <b>From SharePoint/OneDrive</b> — the file as it sits; Copilot reads a portion of it</td></tr>
+      <tr><td>Max number of files</td><td><b>≤ 20</b> uploaded &nbsp;·&nbsp; <b>≤ 100</b> SharePoint &nbsp;·&nbsp; <b>≤ 50</b> OneDrive (per agent)</td><td><b>Uploaded</b> — a handful per prompt (multi-file; no published count) &nbsp;·&nbsp; <b>From SharePoint/OneDrive</b> — a file or a whole folder; Copilot uses a subset (no published count)</td></tr>
     </tbody></table>
     </div>
+    <p class="caption">Limits shown are for the <b>M365 Copilot Agent Builder</b>; <b>Copilot Studio</b> uploads differ (up to 500 files, 512 MB each). Runtime prompt-attachment counts aren't published as a single figure and vary by surface and tenant. Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">agent knowledge sources</a> · <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas">Copilot Studio quotas &amp; limits</a> · <a href="https://support.microsoft.com/en-us/Microsoft-365-Copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot">Refer to specific files in M365 Copilot</a>.
     <div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
-      <p><b>Rule of thumb.</b> Reach for a <b>knowledge source</b> when you're searching a big pile of documents for the right answer. <b>Attach the file(s)</b> when you need Copilot to read specific documents from top to bottom — like a legal or policy review where missing a line matters.</p>
+      <p><b>Rule of thumb.</b> Reach for <b>grounded knowledge</b> (a build-time knowledge source) when you're searching a big pile of documents for the right answer. <b>Attach cloud files at the prompt</b> when you need Copilot to read specific documents from top to bottom — like a legal or policy review where missing a line matters.</p>
     </div>
 
   <div class="subhead" id="m6-copilot-studio"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> When to graduate to Copilot Studio</div><p class="m2-intro">Reach for the <b>lightest tool that does the job</b>. The same three tiers that power Copilot also decide <b>where you build an agent</b> and <b>what the agent you build can do</b> — you only <b>graduate to Copilot Studio</b> when an agent needs Tier-3 reach.</p>
