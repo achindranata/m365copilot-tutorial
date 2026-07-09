@@ -940,6 +940,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
 .tier.t2{border-top-color:var(--green);} .tier.t2 h4{color:var(--green);}
 .tier.t3{border-top-color:var(--accent);} .tier.t3 h4{color:var(--accent);}
 @media(max-width:760px){.tiers{grid-template-columns:1fr;}}
+
+  /* independent-project disclaimer cell */
+  .disclaimer-card{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--accent);
+    border-radius:var(--radius); box-shadow:var(--shadow); padding:20px 24px; margin:28px 0 20px;}
+  .disclaimer-card .dh{display:flex; align-items:center; gap:8px; font-weight:700; font-size:15px;
+    letter-spacing:.2px; color:var(--accent); margin-bottom:8px;}
+  .disclaimer-card p{margin:8px 0; font-size:14px; color:var(--ink-soft); line-height:1.6;}
+  .disclaimer-card p b{color:var(--ink);}
 </style>
 </head>
 <body>
@@ -953,11 +961,18 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <h1>Getting Started with Microsoft 365 Copilot</h1>
     <p>A hands-on training that takes you from your very first prompt to building your own AI agents — across the web, the Copilot app, and your everyday Office applications.</p>
     <div class="meta">Prepared by Adelia Chindranata · Copilot Solution Engineer, Microsoft Indonesia</div>
-    <div class="meta" style="margin-top:10px;font-style:italic;opacity:.9">Personal project. Views are my own and do not represent Microsoft.</div>
   </div>
 </header>
 
 <div class="wrap">
+
+  <!-- ============ DISCLAIMER ============ -->
+  <section class="disclaimer-card" aria-label="Disclaimer">
+    <div class="dh"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3l9-16z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><path d="M12 10v4M12 16.5v.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg> Disclaimer</div>
+    <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+    <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+    <p><b>Microsoft Learn is the source of truth.</b> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+  </section>
 
   <!-- ============ OUTLINE ============ -->
   <section id="outline">
