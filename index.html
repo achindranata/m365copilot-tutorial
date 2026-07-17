@@ -3,7 +3,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="light dark" name="color-scheme"/>
-<title>Microsoft 365 Copilot — End-User Training</title>
+<title>Microsoft 365 Copilot — End-User Coursework</title>
 <style>
   :root {
     --bg: #f3f2f1;
@@ -459,6 +459,13 @@
 .tip{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);}
 .tip .tn{width:30px;height:30px;border-radius:8px;background:linear-gradient(140deg,var(--brand),var(--accent));color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none;}
 .tip h4{margin:0 0 3px;font-size:14.5px;} .tip p{margin:0;font-size:12.5px;color:var(--ink-faint);}
+.tips-list{margin:.5rem 0 .2rem;padding-inline-start:22px;color:var(--ink-soft);font-size:14.5px;line-height:1.65;}
+.tips-list li{margin-bottom:11px;}
+.tips-list li b:first-child{color:var(--ink);}
+.coflow{display:flex;align-items:stretch;gap:12px;margin-top:14px;}
+.coflow .cbox{flex:1;margin:0;}
+.coflow-arrow{flex:none;display:grid;place-items:center;color:var(--brand);font-size:26px;font-weight:800;}
+@media (max-width:600px){.coflow{flex-direction:column;}.coflow-arrow{transform:rotate(90deg);}}
 @media (prefers-color-scheme:dark){.hl.e{color:#e3c534;}}
 @media (max-width:760px){.gcse{grid-template-columns:1fr 1fr;}.cmp2,.tips{grid-template-columns:1fr;}.convo{column-count:1;}}
 @media (max-width:520px){.gcse{grid-template-columns:1fr;}}
@@ -959,7 +966,7 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       Microsoft 365 Copilot
     </span>
     <h1>Getting Started with Microsoft 365 Copilot</h1>
-    <p>A hands-on training that takes you from your very first prompt to building your own AI agents — across the web, the Copilot app, and your everyday Office applications.</p>
+    <p>A hands-on course that takes you from your very first prompt to building your own AI agents — across the web, the Copilot app, and your everyday Office applications.</p>
     <div class="meta">Prepared by Adelia Chindranata · Copilot Solution Engineer, Microsoft Indonesia</div>
   </div>
 </header>
@@ -977,8 +984,8 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
   <!-- ============ OUTLINE ============ -->
   <section id="outline">
     <span class="eyebrow">Course Overview</span>
-    <h2>Training Outline</h2>
-    <p class="lead">The training is delivered in six progressive modules. We build from access and fundamentals through to creating your own agents, so every participant can follow along regardless of starting point.</p>
+    <h2>Course Outline</h2>
+    <p class="lead">The course is delivered in six progressive modules. We build from access and fundamentals through to creating your own agents, so every participant can follow along regardless of starting point.</p>
 
     <div class="outline">
 
@@ -2394,6 +2401,35 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     </div>
     <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/" target="_blank" rel="noopener">Copilot Cowork overview</a> &middot; <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" target="_blank" rel="noopener">Cowork common questions</a> &mdash; Microsoft Learn.</p>
 
+    <div class="subsub" id="m5-cowork-tips"><span class="sx"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.6.5 1 1.3 1 2.1V16h6v-.4c0-.8.4-1.6 1-2.1A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> 10 Tips &amp; Tricks to Maximize Cowork</div>
+    <p class="m2-intro">Grounded in Microsoft&rsquo;s official <b>Best practices for Copilot Cowork</b> guidance plus the full feature set &mdash; blending the core best practices with ways to get more value <i>and</i> spend credits efficiently. A recurring theme: <b>use M365 Copilot Chat (included in your seat) to plan and design, then deploy the finished task to Cowork (usage-billed) to execute</b> &mdash; think and draft cheaply, and spend credits only on the real work.</p>
+    <ol class="tips-list">
+      <li><b>Be specific, and give rich context up front.</b> <b>&ldquo;Email Sarah about the Q2 review tomorrow at 2&nbsp;PM&rdquo;</b> beats <b>&ldquo;Send that email.&rdquo;</b> Precise instructions cut re-work, wrong turns and wasted credits. Load everything in one pass &mdash; drag-and-drop files, add work context (files, people, emails, Teams chats/channels/meetings), or pull from OneDrive, SharePoint and Teams &mdash; up to <b>250,000&nbsp;characters</b> per message. Good context in one pass beats several clarifying round-trips.</li>
+      <li><b>Right-size the request to the task.</b> A quick draft is a <b>light</b> task; a 6-month data analysis is <b>heavy</b>. Ask for exactly the depth you need &mdash; don&rsquo;t request a full deep-research report when a two-line summary would do.</li>
+      <li><b>Batch related work into one session.</b> Credit cost scales with context-loading and runtime, so fold several related asks into one well-scoped request (e.g. &ldquo;read these emails <b>and</b> draft the brief <b>and</b> email the summary&rdquo;). It reuses the loaded context instead of paying to rebuild it each time.</li>
+      <li><b>Plan for complexity &mdash; and design it in Copilot Chat first.</b> Allow extra time for heavy work (decks, cross-source research, large meetings) &mdash; complex&nbsp;&ne;&nbsp;broken, it&rsquo;s just doing more steps. For anything non-trivial, use <b>M365 Copilot Chat as your design studio</b>: plan the approach, refine the exact prompt and preview the output there &mdash; Chat is included in your seat and draws <b>no Cowork credits</b>. Once it looks right, hand it to Cowork to run &mdash; so the credit-consuming session runs right the first time, not after several expensive retries.</li>
+      <li><b>Draft in Markdown (.md) first, then convert.</b> Ask Cowork for the first draft as a <span class="mono">.md</span> file &mdash; the native format for AI tools, the cheapest to generate and edit, and easiest to preview inline. When the content is right, convert it to the final artifact &mdash; <b>Word, PowerPoint, Excel, PDF, HTML</b> and more. You iterate cheaply on the words, and spend on the polished format only once the substance is locked.</li>
+      <li><b>Use &ldquo;Approve &amp; don&rsquo;t ask again&rdquo; wisely.</b> For trusted, repeated actions in a session you can skip future prompts &mdash; scoped to a specific recipient, a domain, or always. It speeds up bulk work; review or revoke anytime from the <b>Permissions</b> panel. (Applies to the current session only.)</li>
+      <li><b>Build custom skills for tasks you repeat.</b> Create reusable skills three ways &mdash; the guided <b>Customize</b> page, by asking Cowork in chat, or a <span class="mono">SKILL.md</span> file in <span class="mono">/Documents/Cowork/skills/</span>. Codify your standard formats once so every future run is consistent and faster. <b>Up to 50 skills</b>; share trusted ones with colleagues.</li>
+      <li><b>Tap plugin skills from the Microsoft 365 App Store.</b> Acquired plugins appear alongside built-in skills and activate <b>automatically</b> based on session context &mdash; extending Cowork with no manual wiring.</li>
+      <li><b>Work with the full file lifecycle.</b> Cowork reads and produces Word, Excel, PowerPoint, PDF, images, code and more. <b>Preview</b> files inline (split view; <span class="mono">Ctrl+F</span> in PDFs), grab outputs from the side panel, or <b>Download All</b> as one zip (up to 50 files / 500&nbsp;MB). Everything also lands in <b>OneDrive &rarr; Documents/Cowork</b>.</li>
+      <li><b>Track your spend with <span class="mono">/cost</span>.</b> Type <span class="mono">/cost</span> in the prompt box of any Cowork session to see the Copilot Credits it actually consumed. Run it periodically &mdash; and after a few representative light / medium / heavy tasks &mdash; to learn your real per-task costs and keep credit consumption in view as you work.</li>
+    </ol>
+
+    <div class="subsub"><span class="sx"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg></span> Special tip &mdash; Design in Chat, deploy to Cowork</div>
+    <p class="m2-intro">Make <b>&ldquo;design in Chat &rarr; deploy to Cowork&rdquo;</b> your default loop &mdash; the single biggest credit-saver, and the engine behind tip&nbsp;4. For any important, ambiguous or repeated task, work across two surfaces:</p>
+    <div class="coflow">
+      <div class="cbox lo"><div class="cb-h">Design in Chat</div><p style="margin:.15rem 0 0">Plan the steps, draft and tighten the prompt, and preview the deliverable&rsquo;s content and structure &mdash; all within your included seat at <b>no Cowork-credit cost</b>.</p></div>
+      <div class="coflow-arrow" aria-hidden="true">&rarr;</div>
+      <div class="cbox brand"><div class="cb-h">Deploy in Cowork</div><p style="margin:.15rem 0 0">Paste the finished prompt into a Cowork session to run the real multi-tool, multi-source execution &mdash; sending, scheduling and building files across your data.</p></div>
+    </div>
+    <p class="m2-intro" style="margin-top:14px">Iterate in Chat (cheap) until the prompt is right, then let Cowork do the credit-consuming work <b>once</b>. Promote winning prompts into a custom skill (tip&nbsp;7) or a recurring scheduled prompt so a single design keeps paying off.</p>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Bonus &mdash; recovery moves.</b> If you see <i>&ldquo;I couldn&rsquo;t access X,&rdquo;</i> the source was briefly unavailable &mdash; try again in a few minutes. If a file doesn&rsquo;t appear, ask <i>&ldquo;Where&rsquo;s my file?&rdquo;</i> and Cowork re-delivers it. Totally stuck? Refresh the session and re-submit.</p>
+    </div>
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/best-practices" target="_blank" rel="noopener">Best practices for Copilot Cowork</a> &middot; <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" target="_blank" rel="noopener">Use Copilot Cowork</a> &mdash; Microsoft Learn &middot; Microsoft Copilot Credits Guide (June&nbsp;2026).</p>
+
   </section>
 
   <!-- ============ MODULE 6 ============ -->
@@ -2646,9 +2682,9 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
   </section>
 
   <footer>
-    <b>Microsoft 365 Copilot — End-User Training</b><br/>
+    <b>Microsoft 365 Copilot — End-User Coursework</b><br/>
     Your guide to working with Copilot across Word, Excel, PowerPoint, Outlook &amp; Teams.<br/>
-    Last updated 16 June 2026  ·  For internal training use<br/>
+    Last updated 16 June 2026  ·  For internal course use<br/>
     <span style="font-size:12px;opacity:.8">Microsoft, Microsoft 365, and Copilot are trademarks of the Microsoft group of companies.</span>
   </footer>
 
