@@ -2667,8 +2667,8 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       <tbody><tr><th>What to consider</th><th>Grounded Knowledge <span style="font-weight:400;display:block;font-size:11px;opacity:.85">knowledge source · build time</span></th><th>Attached Cloud Files <span style="font-weight:400;display:block;font-size:11px;opacity:.85">attached at the prompt · runtime</span></th></tr>
       <tr><td>How it finds answers</td><td>Searches and pulls the most relevant pieces (semantic search)</td><td>Reads the file you point it at, directly</td></tr>
       <tr><td>Default behaviour</td><td>"Find what's relevant"</td><td>"This file is the source"</td></tr>
-      <tr><td>Reads the whole file?</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M6 6l12 12M18 6L6 18" stroke="#c4314b" stroke-linecap="round" stroke-width="2.2"></path></svg> Not necessarily — it picks relevant parts</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Practically yes (in chunks)</span></td></tr>
-      <tr><td>Risk of missing content</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Higher if your prompt is vague</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 13l4 4L19 7" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> Low</span></td></tr>
+      <tr><td>Reads the whole file?</td><td>Not necessarily — it picks relevant parts</td><td>Practically yes (in chunks)</td></tr>
+      <tr><td>Risk of missing content</td><td>Higher if your prompt is vague</td><td>Low</td></tr>
       <tr><td>How specific your prompt must be</td><td>High</td><td>Medium</td></tr>
       <tr><td>Best for</td><td>Q&amp;A across a large library</td><td>Deep analysis of one to a few files</td></tr>
       <tr><td>How you provide files</td><td>At build time: upload files, or point at SharePoint/OneDrive files, folders or sites</td><td><b>Uploaded</b> — drop or upload into the chat &nbsp;·&nbsp; <b>From SharePoint/OneDrive</b> — the "Attach cloud files" picker (a file or a whole folder)</td></tr>
@@ -2685,42 +2685,9 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
   <div class="subhead" id="m6-copilot-studio"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> When to graduate to Copilot Studio</div><p class="m2-intro">Reach for the <b>lightest tool that does the job</b>. The same three tiers that power Copilot also decide <b>where you build an agent</b> and <b>what the agent you build can do</b> — you only <b>graduate to Copilot Studio</b> when an agent needs Tier-3 reach.</p>
     <p class="m2-intro" style="font-style:italic;color:var(--ink-faint);font-size:12px;margin-top:2px">Capabilities and boundaries below are product-level facts — verify against current Microsoft documentation.</p>
     <div class="tiers">
-      <div class="tier t1">
-        <div class="tlabel">Tier 1</div>
-        <h4>Microsoft 365 Copilot Chat (Basic)</h4>
-        <div class="tcreate">Build with: Agent Builder (Basic)</div>
-        <p>Create simple agents from instructions and the knowledge you attach. <b>No Work IQ</b> — the agent can't reach your wider M365 data on its own.</p>
-        <ul>
-          <li>Answers from instructions + the web</li>
-          <li>Grounds on files you attach or upload</li>
-          <li>One user, person-in-the-loop</li>
-        </ul>
-      </div>
-      <div class="tier t2">
-        <div class="tlabel">Tier 2</div>
-        <h4>Microsoft 365 Copilot (Premium)</h4>
-        <div class="tcreate">Build with: Agent Builder</div>
-        <p>Create no-code agents grounded on <b>Work IQ</b> — your files, emails, chats &amp; SharePoint — on <b>GPT</b> models.</p>
-        <ul>
-          <li>Reads &amp; acts over your own M365 data</li>
-          <li>Multi-step work within one identity</li>
-          <li>Generates documents, decks &amp; Excel; scheduled digests</li>
-          <li>Person-reviewed output</li>
-        </ul>
-      </div>
-      <div class="tier t3">
-        <div class="tlabel">Tier 3</div>
-        <h4>Copilot Studio (extensibility)</h4>
-        <div class="tcreate">Build with: Copilot Studio (low-code, IT-governed)</div>
-        <p>Build custom, centrally governed agents wired into line-of-business systems via <b>connectors</b> and <b>Power Automate</b>.</p>
-        <ul>
-          <li>Line-of-business system integration</li>
-          <li>Autonomous event-/schedule-triggered runs</li>
-          <li>Cross-entity / multi-user orchestration</li>
-          <li>External / non-tenant access (no Entra ID)</li>
-          <li>Choose <b>GPT or Anthropic</b> models in the agent's configuration</li>
-        </ul>
-      </div>
+      <div class="tier t1"><h4>Choose Chat (Basic) Agent Builder when&hellip;</h4><ul><li>The task is general reasoning, drafting, or <b>public-web</b> research.</li><li>No access to the user&rsquo;s own M365 data (<b>Work IQ</b>) is required.</li><li>A no-code agent, if any, needs only <b>website</b>.</li></ul></div>
+      <div class="tier t2"><h4>Choose M365 Copilot (Premium) Agent Builder when&hellip;</h4><ul><li>The work needs the user&rsquo;s own M365 data (<b>Work IQ</b>).</li><li>You want a <b>reusable, no-code agent</b> grounded on that same data.</li><li>It stays inside the tenant &mdash; no LOB connectors or schedule needed.</li></ul></div>
+      <div class="tier t3"><h4>Choose Copilot Studio when&hellip;</h4><ul><li>It must connect to a <b>line-of-business system</b> (SAP / Dynamics&nbsp;365).</li><li>It runs on a <b>schedule / trigger</b> or serves <b>many users</b>.</li><li>It needs <b>governance, lifecycle</b> and org-wide publishing.</li></ul></div>
     </div>
     <div class="note">
       <svg class="n-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
