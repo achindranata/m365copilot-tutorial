@@ -270,6 +270,16 @@
   .note p { margin: 0; font-size: 14px; color: var(--ink-soft); }
   .note b { color: var(--ink); }
 
+  /* Common Use Cases — accent callout cell */
+  .usecases { margin-top: 20px; border: 1px solid rgba(134,97,197,.30); background: var(--accent-soft);
+    border-radius: var(--radius); padding: 14px 18px 12px; }
+  .uc-head { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 12.5px;
+    color: var(--accent); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 9px; }
+  .uc-head svg { flex: none; }
+  .uc-list { margin: 0; padding-inline-start: 20px; }
+  .uc-list li { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; margin: 4px 0; }
+  .uc-list b { color: var(--ink); font-weight: 600; }
+
   /* In a Nutshell — peanut callout (design ported from the M365 study notes) */
   .nutshell{margin:24px 0 8px;padding:18px 22px 16px;border:1px solid #ecdcbe;border-radius:12px;
     background:linear-gradient(180deg,#fbf7ef,#f7efe1)}
@@ -958,6 +968,8 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
 .rlogo{background:transparent url("data:image/png;base64,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") center/contain no-repeat;}
 .alogo{background:transparent url("data:image/png;base64,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") center/contain no-repeat;}
 .agenticon{width:24px;height:24px;flex:none;}
+
+
 </style>
 </head>
 <body>
@@ -983,6 +995,9 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
     <p><b>Microsoft Learn is the source of truth.</b> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
   </section>
+
+
+
 
   <!-- ============ OUTLINE ============ -->
   <section id="outline">
@@ -1813,6 +1828,19 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       <div class="pchip"><span class="pc-ic" style="background:transparent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" stroke="#0f6cbd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="pc-tx">Give me this as a single self-contained <b>HTML page</b> (.html).</span></div>
     </div>
     <p class="caption">Name the format <i>and</i> the structure you want — headings, a summary table, a 10-slide deck — and Copilot generates the file ready for you to refine.</p>
+
+    <div class="subsub"><span class="sx"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L5 13h5l-1 9 8-12h-5l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg></span> Power move! — trigger Work IQ to act in your other apps</div>
+    <div class="note">
+      <svg class="n-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L5 13h5l-1 9 8-12h-5l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path></svg>
+      <p>Work IQ doesn't only <i>read</i> across your Microsoft&nbsp;365 — it can also <b>act</b>. Ask Copilot Chat to draft an email or set up a meeting and it pulls that app's action <b>right into the chat</b>: an <b>Outlook compose card</b> or a <b>scheduling pop-up</b> appears inline, so you review and confirm the send without ever leaving the M365 Copilot Chat UX.</p>
+    </div>
+    <div class="prompts">
+      <div class="pchip"><span class="pc-ic" style="background:transparent"><span class="ic-outlook" style="width:20px;height:20px"></span></span><span class="pc-tx"><b>Draft an email</b> — "Send the summary above to a colleague" opens an Outlook compose card here in chat.</span></div>
+      <div class="pchip"><span class="pc-ic" style="background:transparent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" stroke="#0f6cbd" stroke-width="1.7"></rect><path d="M4 9h16M8 3v4M16 3v4" stroke="#0f6cbd" stroke-width="1.7" stroke-linecap="round"></path></svg></span><span class="pc-tx"><b>Schedule a meeting</b> — "Find 30 minutes with the project team next week and send the invite."</span></div>
+      <div class="pchip"><span class="pc-ic" style="background:transparent"><span class="ic-outlook" style="width:20px;height:20px"></span></span><span class="pc-tx"><b>Reply in place</b> — "Reply to the last email accepting the review and proposing Thursday."</span></div>
+      <div class="pchip"><span class="pc-ic" style="background:transparent"><span class="ic-teams" style="width:20px;height:20px"></span></span><span class="pc-tx"><b>Post to Teams</b> — "Send these action items to our project channel."</span></div>
+    </div>
+    <p class="caption">Copilot drafts the email or meeting <i>inside</i> the chat — you review the pop-up, adjust it, then send or schedule. The action runs in Outlook, your calendar or Teams, but you never leave Copilot.</p>
   </section>
 
   <!-- ============ MODULE 4 ============ -->
@@ -1835,6 +1863,15 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m4-outlook"><span class="sx" style="background:transparent"><span class="ic-outlook" style="width:24px;height:24px"></span></span> Copilot in Outlook</div>
     <p class="m2-intro">Copilot helps you cut through your inbox — it summarizes long threads, drafts replies for you, and helps you catch up.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>Outlook Email</b> — summarise a long thread, then use <b>Draft with Copilot</b> / <b>Help me reply</b> to write the response and coach its tone.</li>
+        <li><b>Admin Tasks</b> — triage the inbox: "which emails are still waiting on a reply from me this week?"</li>
+        <li><b>Translation</b> — rewrite a reply in another language and adjust the tone before sending.</li>
+        <li><i>Or from M365 Copilot Chat, trigger <b>Work IQ</b> — "send the above result to a colleague" — and an Outlook compose pop-up opens right inside Chat.</i></li>
+      </ul>
+    </div>
     <div class="update-note">
       <svg aria-hidden="true" class="un-ic" fill="none" height="22" viewBox="0 0 24 24" width="22"><rect height="15" rx="2" stroke="currentColor" stroke-width="1.7" width="16" x="4" y="5"></rect><path d="M4 9h16M8 3v4M16 3v4" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg>
       <div>
@@ -1900,6 +1937,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
         <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m4-teams"><span class="sx" style="background:transparent"><span class="ic-teams" style="width:24px;height:24px"></span></span> Copilot in Teams</div>
     <p class="m2-intro">In a Teams meeting, open Copilot to recap the discussion, catch up if you joined late, and pull out decisions and action items — grounded in the live transcript.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>Teams Meetings</b> — recap the discussion so far, or ask "what did I miss before I joined?"</li>
+        <li><b>Meeting notes</b> — list the decisions and action items with their owners, straight from the live transcript.</li>
+        <li><i>Or from M365 Copilot Chat with <b>Work IQ</b>: "what did I miss in my team's chats yesterday?"</i></li>
+      </ul>
+    </div>
 
     <div class="teams-win">
       <div class="tm-topbar">
@@ -1960,6 +2005,15 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m4-word"><span class="sx" style="background:transparent"><span class="ic-word" style="width:24px;height:24px"></span></span> Copilot in Word</div>
     <p class="m2-intro">In Word, Copilot can draft a document from a prompt, rewrite or tighten what you've written, and summarize a long document into key points.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>Word Summaries</b> — summarise a long report into five key points, or rewrite a section to be more concise.</li>
+        <li><b>Templates &amp; Contracts</b> — draft a professional template or agreement from a short brief.</li>
+        <li><b>Client Proposals</b> — draft a two-page proposal for a client, ready to polish.</li>
+        <li><b>Translation</b> — rewrite the document in another language and adjust the tone, in place.</li>
+      </ul>
+    </div>
 
     <div class="word-win">
         <div class="wd-title">
@@ -2048,6 +2102,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m4-excel"><span class="sx" style="background:transparent"><span class="ic-excel" style="width:24px;height:24px"></span></span> Copilot in Excel</div>
     <p class="m2-intro">In Excel, Copilot helps you make sense of data — explore and summarize it, suggest formulas, and build tables and charts.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>Excel Formulas</b> — generate a formula, or add one that flags any row over budget.</li>
+        <li><b>Data Visuals</b> — chart the revenue trend by quarter and break it down by product.</li>
+        <li><i>For multi-step questions — segments, correlations, forecasts — hand the file to the <b>Analyst agent</b> in Chat.</i></li>
+      </ul>
+    </div>
 
     <div class="xl-win">
       <div class="wd-title">
@@ -2125,6 +2187,13 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
         <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m4-ppt"><span class="sx" style="background:transparent"><span class="ic-ppt" style="width:24px;height:24px"></span></span> Copilot in PowerPoint</div>
     <p class="m2-intro">In PowerPoint, Copilot can build a whole deck from a prompt or a document, add and design slides, and summarize a presentation.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>PowerPoint Decks</b> — build a whole deck from a single prompt, or turn a Word proposal into a customer presentation.</li>
+        <li><b>Design &amp; summarise</b> — add and design slides, apply your Brand Kit, or summarise an existing deck.</li>
+      </ul>
+    </div>
 
         <div class="ppt-win">
       <div class="wd-title">
@@ -2222,8 +2291,8 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
               <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-width="1.6"></path></svg> Agents</div>
             </div>
             <div class="cpf-lbl">Pinned</div>
-            <div class="cpf-pin"><span class="pdot" style="background:#8661c5"></span> Researcher</div>
-            <div class="cpf-pin"><span class="pdot" style="background:#d83b89"></span> Analyst</div>
+            <div class="cpf-pin"><span class="pdot rlogo"></span> Researcher</div>
+            <div class="cpf-pin"><span class="pdot alogo"></span> Analyst</div>
             <div class="cpf-lbl">Chats</div>
             <div class="cpf-chat">Draft Q3 customer follow-up…</div>
             <div class="cpf-chat">Onboarding checklist</div>
@@ -2341,6 +2410,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <p class="caption">Every file these agents create is saved to your <b>OneDrive</b>, inside your organization's tenant — so it stays under the same security, sensitivity-label and compliance rules as the rest of your work.</p>
 
     <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m5-researcher-analyst"><span class="sx" style="background:transparent"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Researcher &amp; Analyst</div>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>Business Reports</b> — Analyst generates forecasts, segments and correlations; Researcher produces a cited market/BI scan.</li>
+        <li><b>Data Visuals</b> — find the trend, outliers and seasonality across a spreadsheet, with charts to back them up.</li>
+        <li><b>Client Proposals</b> — Researcher builds a cited briefing that combines your internal docs with the web before a client meeting.</li>
+      </ul>
+    </div>
     <div class="subsub"><span class="sx" style="background:transparent"><span class="agenticon rlogo"></span></span> Researcher</div>
     <p class="m2-intro">Your built-in research assistant for the questions that need real digging — market scans, competitor analysis, or background for a big decision or meeting.</p>
     <div class="note">
@@ -2379,6 +2456,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
     <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
     <div class="subhead" id="m5-cowork"><span class="sx" style="background:transparent"><span style="width:24px;height:24px;border-radius:6px;background:conic-gradient(from 25deg,#5b8def,#9b6ef3,#e879b9,#f5a25d,#7bd389,#5b8def);display:grid;place-items:center"><svg height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" fill="#fff" fill-opacity="0.92" r="3"></circle></svg></span></span> Cowork</div>
     <p class="m2-intro">Cowork is the <b>agentic</b> side of Microsoft&nbsp;365 Copilot &mdash; you describe an <b>outcome</b> and it <b>plans and carries out the steps</b> for you, across your apps. You don&rsquo;t build it: it&rsquo;s a ready-made agent, on the <b>Cowork</b> tab in the Microsoft&nbsp;365 Copilot app.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>M365 Workflows</b> — describe an outcome and let Cowork plan and run the multi-step, cross-app work, approving each action.</li>
+        <li><b>Admin Tasks</b> — inbox &amp; calendar clean-up and recurring housekeeping on a schedule.</li>
+        <li><b>Project Management</b> — pull a project together from email + Teams and build a tracked to-do list.</li>
+      </ul>
+    </div>
     <div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>How it&rsquo;s designed.</b> Cowork is a <b>prebuilt, autonomous agent</b> that <b>takes action, not just chats</b>. Grounded in your emails, meetings, chats, files and data via <b>Work&nbsp;IQ</b>, it works through a multi-step job across Outlook, Teams, Word, Excel and PowerPoint. Where Copilot Chat answers in a single turn, Cowork works over <b>minutes to hours</b> &mdash; <b>pausing for your approval before every send, post or schedule</b>, running in a <b>secure, isolated environment</b>, and acting only within <b>your own permissions</b>.</p>
@@ -2439,6 +2524,14 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
 
     <div class="subhead" id="m6-agentbuilder"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Agent Builder inside Microsoft 365 Copilot</div><div class="subsub first"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1.1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1.1"></circle><path d="M12 7V4M9 4h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> What you see when you open Agent Builder</div>
     <p class="m2-intro">Describe your agent in plain language on the left, and fine-tune it on the right with the <b>Configure</b> tab.</p>
+    <div class="usecases">
+      <div class="uc-head"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.5 18h5M10 21h4M12 3a6 6 0 00-3.8 10.6c.6.5.9 1 .9 1.9v.5h5.8v-.5c0-.9.3-1.4.9-1.9A6 6 0 0012 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> Common Use Cases</div>
+      <ul class="uc-list">
+        <li><b>First Automation</b> — save a repeated prompt as an agent's instructions so it works that way every time — no code.</li>
+        <li><b>M365 Workflows</b> — package a routine as a reusable agent your team can share.</li>
+        <li><b>Shortcuts &amp; Integrations</b> — wire in knowledge sources and connectors; graduate to <b>Copilot Studio</b> when it needs deeper reach.</li>
+      </ul>
+    </div>
     <div class="browser">
       <div class="chrome">
         <div class="dots"><i></i><i></i><i></i></div>
@@ -2574,8 +2667,8 @@ section[id], .subhead[id]{scroll-margin-top:20px;}
       <tbody><tr><th>What to consider</th><th>Grounded Knowledge <span style="font-weight:400;display:block;font-size:11px;opacity:.85">knowledge source · build time</span></th><th>Attached Cloud Files <span style="font-weight:400;display:block;font-size:11px;opacity:.85">attached at the prompt · runtime</span></th></tr>
       <tr><td>How it finds answers</td><td>Searches and pulls the most relevant pieces (semantic search)</td><td>Reads the file you point it at, directly</td></tr>
       <tr><td>Default behaviour</td><td>"Find what's relevant"</td><td>"This file is the source"</td></tr>
-      <tr><td>Reads the whole file?</td><td>Not necessarily — it picks relevant parts</td><td>Practically yes (in chunks)</td></tr>
-      <tr><td>Risk of missing content</td><td>Higher if your prompt is vague</td><td>Low</td></tr>
+      <tr><td>Reads the whole file?</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M6 6l12 12M18 6L6 18" stroke="#c4314b" stroke-linecap="round" stroke-width="2.2"></path></svg> Not necessarily — it picks relevant parts</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Practically yes (in chunks)</span></td></tr>
+      <tr><td>Risk of missing content</td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M12 3l9 16H3l9-16z" stroke="#b8860b" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="#b8860b" stroke-linecap="round" stroke-width="2"></path></svg> Higher if your prompt is vague</span></td><td><span class="ci"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 13l4 4L19 7" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg> Low</span></td></tr>
       <tr><td>How specific your prompt must be</td><td>High</td><td>Medium</td></tr>
       <tr><td>Best for</td><td>Q&amp;A across a large library</td><td>Deep analysis of one to a few files</td></tr>
       <tr><td>How you provide files</td><td>At build time: upload files, or point at SharePoint/OneDrive files, folders or sites</td><td><b>Uploaded</b> — drop or upload into the chat &nbsp;·&nbsp; <b>From SharePoint/OneDrive</b> — the "Attach cloud files" picker (a file or a whole folder)</td></tr>
