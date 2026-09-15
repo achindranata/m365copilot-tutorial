@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>First-Party Agents — Microsoft 365 Copilot Coursework</title>
+<link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+<input class="navtoggle-cb" id="navtoggle" type="checkbox"/>
+<label class="navtoggle-btn" for="navtoggle" aria-label="Show or hide the course menu"><span class="nt-bars"><i></i><i></i><i></i></span>Menu</label>
+<nav id="sidenav" aria-label="Course navigation">
+  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft 365 Copilot</div><div class="sn-sub">End-user coursework</div></div></div>
+  <div class="sn-eyebrow">Agenda</div>
+  <a class="sn-top" href="../index.html">Course Outline</a>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-1-meet-copilot/"><span class="sn-num">1</span>Meet Copilot &amp; Where to Access It</a>
+    <ul class="sn-list">
+      <li><a href="../module-1-meet-copilot/#p1-what">What Copilot is</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-access">Where to access it</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-browser">Browser</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-app">Copilot app</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-inapp">In-app (Premium)</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-2-fundamentals/"><span class="sn-num">2</span>Copilot Fundamentals &amp; Safe Use</a>
+    <ul class="sn-list">
+      <li><a href="../module-2-fundamentals/#m2-edp">Enterprise Data Protection</a></li>
+      <li><a href="../module-2-fundamentals/#m2-terms">Key terms</a></li>
+      <li><a href="../module-2-fundamentals/#m2-model">Choosing your model</a></li>
+      <li><a href="../module-2-fundamentals/#m2-grounding">Work IQ</a></li>
+      <li><a href="../module-2-fundamentals/#m2-files">Bringing your files in</a></li>
+      <li><a href="../module-2-fundamentals/#p1-try">Try it yourself</a></li>
+      <li><a href="../module-2-fundamentals/#m2-settings">Chat settings</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-3-prompting/"><span class="sn-num">3</span>Prompting Like a Pro</a>
+    <ul class="sn-list">
+      <li><a href="../module-3-prompting/#m3-ingredients">The four ingredients</a></li>
+      <li><a href="../module-3-prompting/#m3-vague-to-valuable">From vague to valuable</a></li>
+      <li><a href="../module-3-prompting/#m3-extend-converse">Extending &amp; conversing</a></li>
+      <li><a href="../module-3-prompting/#m3-best-practices">7 best practices</a></li>
+      <li><a href="../module-3-prompting/#m3-tips">Prompting tips</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-4-office-apps/"><span class="sn-num">4</span>Copilot in the Office Apps</a>
+    <ul class="sn-list">
+      <li><a href="../module-4-office-apps/#m4-outlook">Outlook</a></li>
+      <li><a href="../module-4-office-apps/#m4-teams">Teams</a></li>
+      <li><a href="../module-4-office-apps/#m4-word">Word</a></li>
+      <li><a href="../module-4-office-apps/#m4-excel">Excel</a></li>
+      <li><a href="../module-4-office-apps/#m4-ppt">PowerPoint</a></li>
+      <li><a href="../module-4-office-apps/#m4-notebooks">Copilot Notebooks</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod on" href="../module-5-first-party-agents/"><span class="sn-num">5</span>First-Party Agents</a>
+    <ul class="sn-list">
+      <li><a href="#m5-what">What are first-party agents</a></li>
+      <li><a href="#m5-weppt-agents">Word, Excel &amp; PowerPoint Agents</a></li>
+      <li><a href="#m5-researcher-analyst">Researcher &amp; Analyst</a></li>
+      <li><a href="#m5-cowork">Cowork</a></li>
+      <li><a href="#m5-cowork-skills">Custom skills</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-6-build-your-agent/"><span class="sn-num">6</span>Build Your Own Agent</a>
+    <ul class="sn-list">
+      <li><a href="../module-6-build-your-agent/#m6-agents">Agents &amp; harnesses</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-agentbuilder">Agent Builder</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-instructions">Instructions &amp; knowledge</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-skills">Skills</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-copilot-studio">Copilot Studio</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../beyond-the-basics/"><span class="sn-num">+</span>Beyond the Basics</a>
+    <ul class="sn-list">
+      <li><a href="../beyond-the-basics/#xb-tool-choice">Which tool should I use?</a></li>
+      <li><a href="../beyond-the-basics/#xb-data-sources">Data sources</a></li>
+    </ul>
+  </div>
+</nav>
+<label class="nav-scrim" for="navtoggle" aria-hidden="true"></label>
+<header class="hero"><div class="hero-inner"><span class="kicker">Module 5</span><h1 class="modh">First-Party Agents</h1><p>Part of <b>Getting Started with Microsoft 365 Copilot</b> — a hands-on course from your first prompt to building your own agents.</p></div></header>
+<div class="wrap">
+<aside class="ms-disclaimer" role="note" aria-label="Disclaimer">
+  <h3><span aria-hidden="true">&#9888;</span> Disclaimer</h3>
+  <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+  <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+  <p><strong><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Learn</a> is the source of truth.</strong> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+</aside>
+<section id="module5"><div class="page">
+    <span class="eyebrow">Module 5</span>
+    <h2>First-Party Agents</h2>
+    <p class="lead">Beyond chat, Microsoft 365 Copilot ships with ready-made <b>first-party agents</b> — built by Microsoft and available right inside Copilot. No building required: open one and go.</p>
+    <div class="subhead first" id="m5-what"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1.1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1.1"></circle><path d="M12 7V4M9 4h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> What are first-party agents — and where to find them</div>
+    <p class="m2-intro">First-party agents are specialized assistants <b>built by Microsoft</b> for specific jobs — research, data analysis, and more. You don't build them; you just open one and go. Find them all in the <b>Agent Store</b>: from the sidebar, choose <b>Agents</b>.</p>
+    <div class="browser" style="margin-top:16px">
+      <div class="chrome">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="urlbar"><svg aria-hidden="true" class="lock" fill="none" height="13" viewBox="0 0 24 24" width="13"><rect fill="currentColor" height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"></path></svg><b>m365.cloud.microsoft/chat/agentstore</b></div>
+      </div>
+      <div class="cpfull">
+        <div class="cpf-side">
+            <div class="cpf-logos"><span class="cplogo" style="width:20px;height:18px"></span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="5" r="1.6"></circle><circle cx="12" cy="5" r="1.6"></circle><circle cx="19" cy="5" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle><circle cx="5" cy="19" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle><circle cx="19" cy="19" r="1.6"></circle></svg></div>
+            <div class="cpf-tabs"><span class="cpf-tab active">Home</span><span class="cpf-tab">Cowork</span></div>
+            <div class="cpf-nav">
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg> New chat</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Search</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="4" y="4"></rect><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="10" y="4"></rect><rect height="14" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="16" y="6"></rect></svg> Library</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="3" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg> Tasks</div>
+              <div class="cpf-item active"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-width="1.6"></path></svg> Agents</div>
+            </div>
+            <div class="cpf-lbl">Pinned</div>
+            <div class="cpf-pin"><span class="ic-researcher" style="width:18px;height:18px"></span> Researcher</div>
+            <div class="cpf-pin"><span class="ic-analyst" style="width:18px;height:18px"></span> Analyst</div>
+            <div class="cpf-pin"><span class="ic-cowork" style="width:18px;height:18px"></span> Cowork</div>
+            <div class="cpf-lbl">Chats</div>
+            <div class="cpf-chat">Draft Q3 customer follow-up…</div>
+            <div class="cpf-chat">Onboarding checklist</div>
+            <div class="cpf-prof"><span class="pav">AC</span><div><b>Adelia Chindranata</b><span>M365 Copilot (Premium)</span></div></div>
+          </div>
+        <div class="as-main">
+          <div class="as-h">Agent Store</div>
+          <div class="as-search"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Search for an agent</div>
+          <div class="as-sec-h"><span class="as-t">Your agents</span><span class="as-create">+ Create agent</span></div>
+          <div class="as-grid"><div class="as-card"><span class="as-ic" style="background:transparent"><span class="ic-researcher" style="width:26px;height:26px"></span></span>Researcher</div><div class="as-card"><span class="as-ic" style="background:transparent"><span class="ic-analyst" style="width:26px;height:26px"></span></span>Analyst</div><div class="as-card"><span class="as-ic" style="background:#0f6cbd"><svg fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="11" rx="2" stroke="#fff" stroke-width="1.6" width="16" x="4" y="8"></rect><path d="M9 8V6.5A1.5 1.5 0 0110.5 5h3A1.5 1.5 0 0115 6.5V8" stroke="#fff" stroke-width="1.6"></path></svg></span>Sales</div><div class="as-card"><span class="as-ic" style="background:#2a8a7a"><svg fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M4 5h16v11H9l-5 4V5z" stroke="#fff" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>Prompt Coach</div><div class="as-card"><span class="as-ic" style="background:transparent"><span class="ic-ppt" style="width:20px;height:20px"></span></span>PowerPoint</div><div class="as-card"><span class="as-ic" style="background:transparent"><span class="ic-excel" style="width:20px;height:20px"></span></span>Excel</div></div>
+          <div class="as-more">See more <svg fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+          <div class="as-sec-h" style="margin-top:18px"><span class="as-t">Built by Microsoft</span></div>
+          <div class="as-built"><div class="as-bcard"><div class="as-bh"><span class="as-ic" style="background:#0f6cbd"><svg fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M12 4l10 5-10 5L2 9l10-5z" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"></path><path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4" stroke="#fff" stroke-width="1.5"></path></svg></span><b>AI Learning Advisor</b></div><p>Teaches and troubleshoots Copilot — Agent Builder, Copilot Studio and more.</p></div><div class="as-bcard"><div class="as-bh"><span class="as-ic" style="background:#8661c5"><svg fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="9" cy="9" r="2.6" stroke="#fff" stroke-width="1.5"></circle><path d="M3.5 18a5.5 5.5 0 0111 0M16 7a3 3 0 010 6M21 18a5.5 5.5 0 00-4-5.3" stroke="#fff" stroke-width="1.5"></path></svg></span><b>SME Finder</b></div><p>Find the most suitable subject-matter experts inside your company.</p></div><div class="as-bcard"><div class="as-bh"><span class="as-ic" style="background:#e8a33d"><svg fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="15" rx="2" stroke="#fff" stroke-width="1.5" width="16" x="4" y="5"></rect><path d="M4 9h16M8 3v4M16 3v4" stroke="#fff" stroke-width="1.5"></path></svg></span><b>Plan My Day</b></div><p>Creates a comprehensive morning briefing to start your day.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="caption">The <b>Agent Store</b> (Agents in the sidebar): <b>Your agents</b> are the ones available to you; <b>Built by Microsoft</b> highlights ready-made first-party agents. Use <b>+ Create agent</b> to build your own (Module 6).</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-declarative-agent" rel="noopener" target="_blank">Agents for Microsoft 365 Copilot</a> — Microsoft Learn<span class="ps-n">Module 5 · 1 of 8</span></div></div><div class="page">
+
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m5-weppt-agents"><span class="sx" style="background:transparent;width:auto"><span class="apptrio"><span class="ic-word" style="width:18px;height:18px"></span><span class="ic-excel" style="width:18px;height:18px"></span><span class="ic-ppt" style="width:18px;height:18px"></span></span></span> Word, Excel &amp; PowerPoint Agents</div>
+    <p class="m2-intro">These three agents are <b>installed for you by Microsoft</b> and live in the Copilot app — open one from the <b>Tools</b> menu or the <b>All agents</b> list in the sidebar. Tell it what you need in plain language and it <b>creates a brand-new file</b> for you, saved straight to your <b>OneDrive</b>. They're different from <b>Edit with Copilot</b>: rather than working inside a file you already have open, they build the document, workbook or deck from your prompt.</p>
+
+    <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Where they get their information.</b> On <b>Copilot Chat (Basic)</b> the agents draw on the web and files you attach. With <b>Microsoft 365 Copilot (Premium)</b> they also ground in your work content through <b>Work IQ</b> — the files, emails, meetings and sites you already have permission to see.</p>
+    </div>
+
+    <!-- Word Agent -->
+    
+    
+    
+    
+
+    <!-- PowerPoint Agent -->
+    
+    
+    
+    
+
+    <!-- Excel Agent -->
+    
+    
+    
+    
+
+    <p class="m2-intro" style="margin-top:12px">One thing to know before you reach for them: these three are <b>builders first</b>. They are specialized in turning a prompt into a <b>finished file</b> — a document, a deck, a workbook — and the Excel Agent will also analyze the data it builds from, producing charts and year-to-date summaries. When the job is deep analysis of a dataset rather than producing a file, reach for the <b>Analyst</b> agent below.</p>
+<div class="methods">
+<div class="method">
+<div class="m-ic" style="background:transparent"><span class="ic-word" style="width:26px;height:26px"></span></div>
+<h4>Word Agent</h4>
+<p>A finished document from a brief — reports, proposals, policies, briefing notes. Give it the audience and the length.</p>
+</div>
+<div class="method">
+<div class="m-ic" style="background:transparent"><span class="ic-ppt" style="width:26px;height:26px"></span></div>
+<h4>PowerPoint Agent</h4>
+<p>A designed deck from a prompt or a source document — it drafts the slides, organizes the flow and applies the design.</p>
+</div>
+<div class="method">
+<div class="m-ic" style="background:transparent"><span class="ic-excel" style="width:26px;height:26px"></span></div>
+<h4>Excel Agent</h4>
+<p>A working spreadsheet from a description — it builds the table, adds the formulas and sets up the structure.</p>
+</div>
+</div>
+<h3 style="margin-top:30px">Example Use Case Prompts</h3>
+<div class="prompts">
+<div class="pchip"><span class="pc-ic"><span class="ic-word" style="width:18px;height:18px"></span></span><span class="pc-tx">Draft a two-page onboarding policy for new hires — purpose, scope, the five steps, and a checklist table at the end.</span></div>
+<div class="pchip"><span class="pc-ic"><span class="ic-word" style="width:18px;height:18px"></span></span><span class="pc-tx">Write a one-page project proposal for a customer onboarding portal: goals, scope, timeline and how we’ll measure success.</span></div>
+<div class="pchip"><span class="pc-ic"><span class="ic-ppt" style="width:18px;height:18px"></span></span><span class="pc-tx">Build a 10-slide overview introducing Microsoft 365 Copilot to new employees — what it is, where to find it, three use cases, next steps.</span></div>
+<div class="pchip"><span class="pc-ic"><span class="ic-ppt" style="width:18px;height:18px"></span></span><span class="pc-tx">Turn <span class="mono">/Q3 Proposal.docx</span> into a 6-slide executive deck, ending with a risks-and-mitigations slide.</span></div>
+<div class="pchip"><span class="pc-ic"><span class="ic-excel" style="width:18px;height:18px"></span></span><span class="pc-tx">Build a project budget tracker with columns for item, owner, planned cost, actual cost and variance, plus a summary row.</span></div>
+<div class="pchip"><span class="pc-ic"><span class="ic-excel" style="width:18px;height:18px"></span></span><span class="pc-tx">Create a 12-month cash-flow template with formulas for monthly totals and a running balance.</span></div>
+</div><p class="caption">Every file these agents create is saved to your <b>OneDrive</b>, inside your organization's tenant — so it stays under the same security, sensitivity-label and compliance rules as the rest of your work.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/" rel="noopener" target="_blank">Work smarter with Copilot across your Microsoft 365 apps — Microsoft Learn Training</a> — Microsoft Learn<span class="ps-n">Module 5 · 2 of 8</span></div></div><div class="page">
+
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m5-researcher-analyst"><span class="sx" style="background:transparent"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Researcher &amp; Analyst</div>
+    <div class="subsub"><span class="sx" style="background:transparent"><span class="ic-researcher" style="width:22px;height:22px"></span></span> Researcher</div><div class="agenthero">
+<span class="ic-researcher ah-logo"></span>
+<div>
+<h4>Researcher</h4>
+<p>The agent you hand a question you can’t answer in one search — it goes away, reads widely, and comes back with a brief you could put in front of your leadership.</p>
+</div>
+</div>
+<div class="ahfacts">
+<div class="ahfact" style="--c:#0f6cbd"><div class="k">Reaches for</div><div class="v">The open web <b>and</b> your work content — files, emails, meetings, chats</div></div>
+<div class="ahfact" style="--c:#8661c5"><div class="k">Trades</div><div class="v">Speed for depth — minutes of multi-step reasoning, not a one-shot reply</div></div>
+<div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">A structured, <b>source-cited</b> report you can verify claim by claim</div></div>
+</div>
+<p class="m2-intro">Researcher is built for <b>depth over speed</b>. It reasons through a question across several steps, drawing on <b>both the web and your work content</b> — files, emails, meetings and chats you have permission to see — and returns a <b>comprehensive, source-cited report</b> rather than a chat answer. It deliberately takes longer than a normal reply because it is doing multi-step analysis, checking as it goes, and assembling citations you can verify. Use it when the cost of being wrong is high and you need to show your working: a market landscape, a competitor picture, a decision brief. Give it a clear scope and say whether it should look at your work content, the web, or both.</p><div class="mockout">
+<div class="mo-top"><span class="ic-researcher" style="width:18px;height:18px"></span> Researcher <span class="mo-badge">Source-cited</span></div>
+<div class="mo-body">
+<div class="mo-steps">
+<span class="mo-step done"><i></i> Planned the approach</span>
+<span class="mo-step done"><i></i> Searched the web</span>
+<span class="mo-step done"><i></i> Read your work content</span>
+<span class="mo-step"><i></i> Drafting the brief</span>
+</div>
+<div class="mo-title">Managed services in Southeast Asia — FY27 landscape</div>
+<div class="mo-line w1"></div><div class="mo-line w2"></div><div class="mo-line w1"></div><div class="mo-line w3"></div>
+<div class="mo-cites"><span class="mo-cite">12 web sources</span><span class="mo-cite">4 emails</span><span class="mo-cite">2 meetings</span><span class="mo-cite">3 files</span></div>
+</div>
+</div>
+<p class="caption">Every claim carries its source, so the first thing you do with a Researcher report is spot-check it — not retype it.</p><h3 style="margin-top:26px">Example Use Case Prompt</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="ic-researcher" style="width:18px;height:18px"></span></span><span class="pc-tx">Research the managed-services market in Southeast Asia for our FY27 plan: size the top five providers, summarize how each one positions, fold in what my emails and meetings say about the two we’ve competed with this year, and give me a cited brief with a table of strengths and gaps.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent" rel="noopener" target="_blank">Get started with Researcher agent in Microsoft Copilot</a> — Microsoft Learn<span class="ps-n">Module 5 · 3 of 8</span></div></div><div class="page">
+    
+    
+    
+    
+
+    
+    <div class="subsub"><span class="sx" style="background:transparent"><span class="ic-analyst" style="width:22px;height:22px"></span></span> Analyst</div><div class="agenthero">
+<span class="ic-analyst ah-logo"></span>
+<div>
+<h4>Analyst</h4>
+<p>A data scientist you can hand a messy export to — it works the numbers step by step, shows the code it ran, and tells you what the data is actually saying.</p>
+</div>
+</div>
+<div class="ahfacts">
+<div class="ahfact" style="--c:#0f6cbd"><div class="k">Reaches for</div><div class="v">The file you give it — spreadsheets, exports, CSVs, raw and unpolished</div></div>
+<div class="ahfact" style="--c:#8661c5"><div class="k">Trades</div><div class="v">A formula for <b>real analysis</b> — segments, correlations, forecasts</div></div>
+<div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">Charts, tables and a plain-language read — with the <b>Python</b> it ran</div></div>
+</div>
+<p class="m2-intro">Analyst works like a <b>data scientist on your team</b>. It reasons through a dataset step by step — and <b>runs Python</b> when a question calls for it — to surface trends, comparisons and anomalies, then explains its thinking and shows the visuals behind it. You can watch the code it runs and check its work, which is the point: the answer comes with its reasoning attached. Reach for it when the question is bigger than a formula — segments, correlations, forecasts, or “what is actually going on in this export?” — and hand it the file rather than a description of the file.</p><div class="mockout">
+<div class="mo-top"><span class="ic-analyst" style="width:18px;height:18px"></span> Analyst <span class="mo-badge">Ran Python · view code</span></div>
+<div class="mo-body">
+<div class="mo-title">Revenue by quarter — APAC FY26</div>
+<div class="chartmock">
+<div class="cbar"><em style="height:46%"></em><b>Q1</b></div>
+<div class="cbar"><em style="height:58%"></em><b>Q2</b></div>
+<div class="cbar hi"><em style="height:92%"></em><b>Q3</b></div>
+<div class="cbar"><em style="height:64%"></em><b>Q4</b></div>
+</div>
+<p class="mo-read"><b>Q3 is the outlier.</b> Two enterprise renewals landed a quarter early — strip them out and the underlying trend is flat, not growing.</p>
+</div>
+</div>
+<p class="caption">You can open the code it ran and check its working — the answer arrives with its reasoning attached.</p><h3 style="margin-top:26px">Example Use Case Prompt</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="ic-analyst" style="width:18px;height:18px"></span></span><span class="pc-tx">Take <span class="mono">/APAC Sales FY26.xlsx</span> and tell me what is really happening: revenue trend by quarter with a chart, the three products driving the change, any outliers or data-quality problems you spot, and a short read on what to watch next quarter.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/overview-declarative-agent" rel="noopener" target="_blank">Agents for Microsoft 365 Copilot</a> — Microsoft Learn<span class="ps-n">Module 5 · 4 of 8</span></div></div><div class="page">
+    
+    
+    
+    
+
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m5-cowork"><span class="sx" style="background:transparent"><span class="ic-cowork" style="width:24px;height:24px"></span></span> Cowork</div><div class="agenthero">
+<span class="ic-cowork ah-logo"></span>
+<div>
+<h4>Cowork</h4>
+<p>The agent you hand an <b>outcome</b> rather than a question — it plans the steps, works across your apps for as long as the job takes, and checks with you before anything leaves the building.</p>
+</div>
+</div>
+<div class="ahfacts">
+<div class="ahfact" style="--c:#0f6cbd"><div class="k">Reaches for</div><div class="v">Your Outlook, Teams, files and data — grounded in <b>Work IQ</b>, inside your own permissions</div></div>
+<div class="ahfact" style="--c:#8661c5"><div class="k">Trades</div><div class="v">A single reply for a <b>finished outcome</b> — minutes to hours, running on its own</div></div>
+<div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">Real files in your OneDrive, a task you can reopen, and an <b>approval gate</b> before it sends</div></div>
+</div>
+    <p class="m2-intro">Cowork is the <b>agentic</b> side of Microsoft 365 Copilot — you describe an <b>outcome</b> and it <b>plans and carries out the steps</b> for you, across your apps. You don’t build it: it’s a ready-made agent, on the <b>Cowork</b> tab in the Microsoft 365 Copilot app.</p>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>How it’s designed.</b> Cowork is a <b>prebuilt, autonomous agent</b> that <b>takes action, not just chats</b>. Grounded in your emails, meetings, chats, files and data via <b>Work IQ</b>, it works through a multi-step job across Outlook, Teams, Word, Excel and PowerPoint. Where Copilot Chat answers in a single turn, Cowork works over <b>minutes to hours</b> — <b>pausing for your approval before every send, post or schedule</b>, running in a <b>secure, isolated environment</b>, and acting only within <b>your own permissions</b>. <b>Getting access</b> takes two things, not one: an active <b>Microsoft 365 Copilot license</b> <i>and</i> <b>usage-based (Cowork) billing enabled</b> — the spending policy is an access control, not just a budget.</p>
+    </div>
+    <p class="m2-intro" style="margin-top:14px"><b>Copilot Chat vs Cowork — which do you use?</b> Use <b>Copilot Chat</b> to think, draft and answer in the moment; reach for <b>Cowork</b> when you want work <i>carried out</i> across several apps and steps.</p>
+    <div class="cmp2">
+      <div class="cbox lo"><div class="cb-h">Copilot Chat — think &amp; draft</div><p style="margin:.15rem 0 .4rem">Single-step, single session · seconds to minutes · <b>you</b> act on the output.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Quick draft, answer or insight</li><li>Reason over one attached file</li><li>Fast, focused, single task</li></ul></div>
+      <div class="cbox brand"><div class="cb-h">Cowork — get it done</div><p style="margin:.15rem 0 .4rem">Multi-step, across apps · minutes to hours · <b>autonomous</b>, you approve each action.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Inbox &amp; calendar clean-up</li><li>Project launches &amp; meeting prep</li><li>Recurring, scheduled work</li></ul></div>
+    </div>
+    <p style="font-weight:700;margin:18px 0 4px">Reach for Cowork when…</p>
+    <ul style="margin:.2rem 0 .6rem;color:var(--ink-soft);font-size:14.5px;line-height:1.6">
+      <li>the task is <b>multi-step and can run largely on its own</b> (e.g. research → draft → compile → follow-up), not a single prompt;</li>
+      <li>it should work over your own Microsoft 365 data (<b>Work IQ</b>) and <b>take real actions</b> — send mail, post in Teams, build docs, manage files — each behind an approval;</li>
+      <li>you want a <b>ready-made agent</b> you can extend with up to <b>50 custom skills</b> and Microsoft 365 App Store <b>plugins &amp; connectors</b>, rather than building one in Agent Builder or Copilot Studio;</li>
+      <li>it should run <b>on a schedule</b> — recurring prompts such as a daily briefing or a follow-up sweep;</li>
+      <li>the work stays within <b>one person’s identity and permissions</b>, with you reviewing the result.</li>
+    </ul>
+    <div class="mockout">
+<div class="mo-top"><span class="ic-cowork" style="width:18px;height:18px"></span> Task · Quarterly review prep <span class="mo-badge" style="background:#fff8e6;color:#8a6f00">Needs your input</span></div>
+<div class="mo-body">
+<div class="cwsteps">
+<div class="cwstep"><span class="cwtick done">✓</span><span><b>Read three months of email and Teams</b> — 214 messages, 9 threads that matter</span></div>
+<div class="cwstep"><span class="cwtick done">✓</span><span><b>Summarized decisions and open items</b> — 6 decided, 4 still open</span></div>
+<div class="cwstep"><span class="cwtick run">•</span><span><b>Drafting the deck</b> — 10 slides, risks slide last</span></div>
+<div class="cwstep"><span class="cwtick wait">!</span><span><b>Waiting on you</b> — approval needed before the follow-up email goes out</span></div>
+</div>
+<div class="cwfiles">
+<span class="cwfile"><span class="ic-ppt" style="width:15px;height:15px"></span> Contoso QBR.pptx</span>
+<span class="cwfile"><span class="ic-excel" style="width:15px;height:15px"></span> Open actions.xlsx</span>
+<span class="cwfile"><span class="ic-word" style="width:15px;height:15px"></span> Decision log.docx</span>
+</div>
+<div class="cwappr">
+<span>Cowork wants to <b>send an email</b> to the Contoso team with the deck attached.</span>
+<span class="cwbtns"><span class="cwbtn no">Review</span><span class="cwbtn ok">Approve</span></span>
+</div>
+</div>
+</div>
+<p class="caption">The <b>task</b> is the unit of work — it keeps running when you close the laptop, and you reopen it to find the outcome. The files land in your OneDrive; the approval gate is the reason you can leave it alone.</p><h3 style="margin-top:26px">Example Use Case Prompt</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="ic-cowork" style="width:18px;height:18px"></span></span><span class="pc-tx">Get me ready for Thursday’s quarterly review with Contoso: pull the last three months of email and Teams threads plus the files in <span class="mono">/Contoso FY26</span>, summarize the decisions and everything still open, draft a 10-slide deck ending on risks, put the follow-up actions in a table with owners, and save it all to my OneDrive — check with me before you send or share anything.</span></div></div>
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/" rel="noopener" target="_blank">Copilot Cowork overview</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" rel="noopener" target="_blank">Cowork common questions</a> — Microsoft Learn.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork — sessions, files, approvals, skills</a> — Microsoft Learn<span class="ps-n">Module 5 · 5 of 8</span></div></div><div class="page">
+
+    <div class="subsub" id="m5-cowork-skills"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 5l-4 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Custom skills — teach Cowork a task once</div>
+    <p class="m2-intro">A <b>skill</b> is a modular capability you hand a session so it performs one specific task reliably and repeatably. It isn’t more knowledge and it isn’t another tool — it’s a packaged <b>procedure</b>, with the assets and scripts that procedure needs travelling alongside it. The one-line distinction worth remembering: <b>an agent is the “who”; a skill is the “how”.</b> Add a skill when a task must be done the same way every single time — your report format, your naming convention, your review checklist.</p>
+    <div class="methods">
+      <div class="method">
+        <div class="m-ic">1</div>
+        <h4>From the Customize page</h4>
+        <p>The guided route: open <b>Customize</b> in Cowork and describe the task. Good first skill: a document format you produce every week.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">2</div>
+        <h4>By asking in chat</h4>
+        <p>Describe the procedure to Cowork in plain language and ask it to save the result as a reusable skill, then review what it wrote.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">3</div>
+        <h4>By hand, as a file</h4>
+        <p>Author a <span class="mono">SKILL.md</span> file yourself and drop it in the skills folder — full control over the instructions and any scripts.</p>
+      </div>
+    </div>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Where they live, and when they load.</b> Custom skills are stored as <span class="mono">SKILL.md</span> files in your OneDrive at <span class="mono">/Documents/Cowork/skills/</span> — up to <b>50</b> of them. Cowork discovers your skills at the <b>start of each session</b>, so a skill you add mid-session isn’t picked up until the next one. The same applies to plugins: removing one takes effect in the next session, never mid-flight. Skill scripts run in a <b>temporary, isolated environment inside the Microsoft 365 service boundary</b>, removed when the task finishes — and Microsoft <b>doesn’t validate user-authored skills</b>, so give a new skill’s output the same review you’d give a colleague’s first draft.</p>
+    </div>
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" rel="noopener" target="_blank">Copilot Cowork common questions</a> — Microsoft Learn.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork — sessions, files, approvals, skills</a> — Microsoft Learn<span class="ps-n">Module 5 · 6 of 8</span></div></div><div class="page">
+
+    <div class="subsub" id="m5-cowork-tips"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.6.5 1 1.3 1 2.1V16h6v-.4c0-.8.4-1.6 1-2.1A6 6 0 0012 3z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> 10 Tips &amp; Tricks to Maximize Cowork</div>
+    <p class="m2-intro">Grounded in Microsoft’s official <b>Best practices for Copilot Cowork</b> guidance plus the full feature set — blending the core best practices with ways to get more value <i>and</i> spend credits efficiently. A recurring theme: <b>use M365 Copilot Chat (included in your seat) to plan and design, then deploy the finished task to Cowork (usage-billed) to execute</b> — think and draft inexpensively, and spend credits only on the real work.</p>
+    <ol class="tips-list">
+      <li><b>Be specific, and give rich context up front.</b> <b>“Email Sarah about the Q2 review tomorrow at 2 PM”</b> beats <b>“Send that email.”</b> Precise instructions cut re-work, wrong turns and wasted credits. Load everything in one pass — drag-and-drop files, add work context (files, people, emails, Teams chats/channels/meetings), or pull from OneDrive, SharePoint and Teams — up to <b>250,000 characters</b> per message. Good context in one pass beats several clarifying round-trips.</li>
+      <li><b>Right-size the request to the task.</b> A quick draft is a <b>light</b> task; a 6-month data analysis is <b>heavy</b>. Ask for exactly the depth you need — don’t request a full deep-research report when a two-line summary would do.</li>
+      <li><b>Batch related work into one session.</b> Credit cost scales with context-loading and runtime, so fold several related asks into one well-scoped request (e.g. “read these emails <b>and</b> draft the brief <b>and</b> email the summary”). It reuses the loaded context instead of paying to rebuild it each time.</li>
+      <li><b>Plan for complexity — and design it in Copilot Chat first.</b> Allow extra time for heavy work (decks, cross-source research, large meetings) — complex ≠ broken, it’s just doing more steps. For anything non-trivial, use <b>M365 Copilot Chat as your design studio</b>: plan the approach, refine the exact prompt and preview the output there — Chat is included in your seat and draws <b>no Cowork credits</b>. Once it looks right, hand it to Cowork to run — so the credit-consuming session runs right the first time, not after several expensive retries.</li>
+      <li><b>Draft in Markdown (.md) first, then convert.</b> Ask Cowork for the first draft as a <span class="mono">.md</span> file — the native format for AI tools, the least expensive to generate and edit, and easiest to preview inline. When the content is right, convert it to the final artifact — <b>Word, PowerPoint, Excel, PDF, HTML</b> and more. You iterate inexpensively on the words, and spend on the polished format only once the substance is locked.</li>
+      <li><b>Keep the conversation going responsibly.</b> Long, sprawling sessions tend to cost more per turn — your accumulated context (files, history and past interactions) is carried and re-processed on every iteration, and context is a priced part of each task. Consolidate <i>related</i> work into one well-scoped session (tip 3), but start a fresh session for a genuinely new task rather than piling it onto a bloated one. Watch the climb with <span class="mono">/cost</span>, and stop refining once you hit diminishing returns.</li>
+      <li><b>Build custom skills for tasks you repeat.</b> Create reusable skills three ways — the guided <b>Customize</b> page, by asking Cowork in chat, or a <span class="mono">SKILL.md</span> file in <span class="mono">/Documents/Cowork/skills/</span>. Codify your standard formats once so every future run is consistent and faster. <b>Up to 50 skills</b>; share trusted ones with colleagues.</li>
+      <li><b>Tap plugin skills from the Microsoft 365 App Store.</b> Acquired plugins appear alongside built-in skills and activate <b>automatically</b> based on session context — extending Cowork with no manual wiring.</li>
+      <li><b>Work with the full file lifecycle.</b> Cowork reads and produces Word, Excel, PowerPoint, PDF, images, code and more. <b>Preview</b> files inline (split view; <span class="mono">Ctrl+F</span> in PDFs), grab outputs from the side panel, or <b>Download All</b> as one zip (up to 50 files / 500 MB). Everything also lands in <b>OneDrive → Documents/Cowork</b>.</li>
+      <li><b>Track your spend with <span class="mono">/cost</span>.</b> Type <span class="mono">/cost</span> in the prompt box of any Cowork session to see the Copilot Credits it actually consumed. Run it periodically — and after a few representative light / medium / heavy tasks — to learn your real per-task costs and keep credit consumption in view as you work.</li>
+    </ol><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/best-practices" rel="noopener" target="_blank">Best practices for Copilot Cowork</a> — Microsoft Learn<span class="ps-n">Module 5 · 7 of 8</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4L12 3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg></span> Special tip — Design in Chat, deploy to Cowork</div>
+    <p class="m2-intro">Make <b>“design in Chat → deploy to Cowork”</b> your default loop — the single biggest credit-saver, and the engine behind tip 4. For any important, ambiguous or repeated task, work across two surfaces:</p>
+    <div class="coflow">
+      <div class="cbox lo"><div class="cb-h">Design in Chat</div><p style="margin:.15rem 0 0">Plan the steps, draft and tighten the prompt, and preview the deliverable’s content and structure — all within your included seat at <b>no cost in Cowork Copilot Credits</b>.</p></div>
+      <div aria-hidden="true" class="coflow-arrow">→</div>
+      <div class="cbox brand"><div class="cb-h">Deploy in Cowork</div><p style="margin:.15rem 0 0">Paste the finished prompt into a Cowork session to run the real multi-tool, multi-source execution — sending, scheduling and building files across your data.</p></div>
+    </div>
+    <p class="m2-intro" style="margin-top:14px">Iterate in Chat (included in your Premium plan) until the prompt is right, then let Cowork do the credit-consuming work <b>once</b>. Promote winning prompts into a custom skill (tip 7) or a recurring scheduled prompt so a single design keeps paying off.</p>
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/best-practices" rel="noopener" target="_blank">Best practices for Copilot Cowork</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork</a> — Microsoft Learn · Microsoft Copilot Credits Guide (June 2026).</p>
+
+  <div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/best-practices" rel="noopener" target="_blank">Best practices for Copilot Cowork</a> — Microsoft Learn<span class="ps-n">Module 5 · 8 of 8</span></div></div></section>
+<div class="pagenav"><a class="pn-prev" href="../module-4-office-apps/">&larr; <span class="pn-lbl">Previous</span> Module 4</a><a class="pn-next" href="../module-6-build-your-agent/"><span class="pn-lbl">Next</span> Module 6 &rarr;</a></div>
+<div class="sitefoot"><span>Microsoft 365 Copilot &mdash; End-User Coursework</span>
+<a href="../index.html">Course outline</a>
+<a href="../M365CopilotTutorial.html">Single-page version</a></div>
+</div>
+</body></html>

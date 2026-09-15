@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Copilot Fundamentals & Safe Use — Microsoft 365 Copilot Coursework</title>
+<link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+<input class="navtoggle-cb" id="navtoggle" type="checkbox"/>
+<label class="navtoggle-btn" for="navtoggle" aria-label="Show or hide the course menu"><span class="nt-bars"><i></i><i></i><i></i></span>Menu</label>
+<nav id="sidenav" aria-label="Course navigation">
+  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft 365 Copilot</div><div class="sn-sub">End-user coursework</div></div></div>
+  <div class="sn-eyebrow">Agenda</div>
+  <a class="sn-top" href="../index.html">Course Outline</a>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-1-meet-copilot/"><span class="sn-num">1</span>Meet Copilot &amp; Where to Access It</a>
+    <ul class="sn-list">
+      <li><a href="../module-1-meet-copilot/#p1-what">What Copilot is</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-access">Where to access it</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-browser">Browser</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-app">Copilot app</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-inapp">In-app (Premium)</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod on" href="../module-2-fundamentals/"><span class="sn-num">2</span>Copilot Fundamentals &amp; Safe Use</a>
+    <ul class="sn-list">
+      <li><a href="#m2-edp">Enterprise Data Protection</a></li>
+      <li><a href="#m2-terms">Key terms</a></li>
+      <li><a href="#m2-model">Choosing your model</a></li>
+      <li><a href="#m2-grounding">Work IQ</a></li>
+      <li><a href="#m2-files">Bringing your files in</a></li>
+      <li><a href="#p1-try">Try it yourself</a></li>
+      <li><a href="#m2-settings">Chat settings</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-3-prompting/"><span class="sn-num">3</span>Prompting Like a Pro</a>
+    <ul class="sn-list">
+      <li><a href="../module-3-prompting/#m3-ingredients">The four ingredients</a></li>
+      <li><a href="../module-3-prompting/#m3-vague-to-valuable">From vague to valuable</a></li>
+      <li><a href="../module-3-prompting/#m3-extend-converse">Extending &amp; conversing</a></li>
+      <li><a href="../module-3-prompting/#m3-best-practices">7 best practices</a></li>
+      <li><a href="../module-3-prompting/#m3-tips">Prompting tips</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-4-office-apps/"><span class="sn-num">4</span>Copilot in the Office Apps</a>
+    <ul class="sn-list">
+      <li><a href="../module-4-office-apps/#m4-outlook">Outlook</a></li>
+      <li><a href="../module-4-office-apps/#m4-teams">Teams</a></li>
+      <li><a href="../module-4-office-apps/#m4-word">Word</a></li>
+      <li><a href="../module-4-office-apps/#m4-excel">Excel</a></li>
+      <li><a href="../module-4-office-apps/#m4-ppt">PowerPoint</a></li>
+      <li><a href="../module-4-office-apps/#m4-notebooks">Copilot Notebooks</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-5-first-party-agents/"><span class="sn-num">5</span>First-Party Agents</a>
+    <ul class="sn-list">
+      <li><a href="../module-5-first-party-agents/#m5-what">What are first-party agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-weppt-agents">Word, Excel &amp; PowerPoint Agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-researcher-analyst">Researcher &amp; Analyst</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork">Cowork</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork-skills">Custom skills</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-6-build-your-agent/"><span class="sn-num">6</span>Build Your Own Agent</a>
+    <ul class="sn-list">
+      <li><a href="../module-6-build-your-agent/#m6-agents">Agents &amp; harnesses</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-agentbuilder">Agent Builder</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-instructions">Instructions &amp; knowledge</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-skills">Skills</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-copilot-studio">Copilot Studio</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../beyond-the-basics/"><span class="sn-num">+</span>Beyond the Basics</a>
+    <ul class="sn-list">
+      <li><a href="../beyond-the-basics/#xb-tool-choice">Which tool should I use?</a></li>
+      <li><a href="../beyond-the-basics/#xb-data-sources">Data sources</a></li>
+    </ul>
+  </div>
+</nav>
+<label class="nav-scrim" for="navtoggle" aria-hidden="true"></label>
+<header class="hero"><div class="hero-inner"><span class="kicker">Module 2</span><h1 class="modh">Copilot Fundamentals &amp; Safe Use</h1><p>Part of <b>Getting Started with Microsoft 365 Copilot</b> — a hands-on course from your first prompt to building your own agents.</p></div></header>
+<div class="wrap">
+<aside class="ms-disclaimer" role="note" aria-label="Disclaimer">
+  <h3><span aria-hidden="true">&#9888;</span> Disclaimer</h3>
+  <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+  <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+  <p><strong><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Learn</a> is the source of truth.</strong> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+</aside>
+<section id="module2"><div class="page">
+    <span class="eyebrow">Module 2</span>
+    <h2>Copilot Fundamentals &amp; Safe Use</h2>
+    <p class="lead">Two things make Copilot safe and predictable at work: it's protected by the enterprise controls your organization already uses, and it grounds every answer in sources you choose. This module covers the fundamentals you'll lean on in every later lesson.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-architecture" rel="noopener" target="_blank">Microsoft 365 Copilot architecture — how a prompt is processed</a> — Microsoft Learn<span class="ps-n">Module 2 · 1 of 9</span></div></div><div class="page">
+
+    <!-- 2.1 EDP -->
+    <span class="readbadge">
+      <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      Reading / demo material — nothing to set up
+    </span>
+    <div class="subhead" id="m2-edp"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Secure by design — Enterprise Data Protection (EDP)</div>
+    <p class="m2-intro">Copilot doesn't bypass your security — it rides on top of it. Here's what's protecting you and where your data goes.</p>
+    <div class="sec-panel">
+      <div class="shieldcard">
+        <div class="sh-top">
+          <div class="sh-ic"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.2 12.2l1.9 1.9 3.7-3.9" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+          <div><h4>What Enterprise Data Protection gives you</h4><span>On by default for anyone signed in with a work account.</span></div>
+        </div>
+        <ul class="seclist">
+          <li><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span><b>Your data isn't used to train models.</b> Your prompts, Copilot's responses, and the data it retrieves for grounding are never used to train the foundation models.</span></li>
+          <li><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span><b>It inherits your existing protections.</b> Copilot applies your organization's Microsoft 365 identity, security, compliance and privacy policies — including Microsoft Purview and sensitivity labels.</span></li>
+          <li><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span><b>It respects permissions.</b> Copilot can only surface content you already have access to — it never widens your reach.</span></li>
+          <li><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span><b>Your data stays in the service boundary.</b> Models are hosted in the Microsoft Cloud, within the Microsoft 365 service boundary; OpenAI has no access to your data or the model.</span></li>
+        </ul>
+      </div>
+      <div class="flowcard">
+        <h4>How a prompt flows</h4>
+        <div class="fc-sub">Every request is encrypted end-to-end.</div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>1 · You prompt Copilot</b><p>From Chat or inside an app.</p></div></div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>2 · Grounding via Microsoft Graph</b><p>Retrieves only content you're allowed to see, and/or the web.</p></div></div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>3 · Responsible AI check</b><p>Prompt and results pass automated RAI checks.</p></div></div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>4 · LLM in the Microsoft Cloud</b><p>Processed in the service boundary — not used for training.</p></div></div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>5 · Compliance &amp; Purview</b><p>Responses honor your data-protection policies.</p></div></div>
+        <div class="flow-step"><div class="flow-rail"><i></i><div class="ln"></div></div><div class="flow-body"><b>6 · Response back to you</b><p>Returned with citations to its sources.</p></div></div>
+      </div>
+    </div>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Nothing new to configure.</b> Copilot automatically inherits the security, compliance and privacy controls your organization already set in Microsoft 365.</p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener" target="_blank">Enterprise data protection in Microsoft Copilot and Copilot Chat</a> — Microsoft Learn<span class="ps-n">Module 2 · 2 of 9</span></div></div><div class="page">
+
+    <!-- 2.2 Terms -->
+    <div class="subhead" id="m2-terms"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 7h16M4 12h11M4 17h7" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span> Terms you'll hear a lot</div>
+    <p class="m2-intro">A few names sound alike. Here's how to tell them apart.</p>
+    <div class="glossary">
+      <div class="term">
+        <div class="t-left"><div class="t-name">Chat <span class="t-chip">Basic &amp; Premium</span></div></div>
+        <div class="t-def"><p>The default Copilot chat experience — the prompt box you type into. It's the same chat surface whether you're on Copilot Chat (Basic) or M365 Copilot (Premium).</p></div>
+      </div>
+      <div class="term">
+        <div class="t-left"><div class="t-name">Word / Excel / PowerPoint Agents <span class="t-chip">Premium</span></div></div>
+        <div class="t-def"><p>Task-focused agents built for a specific app, opened through M365 Copilot or Teams. <b>Not</b> the same as "Edit with Copilot." <b>On Basic:</b> these agents need a Premium license, but Copilot Chat (Basic) users can still have files created for them <b>via code interpreter triggered from the prompt</b> — Word, Excel, PowerPoint and PDF, returned as downloads.</p></div>
+      </div>
+      <div class="term">
+        <div class="t-left"><div class="t-name">Edit with Copilot <span class="t-chip">Premium</span></div></div>
+        <div class="t-def"><p>Assisted editing inside the file you have open — draft, rewrite or summarize what's in front of you (the ribbon button and side pane from Module 1). It can take a multi-step pass at your document, workbook or deck — the mode once called "Agent Mode."</p></div>
+      </div>
+    </div>
+    <div class="confuse">
+      <svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M12 3l9 16H3l9-16z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Don't mix these up:</b> <b>Edit with Copilot</b> (assisted editing in the file you have open) is different from the <b>Word / Excel / PowerPoint Agents</b> (app-specific agents you open from Copilot or Teams).</p>
+    </div>
+
+    <div class="term-group-h">More words you'll hear</div>
+    <div class="glossary">
+      <div class="term"><div class="t-left"><div class="t-name">Work IQ <span class="t-chip">Premium</span></div></div><div class="t-def"><p>The intelligence layer that personalizes Copilot to you and your organization, grounding it in your work data.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Grounding</div></div><div class="t-def"><p>Giving Copilot trusted sources — the web, your files, or your work data through Work IQ — to base an answer on.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Agent</div></div><div class="t-def"><p>A customized version of Copilot scoped to specific instructions and knowledge for a task or role.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Agent Builder <span class="t-chip">via M365 Copilot</span></div></div><div class="t-def"><p>The simple, no-code way to build your own agents directly inside Microsoft 365 Copilot (covered in Module 6).</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Copilot Studio</div></div><div class="t-def"><p>The platform for building more sophisticated agents and workflows, with connectors to the apps your company uses.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Copilot Pages <span class="t-chip">Basic &amp; Premium</span></div></div><div class="t-def"><p>A persistent, shareable canvas for working on content together with Copilot and your team.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Notebooks <span class="t-chip">Basic &amp; Premium</span></div></div><div class="t-def"><p>A project-specific space where you group content so Copilot grounds its answers in just that material. Open it from the Copilot app (<b>Notebooks</b>) or from <b>OneNote</b>. The account also needs a SharePoint or OneDrive service plan.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Create <span class="t-chip">Basic &amp; Premium</span></div></div><div class="t-def"><p>Copilot's AI design studio for generating branded images, video and graphics.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Researcher &amp; Analyst <span class="t-chip">Premium</span></div></div><div class="t-def"><p>Advanced reasoning agents — Researcher for deep, multi-step research; Analyst for data analysis.</p></div></div>
+      <div class="term"><div class="t-left"><div class="t-name">Enterprise Data Protection (EDP) <span class="t-chip">Basic &amp; Premium</span></div></div><div class="t-def"><p>The security and privacy commitments that keep your prompts and data protected in Copilot (see the section above).</p></div></div>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/work-iq" rel="noopener" target="_blank">Work IQ — the intelligence layer</a> — Microsoft Learn<span class="ps-n">Module 2 · 3 of 9</span></div></div><div class="page">
+
+    <!-- 2.3 Grounding -->
+    <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m2-model"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Choosing your model in chat</div><p class="lead">You can choose which AI model answers your prompt. On <b>Copilot Chat (Basic)</b>, leave it on <b>Auto</b> — Copilot picks the best model for the task — or pick an <b>OpenAI GPT</b> model. With <b>Microsoft 365 Copilot (Premium)</b> you get more choices, including <b>Anthropic Claude</b> models. Some models may need to be enabled by your admin.</p><span class="handsbadge"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M5 3l14 7-6 2-2 6-6-15z" fill="#fff"></path></svg> Hands-On Session — open Copilot and follow along</span><p class="m2-intro">At the top of the chat, click the model selector (<b>Auto</b>) to see the available models.</p><div class="appwin">
+        <div class="cpfull">
+          <div class="cpf-side">
+            <div class="cpf-logos"><span class="cplogo" style="width:20px;height:18px"></span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="5" r="1.6"></circle><circle cx="12" cy="5" r="1.6"></circle><circle cx="19" cy="5" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle><circle cx="5" cy="19" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle><circle cx="19" cy="19" r="1.6"></circle></svg></div>
+            <div class="cpf-tabs"><span class="cpf-tab active">Home</span><span class="cpf-tab">Cowork</span></div>
+            <div class="cpf-nav">
+              <div class="cpf-item active"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg> New chat</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Search</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="4" y="4"></rect><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="10" y="4"></rect><rect height="14" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="16" y="6"></rect></svg> Library</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="3" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg> Tasks</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Agents</div>
+            </div>
+            <div class="cpf-lbl">Pinned</div>
+            <div class="cpf-pin"><span class="ic-researcher" style="width:18px;height:18px"></span> Researcher</div>
+            <div class="cpf-pin"><span class="ic-analyst" style="width:18px;height:18px"></span> Analyst</div>
+            <div class="cpf-pin"><span class="pdot" style="background:#0f6cbd"></span> Sales</div>
+            <div class="cpf-lbl">Chats</div>
+            <div class="cpf-chat">Draft Q3 customer follow-up…</div>
+            <div class="cpf-chat">M365 Copilot Security with 3rd…</div>
+            <div class="cpf-chat">Schedule Meeting with [Person X]…</div>
+            <div class="cpf-prof"><span class="pav">AC</span><div><b>Adelia Chindranata</b><span>M365 Copilot (Premium)</span></div></div>
+          </div>
+          <div class="cpf-main">
+            <div class="cph-toolbar">
+              <span class="model-wrap"><span class="cph-model open">Auto <svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span>
+              <div class="model-menu">
+                <div class="mm-h">Choose a model</div>
+                <div class="mm-item sel"><span class="mm-ic"><svg aria-hidden="true" fill="currentColor" height="13" viewBox="0 0 24 24" width="13"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"></path></svg></span><span class="mm-tx">Auto<span>Let Copilot pick the best model</span></span><span class="mm-chk"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></span></div>
+                <div class="mm-item"><span class="mm-ic"><svg aria-hidden="true" fill="currentColor" height="13" viewBox="0 0 24 24" width="13"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path></svg></span><span class="mm-tx">Quick response<span>Fast answers</span></span></div>
+                <div class="mm-item"><span class="mm-ic"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M9 18h6M10 21h4M12 3a6 6 0 014 10.5c-.6.6-1 1.3-1 2H9c0-.7-.4-1.4-1-2A6 6 0 0112 3z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span><span class="mm-tx">Think Deeper<span>More reasoning</span></span></div>
+                <div class="mm-item"><span class="mm-ic" style="background:#10a37f;color:#fff">GPT</span><span class="mm-tx">GPT-5<span>OpenAI</span></span></div>
+                <div class="mm-item"><span class="mm-ic" style="background:#d97757;color:#fff;font-size:12px">C</span><span class="mm-tx">Claude<span>Anthropic</span></span></div>
+              </div></span>
+              <span class="cph-right">New Copilot <span class="miniswitch"></span> <span class="cph-shield"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> <svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><circle cx="5" cy="12" r="1.7"></circle><circle cx="12" cy="12" r="1.7"></circle><circle cx="19" cy="12" r="1.7"></circle></svg></span>
+            </div>
+            <div class="cpf-content">
+              <div class="cph-greet">Hi, what can I help you with?</div>
+              <div class="cph-input"><span class="plus">+</span><span class="ph">Message Copilot</span><span class="ic"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span><span class="cph-voice"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M6 9v6M10 6v12M14 8v8M18 10v4" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span></div>
+              <div class="cph-chips">
+                <span class="cph-chip"><svg aria-hidden="true" height="14" viewBox="0 0 24 24" width="14"><rect fill="#F25022" height="9" width="9" x="2" y="2"></rect><rect fill="#7FBA00" height="9" width="9" x="13" y="2"></rect><rect fill="#00A4EF" height="9" width="9" x="2" y="13"></rect><rect fill="#FFB900" height="9" width="9" x="13" y="13"></rect></svg> Suggested</span>
+                <span class="cph-chip">Files</span>
+                <span class="cph-chip">Emails</span>
+                <span class="cph-chip">People</span>
+                <span class="cph-chip"><svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><circle cx="5" cy="12" r="1.7"></circle><circle cx="12" cy="12" r="1.7"></circle><circle cx="19" cy="12" r="1.7"></circle></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><p class="caption">Open the model selector to switch models for the current chat. Options include OpenAI's <b>GPT</b> and Anthropic's <b>Claude</b> — some may need to be enabled by your admin.</p><h3 style="margin-top:32px">Try it yourself — compare two models</h3><div class="steps-row">
+      <div class="step-card">
+        <div class="sc-num">STEP 1</div>
+        <h4>Start on Auto</h4>
+        <p>Open the model selector, leave it on Auto, and ask: "Summarize my priorities for this week."</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 2</div>
+        <h4>Pick a model</h4>
+        <p>Open it again and choose a specific model — GPT or Claude — then ask the same question.</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 3</div>
+        <h4>Compare</h4>
+        <p>Notice the differences in tone, depth and structure, and pick the model that best fits the task.</p>
+      </div>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor" rel="noopener" target="_blank">Anthropic as a subprocessor in Microsoft Online Services</a> — Microsoft Learn<span class="ps-n">Module 2 · 4 of 9</span></div></div><div class="page">
+    <!-- 2.4 Files -->
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m2-grounding"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="8" rx="4" stroke="currentColor" stroke-width="1.7" width="18" x="3" y="8"></rect><circle cx="15.5" cy="12" fill="currentColor" r="2.4"></circle></svg></span> Work IQ on/off — web-grounded vs. Work IQ–grounded chat</div>
+    <p class="m2-intro">There aren't two separate chats anymore. There's <b>one chat box with a single Work IQ toggle</b> — flip it to control what Copilot grounds its answer in.</p>
+    <div class="wqdemo">
+      <input class="wq-cb" id="wq-toggle" type="checkbox"/>
+      <label class="wq-toggle" for="wq-toggle">
+        <span class="wq-sw"></span>
+        <span class="wq-lbl">Work IQ</span>
+      </label>
+      <div class="wq-panel">
+        <div class="wq-card wq-off">
+          <div class="wq-state">Work IQ off</div>
+          <h4>Web-grounded Chat</h4>
+          <p>Copilot reasons over public web knowledge and the files you hand it — ideal for research, drafting and general questions. Every prompt starts with you finding, attaching or pasting the material first.</p>
+          <ul>
+            <li style="--c:var(--ink-faint)">Open-web knowledge</li>
+            <li style="--c:var(--ink-faint)">Plus any files you attach</li>
+            <li style="--c:var(--green)">Available to Basic &amp; Premium</li>
+          </ul>
+        </div>
+        <div class="wq-card wq-on">
+          <div class="wq-state">Work IQ on</div>
+          <h4>Work IQ–grounded Chat</h4>
+          <p>Copilot also reasons over your work across Microsoft 365 — emails, chats, meetings and files — trimmed to what you already have permission to see. The context is already there before you type.</p>
+          <ul>
+            <li style="--c:var(--brand)">Everything web-grounded does</li>
+            <li style="--c:var(--accent)">Your emails, chats, meetings and files</li>
+            <li style="--c:var(--green)">Permission-trimmed — nothing you can't already open</li>
+          </ul>
+        </div>
+        <div class="wq-try">
+          <div class="wq-try-h">Suggested prompts to try</div>
+          <div class="wq-bubs wq-off">
+            <div class="wq-bub"><span class="wq-tag">Without Work IQ</span>Review <span class="wq-ref">/Document A</span> and compare it against <span class="wq-ref">/Document B</span>.</div>
+            <div class="wq-bub">Suggest a reply to this question <span class="wq-ref">[paste the question]</span>.</div>
+          </div>
+          <div class="wq-bubs wq-on">
+            <div class="wq-bub"><span class="wq-tag">With Work IQ</span>List my meetings today and the key decisions I should make.</div>
+            <div class="wq-bub">Recap my previous engagements with <span class="wq-ref">[stakeholder]</span> — what has been decided, and what has not?</div>
+          </div>
+          <p class="wq-hint wq-off"><b>Notice the pattern.</b> Both prompts begin with you supplying the raw material — the documents, the pasted text. Copilot is capable, but it starts from zero every time.</p>
+          <p class="wq-hint wq-on"><b>The prompt gets shorter, and the question gets bigger.</b> You stop describing the material and start asking about your actual work.</p>
+        </div>
+      </div>
+    </div>
+    <p class="caption">It's one chat with a single Work IQ toggle — not two separate chat experiences.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy" rel="noopener" target="_blank">Data, privacy and security for Microsoft Copilot</a> — Microsoft Learn<span class="ps-n">Module 2 · 5 of 9</span></div></div><div class="page">
+
+    <div class="lic-row" style="margin-top:40px"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div><div class="subhead" id="m2-files"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Bringing your files into Chat</div>
+    <p class="m2-intro">Three ways to put OneDrive and SharePoint content in front of Copilot.</p>
+    <div class="methods">
+      <div class="method">
+        <div class="m-ic">/</div>
+        <h4>Type / to reference</h4>
+        <p>Type a <b>forward slash</b> in the prompt box to navigate files and artifacts already in OneDrive or SharePoint. Copilot suggests recent files — keep typing to filter.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic"><svg aria-hidden="true" fill="none" height="20" viewBox="0 0 24 24" width="20"><path d="M12 16V5M8 9l4-4 4 4M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+        <h4>Upload files</h4>
+        <p>Add files from your device. A copy is saved to your OneDrive in the <b>Microsoft Copilot Chat Files</b> folder.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic"><svg aria-hidden="true" fill="none" height="21" viewBox="0 0 24 24" width="21"><path d="M7 18a4 4 0 01-.5-7.97 5 5 0 019.6-1.4A3.5 3.5 0 0117 18H7z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></div>
+        <h4>Attach cloud files</h4>
+        <p>Select the <b>Attach cloud files</b> icon to browse OneDrive &amp; SharePoint in a pop-up — attach a single file or a whole folder.</p>
+      </div>
+    </div>
+    <div class="compose">
+      <div class="slashmenu">
+        <div class="sm-h">Recent files · OneDrive &amp; SharePoint</div>
+        <div class="slash-item sel"><span class="si-ic"><span class="ic-word" style="width:18px;height:18px"></span></span> Q3 Proposal.docx <span class="si-meta">OneDrive</span></div>
+        <div class="slash-item"><span class="si-ic"><span class="ic-excel" style="width:18px;height:18px"></span></span> APAC Sales FY26.xlsx <span class="si-meta">SharePoint › Sales</span></div>
+        <div class="slash-item"><span class="si-ic"><span class="ic-ppt" style="width:18px;height:18px"></span></span> Customer Brief.pptx <span class="si-meta">OneDrive</span></div>
+      </div>
+      <div class="ctxt">Summarize <span class="sl">/</span>Q3 Pro…</div>
+      <div class="crow">
+        <span class="citem"><b style="font-size:14px">/</b> Reference</span>
+        <span class="citem"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M7 18a4 4 0 01-.5-7.97 5 5 0 019.6-1.4A3.5 3.5 0 0117 18H7z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg> Attach cloud files</span>
+        <span class="citem"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M12 16V5M8 9l4-4 4 4M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg> Upload</span>
+        <span class="csend"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 12l16-7-7 16-2-7-7-2z" fill="#fff"></path></svg></span>
+      </div>
+    </div>
+    <p class="caption">Typing / opens Context IQ — you only ever see files you already have permission to open.</p>
+
+    <h3 style="margin-top:36px">Try it yourself — hands-on activity</h3>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="sc-num">STEP 1</div>
+        <h4>Flip Work IQ on</h4>
+        <p>Switch the Work IQ toggle on and ask: "What did my team decide this week?" Notice Copilot now reasons over your work data.</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 2</div>
+        <h4>Reference a file with /</h4>
+        <p>Type "/" in the prompt box, pick a recent document, and ask Copilot to summarize its key points.</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 3</div>
+        <h4>Attach cloud files</h4>
+        <p>Use Attach cloud files to bring in a SharePoint folder, then ask a question that spans everything in it.</p>
+      </div>
+    </div>
+
+<div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/Microsoft-365-Copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot" rel="noopener" target="_blank">Refer to specific files and more in Microsoft 365 Copilot</a> — Microsoft Support<span class="ps-n">Module 2 · 6 of 9</span></div></div><div class="page">
+    <div class="subsub" id="p1-try" style="margin-top:36px"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.4" stroke="currentColor" stroke-width="1.7"></circle><path d="M10.4 9.2l5 2.8-5 2.8z" fill="currentColor"></path></svg></span> Try it yourself — 60-second activity</div>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="sc-num">STEP 1</div>
+        <h4>Open Copilot</h4>
+        <p>Browse to m365.cloud.microsoft/chat or open the Copilot app in Teams and sign in with your work account.</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 2</div>
+        <h4>Ask a real question</h4>
+        <p>Type: "Catch me up on what I missed this week" and watch Copilot reason over your email and chats.</p>
+      </div>
+      <div class="step-card">
+        <div class="sc-num">STEP 3</div>
+        <h4>Go in-app</h4>
+        <p>If you're Premium-licensed, open a Word doc and click the Copilot button in the ribbon to draft or rewrite.</p>
+      </div>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot" rel="noopener" target="_blank">Get started writing prompts in Microsoft Copilot</a> — Microsoft Support<span class="ps-n">Module 2 · 7 of 9</span></div></div><div class="page">
+
+    <div class="subhead" id="m2-settings" style="margin-top:46px"><span class="sx"><svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><circle cx="5" cy="12" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="19" cy="12" r="1.8"></circle></svg></span> Chat settings &amp; the ⋯ menu</div>
+    <p class="m2-intro">The <b>⋯</b> menu at the top-right of Copilot is home to settings — <b>Recent pages</b>, <b>Scheduled prompts</b>, <b>Chat settings</b>, and the <b>Web search</b> toggle that controls whether answers include results from the web.</p>
+      <div class="appwin">
+        <div class="cpfull">
+          <div class="cpf-side">
+            <div class="cpf-logos"><span class="cplogo" style="width:20px;height:18px"></span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="5" r="1.6"></circle><circle cx="12" cy="5" r="1.6"></circle><circle cx="19" cy="5" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle><circle cx="5" cy="19" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle><circle cx="19" cy="19" r="1.6"></circle></svg></div>
+            <div class="cpf-tabs"><span class="cpf-tab active">Home</span><span class="cpf-tab">Cowork</span></div>
+            <div class="cpf-nav">
+              <div class="cpf-item active"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg> New chat</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Search</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="4" y="4"></rect><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="10" y="4"></rect><rect height="14" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="16" y="6"></rect></svg> Library</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="3" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg> Tasks</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Agents</div>
+            </div>
+            <div class="cpf-lbl">Pinned</div>
+            <div class="cpf-pin"><span class="ic-researcher" style="width:18px;height:18px"></span> Researcher</div>
+            <div class="cpf-pin"><span class="ic-analyst" style="width:18px;height:18px"></span> Analyst</div>
+            <div class="cpf-lbl">Chats</div>
+            <div class="cpf-chat">Summarize this week's emails</div>
+            <div class="cpf-chat">Draft vendor follow-up</div>
+            <div class="cpf-chat">Q3 planning notes</div>
+            <div class="cpf-chat">Onboarding checklist</div>
+            <div class="cpf-chat">Agent Builder vs Copilot Studio</div>
+            <div class="cpf-prof"><span class="pav">AC</span><div><b>Adelia Chindranata</b><span>M365 Copilot (Premium)</span></div></div>
+          </div>
+          <div class="cpf-main">
+            <div class="cph-toolbar">
+              <span style="display:flex;align-items:center;gap:12px"><span class="wiq-pill">Work IQ</span><span class="cph-model">Auto <svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span></span>
+              <span class="cph-right">New Copilot <span class="miniswitch"></span> <span class="cph-shield"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> <span style="color:var(--ink-faint)"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> <svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><circle cx="5" cy="12" r="1.7"></circle><circle cx="12" cy="12" r="1.7"></circle><circle cx="19" cy="12" r="1.7"></circle></svg></span>
+            </div>
+            <div class="dotmenu"><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M7 3h7l4 4v14H7z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M14 3v4h4" stroke="currentColor" stroke-width="1.5"></path></svg></span> Recent pages</div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 7v5l3 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span> Scheduled prompts</div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.5 5.5l2 2M16.5 16.5l2 2M18.5 5.5l-2 2M7.5 16.5l-2 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.3"></path></svg></span> Chat settings</div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 4v11M8 11l4 4 4-4M5 20h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span> Download apps <span class="dm-chev"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span></div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle><path d="M9.5 9.5a2.5 2.5 0 113.5 2.3c-.7.3-1 .8-1 1.7M12 17v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span> Help and tips <span class="dm-chev"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span></div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M9 9h6M9 12h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span> Send feedback</div><div class="dm-div"></div><div class="dm-lbl">Copilot response includes:</div><div class="dm-item"><span class="dm-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="9" stroke="#0f6cbd" stroke-width="1.5"></circle><path d="M3 12h18M12 3c2.4 2.5 2.4 15 0 18M12 3c-2.4 2.5-2.4 15 0 18" stroke="#0f6cbd" stroke-width="1.1"></path></svg></span> Web search <span class="dm-toggle"></span></div></div>
+            <div class="cpf-content">
+              <div class="cph-greet">Hi, how can I help?</div>
+              <div class="cph-input"><span class="plus">+</span><span class="ph">Message Copilot</span><span class="ic"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span></div>
+              <div class="cph-chips"><span class="cph-chip"><svg aria-hidden="true" height="14" viewBox="0 0 24 24" width="14"><rect fill="#F25022" height="9" width="9" x="2" y="2"></rect><rect fill="#7FBA00" height="9" width="9" x="13" y="2"></rect><rect fill="#00A4EF" height="9" width="9" x="2" y="13"></rect><rect fill="#FFB900" height="9" width="9" x="13" y="13"></rect></svg> Suggested</span><span class="cph-chip">Files</span><span class="cph-chip">Emails</span><span class="cph-chip">People</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <p class="caption">Open the <b>⋯</b> menu to manage settings and the Web search toggle. <b>Scheduled prompts</b> — automating a prompt to run on a schedule — requires a Microsoft 365 Copilot (Premium) license.</p>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Availability.</b> The <b>Web search</b> toggle works for both <b>Copilot Chat (Basic)</b> and <b>M365 Copilot (Premium)</b> — turn web results on or off. <b>Scheduled prompts</b> (running a prompt on a schedule) require <b>M365 Copilot (Premium)</b>.</p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory" rel="noopener" target="_blank">Copilot personalization and memory</a> — Microsoft Learn<span class="ps-n">Module 2 · 8 of 9</span></div></div><div class="page">
+
+    <div class="subsub" style="margin-top:40px"><span class="sx"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="8.5" cy="9" r="2.6" stroke="currentColor" stroke-width="1.5"></circle><circle cx="16" cy="10" r="2.1" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 18c0-2.6 2.2-4.2 5-4.2s5 1.6 5 4.2M15 14c2.2.1 4 1.5 4 3.8" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span> Personalization</div>
+    <p class="m2-intro">Open <b>Chat settings → Personalization</b> (from the ⋯ menu) to control how Copilot tailors answers to you — your preferences, saved memories, and past chats.</p>
+    <div class="csettings">
+      <div class="cs-nav">
+        <div class="cs-title">Chat settings</div>
+        <div class="cs-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.5 5.5l2 2M16.5 16.5l2 2M18.5 5.5l-2 2M7.5 16.5l-2 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.3"></path></svg> General</div>
+        <div class="cs-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.5" width="16" x="4" y="4"></rect><path d="M8 15v-3M12 15V9M16 15v-5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Data controls</div>
+        <div class="cs-item active"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="8.5" cy="9" r="2.6" stroke="currentColor" stroke-width="1.5"></circle><circle cx="16" cy="10" r="2.1" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 18c0-2.6 2.2-4.2 5-4.2s5 1.6 5 4.2M15 14c2.2.1 4 1.5 4 3.8" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg> Personalization</div>
+        <div class="cs-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M6 9a6 6 0 1112 0c0 5 2 6 2 6H4s2-1 2-6zM10 19a2 2 0 004 0" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg> Notifications</div>
+        <div class="cs-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.5" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-width="1.5"></path></svg> Agents</div>
+        <div class="cs-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="6" cy="17" r="2" stroke="currentColor" stroke-width="1.5"></circle><circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.5"></circle><circle cx="18" cy="14" r="2" stroke="currentColor" stroke-width="1.5"></circle><path d="M7.6 15.5l3-5M13.6 9.2l3 3.4" stroke="currentColor" stroke-width="1.4"></path></svg> Sources</div>
+      </div>
+      <div class="cs-body">
+        <span class="cs-close"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span>
+        <div class="cs-h">Personalization</div>
+        <p class="cs-intro">Copilot tailors responses using your <a>work account data</a> and preferences to deliver more relevant answers. <a>Learn more</a></p>
+        <div class="cs-card">
+          <div class="cs-row"><div class="cs-txt"><b>Customization</b><p>Add details about your preferences so Copilot can respond your way.</p></div><span class="cs-tog"></span></div>
+          <a class="cs-link2">Customize Copilot</a>
+        </div>
+        <div class="cs-card">
+          <div class="cs-row"><div class="cs-txt"><b>Saved memories</b><p>Allow Copilot to remember details to provide better responses.</p></div><span class="cs-tog"></span></div>
+          <a class="cs-link2">Manage saved memories</a>
+          <div class="cs-row" style="margin-top:18px"><div class="cs-txt"><b>Past chats and work insights</b><p>Let Copilot use past chats and work insights to personalize responses over time. <a class="cs-link">Learn more</a></p></div><span class="cs-tog"></span></div>
+        </div>
+      </div>
+    </div>
+    <p class="caption">Found in the ⋯ menu → Chat settings → Personalization.</p>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Availability.</b> Copilot memory — <b>Customization</b>, <b>Saved memories</b> and <b>Past chats</b> — works for both <b>Copilot Chat (Basic)</b> and <b>M365 Copilot (Premium)</b>. The <b>work insights</b> signals in "Past chats and work insights" draw on <b>Work IQ</b>, which is Premium. These controls are currently <b>in preview</b>. <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-personalization-memory">Learn more →</a></p>
+    </div>
+
+  <div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-architecture" rel="noopener" target="_blank">Microsoft 365 Copilot architecture — how a prompt is processed</a> — Microsoft Learn<span class="ps-n">Module 2 · 9 of 9</span></div></div></section>
+<div class="pagenav"><a class="pn-prev" href="../module-1-meet-copilot/">&larr; <span class="pn-lbl">Previous</span> Module 1</a><a class="pn-next" href="../module-3-prompting/"><span class="pn-lbl">Next</span> Module 3 &rarr;</a></div>
+<div class="sitefoot"><span>Microsoft 365 Copilot &mdash; End-User Coursework</span>
+<a href="../index.html">Course outline</a>
+<a href="../M365CopilotTutorial.html">Single-page version</a></div>
+</div>
+</body></html>

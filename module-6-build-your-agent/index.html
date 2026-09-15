@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Build Your Own Agent — Microsoft 365 Copilot Coursework</title>
+<link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+<input class="navtoggle-cb" id="navtoggle" type="checkbox"/>
+<label class="navtoggle-btn" for="navtoggle" aria-label="Show or hide the course menu"><span class="nt-bars"><i></i><i></i><i></i></span>Menu</label>
+<nav id="sidenav" aria-label="Course navigation">
+  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft 365 Copilot</div><div class="sn-sub">End-user coursework</div></div></div>
+  <div class="sn-eyebrow">Agenda</div>
+  <a class="sn-top" href="../index.html">Course Outline</a>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-1-meet-copilot/"><span class="sn-num">1</span>Meet Copilot &amp; Where to Access It</a>
+    <ul class="sn-list">
+      <li><a href="../module-1-meet-copilot/#p1-what">What Copilot is</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-access">Where to access it</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-browser">Browser</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-app">Copilot app</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-inapp">In-app (Premium)</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-2-fundamentals/"><span class="sn-num">2</span>Copilot Fundamentals &amp; Safe Use</a>
+    <ul class="sn-list">
+      <li><a href="../module-2-fundamentals/#m2-edp">Enterprise Data Protection</a></li>
+      <li><a href="../module-2-fundamentals/#m2-terms">Key terms</a></li>
+      <li><a href="../module-2-fundamentals/#m2-model">Choosing your model</a></li>
+      <li><a href="../module-2-fundamentals/#m2-grounding">Work IQ</a></li>
+      <li><a href="../module-2-fundamentals/#m2-files">Bringing your files in</a></li>
+      <li><a href="../module-2-fundamentals/#p1-try">Try it yourself</a></li>
+      <li><a href="../module-2-fundamentals/#m2-settings">Chat settings</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-3-prompting/"><span class="sn-num">3</span>Prompting Like a Pro</a>
+    <ul class="sn-list">
+      <li><a href="../module-3-prompting/#m3-ingredients">The four ingredients</a></li>
+      <li><a href="../module-3-prompting/#m3-vague-to-valuable">From vague to valuable</a></li>
+      <li><a href="../module-3-prompting/#m3-extend-converse">Extending &amp; conversing</a></li>
+      <li><a href="../module-3-prompting/#m3-best-practices">7 best practices</a></li>
+      <li><a href="../module-3-prompting/#m3-tips">Prompting tips</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-4-office-apps/"><span class="sn-num">4</span>Copilot in the Office Apps</a>
+    <ul class="sn-list">
+      <li><a href="../module-4-office-apps/#m4-outlook">Outlook</a></li>
+      <li><a href="../module-4-office-apps/#m4-teams">Teams</a></li>
+      <li><a href="../module-4-office-apps/#m4-word">Word</a></li>
+      <li><a href="../module-4-office-apps/#m4-excel">Excel</a></li>
+      <li><a href="../module-4-office-apps/#m4-ppt">PowerPoint</a></li>
+      <li><a href="../module-4-office-apps/#m4-notebooks">Copilot Notebooks</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-5-first-party-agents/"><span class="sn-num">5</span>First-Party Agents</a>
+    <ul class="sn-list">
+      <li><a href="../module-5-first-party-agents/#m5-what">What are first-party agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-weppt-agents">Word, Excel &amp; PowerPoint Agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-researcher-analyst">Researcher &amp; Analyst</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork">Cowork</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork-skills">Custom skills</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod on" href="../module-6-build-your-agent/"><span class="sn-num">6</span>Build Your Own Agent</a>
+    <ul class="sn-list">
+      <li><a href="#m6-agents">Agents &amp; harnesses</a></li>
+      <li><a href="#m6-agentbuilder">Agent Builder</a></li>
+      <li><a href="#m6-instructions">Instructions &amp; knowledge</a></li>
+      <li><a href="#m6-skills">Skills</a></li>
+      <li><a href="#m6-copilot-studio">Copilot Studio</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../beyond-the-basics/"><span class="sn-num">+</span>Beyond the Basics</a>
+    <ul class="sn-list">
+      <li><a href="../beyond-the-basics/#xb-tool-choice">Which tool should I use?</a></li>
+      <li><a href="../beyond-the-basics/#xb-data-sources">Data sources</a></li>
+    </ul>
+  </div>
+</nav>
+<label class="nav-scrim" for="navtoggle" aria-hidden="true"></label>
+<header class="hero"><div class="hero-inner"><span class="kicker">Module 6</span><h1 class="modh">Build Your Own Agent</h1><p>Part of <b>Getting Started with Microsoft 365 Copilot</b> — a hands-on course from your first prompt to building your own agents.</p></div></header>
+<div class="wrap">
+<aside class="ms-disclaimer" role="note" aria-label="Disclaimer">
+  <h3><span aria-hidden="true">&#9888;</span> Disclaimer</h3>
+  <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+  <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+  <p><strong><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Learn</a> is the source of truth.</strong> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+</aside>
+<section id="module6"><div class="page">
+    <span class="eyebrow">Module 6</span>
+    <h2>Build Your Own Agent — Agents, Agent Builder &amp; Copilot Studio</h2>
+    <p class="lead">When you chat with Microsoft 365 Copilot — or use one of its built-in, first-party agents — you're <b>prompting</b>: typing what you want, each time. An agent turns that around. Instead of prompting, you save your prompt as the agent's <b>instructions</b>, so it works that way every time. This module goes in three steps: what an agent actually <b>is</b> (and what a harness is), how to build one with no code in <b>Agent Builder</b>, how to package repeatable work as <b>skills</b>, and when to graduate to <b>Copilot Studio</b>.</p><div class="agenthero">
+<span class="ah-tile" style="background:linear-gradient(140deg,#2aa8c4,#1b6fb8)"><svg aria-hidden="true" fill="none" height="30" viewBox="0 0 24 24" width="30"><rect height="11" rx="3" stroke="#fff" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="#fff" r="1.2"></circle><circle cx="14.5" cy="12.5" fill="#fff" r="1.2"></circle><path d="M12 7V4M9 4h6" stroke="#fff" stroke-linecap="round" stroke-width="1.7"></path></svg></span>
+<div>
+<h4>From prompting to building</h4>
+<p>Everything so far has been you <b>typing</b> what you want. An agent is that prompt made permanent — written once as instructions, pointed at the right knowledge, and handed to whoever needs it.</p>
+</div>
+</div>
+<div class="journey">
+<div class="jstep">
+<div class="jn">1</div>
+<h5>Know what you’re choosing</h5>
+<p>Agent = model + harness. The harness decides what your design can even express.</p>
+</div>
+<div class="jstep">
+<div class="jn">2</div>
+<h5>Build it, no code</h5>
+<p>Agent Builder inside Microsoft 365 Copilot: instructions, knowledge, prompts, share.</p>
+</div>
+<div class="jstep">
+<div class="jn">3</div>
+<h5>Package what repeats</h5>
+<p>Skills turn a procedure you keep re-explaining into a module the agent reaches for.</p>
+</div>
+<div class="jstep">
+<div class="jn">4</div>
+<h5>Graduate when it’s time</h5>
+<p>Copilot Studio when you hit the walls — memory, loops, transactions, outside reach.</p>
+</div>
+</div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-overview" rel="noopener" target="_blank">Agents overview — Microsoft Copilot Studio</a> — Microsoft Learn<span class="ps-n">Module 6 · 1 of 12</span></div></div><div class="page">
+
+    <div class="subhead first" id="m6-agents"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1.1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1.1"></circle><path d="M12 7V4M9 4h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> Agents &amp; harnesses — what you're actually choosing</div>
+    <p class="m2-intro">An LLM on its own is <b>not</b> an agent: it generates text and stops. What turns it into something that performs work is the <b>harness</b> — the runtime scaffolding around the model. The harness decides when to call the model, what to send it, how to read what comes back, and which tool to call next. It also manages conversation state and context, applies approval policies, and keeps a multi-step task moving.</p>
+    <div class="promptbox" style="text-align:center;font-size:18px;line-height:1.6">
+      Agent = <span class="hl g">LLM</span> + <span class="hl c">Harness</span>
+    </div>
+    <p class="m2-intro" style="margin-top:14px">Notice what that means: <b>neither term is something you write.</b> You select a model and you select a harness. What you author is the third thing — the <b>design layer</b> — and it has exactly three components.</p>
+    <div class="methods">
+      <div class="method">
+        <div class="m-ic">I</div>
+        <h4>Instructions</h4>
+        <p>The agent's role, scope, tone and boundaries — and how it should call resources, fill tool inputs and respond.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">K</div>
+        <h4>Knowledge</h4>
+        <p>The grounding sources it answers from — SharePoint, files, connectors, approved websites — so answers are anchored, not invented.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">T</div>
+        <h4>Tools</h4>
+        <p>What it can <b>do</b> beyond talking — connectors, APIs, MCP servers, flows, and other agents it can invoke.</p>
+      </div>
+    </div>
+    <p class="m2-intro" style="margin-top:14px">The design layer is built <b>around</b> the harness, never independently of it. The harness decides which of the three you can express, how richly, and whether some are available at all. So: <b>choose the harness first, then design into it.</b></p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview" rel="noopener" target="_blank">Harnesses in Copilot Studio</a> — Microsoft Learn<span class="ps-n">Module 6 · 2 of 12</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 4v16M7 8h10M5 12l2-4 2 4a2 2 0 01-4 0zM15 12l2-4 2 4a2 2 0 01-4 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Three harnesses, three approaches</div>
+    <p class="m2-intro">Microsoft offers three. They aren't three tiers of one product — they're three different answers to “what happens to my instructions, knowledge and tools at runtime?”</p>
+    <table class="cmptable">
+      <thead><tr><th>Consideration</th><th>Copilot chat</th><th>Standard</th><th>GitHub Copilot</th></tr></thead>
+      <tbody>
+        <tr><td>Best for</td><td>Extending M365 Copilot Chat with enterprise knowledge</td><td>Rule-based agents and structured conversations</td><td>Complex, multi-step business processes</td></tr>
+        <tr><td>How it works</td><td>Connects enterprise knowledge to M365 Copilot Chat</td><td>Follows the topics and rules you define</td><td>Reasons through a goal on its own, step by step</td></tr>
+        <tr><td>You build it in</td><td><b>Agent Builder</b> (and declarative agents in Copilot Studio)</td><td>Copilot Studio</td><td>Copilot Studio</td></tr>
+        <tr><td>Recovers from problems</td><td>Not a focus</td><td>Follows the paths you built</td><td>Retries and finds alternative paths automatically</td></tr>
+        <tr><td>Works with files</td><td>Not a focus in the harness — but it <b>generates</b> Word, Excel, PowerPoint and PDF through <b>code interpreter</b></td><td>Not a focus in the harness — but a <b>tool can do it</b>: a connector action or agent flow (SharePoint, OneDrive, Excel Online) creates or edits the file. It is <b>deterministic</b> — you map the target file, the location and the change yourself, and the agent only triggers it</td><td>Creates, <b>edits</b> and reasons over Word, Excel, PowerPoint and PDF <b>natively</b> — no wiring</td></tr>
+        <tr><td>Skills &amp; memory</td><td>Not a focus</td><td>Not a focus</td><td>Yes — both, natively</td></tr>
+        <tr><td>Publishing</td><td>Internal teams</td><td>Internal teams or external customers</td><td>Internal teams or external customers</td></tr>
+        <tr><td>Billing</td><td>Consumption, or included in the M365 Copilot license</td><td>Standard-harness licensing</td><td>Copilot Credits (usage-based, including build and test)</td></tr>
+      </tbody>
+    </table>
+    <p class="caption">The harness you pick is inherited, not negotiated: instruction ceilings, whether tools can be orchestrated across steps, and whether knowledge is reasoned over or merely retrieved are all harness properties. Read “not a focus” as <i>the harness won’t do it for you</i> rather than <i>impossible</i> — on the standard harness, files are a <b>wiring</b> job you author; on the GitHub Copilot harness they are a <b>capability</b> you inherit.</p>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>The planning rule.</b> Choose the <b>least capable harness that still clears the requirement</b>, then design instructions, knowledge and tools to fit it. Capability you don't need is cost, governance surface and latency that you do pay for.</p>
+    </div>
+    <div class="confuse">
+      <svg aria-hidden="true" fill="none" height="20" viewBox="0 0 24 24" width="20"><path d="M12 4l9 16H3l9-16z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path><path d="M12 10v4M12 17v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.9"></path></svg>
+      <p><b>Common mistake — blaming the model for what the harness owns.</b> “The agent forgot what we discussed” is a state-and-context problem. “It stopped after one step” is an orchestration-loop problem. “It couldn't produce the Excel file” is a harness-capability problem. Swapping the model fixes none of these.</p>
+    </div>
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-overview" rel="noopener" target="_blank">Agents overview — Copilot Studio</a> · <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview" rel="noopener" target="_blank">Harnesses in Copilot Studio</a> · <a href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness" rel="noopener" target="_blank">Agent harness — Microsoft Agent Framework</a>.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview" rel="noopener" target="_blank">Harnesses in Copilot Studio</a> — Microsoft Learn<span class="ps-n">Module 6 · 3 of 12</span></div></div><div class="page">
+
+    <div class="subhead" id="m6-agentbuilder"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Agent Builder inside Microsoft 365 Copilot</div><div class="subsub first"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1.1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1.1"></circle><path d="M12 7V4M9 4h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> What you see when you open Agent Builder</div>
+    <p class="m2-intro">Describe your agent in plain language on the left, and fine-tune it on the right under <b>Configure</b>.</p>
+    <div class="browser">
+      <div class="chrome">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="urlbar"><svg aria-hidden="true" class="lock" fill="none" height="13" viewBox="0 0 24 24" width="13"><rect fill="currentColor" height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"></path></svg><b>m365.cloud.microsoft/agents/new</b></div>
+      </div>
+      <div class="agwin">
+        <div class="agw-top">
+          <span class="agw-pill"><span class="agdot"></span> Agent Builder</span>
+          <span class="agw-pill" style="margin-inline-start:auto">Configure <svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span>
+          <span class="agw-icons" style="margin-inline-start:auto"><span class="agw-create">Create</span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span>
+        </div>
+        <div class="agw-body">
+          <div class="agw-rail">
+            <span class="cplogo" style="width:22px;height:20px"></span>
+            <svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg>
+            <svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg>
+            <svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="14" rx="1" stroke="currentColor" stroke-width="1.5" width="3.4" x="4" y="5"></rect><rect height="14" rx="1" stroke="currentColor" stroke-width="1.5" width="3.4" x="10.3" y="5"></rect><rect height="12" rx="1" stroke="currentColor" stroke-width="1.5" width="3.4" x="16.6" y="7"></rect></svg>
+          </div>
+          <div class="agw-mid">
+            <div class="agw-ttl">Build your own specialist agent</div>
+            <div class="agw-describe"><span style="font-size:16px">+</span> Message Agent Builder <span style="margin-inline-start:auto"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span></div>
+          </div>
+          <div class="agw-cfg">
+            <div class="aghero"><span class="agav"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M9.5 8.5L6 12l3.5 3.5M14.5 8.5L18 12l-3.5 3.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><div><b>New Agent</b><span class="aghs">Describe your agent <svg aria-hidden="true" fill="none" height="13" style="vertical-align:-1px" viewBox="0 0 24 24" width="13"><path d="M4 20h5M6 17l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></div><span class="agmodel">Auto <svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></div><div class="agc"><div class="agc-h"><span class="agc-t">Instructions</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></span></div><div class="ag-field ag-ta">Describe what this agent should do, define its tone, and outline any rules or guidelines it must follow</div></div>
+            <div class="agc"><div class="agc-h"><span class="agc-t">Knowledge</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><circle cx="12" cy="12" r="3.1" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 3.6v2M12 18.4v2M3.6 12h2M18.4 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span></span></div>
+              <div class="agdrop">Focus your agent by adding specific knowledge sources<br/><span class="agadd"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg> Add knowledge</span></div>
+              <div class="ag-row" style="margin-top:6px"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"></circle><path d="M3.8 12h16.4M12 3.8c2.3 2.4 2.3 13.9 0 16.4M12 3.8c-2.3 2.4-2.3 13.9 0 16.4" stroke="currentColor" stroke-width="1.2"></path></svg></span> Web search <span class="ag-tog"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="caption">From <b>Agents</b>, choose <b>New agent</b>. Chat your way to an agent on the left, or open <b>Configure</b> on the right and set it up field by field.</p>
+
+    <p class="m2-intro" style="margin-top:16px">The first time you open the refreshed <b>Configure</b> panel, Agent Builder tells you what changed. Three things matter before you build:</p>
+    <ul class="tips-list">
+      <li><b>“Uploaded files” is now “Attachments.”</b> Same section, clearer name.</li>
+      <li><b>Every agent can write code and create Word, Excel and PowerPoint files</b> — on by default.</li>
+      <li><b>Every agent can generate graphics and illustrations</b> — on by default.</li>
+    </ul>
+    <p class="m2-intro">Those last two mean a new agent arrives with them already switched on — the <b>Capabilities</b> controls are still there if you want to turn something off. <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">Learn more about what changed →</a></p>
+    <p class="m2-intro" style="margin-top:14px">One thing to note before we dive in: the Configure page is the same shape for everyone, but <b>M365 Copilot (Premium)</b> and <b>Copilot Chat (Basic)</b> users don't see the same sections. Next, both views on one page — switch between them with the toggle.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents" rel="noopener" target="_blank">Build agents using Agent Builder in Microsoft 365 Copilot</a> — Microsoft Learn<span class="ps-n">Module 6 · 4 of 12</span></div></div><div class="page">
+
+        <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span> <span class="lic-badge basic">Copilot Chat (Basic)</span></div>
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M5 4h11l3 3v13H5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span> The Configuration Page — Premium vs. Basic</div>
+    <p class="m2-intro">The Configure page is the same shape for both licenses, but they don't show the same sections. Switch the view to compare.</p>
+    <div class="licview">
+      <input checked="checked" class="lv-rb" id="lv-prem" name="lv-agentbuilder" type="radio"/>
+      <input class="lv-rb" id="lv-basic" name="lv-agentbuilder" type="radio"/>
+      <div class="lvswitch">
+        <label class="lvtab lv-t-prem" for="lv-prem">M365 Copilot (Premium)</label>
+        <label class="lvtab lv-t-basic" for="lv-basic">Copilot Chat (Basic)</label>
+      </div>
+      <div class="lvpane lv-p-prem">
+        <h4 class="lvpane-h">Configuration Page for M365 Copilot (Premium) User</h4>
+        <p class="m2-intro">Scroll <b>Configure</b> to set the agent up end to end — name, <b>Instructions</b>, <b>Skills</b>, <b>Knowledge</b> with its <b>Work content</b> switches, and <b>Suggested prompts</b>.</p>
+    <div class="agpage">
+      <div class="aghero"><span class="agav"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M9.5 8.5L6 12l3.5 3.5M14.5 8.5L18 12l-3.5 3.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><div><b>New Agent</b><span class="aghs">Describe your agent <svg aria-hidden="true" fill="none" height="13" style="vertical-align:-1px" viewBox="0 0 24 24" width="13"><path d="M4 20h5M6 17l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></div><span class="agmodel">Auto <svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></div><div class="agc"><div class="agc-h"><span class="agc-t">Instructions</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></span></div><div class="ag-field ag-ta">Describe what this agent should do, define its tone, and outline any rules or guidelines it must follow</div></div>
+      <div class="agc">
+        <div class="agc-h"><span class="agc-t">Skills</span><i class="agi">i</i><span class="agtag">Preview</span><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg> Add <svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></span></div>
+        <div class="agdrop">Add skills to specialize this agent</div>
+      </div>
+      <div class="agc">
+        <div class="agc-h"><span class="agc-t">Knowledge</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M20 11a8 8 0 10-1.6 5.4M20 5v5h-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><circle cx="12" cy="12" r="3.1" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 3.6v2M12 18.4v2M3.6 12h2M18.4 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span></span></div>
+        <div class="agdrop">Focus your agent by adding specific knowledge sources<br/><span class="agadd"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg> Add knowledge</span> <span style="margin-inline-start:6px">or just drop files here</span></div>
+        <div class="aggrp">Work content <i class="agi">i</i></div>
+        <div class="ag-row"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M7 18a4 4 0 01-.5-7.97 5 5 0 019.6-1.4A3.5 3.5 0 0117 18H7z" fill="#c7e0f4" stroke="#0f6cbd" stroke-linejoin="round" stroke-width="1.4"></path></svg></span> Cloud files <span class="ag-tog"></span></div>
+        <div class="ag-row"><span class="agrow-ic"><span class="ic-outlook" style="width:17px;height:17px"></span></span> Outlook <span class="ag-tog"></span></div>
+        <div class="ag-row"><span class="agrow-ic"><span class="ic-teams" style="width:17px;height:17px"></span></span> Teams <span class="ag-tog"></span></div>
+        <div class="ag-row"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M9 3v5M15 3v5M7 8h10v3a5 5 0 01-10 0V8zM12 16v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Copilot connectors <span class="agtag">None</span> <span style="color:var(--ink-faint)">›</span> <span class="ag-tog"></span></div>
+        <div class="ag-row"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"></circle><path d="M3.8 12h16.4M12 3.8c2.3 2.4 2.3 13.9 0 16.4M12 3.8c-2.3 2.4-2.3 13.9 0 16.4" stroke="currentColor" stroke-width="1.2"></path></svg></span> Web search <span class="ag-tog"></span></div>
+        <div class="ag-row"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Attachments <i class="agi">i</i> <span class="agtag">None</span></div>
+      </div>
+      <div class="agc"><div class="agc-h"><span class="agc-t">Suggested prompts</span><i class="agi">i</i></div><div class="ag-sp-head"><span>Title</span><span>Message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-add">+ Add a suggested prompt</div></div>
+    </div>
+    <p class="caption">The Premium Configure page, top to bottom. <b>Work content</b> is the Work IQ half — Cloud files, Outlook, Teams and Copilot connectors, each its own switch — and it is the part a Basic user does not get.</p>
+      </div>
+      <div class="lvpane lv-p-basic">
+        <h4 class="lvpane-h">Configuration Page for Copilot Chat (Basic) User</h4>
+        <p class="m2-intro">Same page, fewer sections: <b>no Skills</b> card and <b>no Work content</b>. Knowledge is the sources you add plus, if you switch it on, the public web.</p>
+    <div class="agpage">
+      <div class="aghero"><span class="agav"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M9.5 8.5L6 12l3.5 3.5M14.5 8.5L18 12l-3.5 3.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><div><b>New Agent</b><span class="aghs">Describe your agent <svg aria-hidden="true" fill="none" height="13" style="vertical-align:-1px" viewBox="0 0 24 24" width="13"><path d="M4 20h5M6 17l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></div><span class="agmodel">Auto <svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></div><div class="agc"><div class="agc-h"><span class="agc-t">Instructions</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span></span></div><div class="ag-field ag-ta">Describe what this agent should do, define its tone, and outline any rules or guidelines it must follow</div></div>
+      <div class="agc">
+        <div class="agc-h"><span class="agc-t">Knowledge</span><i class="agi">i</i><span class="agc-r"><span class="agbtn"><svg aria-hidden="true" fill="currentColor" height="11" viewBox="0 0 24 24" width="11"><path d="M7 7h4v4c0 2.2-1.6 4-3.6 4.3V13H7V7zm7 0h4v4c0 2.2-1.6 4-3.6 4.3V13H14V7z"></path></svg> Suggest improvements</span><span class="agbtn"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><circle cx="12" cy="12" r="3.1" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 3.6v2M12 18.4v2M3.6 12h2M18.4 12h2M6.1 6.1l1.4 1.4M16.5 16.5l1.4 1.4M17.9 6.1l-1.4 1.4M7.5 16.5l-1.4 1.4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span></span></div>
+        <div class="agdrop">Focus your agent by adding specific knowledge sources<br/><span class="agadd"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg> Add knowledge</span></div>
+        <div class="ag-row" style="margin-top:6px"><span class="agrow-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"></circle><path d="M3.8 12h16.4M12 3.8c2.3 2.4 2.3 13.9 0 16.4M12 3.8c-2.3 2.4-2.3 13.9 0 16.4" stroke="currentColor" stroke-width="1.2"></path></svg></span> Web search <span class="ag-tog"></span></div>
+      </div>
+      <div class="agc"><div class="agc-h"><span class="agc-t">Suggested prompts</span><i class="agi">i</i></div><div class="ag-sp-head"><span>Title</span><span>Message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-sp-row"><span class="ag-field">Enter a title</span><span class="ag-field">Enter a message</span></div><div class="ag-add">+ Add a suggested prompt</div></div>
+    </div>
+    <p class="caption">On Copilot Chat (Basic) there is no <b>Work content</b> block and no <b>Skills</b> card — the agent grounds on what you attach and, with <b>Web search</b> on, the public web. File creation still works: every agent can write code and produce Word, Excel and PowerPoint files.</p>
+      </div>
+    </div>
+    <div class="lvdiff">
+      <div class="lvd-h">What Premium adds</div>
+      <ul>
+        <li><b>Skills</b> card (preview) — absent on Basic.</li>
+        <li><b>Work content</b> switches under Knowledge — Cloud files, Outlook, Teams and Copilot connectors.</li>
+      </ul>
+      <p>Both licenses share the agent header, <b>Instructions</b>, <b>Knowledge</b> with <b>Web search</b>, and <b>Suggested prompts</b> — and on both, every agent can write code and create Word, Excel and PowerPoint files.</p>
+    </div>
+    <div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents" rel="noopener" target="_blank">Build agents using Agent Builder in Microsoft 365 Copilot</a> — Microsoft Learn<span class="ps-n">Module 6 · 5 of 12</span></div></div><div class="page">
+
+    <div class="subhead" id="m6-instructions"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Instructions, knowledge sources &amp; sharing</div><div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 7h10M18 7h2M4 12h2M10 12h10M4 17h7M15 17h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path><circle cx="15" cy="7" r="2.2" stroke="currentColor" stroke-width="1.7"></circle><circle cx="8" cy="12" r="2.2" stroke="currentColor" stroke-width="1.7"></circle><circle cx="13" cy="17" r="2.2" stroke="currentColor" stroke-width="1.7"></circle></svg></span> Configuring your Agent in Agent Builder</div>
+    <p class="m2-intro">On the <b>Configure</b> tab you shape the agent through four parts.</p>
+    <div class="plist">
+      <div class="prow"><div class="prail"><div class="pn">1</div></div><div class="pbody"><h4>Instructions</h4><p>Tell the agent how to behave — its tasks, tone, rules, steps and examples. This is where your prompt becomes the agent’s standing brief. (Up to 8,000 characters.)</p></div></div>
+      <div class="prow"><div class="prail"><div class="pn">2</div></div><div class="pbody"><h4>Knowledge</h4><p>Choose the sources the agent grounds its answers in. Premium can use files, emails, chats, meetings, websites and the org chart; Basic is limited to specific websites.</p></div></div>
+      <div class="prow"><div class="prail"><div class="pn">3</div></div><div class="pbody"><h4>Skills &amp; capabilities</h4><p>Add <b>Skills</b> (preview) to specialize the agent on a task. Capabilities now arrive switched on — every new agent can write code, create Word, Excel and PowerPoint files, and generate graphics — and the controls stay available if you want to turn one off.</p></div></div>
+      <div class="prow"><div class="prail"><div class="pn">4</div></div><div class="pbody"><h4>Suggested prompts</h4><p>Add starter prompts (a Title and a Message) so people know how to begin with your agent.</p></div></div>
+    </div>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Character limits.</b> <b>Name</b> — up to 30 characters. <b>Description</b> — up to 1,000. <b>Instructions</b> — up to 8,000. Keep instructions focused; for longer or more complex logic, split it into steps or move to Copilot Studio. <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents">Learn more →</a></p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge" rel="noopener" target="_blank">Add knowledge sources to your agent in Agent Builder</a> — Microsoft Learn<span class="ps-n">Module 6 · 6 of 12</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="16" rx="1.5" stroke="currentColor" stroke-width="1.6" width="7" x="4" y="4"></rect><rect height="16" rx="1.5" stroke="currentColor" stroke-width="1.6" width="7" x="13" y="4"></rect></svg></span> Considerations: Grounded Knowledge vs. Attached Cloud Files</div>
+    <p class="m2-intro">When you hand Copilot documents to work from, there are two ways to do it — and they behave differently. <b>Grounded knowledge</b> is a <b>knowledge source you wire into the agent at build time</b> (for example, a SharePoint folder) — it lets Copilot <i>find</i> the relevant bits across many documents. <b>Attached cloud files</b> are files you <b>attach to the prompt at runtime</b> — they point Copilot straight at specific files so it reads them thoroughly. In short: grounded knowledge optimizes for <b>relevance</b> across a library; attached files optimize for <b>completeness</b> on the few you attach.</p>
+    <div class="cmp2">
+      <div class="cbox brand"><div class="cb-h">Grounded knowledge (build time) — use when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li>You're searching a <b>large document library</b></li><li>You're answering <b>FAQ-style</b> questions</li><li>You're <b>discovering</b> things — "which policy mentions X?", "what are the common themes?"</li></ul></div>
+      <div class="cbox hi"><div class="cb-h">Attached cloud files (at the prompt) — use when…</div><ul style="margin:8px 0 0;padding-inline-start:18px;font-size:12.5px;color:var(--ink-soft);line-height:1.6"><li><b>Legal or policy review</b> and validation</li><li><b>Exception analysis</b></li><li>"<b>Make sure you don't miss anything</b>" tasks on specific files</li></ul></div>
+    </div>
+    <div style="overflow-x:auto;margin-top:16px">
+    <table class="cmptable">
+      <tbody><tr><th>What to consider</th><th>Grounded Knowledge <span style="font-weight:400;display:block;font-size:11px;opacity:.85">knowledge source · build time</span></th><th>Attached Cloud Files <span style="font-weight:400;display:block;font-size:11px;opacity:.85">attached at the prompt · runtime</span></th></tr>
+      <tr><td>How it finds answers</td><td>Searches and pulls the most relevant pieces (semantic search)</td><td>Reads the file you point it at, directly</td></tr>
+      <tr><td>Default behavior</td><td>"Find what's relevant"</td><td>"This file is the source"</td></tr>
+      <tr><td>Reads the whole file?</td><td>Documented: with <b>up to 20 files</b> Copilot searches the <b>full contents</b> of all of them. Past that it leans on retrieval and picks the relevant parts</td><td>Yes — it reads the files you point it at</td></tr>
+      <tr><td>Risk of missing content</td><td>Higher if your prompt is vague</td><td>Low</td></tr>
+      <tr><td>How specific your prompt must be</td><td>High</td><td>Medium</td></tr>
+      <tr><td>Best for</td><td>Q&amp;A across a large library</td><td>Deep analysis of one to a few files</td></tr>
+      <tr><td>How you provide files</td><td>At build time: upload files, or point at SharePoint/OneDrive files, folders or sites</td><td><b>Uploaded</b> — drop or upload into the chat  ·  <b>From SharePoint/OneDrive</b> — the "Attach cloud files" picker (a file or a whole folder)</td></tr>
+      <tr><td>Max file size</td><td>Uploaded: <b>512 MB</b> for DOC/DOCX, PDF, PPT/PPTX and TXT · <b>30 MB</b> for XLS/XLSX. SharePoint/OneDrive picks: no fixed size limit — supported file types only</td><td><b>Uploaded</b> — up to ~<b>512 MB</b>/file on licensed Copilot Chat (tenant admins may set lower caps)  ·  <b>From SharePoint/OneDrive</b> — the file as it sits; Copilot reads a portion of it</td></tr>
+      <tr><td>Max number of files</td><td><b>≤ 20</b> uploaded  ·  <b>≤ 100</b> SharePoint  ·  <b>≤ 50</b> OneDrive (per agent)</td><td><b>Uploaded</b> — a handful per prompt (multi-file; no published count)  ·  <b>From SharePoint/OneDrive</b> — a file or a whole folder; Copilot uses a subset (no published count)</td></tr>
+    </tbody></table>
+    </div>
+    <p class="caption">Microsoft documents that with <b>up to 20</b> knowledge files Copilot searches the full contents of all of them — the relevance-versus-completeness trade-off below bites hardest above that number. Limits shown are for the <b>M365 Copilot Agent Builder</b>; <b>Copilot Studio</b> uploads differ (up to 500 files, 512 MB each). Runtime prompt-attachment counts aren't published as a single figure and vary by surface and tenant. Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge">agent knowledge sources</a> · <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas">Copilot Studio quotas &amp; limits</a> · <a href="https://support.microsoft.com/en-us/Microsoft-365-Copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot">Refer to specific files in M365 Copilot</a>.
+    </p><div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Rule of thumb.</b> Reach for <b>grounded knowledge</b> (a build-time knowledge source) when you're searching a big pile of documents for the right answer. <b>Attach cloud files at the prompt</b> when you need Copilot to read specific documents from top to bottom — like a legal or policy review where missing a line matters.</p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge" rel="noopener" target="_blank">Add knowledge sources to your agent in Agent Builder</a> — Microsoft Learn<span class="ps-n">Module 6 · 7 of 12</span></div></div><div class="page">
+
+  <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span><span class="t-chip">Preview · Frontier</span></div>
+  <div class="subhead" id="m6-skills"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 5l-4 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Skills — packaging work your agent repeats</div>
+    <p class="m2-intro">Agent Builder gives your agent <b>8,000 characters</b> of instructions. That is a real design budget, and it is the reason <b>skills</b> exist. A skill is a modular capability you add to an agent so it performs a specific task more reliably and repeatably — not more knowledge, and not another tool, but a packaged <b>procedure</b> with the assets and scripts that procedure needs travelling alongside it. <b>An agent is the “who”; a skill is the “how”.</b></p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-skills" rel="noopener" target="_blank">Custom skills in declarative agents (preview)</a> — Microsoft Learn<span class="ps-n">Module 6 · 8 of 12</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 3l8 4.2v9.6L12 21l-8-4.2V7.2L12 3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path><path d="M4 7.2l8 4.2 8-4.2M12 11.4V21" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path></svg></span> The anatomy of a skill</div>
+    <p class="m2-intro">A skill is a file directory. Exactly one file is mandatory.</p>
+    <div class="methods">
+      <div class="method">
+        <div class="m-ic">1</div>
+        <h4><span class="mono">SKILL.md</span> — required</h4>
+        <p>YAML front matter carries the <b>name and description</b> — what the orchestrator reads to decide when the skill applies, so they're load-bearing, not labels. Below it, the procedure itself.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">2</div>
+        <h4>Resource files — optional</h4>
+        <p>The assets the task needs: branded templates, KPI definitions, reference tables, schemas.</p>
+      </div>
+      <div class="method">
+        <div class="m-ic">3</div>
+        <h4>Scripts — optional</h4>
+        <p>Code you control instead of code the model improvises — the same transformation, the same chart, every run.</p>
+      </div>
+    </div>
+    <p class="caption">A worked example from the documentation: a finance team's <b>quarterly business review</b> skill bundles the instructions for producing the review, scripts that transform the data and build the charts, and assets such as financial models, KPI definitions and branded slide templates.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-skills" rel="noopener" target="_blank">Custom skills in declarative agents (preview)</a> — Microsoft Learn<span class="ps-n">Module 6 · 9 of 12</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M12 4v16M7 8h10M5 12l2-4 2 4a2 2 0 01-4 0zM15 12l2-4 2 4a2 2 0 01-4 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Why a skill instead of longer instructions</div>
+    <div class="cmp2">
+      <div class="cbox hi"><div class="cb-h">Optimized context</div><p><b>Progressive disclosure</b> — the model loads a skill's instructions and contents only when the task needs them, so context stays focused as your skill library grows.</p></div>
+      <div class="cbox hi"><div class="cb-h">Scale without quality loss</div><p>Decompose complex guidance into modules: longer, more specific direction without degrading instruction-following or hitting the 8,000-character ceiling.</p></div>
+      <div class="cbox hi"><div class="cb-h">Reusable assets</div><p>Instructions, resources and scripts ship together as one integrable capability.</p></div>
+      <div class="cbox hi"><div class="cb-h">Enterprise-ready</div><p>Scripts run in a secure sandbox, sensitivity labels on skill files are retained and honored, and files are stored in tenant-scoped SharePoint Embedded containers.</p></div>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-skills" rel="noopener" target="_blank">Custom skills in declarative agents (preview)</a> — Microsoft Learn<span class="ps-n">Module 6 · 10 of 12</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.7" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1.1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1.1"></circle><path d="M12 7V4M9 4h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> Limits to design around</div>
+    <table class="cmptable">
+      <thead><tr><th>Item</th><th>Agent Builder</th><th>Microsoft 365 Agents Toolkit</th></tr></thead>
+      <tbody>
+        <tr><td>Max skills per agent</td><td>8</td><td>8</td></tr>
+        <tr><td>Package format</td><td>Compressed <span class="mono">.zip</span>, max 50 MB</td><td>Skill directory — <span class="mono">.zip</span> not supported</td></tr>
+        <tr><td>Max file size</td><td>25 MB per file</td><td>No skill-level limit; app package capped at 10 MB</td></tr>
+        <tr><td>Max files</td><td>350 files across all skills</td><td>350 files across all skills</td></tr>
+        <tr><td>Directory depth</td><td>Maximum 3</td><td>Maximum 3</td></tr>
+        <tr><td>Reuse across agents</td><td colspan="2">Not supported at this stage of the preview</td></tr>
+        <tr><td>Skills + embedded files</td><td colspan="2">Cannot be combined yet — support planned</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Does this change the harness? No.</b> Agent Builder still produces <b>declarative agents on the Copilot chat harness</b> — custom skills are a new component <i>inside</i> the agent, not a migration to a different runtime. Skill scripts run in a sandbox with <b>no network access, no package installation and no authenticated network calls</b>; connectors, API plugins and MCP servers stay available to the agent through the orchestrator, but scripts can't reach them. Skills raise the <b>ceiling</b> of this harness — longer, more repeatable instruction sets — without moving the <b>walls</b>. If your requirement fails on memory, reasoning loops, transactions, file <i>editing</i> or external publishing, skills won't rescue it; a harness change will.</p>
+    </div>
+    
+    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-skills" rel="noopener" target="_blank">Custom skills in declarative agents (preview)</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-skills" rel="noopener" target="_blank">Add custom skills in Agent Builder</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions" rel="noopener" target="_blank">Write effective instructions for declarative agents</a> — Microsoft Learn.</p><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-skills" rel="noopener" target="_blank">Custom skills in declarative agents (preview)</a> — Microsoft Learn<span class="ps-n">Module 6 · 11 of 12</span></div></div><div class="page">
+
+  <div class="subhead" id="m6-copilot-studio"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M8.6 12.3l2.3 2.3 4.6-4.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Copilot Studio — the maker harness, and when to graduate</div>
+    <p class="m2-intro">Copilot Studio is where the other two harnesses live. The <b>standard harness</b> is the classic Copilot Studio most makers know: you author <b>topics</b>, prompts and paths, and the agent responds consistently to well-understood requests — an internal help desk that answers common questions and routes simple ones through a flow. The <b>GitHub Copilot harness</b> is the most capable option: it takes a goal, breaks it into steps, calls tools across connectors, knowledge, MCP and connected agents, <b>adjusts when a step fails</b>, natively creates and <b>edits</b> Word, Excel, PowerPoint and PDF, and supports skills and memory. It is <b>generally available</b> in Copilot Studio — you choose the harness when you create an agent — and usage is billed in <b>Copilot Credits</b>, including build and test.</p>
+    <div class="cmp2">
+      <div class="cbox lo"><div class="cb-h">Stay in Agent Builder when…</div><p>One person's job, answered from knowledge you can attach or reach through Work IQ; one grounding pass plus one tool call produces a complete answer; the deliverable is a <b>generated</b> file; publishing is to your team.</p></div>
+      <div class="cbox hi"><div class="cb-h">Graduate to Copilot Studio when…</div><p>You hit the <b>walls</b>: memory across a task, reasoning loops, transactions against a line-of-business system, <b>editing</b> an existing document in place, autonomous or event-triggered runs, multi-user orchestration, or reach outside the tenant.</p></div>
+    </div>
+    <p class="m2-intro" style="margin-top:14px">Reach for the <b>lightest tool that does the job</b>. The same three tiers that power Copilot also decide <b>where you build an agent</b> and <b>what the agent you build can do</b> — you only <b>graduate to Copilot Studio</b> when an agent needs Tier-3 reach.</p>
+    <p class="m2-intro" style="font-style:italic;color:var(--ink-faint);font-size:12px;margin-top:2px">Always check these capabilities and boundaries against the latest Microsoft Learn release every time you do solutioning.</p>
+    <div class="tiers">
+      <div class="tier t1">
+        <div class="tlabel">Tier 1</div>
+        <h4>Microsoft 365 Copilot Chat (Basic)</h4>
+        <div class="tcreate">Build with: Agent Builder (Basic)</div>
+        <p>Create simple agents from instructions and the knowledge you attach. <b>No Work IQ</b> — the agent can't reach your wider M365 data on its own.</p>
+        <ul>
+          <li>Answers from instructions + the web</li>
+          <li>Grounds on files you attach or upload</li>
+          <li>One user, person-in-the-loop</li>
+        </ul>
+      </div>
+      <div class="tier t2">
+        <div class="tlabel">Tier 2</div>
+        <h4>Microsoft 365 Copilot (Premium)</h4>
+        <div class="tcreate">Build with: Agent Builder</div>
+        <p>Create no-code agents grounded on <b>Work IQ</b> — your files, emails, chats &amp; SharePoint — on <b>GPT</b> models.</p>
+        <ul>
+          <li>Reads &amp; acts over your own M365 data</li>
+          <li>Multi-step work within one identity</li>
+          <li>Generates documents, decks &amp; Excel; scheduled digests</li>
+          <li>Person-reviewed output</li>
+        </ul>
+      </div>
+      <div class="tier t3">
+        <div class="tlabel">Tier 3</div>
+        <h4>Copilot Studio (extensibility)</h4>
+        <div class="tcreate">Build with: Copilot Studio (low-code, IT-governed)</div>
+        <p>Build custom, centrally governed agents wired into line-of-business systems via <b>connectors</b> and <b>Power Automate</b>.</p>
+        <ul>
+          <li>Line-of-business system integration</li>
+          <li>Autonomous event-/schedule-triggered runs</li>
+          <li>Cross-entity / multi-user orchestration</li>
+          <li>External / non-tenant access (no Entra ID)</li>
+          <li>Choose <b>GPT or Anthropic</b> models in the agent's configuration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>The usual path — prototype, then harden.</b> Prove the idea fast in <b>Agent Builder</b> (Tier 1–2), then rebuild it in <b>Copilot Studio</b> (Tier 3) when it needs system connectors, autonomous triggers, multi-user orchestration or external reach. If a task stays within one person's identity and a human reviews the output, you usually <b>don't</b> need Copilot Studio at all.</p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-overview" rel="noopener" target="_blank">Agents overview — Microsoft Copilot Studio</a> — Microsoft Learn<span class="ps-n">Module 6 · 12 of 12</span></div></div></section>
+<div class="pagenav"><a class="pn-prev" href="../module-5-first-party-agents/">&larr; <span class="pn-lbl">Previous</span> Module 5</a><a class="pn-next" href="../beyond-the-basics/"><span class="pn-lbl">Next</span> Beyond the Basics &rarr;</a></div>
+<div class="sitefoot"><span>Microsoft 365 Copilot &mdash; End-User Coursework</span>
+<a href="../index.html">Course outline</a>
+<a href="../M365CopilotTutorial.html">Single-page version</a></div>
+</div>
+</body></html>

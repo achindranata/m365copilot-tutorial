@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Copilot in the Office Apps — Microsoft 365 Copilot Coursework</title>
+<link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+<input class="navtoggle-cb" id="navtoggle" type="checkbox"/>
+<label class="navtoggle-btn" for="navtoggle" aria-label="Show or hide the course menu"><span class="nt-bars"><i></i><i></i><i></i></span>Menu</label>
+<nav id="sidenav" aria-label="Course navigation">
+  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft 365 Copilot</div><div class="sn-sub">End-user coursework</div></div></div>
+  <div class="sn-eyebrow">Agenda</div>
+  <a class="sn-top" href="../index.html">Course Outline</a>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-1-meet-copilot/"><span class="sn-num">1</span>Meet Copilot &amp; Where to Access It</a>
+    <ul class="sn-list">
+      <li><a href="../module-1-meet-copilot/#p1-what">What Copilot is</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-access">Where to access it</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-browser">Browser</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-app">Copilot app</a></li>
+      <li><a href="../module-1-meet-copilot/#p1-inapp">In-app (Premium)</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-2-fundamentals/"><span class="sn-num">2</span>Copilot Fundamentals &amp; Safe Use</a>
+    <ul class="sn-list">
+      <li><a href="../module-2-fundamentals/#m2-edp">Enterprise Data Protection</a></li>
+      <li><a href="../module-2-fundamentals/#m2-terms">Key terms</a></li>
+      <li><a href="../module-2-fundamentals/#m2-model">Choosing your model</a></li>
+      <li><a href="../module-2-fundamentals/#m2-grounding">Work IQ</a></li>
+      <li><a href="../module-2-fundamentals/#m2-files">Bringing your files in</a></li>
+      <li><a href="../module-2-fundamentals/#p1-try">Try it yourself</a></li>
+      <li><a href="../module-2-fundamentals/#m2-settings">Chat settings</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-3-prompting/"><span class="sn-num">3</span>Prompting Like a Pro</a>
+    <ul class="sn-list">
+      <li><a href="../module-3-prompting/#m3-ingredients">The four ingredients</a></li>
+      <li><a href="../module-3-prompting/#m3-vague-to-valuable">From vague to valuable</a></li>
+      <li><a href="../module-3-prompting/#m3-extend-converse">Extending &amp; conversing</a></li>
+      <li><a href="../module-3-prompting/#m3-best-practices">7 best practices</a></li>
+      <li><a href="../module-3-prompting/#m3-tips">Prompting tips</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod on" href="../module-4-office-apps/"><span class="sn-num">4</span>Copilot in the Office Apps</a>
+    <ul class="sn-list">
+      <li><a href="#m4-outlook">Outlook</a></li>
+      <li><a href="#m4-teams">Teams</a></li>
+      <li><a href="#m4-word">Word</a></li>
+      <li><a href="#m4-excel">Excel</a></li>
+      <li><a href="#m4-ppt">PowerPoint</a></li>
+      <li><a href="#m4-notebooks">Copilot Notebooks</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-5-first-party-agents/"><span class="sn-num">5</span>First-Party Agents</a>
+    <ul class="sn-list">
+      <li><a href="../module-5-first-party-agents/#m5-what">What are first-party agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-weppt-agents">Word, Excel &amp; PowerPoint Agents</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-researcher-analyst">Researcher &amp; Analyst</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork">Cowork</a></li>
+      <li><a href="../module-5-first-party-agents/#m5-cowork-skills">Custom skills</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../module-6-build-your-agent/"><span class="sn-num">6</span>Build Your Own Agent</a>
+    <ul class="sn-list">
+      <li><a href="../module-6-build-your-agent/#m6-agents">Agents &amp; harnesses</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-agentbuilder">Agent Builder</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-instructions">Instructions &amp; knowledge</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-skills">Skills</a></li>
+      <li><a href="../module-6-build-your-agent/#m6-copilot-studio">Copilot Studio</a></li>
+    </ul>
+  </div>
+  <div class="sn-group">
+    <a class="sn-mod" href="../beyond-the-basics/"><span class="sn-num">+</span>Beyond the Basics</a>
+    <ul class="sn-list">
+      <li><a href="../beyond-the-basics/#xb-tool-choice">Which tool should I use?</a></li>
+      <li><a href="../beyond-the-basics/#xb-data-sources">Data sources</a></li>
+    </ul>
+  </div>
+</nav>
+<label class="nav-scrim" for="navtoggle" aria-hidden="true"></label>
+<header class="hero"><div class="hero-inner"><span class="kicker">Module 4</span><h1 class="modh">Copilot in the Office Apps</h1><p>Part of <b>Getting Started with Microsoft 365 Copilot</b> — a hands-on course from your first prompt to building your own agents.</p></div></header>
+<div class="wrap">
+<aside class="ms-disclaimer" role="note" aria-label="Disclaimer">
+  <h3><span aria-hidden="true">&#9888;</span> Disclaimer</h3>
+  <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+  <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+  <p><strong><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Learn</a> is the source of truth.</strong> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+</aside>
+<section id="module4"><div class="page">
+    <span class="eyebrow">Module 4</span>
+    <h2>Copilot in the Office Apps</h2>
+    <p class="lead">In Word, Excel, PowerPoint, Outlook and Teams, Copilot works right where you do. The key idea to grasp first: Copilot can write straight into the file you have open — not just answer in a side pane.</p>
+
+    <div class="subhead first"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 20h5M6 17l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Editing Mode — Copilot writes into your open object</div>
+    <p class="m2-intro">Inside an Office app, Copilot can do two things: <b>chat</b> with you in the side pane, or switch to <b>Editing Mode</b> and put content directly into the document, email, spreadsheet or deck in front of you.</p>
+    <div class="cmp2">
+      <div class="cbox lo"><div class="cb-h">Ask in chat</div><p>Copilot answers in the side pane. You read the result and copy what you need into your file.</p></div>
+      <div class="cbox brand"><div class="cb-h">Editing Mode</div><p>Copilot writes the content straight into the open object — drafting a Word document, filling Excel cells, building PowerPoint slides or composing an Outlook email.</p></div>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/office/copilot-frontier/get-started-editing-with-copilot-in-office" rel="noopener" target="_blank">Get started editing with Copilot in Office</a> — Microsoft Support<span class="ps-n">Module 4 · 1 of 8</span></div></div><div class="page">
+
+    <div class="subhead"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="6" rx="1.4" stroke="currentColor" stroke-width="1.7" width="6" x="4" y="4"></rect><rect height="6" rx="1.4" stroke="currentColor" stroke-width="1.7" width="6" x="14" y="4"></rect><rect height="6" rx="1.4" stroke="currentColor" stroke-width="1.7" width="6" x="4" y="14"></rect><rect height="6" rx="1.4" stroke="currentColor" stroke-width="1.7" width="6" x="14" y="14"></rect></svg></span> Copilot, app by app</div>
+    <p class="m2-intro">We'll go through Copilot one app at a time. First up: Outlook.</p>
+
+    <!-- ===== 4.1 Copilot in Outlook ===== -->
+    <div class="lic-row"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-outlook"><span class="sx" style="background:transparent"><span class="ic-outlook" style="width:24px;height:24px"></span></span> Copilot in Outlook</div>
+    <p class="m2-intro">Copilot helps you cut through your inbox — it summarizes long threads, drafts replies for you, and helps you catch up.</p>
+    <div class="update-note">
+      <svg aria-hidden="true" class="un-ic" fill="none" height="22" viewBox="0 0 24 24" width="22"><rect height="15" rx="2" stroke="currentColor" stroke-width="1.7" width="16" x="4" y="5"></rect><path d="M4 9h16M8 3v4M16 3v4" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg>
+      <div>
+        <span class="un-tag">What's new · April 2026</span>
+        <p>Even on <b>Copilot Chat (Basic)</b>, Copilot in Outlook reaches past the email you have open — <b>emails, calendar items, meetings, chats</b> and a bounded set of related files. Note the boundary: Basic uses a <b>limited set of organizational content with reduced grounding</b> compared with Microsoft 365 Copilot (Premium), so the deepest cross-mailbox questions still want a Premium license. <a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58">Learn more →</a></p>
+      </div>
+    </div>
+
+    <div class="ix">
+      <input class="ixcb" id="ix-ol" type="checkbox"/>
+    <div class="outlook-win">
+      <div class="ol-bar">
+        <span class="ol-title"><span class="ic-outlook" style="width:16px;height:16px"></span> Outlook</span>
+        <span class="ol-search"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.7"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg> Search to ask Copilot</span>
+        <span class="ol-cop"><span class="cplogo" style="width:14px;height:12px"></span> Copilot</span>
+      </div>
+      <div class="ol-body">
+        <div class="ol-folders">
+          <div class="ol-fold active">Inbox</div>
+          <div class="ol-fold">Drafts</div>
+          <div class="ol-fold">Sent Items</div>
+          <div class="ol-fold">Deleted Items</div>
+          <div class="ol-fold">Archive</div>
+        </div>
+        <div class="ol-list">
+          <div class="ol-tabs"><span class="ol-tab active">Focused</span><span class="ol-tab">Other</span></div>
+          <div class="ol-mail"><div class="ol-from">Priya Menon <span class="ol-time">10:24</span></div><div class="ol-subj">Q3 planning — your input?</div><div class="ol-prev">Can you review the draft before Friday…</div></div>
+          <div class="ol-mail sel"><div class="ol-from">Jordan Avery <span class="ol-time">09:48</span></div><div class="ol-subj">Regional enablement sessions</div><div class="ol-prev">We'd love your team to join the…</div></div>
+          <div class="ol-mail"><div class="ol-from">Marco Diaz <span class="ol-time">Yest</span></div><div class="ol-subj">Budget sign-off</div><div class="ol-prev">Approved — see the note attached…</div></div>
+        </div>
+        <div class="ol-read">
+          <div class="ol-sum">
+            <span class="cplogo" style="width:18px;height:16px;flex:none"></span>
+            <div><b>Summary by Copilot</b><p>Jordan invites your team to three regional enablement sessions and asks you to forward the invite to stakeholders and confirm who will attend.</p></div>
+          </div>
+          <div class="ol-subject">Regional enablement sessions — save your seat</div>
+          <div class="ol-meta"><span class="ol-av">JA</span> Jordan Avery &lt;jordan.avery@contoso.com&gt; · 09:48</div>
+          <div class="ol-mbody">Hi Adelia,<br/><br/>We'd love your team to join our upcoming regional enablement series — three short sessions to help your specialists get more from Copilot. Could you share the invite with the right stakeholders and let me know who plans to attend?<br/><br/>Thanks,<br/>Jordan</div>
+          <div class="ol-reply">
+            <div class="ol-to">To <span class="ol-chip">Jordan Avery ×</span></div>
+            <div class="ol-helpreply ixhide">Start typing, or <label class="hr-pill ixbtn" for="ix-ol"><span class="cplogo" style="width:14px;height:12px"></span> Help me reply</label> <span style="font-size:11.5px">(Alt + I)</span></div>
+            <div class="ixout ol-drafted">
+              <div class="ix-think"><span class="ix-dots"><i></i><i></i><i></i></span> Copilot is reading the thread…</div>
+              <div class="ol-typed">
+                <span class="ty" style="--d:1.0s;--t:.45s">Hi Jordan,</span>
+                <span class="ty" style="--d:1.5s;--t:1.5s">Thanks for the invite — we'd love to join the regional enablement series.</span>
+                <span class="ty" style="--d:3.1s;--t:1.6s">I'll forward it to our specialists today and confirm the attendee list by Friday.</span>
+                <span class="ty" style="--d:4.8s;--t:1.4s">Could you also share the session times and any prerequisites?</span>
+                <span class="ty" style="--d:6.3s;--t:.4s">Thanks,</span>
+                <span class="ty last" style="--d:6.8s;--t:.4s">Adelia</span>
+              </div>
+            </div>
+            <div class="ol-sendrow"><span class="ol-send">Send</span><span class="ol-discard">Discard</span><span style="margin-inline-start:auto;font-size:11px;color:var(--ink-faint)">Draft saved</span><label class="ixreset ixout" for="ix-ol">↻ Reset</label></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p class="caption">Select <b>Help me reply</b> in the compose box above — Copilot drafts the reply in place. Three Copilot touchpoints to spot: the <b>Copilot</b> toggle in the toolbar, <b>Summary by Copilot</b> at the top of a long email, and <b>Help me reply</b> in the compose box.</p>
+
+    
+    
+
+    <h3 style="margin-top:30px">Example Use Case Prompts</h3>
+    <div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Summarize this thread, list every decision and open action item, and flag anything that’s waiting on me.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Draft a reply accepting Thursday’s review, propose 30 minutes instead of an hour, and ask for the deck in advance.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/topic/chat-with-copilot-in-outlook-8090e7b3-5b1d-4c6d-9b06-02edac062f58" rel="noopener" target="_blank">Chat with Copilot in Outlook</a> — Microsoft Support<span class="ps-n">Module 4 · 2 of 8</span></div></div><div class="page">
+
+    <!-- ===== placeholders ===== -->
+        <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-teams"><span class="sx" style="background:transparent"><span class="ic-teams" style="width:24px;height:24px"></span></span> Copilot in Teams</div>
+    <p class="m2-intro">In a Teams meeting, open Copilot to recap the discussion, catch up if you joined late, and pull out decisions and action items — grounded in the live transcript.</p>
+
+    <div class="ix">
+      <input checked="checked" class="ixcb" id="tm-s0" name="tm-step" type="radio"/>
+      <input class="ixcb" id="tm-s1" name="tm-step" type="radio"/>
+      <input class="ixcb" id="tm-s2" name="tm-step" type="radio"/>
+    <div class="teams-win">
+      <div class="tm-topbar">
+        <span class="tm-mtitle">Q3 Campaign Sync</span>
+        <span class="tm-timer"><span class="dot"></span> 24:10</span>
+        <span class="tm-ctrls">
+          <span class="tm-ctrl" title="Chat"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl" title="People"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.6"></circle><path d="M3.5 19a5.5 5.5 0 0111 0M16 7a3 3 0 010 6M21 19a5.5 5.5 0 00-4-5.3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl" title="React"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M8.5 14a4 4 0 007 0M9 9.5v.01M15 9.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span>
+          <span class="tm-ctrl" title="View"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="7" rx="1.4" stroke="currentColor" stroke-width="1.6" width="7" x="4" y="4"></rect><rect height="7" rx="1.4" stroke="currentColor" stroke-width="1.6" width="7" x="13" y="4"></rect><rect height="7" rx="1.4" stroke="currentColor" stroke-width="1.6" width="7" x="4" y="13"></rect><rect height="7" rx="1.4" stroke="currentColor" stroke-width="1.6" width="7" x="13" y="13"></rect></svg></span>
+          <span class="tm-ctrl" title="Notes"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="18" rx="2" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="3"></rect><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl cop" title="Copilot"><span class="cplogo" style="width:15px;height:13px"></span> Copilot</span>
+          <span class="tm-ctrl" title="Camera"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="12" rx="2" stroke="currentColor" stroke-width="1.6" width="13" x="3" y="6"></rect><path d="M16 10l5-3v10l-5-3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl" title="Mic"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl" title="Share"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="12" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="5"></rect><path d="M12 8v5M9.5 10.5L12 8l2.5 2.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span>
+          <span class="tm-ctrl leave" title="Leave"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M5 11c4-3 10-3 14 0l-1.5 2.5-3-.8v-1.8c-1.6-.5-3.4-.5-5 0v1.8l-3 .8L5 11z" fill="currentColor"></path></svg> Leave</span>
+        </span>
+      </div>
+      <div class="tm-body">
+        <div class="tm-stage">
+          <div class="tm-tile"><span class="tm-ava">AC</span><span class="tm-name">Adelia Chindranata</span></div>
+          <div class="tm-tile"><span class="tm-ava">PM</span><span class="tm-name">Priya Menon</span></div>
+          <div class="tm-tile"><span class="tm-ava">MD</span><span class="tm-name">Marco Diaz</span></div>
+          <div class="tm-tile"><span class="tm-ava">JA</span><span class="tm-name">Jordan Avery</span></div>
+        </div>
+        <div class="tm-copilot">
+          <div class="tm-cop-h"><span class="cplogo" style="width:18px;height:16px"></span> Copilot</div>
+          <div class="tm-today">Today</div>
+          <div class="tm-msg tm-s0only">
+            <div class="tm-msg-h"><span class="cplogo" style="width:15px;height:13px"></span> Recap so far</div>
+            Here's where the team landed: ship the new landing page by <b>Friday</b>, Priya owns the copy, and the budget question moves to <b>next week</b>. Marco will confirm the final number with Finance.
+          </div>
+          <div class="tmstage st1">
+            <div class="tm-q">What is this meeting about?</div>
+            <div class="ix-think dark"><span class="ix-dots"><i></i><i></i><i></i></span> Reading the transcript…</div>
+            <div class="tm-msg">
+              <div class="tm-msg-h"><span class="cplogo" style="width:15px;height:13px"></span> Copilot</div>
+              <span class="ty" style="--d:1.0s;--t:1.7s">This is the weekly Q3 campaign sync — the team is tracking the new landing page.</span>
+              <span class="ty" style="--d:2.8s;--t:1.6s">It ships <b>Friday</b>, Priya owns the copy, Marco checks the budget.</span>
+              <span class="ty" style="--d:4.5s;--t:1.5s">Open question: the paid-media number, which moves to next week.</span>
+              <span class="ty" style="--d:6.1s;--t:1.2s">Two decisions and three action items so far.</span>
+            </div>
+          </div>
+          <div class="tmstage st2">
+            <div class="tm-q">Tell me more about previous engagements before this meeting</div>
+            <div class="ix-think dark"><span class="ix-dots"><i></i><i></i><i></i></span> Looking across your emails, chats and past meetings…</div>
+            <div class="tm-msg">
+              <div class="tm-msg-h"><span class="cplogo" style="width:15px;height:13px"></span> Copilot</div>
+              <span class="ty" style="--d:1.0s;--t:1.6s">You've met this group three times this quarter — the last on 2 September.</span>
+              <span class="ty" style="--d:2.7s;--t:1.7s">Then the launch date slipped a week and the creative brief was reopened.</span>
+              <span class="ty" style="--d:4.5s;--t:1.6s">Jordan's email on 9 September asked for the enablement sessions.</span>
+              <span class="ty" style="--d:6.2s;--t:1.4s">Still open from last time: the budget sign-off Marco raised again today.</span>
+              <div class="tm-cites"><span class="tm-cite">Meeting · 2 Sep</span><span class="tm-cite">Email · Jordan Avery</span><span class="tm-cite">Teams chat</span></div>
+            </div>
+          </div>
+          <div class="tm-sugg">
+            <label class="tm-sug ixbtn tmchip1" for="tm-s1">What is this meeting about?</label>
+            <label class="tm-sug ixbtn tmchip2" for="tm-s2">Tell me more about previous engagements before this meeting</label>
+            <label class="tm-sug ixreset tmreset" for="tm-s0">↻ Reset</label>
+            <div class="tm-input">Ask about this meeting <span class="send"><svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M4 12l16-7-7 16-2-7-7-2z" fill="#fff"></path></svg></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p class="caption">Ask the first question in the Copilot pane above, then follow up — the first answer comes from the meeting, the second reaches across your past meetings, emails and chats. The <b>Copilot</b> toggle sits in the meeting toolbar — open it during or after a meeting. Turn on <b>transcription</b> so Copilot can answer questions about what was said.</p>
+
+    
+    
+
+    <h3 style="margin-top:30px">Example Use Case Prompts</h3>
+    <div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">I joined 20 minutes late — recap what I missed and list the decisions made, with who owns each one.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Pull out every action item with its owner and due date, and flag the ones assigned to me.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/" rel="noopener" target="_blank">Work smarter with Copilot across your Microsoft 365 apps — Microsoft Learn Training</a> — Microsoft Learn<span class="ps-n">Module 4 · 3 of 8</span></div></div><div class="page">
+
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-word"><span class="sx" style="background:transparent"><span class="ic-word" style="width:24px;height:24px"></span></span> Copilot in Word</div>
+    <p class="m2-intro">In Word, Copilot can draft a document from a prompt, rewrite or tighten what you've written, and summarize a long document into key points.</p>
+
+    <div class="ix">
+      <input class="ixcb" id="ix-wd" type="checkbox"/>
+    <div class="word-win">
+        <div class="wd-title">
+          <span class="ic-word" style="width:15px;height:15px"></span>
+          <span class="wd-autosave">AutoSave <span class="wd-mini-toggle"></span> On</span>
+          <span class="wd-name">Q3 Proposal.docx</span>
+          <span class="wd-win-ctl"><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 6h7" stroke="currentColor" stroke-width="1.1"></path></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><rect fill="none" height="7" stroke="currentColor" stroke-width="1.1" width="7" x="2" y="2"></rect></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 2l7 7M9 2l-7 7" stroke="currentColor" stroke-width="1.1"></path></svg></span>
+        </div>
+        <div class="wd-ribbon">
+          <span class="wd-tab">File</span><span class="wd-tab active">Home</span><span class="wd-tab">Insert</span><span class="wd-tab">Draw</span><span class="wd-tab">Design</span><span class="wd-tab">Layout</span><span class="wd-tab">Review</span><span class="wd-tab">View</span>
+          <span class="wd-rspace"></span><span class="wd-editing">Editing ▾</span><span class="wd-share">Share</span>
+        </div>
+        <div class="wd-tools">
+          <span class="wd-grp"><span class="wd-pillbox">Aptos (Body)</span><span class="wd-pillbox">12</span></span>
+          <span class="wd-grp"><b>B</b> <i>I</i> <u>U</u></span>
+          <span class="wd-grp last"><span class="wd-pillbox">Normal</span><span class="wd-pillbox">Heading 1</span></span>
+        </div>
+        <div class="wd-body">
+          <div class="wd-doc">
+            <div class="wd-page">
+              <div class="ixhide">
+                <div class="line title"></div>
+                <div class="line w2"></div><div class="line w3"></div><div class="line w1"></div>
+                <div class="line w2"></div><div class="line w3"></div><div class="line w2"></div><div class="line w1"></div>
+              </div>
+              <div class="ixout wd-typed">
+                <span class="ty tyh" style="--d:1.0s;--t:.9s">Q3 Project Update</span>
+                <span class="ty" style="--d:2.0s;--t:1.6s">Progress. The landing page is in final review and ships this Friday.</span>
+                <span class="ty" style="--d:3.7s;--t:1.5s">The copy is signed off; translations are 80% complete.</span>
+                <span class="ty" style="--d:5.3s;--t:1.6s">Risks. The paid-media budget is unconfirmed and could delay the push.</span>
+                <span class="ty last" style="--d:7.0s;--t:1.6s">Next steps. Confirm the budget, lock the checklist, brief the field team.</span>
+              </div>
+            </div>
+            <div class="wd-fab hot" title="Copilot"><span class="cplogo" style="width:24px;height:21px"></span></div>
+          </div>
+          <div class="wcp">
+            <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-new"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+            <div class="wcp-h">Let's edit your document</div>
+            <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+            <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to edit</div><div class="wcp-irow"><span class="wcp-plus">+</span><span class="wcp-mic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span></div></div>
+            <div class="ixhide">
+              <label class="wcp-card ixbtn" for="ix-wd">Draft a project update</label>
+            </div>
+            <div class="ixout ixpane">
+              <div class="ixp-q">Draft a project update</div>
+              <div class="ix-think"><span class="ix-dots"><i></i><i></i><i></i></span> Copilot is drafting…</div>
+              <div class="ixp-row"><span class="ixp-keep">Keep it</span><span class="ixp-ghost">Regenerate</span><label class="ixreset" for="ix-wd">↻ Reset</label></div>
+            </div>
+            <div class="wcp-foot">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="caption">Select the first prompt in the pane above and Copilot writes the draft straight into the page. Look for the small <b>Copilot</b> button at the bottom-right of your document — click it and the side pane opens, ready to draft, rewrite or summarize.</p>
+
+    <h3 style="margin-top:30px">Applying an agent in Copilot in Word</h3>
+    <p class="m2-intro">Click the <b>+</b> in the Copilot pane to bring an agent into your prompt — like <b>Researcher</b> or <b>Analyst</b>.</p>
+    <div class="amx">
+      <div class="amx-mode">Chat only <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+      <div class="amx-input">
+        <div class="amx-ph">Describe your research, including specific details, keywords, and preferred sources</div>
+        <div class="amx-irow">
+          <span class="amx-plus on">+</span>
+          <span class="amx-agent"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.6"></circle><ellipse cx="12" cy="12" rx="10" ry="3.6" stroke="currentColor" stroke-width="1.4" transform="rotate(-22 12 12)"></ellipse></svg></span>
+          <span class="amx-x">×</span>
+          <span class="amx-mic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span>
+        </div>
+      </div>
+      <div class="amx-menu">
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Add work content</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 16V5M8 9l4-4 4 4M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Upload images and files</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M7 18a4 4 0 01-.5-7.97 5 5 0 019.6-1.4A3.5 3.5 0 0117 18H7z" fill="none" stroke="#0f6cbd" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Attach cloud files</div>
+        <div class="amx-div"></div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="18" rx="2" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="3"></rect><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span> Legal Agent (Frontier)</div>
+        <div class="amx-item"><span class="amx-ic"><span class="ic-researcher" style="width:18px;height:18px"></span></span> Researcher</div>
+        <div class="amx-item"><span class="amx-ic"><span class="ic-analyst" style="width:18px;height:18px"></span></span> Analyst</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg></span> More <span class="amx-chev"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span></div>
+      </div>
+    </div>
+    <div class="confuse">
+      <svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><path d="M12 3l9 16H3l9-16z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M12 10v4M12 16.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Two things to know:</b> only <b>selected agents</b> appear here — not your whole agent catalog. And once an agent is applied, you <b>can't turn on Allow editing</b>: the pane switches to <b>Chat only</b>, so Copilot answers in chat rather than editing the document directly.</p>
+    </div>
+
+    
+    
+
+    <h3 style="margin-top:30px">Example Use Case Prompts</h3>
+    <div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Draft a one-page project update from <span class="mono">/Q3 Status Notes.docx</span> — progress, risks, next steps and a short executive summary.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Rewrite this section for an executive audience: half the length, plain language, and keep the three key figures.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/word/welcome-to-copilot-in-word" rel="noopener" target="_blank">Welcome to Copilot in Word</a> — Microsoft Support<span class="ps-n">Module 4 · 4 of 8</span></div></div><div class="page">
+
+    <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-excel"><span class="sx" style="background:transparent"><span class="ic-excel" style="width:24px;height:24px"></span></span> Copilot in Excel</div>
+    <p class="m2-intro">In Excel, Copilot helps you make sense of data — explore and summarize it, suggest formulas, and build tables and charts.</p>
+
+    <div class="ix">
+      <input class="ixcb" id="ix-xl" type="checkbox"/>
+    <div class="xl-win">
+      <div class="wd-title">
+        <span class="ic-excel" style="width:15px;height:15px"></span>
+        <span class="wd-autosave">AutoSave <span class="wd-mini-toggle off"></span> Off</span>
+        <span class="wd-name">Book1 — Excel</span>
+        <span class="wd-win-ctl"><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 6h7" stroke="currentColor" stroke-width="1.1"></path></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><rect fill="none" height="7" stroke="currentColor" stroke-width="1.1" width="7" x="2" y="2"></rect></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 2l7 7M9 2l-7 7" stroke="currentColor" stroke-width="1.1"></path></svg></span>
+      </div>
+      <div class="wd-ribbon">
+        <span class="wd-tab">File</span><span class="wd-tab active">Home</span><span class="wd-tab">Insert</span><span class="wd-tab">Draw</span><span class="wd-tab">Page Layout</span><span class="wd-tab">Formulas</span><span class="wd-tab">Data</span><span class="wd-tab">Review</span><span class="wd-tab">View</span><span class="wd-tab">Automate</span>
+        <span class="wd-rspace"></span><span class="wd-editing">Comments</span><span class="wd-share">Share</span>
+      </div>
+      <div class="wd-tools">
+        <span class="wd-grp"><span class="wd-pillbox">Aptos Narrow</span><span class="wd-pillbox">11</span> <b>B</b> <i>I</i> <u>U</u></span>
+        <span class="wd-grp"><span class="wd-pillbox">General</span> % ,</span>
+        <span class="wd-grp last">Σ AutoSum</span>
+      </div>
+      <div class="xl-fbar"><span class="xl-namebox">A1</span><span class="xl-fx"><i>fx</i></span><span class="xl-formula"></span></div>
+      <div class="xl-body">
+        <div class="xl-gridwrap">
+          <table class="xl-grid"><tbody><tr><th class="xl-rn"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th></tr><tr><td class="xl-rn">1</td><td class="sel"><span class="xlv" style="--d:1.00s">Quarter</span></td><td><span class="xlv" style="--d:1.12s">Revenue</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">2</td><td><span class="xlv" style="--d:1.24s">Q1</span></td><td><span class="xlv" style="--d:1.30s">412</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">3</td><td><span class="xlv" style="--d:1.36s">Q2</span></td><td><span class="xlv" style="--d:1.42s">468</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">4</td><td><span class="xlv" style="--d:1.48s">Q3</span></td><td><span class="xlv" style="--d:1.54s">505</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">5</td><td><span class="xlv" style="--d:1.60s">Q4</span></td><td><span class="xlv" style="--d:1.66s">601</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="xl-rn">12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+          <div class="ixout xl-chart"><div class="xlc-h">Revenue by quarter</div><div class="xlc-bars"><span class="xlb" style="--h:58%;--d:2.00s"><em></em><b>Q1</b></span><span class="xlb" style="--h:68%;--d:2.18s"><em></em><b>Q2</b></span><span class="xlb" style="--h:74%;--d:2.36s"><em></em><b>Q3</b></span><span class="xlb" style="--h:92%;--d:2.54s"><em></em><b>Q4</b></span></div></div>
+          <div class="wd-fab hot" title="Copilot"><span class="cplogo" style="width:24px;height:21px"></span></div>
+        </div>
+        <div class="wcp">
+            <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#107c10"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+            <div class="wcp-h">Let's edit your workbook</div>
+            <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+            <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to edit</div><div class="wcp-irow"><span class="wcp-plus">+</span><span style="margin-inline-start:6px"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="6" cy="17" r="2" stroke="currentColor" stroke-width="1.6"></circle><circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.6"></circle><circle cx="18" cy="14" r="2" stroke="currentColor" stroke-width="1.6"></circle><path d="M7.6 15.5l3-5M13.6 9.2l3 3.4" stroke="currentColor" stroke-width="1.5"></path></svg></span></div></div>
+            <div class="ixhide">
+              <label class="wcp-card ixbtn" for="ix-xl">Chart revenue by quarter</label>
+            </div>
+            <div class="ixout ixpane">
+              <div class="ixp-q">Chart revenue by quarter</div>
+              <div class="ix-think"><span class="ix-dots"><i></i><i></i><i></i></span> Copilot is analyzing the range…</div>
+              <span class="ty ixp-note" style="--d:3.2s;--t:1.6s">Revenue grew every quarter; Q4 is 46% above Q1.</span>
+              <div class="ixp-row"><span class="ixp-keep xl">Keep it</span><span class="ixp-ghost">Undo</span><label class="ixreset" for="ix-xl">↻ Reset</label></div>
+            </div>
+            <div class="wcp-foot">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <p class="caption">Select the first prompt in the pane above — Copilot writes the quarterly figures into the sheet, then builds the chart. Click the small <b>Copilot</b> button at the bottom-right of the sheet and the side pane opens — ready to explore your data, build tables, suggest formulas and create charts.</p>
+
+    <h3 style="margin-top:30px">Choosing how Copilot works — the edit mode</h3>
+    <p class="m2-intro">Inside the side pane, click <b>Allow editing</b> to switch modes — control whether Copilot edits the workbook directly, plans first, or just chats.</p>
+    <div class="panecard">
+      <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#107c10"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+      <div class="wcp-h" style="margin:14px 0 10px">Let's edit your workbook</div>
+      <span class="modetag">Switch mode</span>
+      <div class="wcp-allow" style="margin:6px 0 0">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+      <div class="modemenu" style="margin-top:9px;width:auto">
+        <div class="mode-item"><svg aria-hidden="true" class="m-ic" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 20h5M6 17l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg><div class="m-tx"><b>Allow editing</b><span>Copilot can edit your workbook directly.</span></div><svg aria-hidden="true" class="m-chk" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+        <div class="mode-item"><svg aria-hidden="true" class="m-ic" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="17" rx="2" stroke="currentColor" stroke-width="1.6" width="12" x="6" y="4"></rect><rect height="3" rx="1" stroke="currentColor" stroke-width="1.4" width="6" x="9" y="2.6"></rect><path d="M9 11l1.1 1.1L12 10.3M9 16l1.1 1.1L12 15.3M14 11.2h2.4M14 16.2h2.4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path></svg><div class="m-tx"><b>Plan</b><span>Come up with a plan before editing.</span></div></div>
+        <div class="mode-item"><svg aria-hidden="true" class="m-ic" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg><div class="m-tx"><b>Chat only</b><span>Copilot will respond in chat only.</span></div></div>
+      </div>
+      <div class="wcp-foot">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+    </div>
+
+    <h3 style="margin-top:30px">Bringing content into Excel — the + menu</h3>
+    <p class="m2-intro">Click the <b>+</b> in the prompt box to add context or set up your sheet.</p>
+    <div class="panecard">
+      <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#107c10"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+      <div class="wcp-h" style="margin:14px 0 10px">Let's edit your workbook</div>
+      <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+      <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to edit</div><div class="wcp-irow"><span class="wcp-plus green">+</span><span style="margin-inline-start:6px"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="6" cy="17" r="2" stroke="currentColor" stroke-width="1.6"></circle><circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.6"></circle><circle cx="18" cy="14" r="2" stroke="currentColor" stroke-width="1.6"></circle><path d="M7.6 15.5l3-5M13.6 9.2l3 3.4" stroke="currentColor" stroke-width="1.5"></path></svg></span></div></div>
+      <div class="amx-menu" style="margin-top:10px;width:auto">
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Add work content</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 16V5M8 9l4-4 4 4M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Upload images and files</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="18" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="3"></rect><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke="currentColor" stroke-width="1.3"></path></svg></span> Create workbook rules</div>
+      </div>
+      <div class="wcp-foot">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+    </div>
+
+
+    <h3 style="margin-top:30px">Example Use Case Prompts</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Analyze this table by region and quarter, highlight the three biggest movers, and explain what’s driving them.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Add a column flagging orders shipped more than five days late, then chart the monthly trend.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/office/copilot-frontier/get-started-editing-with-copilot-in-office" rel="noopener" target="_blank">Get started editing with Copilot in Office</a> — Microsoft Support<span class="ps-n">Module 4 · 5 of 8</span></div></div><div class="page">
+    
+
+        <div class="lic-row"><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-ppt"><span class="sx" style="background:transparent"><span class="ic-ppt" style="width:24px;height:24px"></span></span> Copilot in PowerPoint</div>
+    <p class="m2-intro">In PowerPoint, Copilot can build a whole deck from a prompt or a document, add and design slides, and summarize a presentation.</p>
+
+        <div class="ix">
+      <input class="ixcb" id="ix-pp" type="checkbox"/>
+        <div class="ppt-win">
+      <div class="wd-title">
+        <span class="ic-ppt" style="width:15px;height:15px"></span>
+        <span class="wd-autosave">AutoSave <span class="wd-mini-toggle off"></span> Off</span>
+        <span class="wd-name">Presentation1 — PowerPoint</span>
+        <span class="wd-win-ctl"><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 6h7" stroke="currentColor" stroke-width="1.1"></path></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><rect fill="none" height="7" stroke="currentColor" stroke-width="1.1" width="7" x="2" y="2"></rect></svg><svg aria-hidden="true" height="11" viewBox="0 0 11 11" width="11"><path d="M2 2l7 7M9 2l-7 7" stroke="currentColor" stroke-width="1.1"></path></svg></span>
+      </div>
+      <div class="wd-ribbon">
+        <span class="wd-tab">File</span><span class="wd-tab active">Home</span><span class="wd-tab">Insert</span><span class="wd-tab">Draw</span><span class="wd-tab">Design</span><span class="wd-tab">Transitions</span><span class="wd-tab">Animations</span><span class="wd-tab">Slide Show</span><span class="wd-tab">Review</span><span class="wd-tab">View</span>
+        <span class="wd-rspace"></span><span class="wd-editing">Comments</span><span class="wd-share">Share</span>
+      </div>
+      <div class="wd-tools">
+        <span class="wd-grp"><span class="wd-pillbox">New Slide</span><span class="wd-pillbox">Layout</span></span>
+        <span class="wd-grp"><span class="wd-pillbox">Aptos</span> <b>B</b> <i>I</i> <u>U</u></span>
+        <span class="wd-grp last"><span class="wd-pillbox">Designer</span></span>
+      </div>
+      <div class="ppt-body">
+        <div class="ppt-thumbs">
+          <div class="ppt-thumb"><span class="tn">1</span><div class="ppt-mini"><span class="m1 ixhide"></span><span class="m2 ixhide"></span><span class="ixout mini-fill mf-title"></span></div></div>
+          <div class="ixout ppt-thumb ppn" style="--d:2.1s"><span class="tn">2</span><div class="ppt-mini"><span class="mini-fill mf-bullets"></span></div></div>
+          <div class="ixout ppt-thumb ppn" style="--d:3.0s"><span class="tn">3</span><div class="ppt-mini"><span class="mini-fill mf-chart"><i style="--h:42%"></i><i style="--h:68%"></i><i style="--h:92%"></i></span></div></div>
+        </div>
+        <div class="ppt-stage">
+          <div class="ppt-slide"><div class="pt ixhide">Click to add title</div><div class="ps ixhide">Click to add subtitle</div>
+            <div class="ixout pp-made">
+              <span class="ppm-band"></span>
+              <span class="ppm-ring"></span>
+              <span class="ppm-chip">Q3 · FY26</span>
+              <span class="ppm-body">
+                <span class="ty ppm-kicker" style="--d:1.0s;--t:.5s">CAMPAIGN LAUNCH</span>
+                <span class="ty ppm-title" style="--d:1.5s;--t:1.0s">Going live in Q3</span>
+                <span class="ppm-rule" style="--d:2.5s"></span>
+                <span class="ty ppm-sub" style="--d:2.7s;--t:1.1s">Regional rollout · three markets</span>
+              </span>
+            </div>
+          </div>
+          <div class="wd-fab hot" title="Copilot"><span class="cplogo" style="width:24px;height:21px"></span></div>
+        </div>
+        <div class="wcp">
+            <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#c43e1c"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+            <div class="wcp-h">Let's edit your presentation</div>
+            <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+            <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to create or edit</div><div class="wcp-irow"><span class="wcp-plus">+</span></div></div>
+            <div class="ixhide">
+              <label class="wcp-card ixbtn" for="ix-pp">Create a 3-slide deck</label>
+            </div>
+            <div class="ixout ixpane">
+              <div class="ixp-q">Create a 3-slide deck</div>
+              <div class="ix-think"><span class="ix-dots"><i></i><i></i><i></i></span> Copilot is designing your slides…</div>
+              <span class="ty ixp-note" style="--d:3.4s;--t:1.7s">Three slides added, with Designer layouts applied.</span>
+              <div class="ixp-row"><span class="ixp-keep ppt">Keep it</span><span class="ixp-ghost">Add a slide</span><label class="ixreset" for="ix-pp">↻ Reset</label></div>
+            </div>
+            <div class="wcp-foot">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <p class="caption">Select the first prompt in the pane above and Copilot lays out the slides one by one. The small <b>Copilot</b> button at the bottom-right of the slide opens the side pane — start a deck from a prompt, add a slide, or create a branded presentation.</p>
+
+    <h3 style="margin-top:30px">Bringing content into your deck — the + menu</h3>
+    <p class="m2-intro">Click the <b>+</b> in the prompt box to add content, pick a brand, or reach all skills.</p>
+    <div class="panecard">
+      <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#c43e1c"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+      <div class="wcp-h" style="margin:14px 0 10px">Let's edit your presentation</div>
+      <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+      <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to create or edit</div><div class="wcp-irow"><span class="wcp-plus" style="color:#c43e1c;border-color:#c43e1c;box-shadow:0 0 0 3px rgba(196,62,28,.12)">+</span></div></div>
+      <div class="amx-menu" style="margin-top:10px;width:auto">
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M8 12l6-6a3 3 0 014 4l-7 7a5 5 0 01-7-7l6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Add work content</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 16V5M8 9l4-4 4 4M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg></span> Upload files</div>
+        <div class="amx-div"></div>
+        <div class="amx-item" style="background:var(--surface-alt)"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M7 4h10v14l-5-2.5L7 18z" fill="#c43e1c"></path></svg></span> Select brand</div>
+        <div class="amx-item"><span class="amx-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M15.5 12v1.5a2.5 2.5 0 005 0V12a8.5 8.5 0 10-3.3 6.7" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg></span> All skills</div>
+      </div>
+      <div class="wcp-foot" style="margin-top:14px">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+    </div>
+    <h3 style="margin-top:30px">Skills in PowerPoint — shortcuts for the jobs you repeat</h3>
+<p class="m2-intro">Beyond a free-form prompt, the pane carries <b>skills</b> — task-shaped shortcuts for the jobs people ask for again and again. Pick one from the <b>Choose skills</b> menu, or type it directly as an <span class="mono">@</span>mention, instead of describing the task from scratch.</p>
+<div class="panecard">
+<div class="wcp-h" style="margin:2px 0 10px">Let’s edit your presentation</div>
+<div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+<div class="wcp-input">
+<div class="wcp-ph" style="color:var(--ink);font-weight:600">@</div>
+<div class="wcp-irow"><span class="wcp-plus" style="color:#c43e1c;border-color:#c43e1c;box-shadow:0 0 0 3px rgba(196,62,28,.12)">+</span>
+<span class="wcp-mic"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="6" x="9" y="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span>
+<span style="margin-inline-start:10px;width:26px;height:26px;border-radius:50%;background:#c43e1c;color:#fff;display:grid;place-items:center"><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 12h13M13 6l6 6-6 6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span>
+</div>
+</div>
+<div class="sklmenu">
+<div class="sklrow sel"><span class="skl-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="17" x="3.5" y="5.5"></rect><path d="M6 16l4-4 3 3 2-2 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span><span class="skl-tx"><b>Visualize this slide</b><span>Turn text-heavy slides into polished visuals.</span></span></div>
+<div class="sklrow"><span class="skl-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M4 5h16v11H9l-5 4V5z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg></span><span class="skl-tx"><b>Review this presentation</b><span>Improve slides with strong storytelling.</span></span></div>
+<div class="sklrow"><span class="skl-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.6"></circle><path d="M9.8 9.6a2.3 2.3 0 113 2.2v1.1M12.8 16v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span><span class="skl-tx"><b>Prepare for questions</b><span>Predict audience questions or concerns.</span></span></div>
+
+
+<div class="sklrow"><span class="skl-ic"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M6 4h9l4 4v12H6z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9 12h6M9 15.5h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg></span><span class="skl-tx"><b>Manage skills</b></span></div>
+</div>
+</div>
+<p class="caption">Skills are reached two ways: the <b>Choose skills</b> menu, or an <span class="mono">@</span>mention typed straight into the prompt box. <b>Manage skills</b> at the bottom of the list is where you turn them on or off.</p>
+    
+
+    <h3 style="margin-top:30px">Apply your Brand Kit</h3>
+    <p class="m2-intro">Choosing <b>Select brand</b> applies your organization's <b>Brand Kit</b> — its colors, fonts and logos — so your deck comes out on-brand. <b>Manage brand kit</b> opens <b>Microsoft 365 Copilot → Create</b>.</p>
+    <div class="panecard">
+      <div class="wcp-top"><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M9 4v16" stroke="currentColor" stroke-width="1.6"></path></svg><svg aria-hidden="true" fill="none" height="16" viewBox="0 0 24 24" width="16"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6l7-3z" fill="none" stroke="#107c10" stroke-linejoin="round" stroke-width="1.6"></path><path d="M9.3 12l1.8 1.8 3.6-3.8" fill="none" stroke="#107c10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span class="wcp-right"><span class="wcp-auto">Auto <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wcp-new" style="background:#c43e1c"><svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="#fff" stroke-linejoin="round" stroke-width="1.7"></path></svg><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><path d="M6 9l6 6 6-6" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span><svg aria-hidden="true" fill="currentColor" height="16" viewBox="0 0 24 24" width="16"><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle></svg><svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span></div>
+      <div class="wcp-h" style="margin:14px 0 10px">Let's edit your presentation</div>
+      <div class="wcp-allow">Allow editing <svg aria-hidden="true" fill="none" height="13" viewBox="0 0 24 24" width="13"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></div>
+      <div class="wcp-input"><div class="wcp-ph">Describe what you'd like to create or edit</div><div class="wcp-irow"><span class="wcp-plus">+</span></div></div>
+      <div class="brandpanel">
+        <div class="brandpanel-h"><span class="bp-title">Select brand</span><span class="bp-manage">Manage kits</span></div>
+        <div class="brandgrid"><div class="brandcard"><div class="bc-tile"><span class="bc-kit"><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="display:flex;align-items:center;gap:3px"><svg aria-hidden="true" height="13" viewBox="0 0 24 24" width="13"><rect fill="#F25022" height="9" width="9" x="2" y="2"></rect><rect fill="#7FBA00" height="9" width="9" x="13" y="2"></rect><rect fill="#00A4EF" height="9" width="9" x="2" y="13"></rect><rect fill="#FFB900" height="9" width="9" x="13" y="13"></rect></svg><span style="font-size:9px;font-weight:600;color:#555">Microsoft</span></span><div class="bc-swatch"><span style="background:#f25022"></span><span style="background:#ed9b6b"></span><span style="background:#b48ead"></span><span style="background:#7fba00"></span></div></div><div class="bc-name">Microsoft (Test)</div></div><div class="brandcard"><div class="bc-tile"><span class="bc-kit"><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#6b3fa0;font-weight:800;font-style:italic;font-size:13px">adventure</span><div class="bc-swatch"><span style="background:#2b3a8c"></span><span style="background:#ffffff"></span><span style="background:#6b3fa0"></span><span style="background:#5a3a2a"></span></div></div><div class="bc-name">Adventure Works Cycle</div></div><div class="brandcard"><div class="bc-tile"><span class="bc-kit"><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span class="cplogo" style="width:30px;height:27px"></span><div class="bc-swatch"><span style="background:#efe6d8"></span><span style="background:#dfe9f3"></span><span style="background:#0f6cbd"></span></div></div><div class="bc-name">Microsoft Copilot (Test)</div></div><div class="brandcard"><div class="bc-tile"><span class="bc-kit"><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#107c10;font-weight:800;font-size:12px;letter-spacing:.5px">XBOX</span><div class="bc-swatch"><span style="background:#107c10"></span><span style="background:#000000"></span><span style="background:#3a3a3a"></span></div></div><div class="bc-name">XBOX</div></div><div class="brandcard"><div class="bc-tile" style="background:#1b1a1a"><span class="bc-kit"><svg aria-hidden="true" fill="none" height="11" viewBox="0 0 24 24" width="11"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#fff;font-weight:800;font-size:13px">Zava</span><div class="bc-swatch"><span style="background:#1b1a1a"></span><span style="background:#2a8a7a"></span><span style="background:#107c10"></span></div></div><div class="bc-name">Zava</div></div><div class="brandcard"><div class="bc-tile bc-add">+</div></div></div>
+      </div>
+      <div class="wcp-foot" style="margin-top:14px">M365 Copilot (Premium) <svg aria-hidden="true" fill="none" height="14" viewBox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle><path d="M12 11v5M12 8v.01" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></div>
+    </div>
+    <p class="m2-intro" style="margin-top:4px"><a href="https://m365.cloud.microsoft/create/brandkit?"><svg aria-hidden="true" fill="none" height="13" style="vertical-align:-1px" viewBox="0 0 24 24" width="13"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg> m365.cloud.microsoft/create/brandkit</a></p>
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Availability.</b> Brand kits require a <b>Microsoft 365 Copilot (Premium)</b> license. Official brand kits are created and maintained by <b>brand managers</b> — designated by your IT admin — in the Microsoft 365 Copilot app (Create). <a href="https://support.microsoft.com/en-us/Microsoft-365-Copilot/create-and-manage-official-brand-kits-in-the-microsoft-365-copilot-app">Learn more →</a></p>
+    </div>
+        <div class="browser" style="margin-top:26px">
+        <div class="chrome">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="urlbar"><svg aria-hidden="true" class="lock" fill="none" height="13" viewBox="0 0 24 24" width="13"><rect fill="currentColor" height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"></path></svg><b>m365.cloud.microsoft/create/brandkit</b></div>
+        </div>
+        <div class="cpfull">
+          <div class="cpf-side">
+            <div class="cpf-logos"><span class="cplogo" style="width:20px;height:18px"></span><svg aria-hidden="true" fill="currentColor" height="15" viewBox="0 0 24 24" width="15"><circle cx="5" cy="5" r="1.6"></circle><circle cx="12" cy="5" r="1.6"></circle><circle cx="19" cy="5" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="12" cy="12" r="1.6"></circle><circle cx="19" cy="12" r="1.6"></circle><circle cx="5" cy="19" r="1.6"></circle><circle cx="12" cy="19" r="1.6"></circle><circle cx="19" cy="19" r="1.6"></circle></svg></div>
+            <div class="cpf-tabs"><span class="cpf-tab active">Home</span><span class="cpf-tab">Cowork</span></div>
+            <div class="cpf-nav">
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><path d="M4 20h6M6 16l9-9 3 3-9 9H6v-3z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path></svg> New chat</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"></circle><path d="M16 16l4 4" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg> Search</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="4" y="4"></rect><rect height="16" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="10" y="4"></rect><rect height="14" rx="1" stroke="currentColor" stroke-width="1.6" width="4" x="16" y="6"></rect></svg> Library</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="3" stroke="currentColor" stroke-width="1.6" width="16" x="4" y="4"></rect><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg> Tasks</div>
+              <div class="cpf-item"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="11" rx="3" stroke="currentColor" stroke-width="1.6" width="14" x="5" y="7"></rect><circle cx="9.5" cy="12.5" fill="currentColor" r="1"></circle><circle cx="14.5" cy="12.5" fill="currentColor" r="1"></circle><path d="M12 7V4" stroke="currentColor" stroke-width="1.6"></path></svg> Agents</div>
+            </div>
+            <div class="cpf-lbl">Pinned</div>
+            <div class="cpf-pin"><span class="ic-researcher" style="width:18px;height:18px"></span> Researcher</div>
+            <div class="cpf-pin"><span class="ic-analyst" style="width:18px;height:18px"></span> Analyst</div>
+            <div class="cpf-lbl">Chats</div>
+            <div class="cpf-chat">Draft Q3 customer follow-up…</div>
+            <div class="cpf-chat">Onboarding checklist</div>
+            <div class="cpf-prof"><span class="pav">AC</span><div><b>Adelia Chindranata</b><span>M365 Copilot (Premium)</span></div></div>
+          </div>
+          <div class="create-main">
+            <div class="cr-bc">‹ Create</div>
+            <div class="cr-head"><h4>Manage brand kits</h4><span class="cr-new">+ New brand kit</span></div>
+            <div class="cr-tabs"><span class="cr-tab active">All</span><span class="cr-tab">Official</span><span class="cr-tab">Created by you</span><span class="cr-tab">Shared with you</span></div>
+            <div class="cr-grid"><div class="cr-card"><div class="cr-tile"><div class="cr-tile-top"><span class="cr-kit"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="display:flex;align-items:center;gap:3px"><svg aria-hidden="true" height="13" viewBox="0 0 24 24" width="13"><rect fill="#F25022" height="9" width="9" x="2" y="2"></rect><rect fill="#7FBA00" height="9" width="9" x="13" y="2"></rect><rect fill="#00A4EF" height="9" width="9" x="2" y="13"></rect><rect fill="#FFB900" height="9" width="9" x="13" y="13"></rect></svg><span style="font-size:9px;font-weight:600;color:#555">Microsoft</span></span></div><div class="cr-heading" style="color:#1a1a1a">Heading</div><div class="cr-sw"><span style="background:#f25022"></span><span style="background:#ed9b6b"></span><span style="background:#b48ead"></span><span style="background:#7fba00"></span></div></div><div class="cr-name">Microsoft (Test)</div><div class="cr-official">Official</div></div><div class="cr-card"><div class="cr-tile"><div class="cr-tile-top"><span class="cr-kit"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#2b3a8c;font-weight:800;font-style:italic;font-size:13px">adventure</span></div><div class="cr-heading" style="color:#2b3a8c">Heading</div><div class="cr-sw"><span style="background:#2b3a8c"></span><span style="background:#ffffff"></span><span style="background:#6b3fa0"></span><span style="background:#5a3a2a"></span></div></div><div class="cr-name">Adventure Works Cycle</div><div class="cr-official">Official</div></div><div class="cr-card"><div class="cr-tile"><div class="cr-tile-top"><span class="cr-kit"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span class="cplogo" style="width:26px;height:23px"></span></div><div class="cr-heading" style="color:#1a1a1a">Heading</div><div class="cr-sw"><span style="background:#efe6d8"></span><span style="background:#dfe9f3"></span><span style="background:#0f6cbd"></span><span style="background:#8661c5"></span></div></div><div class="cr-name">Microsoft Copilot (Test)</div><div class="cr-official">Official</div></div><div class="cr-card"><div class="cr-tile"><div class="cr-tile-top"><span class="cr-kit"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#107c10;font-weight:800;font-size:12px;letter-spacing:.5px">XBOX</span></div><div class="cr-heading" style="color:#1a1a1a">Heading</div><div class="cr-sw"><span style="background:#107c10"></span><span style="background:#000000"></span><span style="background:#3a3a3a"></span><span style="background:#9bd17a"></span></div></div><div class="cr-name">Xbox Brand Kit (Test)</div><div class="cr-official">Official</div></div><div class="cr-card"><div class="cr-tile"><div class="cr-tile-top"><span class="cr-kit"><svg aria-hidden="true" fill="none" height="12" viewBox="0 0 24 24" width="12"><rect height="13" rx="2" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="7"></rect><path d="M8 7V5.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V7" stroke="currentColor" stroke-width="1.6"></path></svg></span><span style="color:#1a1a1a;font-weight:800;font-size:13px">Zava</span></div><div class="cr-heading" style="color:#1a1a1a">Heading</div><div class="cr-sw"><span style="background:#1b1a1a"></span><span style="background:#2a8a7a"></span><span style="background:#107c10"></span><span style="background:#888888"></span></div></div><div class="cr-name">Zava</div><div class="cr-official">Official</div></div></div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ===== 4.x Copilot Notebooks ===== -->
+    <h3 style="margin-top:30px">Example Use Case Prompts</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Build a 10-slide deck from <span class="mono">/Q3 Business Review.docx</span> — agenda, three findings, one data slide, and recommended next steps.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Review this deck for storytelling: tighten the narrative flow and tell me which slides are too text-heavy.</span></div></div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/office/copilot-frontier/get-started-editing-with-copilot-in-office" rel="noopener" target="_blank">Get started editing with Copilot in Office</a> — Microsoft Support<span class="ps-n">Module 4 · 6 of 8</span></div></div><div class="page"><div class="lic-row" style="margin-top:40px"><span class="lic-badge basic">Copilot Chat (Basic)</span><span class="lic-badge prem">M365 Copilot (Premium)</span></div>
+    <div class="subhead" id="m4-notebooks"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.7" width="13" x="7" y="4"></rect><path d="M7 8H4M7 12H4M7 16H4" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></span> Microsoft 365 Copilot Notebooks</div><div class="agenthero">
+<span class="ah-tile" style="background:linear-gradient(140deg,#7a4fd0,#4a2a9e)"><svg aria-hidden="true" fill="none" height="30" viewBox="0 0 24 24" width="30"><rect height="16" rx="2" stroke="#fff" stroke-width="1.7" width="13" x="7" y="4"></rect><path d="M7 8H4M7 12H4M7 16H4" stroke="#fff" stroke-linecap="round" stroke-width="1.7"></path></svg></span>
+<div>
+<h4>Microsoft 365 Copilot Notebooks</h4>
+<p>A workspace with a <b>fence around it</b>. You decide what goes in; Copilot answers from that and nothing else — so the same question gives you a project answer instead of a company-wide one.</p>
+</div>
+</div>
+<div class="ahfacts">
+<div class="ahfact" style="--c:#0f6cbd"><div class="k">Reaches for</div><div class="v">Only what you put in it — files, pages, meeting notes, chats and links</div></div>
+<div class="ahfact" style="--c:#8661c5"><div class="k">Trades</div><div class="v">Breadth for <b>focus</b> — it won’t wander into your wider OneDrive, mail or the web</div></div>
+<div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">Answers scoped to the project — plus audio overviews and a notebook you can share</div></div>
+</div>
+    <p class="m2-intro">A <b>notebook</b> is an AI-powered workspace scoped to one piece of work. You gather the content that matters — files, Copilot Pages, meeting notes, chats and links — into a single place, and Copilot answers <b>only</b> from the references you added. Nothing more, nothing less: a notebook doesn’t reach into your whole OneDrive, mailbox, Teams chats or the web unless you put those references in it. Add more as the project evolves and the answers update with it.</p>
+
+    <div class="mockout">
+<div class="mo-top"><svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17"><rect height="16" rx="2" stroke="currentColor" stroke-width="1.7" width="13" x="7" y="4"></rect><path d="M7 8H4M7 12H4M7 16H4" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg> Q3 Launch — notebook <span class="mo-badge" style="background:var(--brand-soft);color:var(--brand)">12 references</span></div>
+<div class="nb-body">
+<div class="nb-side">
+<div class="nb-lbl">References</div>
+<div class="nb-ref"><span class="dot"><span class="ic-word" style="width:14px;height:14px"></span></span> Q3 Proposal.docx</div>
+<div class="nb-ref"><span class="dot"><span class="ic-excel" style="width:14px;height:14px"></span></span> APAC Sales FY26.xlsx</div>
+<div class="nb-ref"><span class="dot"><span class="ic-teams" style="width:14px;height:14px"></span></span> Kickoff meeting notes</div>
+<div class="nb-ref"><span class="dot" style="background:var(--accent-soft)"></span> Launch plan.page</div>
+<div class="nb-ref"><span class="dot" style="background:var(--brand-soft)"></span> contoso.com/pricing</div>
+<div class="nb-lbl" style="margin-top:12px">+ 7 more</div>
+</div>
+<div class="nb-main">
+<div class="nb-q">What’s still unresolved before we launch?</div>
+<div class="mo-line w1"></div><div class="mo-line w2"></div><div class="mo-line w1"></div><div class="mo-line w3"></div>
+<span class="nb-src">Answered from 4 of your 12 references — nothing else</span>
+<span class="nb-audio">Audio overview ready</span>
+</div>
+</div>
+</div>
+<p class="caption">The scope <i>is</i> the feature. Ask this in chat and Copilot searches everywhere you have access to; ask it here and the answer comes from these twelve things — which is exactly what you want when a project has its own truth.</p><div class="access-grid" style="grid-template-columns:1fr 1fr">
+      <div class="access">
+        <div class="ico"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9" stroke="#0f6cbd" stroke-width="1.7"></circle><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="#0f6cbd" stroke-width="1.3"></path></svg></div>
+        <h3>1 · Microsoft 365 Copilot app → Notebooks</h3>
+        <p>Open the Copilot app at <b>m365.cloud.microsoft</b> and choose <b>Notebooks</b> in the left navigation. Don’t see it yet? Open the app launcher (the waffle at the top of the left pane) and select <b>Notebooks</b> — the entry point is still rolling out. This is the lightweight, chat-first experience.</p>
+        <span class="tag free">Copilot Chat (Basic)</span> <span class="tag prem">M365 Copilot (Premium)</span>
+      </div>
+      <div class="access">
+        <div class="ico"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 24 24" width="22"><rect height="16" rx="2" stroke="#8661c5" stroke-width="1.7" width="12" x="7" y="4"></rect><path d="M7 8H4M7 12H4M7 16H4" stroke="#8661c5" stroke-linecap="round" stroke-width="1.7"></path></svg></div>
+        <h3>2 · OneNote → Copilot Notebooks</h3>
+        <p>Open the same notebook in <b>OneNote</b> for the fuller, workspace-focused experience — sections, pages and free-form notes alongside your references.</p>
+        <span class="tag free">Copilot Chat (Basic)</span> <span class="tag prem">M365 Copilot (Premium)</span>
+      </div>
+    </div>
+    <p class="caption">Two doors, one notebook. Notebooks stay in sync between the Copilot app and OneNote, so you can move between them without losing context.</p>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Notebook or agent?</b> A notebook is a <b>scope</b>; an agent is a <b>role</b>. A notebook is a container of <b>references you curate for one project</b> — Copilot answers only from what you put in it, and any instructions you set apply inside that notebook. An agent is a <b>configured assistant</b>: a name, a description, standing <b>instructions</b>, its own knowledge sources and capabilities, packaged so it behaves the same way on every task and shareable with colleagues. Reach for a notebook when the constant is the <b>content</b>; build an agent when the constant is the <b>job</b>. <a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-microsoft-365-copilot-notebooks-works">Notebooks →</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents">Agents →</a></p>
+    </div><div class="page-src"><span class="ps-k">Source</span><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-microsoft-365-copilot-notebooks-works" rel="noopener" target="_blank">How Microsoft Copilot Notebooks works</a> — Microsoft Support<span class="ps-n">Module 4 · 7 of 8</span></div></div><div class="page">
+
+    <div class="subsub"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M4 7h16M4 12h11M4 17h7" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg></span> Example Use Case Prompts</div>
+    <div class="prompts"><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Summarize every document in this notebook, grouped by theme, and highlight where the sources disagree.</span></div><div class="pchip"><span class="pc-ic"><span class="cplogo" style="width:18px;height:16px"></span></span><span class="pc-tx">Using only the references here, draft a one-page proposal with objectives, risks and recommended next steps.</span></div></div>
+    <p class="caption">Beyond Q&amp;A: set <b>custom instructions</b> per notebook to fix tone and format, generate an <b>audio overview</b> to catch up on the material hands-free, and <b>share</b> the notebook so your team can co-create in it.</p>
+
+    <div class="note">
+      <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+      <p><b>Availability &amp; limits.</b> Notebooks are available to <b>Microsoft Copilot</b> and <b>Copilot Chat</b> licensed users; the account also needs a SharePoint or OneDrive service plan. Supported references include <b>.docx, .pptx, .xlsx, .pdf, .page, .loop</b>, OneNote pages and notebooks, plus specific web URLs. Copilot grounds on up to <b>300 files</b> per notebook — when you add a shared location such as a SharePoint site, it picks the 300 most relevant, so add a must-have file directly. Notebooks can’t generate images or charts inside the notebook, and <b>deleting a notebook is currently permanent</b>. <a href="https://support.microsoft.com/en-us/microsoft-365-copilot/how-microsoft-365-copilot-notebooks-works">Learn more →</a></p>
+    </div>
+
+
+  <div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/" rel="noopener" target="_blank">Work smarter with Copilot across your Microsoft 365 apps — Microsoft Learn Training</a> — Microsoft Learn<span class="ps-n">Module 4 · 8 of 8</span></div></div></section>
+<div class="pagenav"><a class="pn-prev" href="../module-3-prompting/">&larr; <span class="pn-lbl">Previous</span> Module 3</a><a class="pn-next" href="../module-5-first-party-agents/"><span class="pn-lbl">Next</span> Module 5 &rarr;</a></div>
+<div class="sitefoot"><span>Microsoft 365 Copilot &mdash; End-User Coursework</span>
+<a href="../index.html">Course outline</a>
+<a href="../M365CopilotTutorial.html">Single-page version</a></div>
+</div>
+</body></html>
