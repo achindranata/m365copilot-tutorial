@@ -86,6 +86,12 @@
 <label class="nav-scrim" for="navtoggle" aria-hidden="true"></label>
 <header class="hero"><div class="hero-inner"><span class="kicker">Module 5</span><h1 class="modh">First-Party Agents</h1><p>Part of <b>Getting Started with Microsoft 365 Copilot</b> — a hands-on course from your first prompt to building your own agents.</p></div></header>
 <div class="wrap">
+<aside class="ms-disclaimer" role="note" aria-label="Disclaimer">
+  <h3><span aria-hidden="true">&#9888;</span> Disclaimer</h3>
+  <p>This is an independent, personal project created for learning. The views and content here are the author&rsquo;s own and do not represent Microsoft. It has no relationship to, and does not reflect, the author&rsquo;s role or position at Microsoft.</p>
+  <p>This site is not official Microsoft documentation, guidance, endorsement, or support. It is not an official Microsoft publication.</p>
+  <p><strong><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Learn</a> is the source of truth.</strong> Product names, features, licensing/SKUs, and steps change frequently &mdash; always verify against the linked Microsoft Learn pages.</p>
+</aside>
 <section id="module5"><div class="page">
     <span class="eyebrow">Module 5</span>
     <h2>First-Party Agents</h2>
@@ -266,14 +272,258 @@
 <div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">Real files in your OneDrive, a task you can reopen, and an <b>approval gate</b> before it sends</div></div>
 </div>
     <p class="m2-intro">Cowork is the <b>agentic</b> side of Microsoft 365 Copilot — you describe an <b>outcome</b> and it <b>plans and carries out the steps</b> for you, across your apps. You don’t build it: it’s a ready-made agent, on the <b>Cowork</b> tab in the Microsoft 365 Copilot app.</p>
+    <div class="cwx-dg">
+      <p class="cwx-dg-cap"><b>Copilot Cowork</b> Click the composer &mdash; you delegate an outcome and the plan builds itself</p>
+      <input type="radio" name="m5cw" id="m5cw-0" class="cwx-sw-in" checked>
+      <input type="radio" name="m5cw" id="m5cw-1" class="cwx-sw-in">
+      <div class="cwx-cpui cwx-work">
+        <div class="cwx-rail">
+          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
+          <div class="cwx-segs"><span class="cwx-seg">Chat</span><span class="cwx-seg cwx-on">Cowork</span></div>
+          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New task</div>
+          <ul class="cwx-nav">
+            <li><span class="cwx-ic"></span>My tasks</li>
+            <li><span class="cwx-ic"></span>Automations</li>
+            <li><span class="cwx-ic cwx-r"></span>Customize</li>
+          </ul>
+          <p class="cwx-rail-h">Pinned</p>
+          <ul class="cwx-nav cwx-pin">
+            <li class="cwx-sel"><span class="cwx-ic cwx-v"></span>Weekly reset</li>
+            <li><span class="cwx-ic cwx-b"></span>Contoso account</li>
+            <li><span class="cwx-ic cwx-p"></span>Workshop prep</li>
+          </ul>
+        </div>
+        <div class="cwx-main">
+          <div class="cwx-topbar">
+            <span class="cwx-ttl">Weekly reset</span>
+            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
+          </div>
+          <div class="cwx-canvas">
+
+            <div class="cwx-cpane cwx-p0">
+              <p class="cwx-hero">Give me an outcome, not a step</p>
+              <label class="cwx-composer cwx-typed" for="m5cw-1">
+                <span class="cwx-pl">+</span>
+                <span class="cwx-ph">Review last week, clean up my calendar, draft regrets and block focus time&hellip;</span>
+                <span class="cwx-send">&uarr;</span>
+              </label>
+              <p class="cwx-clickme">Click to start the task</p>
+            </div>
+
+            <div class="cwx-cpane cwx-p1">
+              <div class="cwx-thread">
+                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Review last week, clean up my calendar, draft regrets for the conflicts and block three hours of focus time on Tuesday. Then prep a briefing for the Contoso meeting.</span></div>
+                <div class="cwx-bub cwx-ai cwx-stg cwx-d3"><span class="cwx-t">I've broken this into six steps and started work. I'll check in before anything is sent.<small>Task running &middot; you can close this window</small></span></div>
+              </div>
+              <div class="cwx-foot">
+                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Cowork</span><span class="cwx-send">&uarr;</span></span>
+                <label class="cwx-reset" for="m5cw-0">Reset</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cwx-wsp">
+          <p class="cwx-wh">Workspace<span class="cwx-x">&times;</span></p>
+
+          <div class="cwx-idleonly" style="flex-direction:column;gap:.5rem">
+            <p class="cwx-sh">Steps<span class="cwx-cnt">0 / 6</span></p>
+            <ul class="cwx-wl">
+              <li class="cwx-dim"><span class="cwx-ck"></span><span>Waiting for a task</span></li>
+            </ul>
+            <p class="cwx-sh">Output</p>
+            <ul class="cwx-wf"><li class="cwx-dim"><span class="cwx-ft cwx-m">&mdash;</span><span>Nothing yet</span></li></ul>
+          </div>
+
+          <div class="cwx-runonly" style="flex-direction:column;gap:.5rem">
+            <p class="cwx-sh">Steps<span class="cwx-cnt cwx-done">6 / 6</span></p>
+            <ul class="cwx-wl">
+              <li class="cwx-stg cwx-d2"><span class="cwx-ck cwx-ok">&#10003;</span><span>Review last week's calendar</span></li>
+              <li class="cwx-stg cwx-d3"><span class="cwx-ck cwx-ok">&#10003;</span><span>Identify conflicts and low-value meetings</span></li>
+              <li class="cwx-stg cwx-d4"><span class="cwx-ck cwx-ok">&#10003;</span><span>Draft regrets &mdash; awaiting approval</span></li>
+              <li class="cwx-stg cwx-d5"><span class="cwx-ck cwx-run"></span><span>Block focus time Tuesday</span></li>
+              <li class="cwx-stg cwx-d6"><span class="cwx-ck"></span><span>Pull Contoso emails and meeting notes</span></li>
+              <li class="cwx-stg cwx-d7"><span class="cwx-ck"></span><span>Produce the briefing document</span></li>
+            </ul>
+            <p class="cwx-sh">Output</p>
+            <ul class="cwx-wf">
+              <li class="cwx-stg cwx-d7"><span class="cwx-ft cwx-h">H</span><span>Contoso-briefing.docx</span></li>
+              <li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-z">X</span><span>calendar-changes.xlsx</span></li>
+            </ul>
+            <p class="cwx-sh">References</p>
+            <ul class="cwx-wf"><li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-m">M</span><span>Last week's meetings</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <p class="cwx-dg-foot">Multi-step workflows across tasks and sources, with an approval gate in front of anything consequential.</p>
+    </div>
     <div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>How it’s designed.</b> Cowork is a <b>prebuilt, autonomous agent</b> that <b>takes action, not just chats</b>. Grounded in your emails, meetings, chats, files and data via <b>Work IQ</b>, it works through a multi-step job across Outlook, Teams, Word, Excel and PowerPoint. Where Copilot Chat answers in a single turn, Cowork works over <b>minutes to hours</b> — <b>pausing for your approval before every send, post or schedule</b>, running in a <b>secure, isolated environment</b>, and acting only within <b>your own permissions</b>. <b>Getting access</b> takes two things, not one: an active <b>Microsoft 365 Copilot license</b> <i>and</i> <b>usage-based (Cowork) billing enabled</b> — the spending policy is an access control, not just a budget.</p>
     </div>
     <p class="m2-intro" style="margin-top:14px"><b>Copilot Chat vs Cowork — which do you use?</b> Use <b>Copilot Chat</b> to think, draft and answer in the moment; reach for <b>Cowork</b> when you want work <i>carried out</i> across several apps and steps.</p>
+    <div class="cwx-pick">
+      <input type="radio" name="m5cmp" id="m5cmp-none" class="cwx-sw-in" checked aria-label="Hide illustration">
+      <input type="radio" name="m5cmp" id="m5cmp-chat" class="cwx-sw-in" aria-label="Show how Copilot Chat works">
+      <input type="radio" name="m5cmp" id="m5cmp-cw" class="cwx-sw-in" aria-label="Show how Cowork works">
     <div class="cmp2">
-      <div class="cbox lo"><div class="cb-h">Copilot Chat — think &amp; draft</div><p style="margin:.15rem 0 .4rem">Single-step, single session · seconds to minutes · <b>you</b> act on the output.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Quick draft, answer or insight</li><li>Reason over one attached file</li><li>Fast, focused, single task</li></ul></div>
-      <div class="cbox brand"><div class="cb-h">Cowork — get it done</div><p style="margin:.15rem 0 .4rem">Multi-step, across apps · minutes to hours · <b>autonomous</b>, you approve each action.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Inbox &amp; calendar clean-up</li><li>Project launches &amp; meeting prep</li><li>Recurring, scheduled work</li></ul></div>
+      <div class="cbox lo cwx-card cwx-card-chat"><label class="cwx-hit" for="m5cmp-chat" aria-label="Show how Copilot Chat works"></label><div class="cb-h">Copilot Chat — think &amp; draft</div><p style="margin:.15rem 0 .4rem">Single-step, single session · seconds to minutes · <b>you</b> act on the output.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Quick draft, answer or insight</li><li>Reason over one attached file</li><li>Fast, focused, single task</li></ul><span class="cwx-go">See how it works</span></div>
+      <div class="cbox brand cwx-card cwx-card-cw"><label class="cwx-hit" for="m5cmp-cw" aria-label="Show how Cowork works"></label><div class="cb-h">Cowork — get it done</div><p style="margin:.15rem 0 .4rem">Multi-step, across apps · minutes to hours · <b>autonomous</b>, you approve each action.</p><ul style="margin:0;padding-inline-start:18px;font-size:13px;color:var(--ink-soft)"><li>Inbox &amp; calendar clean-up</li><li>Project launches &amp; meeting prep</li><li>Recurring, scheduled work</li></ul><span class="cwx-go">See how it works</span></div>
+    </div>
+      <div class="cwx-show cwx-show-chat"><div class="cwx-show-bar"><label class="cwx-close" for="m5cmp-none">Close &times;</label></div>
+<div class="cwx-dg">
+      <p class="cwx-dg-cap"><b>Copilot Chat</b> Click the composer &mdash; you ask, it answers, you iterate</p>
+      <input type="radio" name="m5cc2" id="m5cc2-0" class="cwx-sw-in" checked>
+      <input type="radio" name="m5cc2" id="m5cc2-1" class="cwx-sw-in">
+      <div class="cwx-cpui">
+        <div class="cwx-rail">
+          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
+          <div class="cwx-segs"><span class="cwx-seg cwx-on">Chat</span><span class="cwx-seg">Cowork</span></div>
+          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New chat</div>
+          <ul class="cwx-nav">
+            <li><span class="cwx-ic cwx-r"></span>Search</li>
+            <li><span class="cwx-ic"></span>Library</li>
+            <li><span class="cwx-ic"></span>Agents &amp; Skills</li>
+            <li><span class="cwx-ic"></span>Notebooks</li>
+          </ul>
+          <p class="cwx-rail-h">Pinned</p>
+          <ul class="cwx-nav cwx-pin">
+            <li><span class="cwx-ic cwx-v"></span>Researcher</li>
+            <li><span class="cwx-ic cwx-m"></span>Analyst</li>
+            <li><span class="cwx-ic cwx-b"></span>Sales</li>
+            <li><span class="cwx-ic cwx-t"></span>Know Your Customer</li>
+          </ul>
+        </div>
+        <div class="cwx-main">
+          <div class="cwx-topbar">
+            <span class="cwx-tchip cwx-iq">Work IQ</span><span class="cwx-tchip">Auto &#8964;</span>
+            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
+          </div>
+          <div class="cwx-canvas">
+
+            <div class="cwx-cpane cwx-p0">
+              <p class="cwx-hero">Hi, try asking me what's next on your calendar</p>
+              <label class="cwx-composer cwx-typed" for="m5cc2-1">
+                <span class="cwx-pl">+</span>
+                <span class="cwx-ph">Summarise the Contoso account for me</span>
+                <span class="cwx-send">&uarr;</span>
+              </label>
+              <div class="cwx-sugg">
+                <label class="cwx-s" for="m5cc2-1"><span class="cwx-ms"></span>Suggested</label>
+                <label class="cwx-s" for="m5cc2-1">File Insights</label>
+                <label class="cwx-s" for="m5cc2-1">Inbox Triage</label>
+                <label class="cwx-s" for="m5cc2-1">People Search</label>
+              </div>
+              <p class="cwx-clickme">Click to send</p>
+            </div>
+
+            <div class="cwx-cpane cwx-p1">
+              <div class="cwx-thread">
+                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Summarise the Contoso account for me</span></div>
+                <div class="cwx-bub cwx-ai cwx-stg cwx-d2"><span class="cwx-t">Here are the key points from recent emails and meetings&hellip;<small>3 references</small></span></div>
+                <div class="cwx-bub cwx-me cwx-stg cwx-d3"><span class="cwx-t">Now draft a follow-up email</span></div>
+                <div class="cwx-bub cwx-ai cwx-stg cwx-d4"><span class="cwx-t">Draft ready &mdash; review and send when you're happy.<small>You act on the output</small></span></div>
+                <div class="cwx-bub cwx-ai cwx-stg cwx-d5"><span class="cwx-t"><span class="cwx-typing"><i></i><i></i><i></i></span></span></div>
+              </div>
+              <div class="cwx-foot">
+                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Copilot</span><span class="cwx-send">&uarr;</span></span>
+                <label class="cwx-reset" for="m5cc2-0">Reset</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <p class="cwx-dg-foot">Single-step, single session. Close the window and the work stops.</p>
+    </div>
+      </div>
+      <div class="cwx-show cwx-show-cw"><div class="cwx-show-bar"><label class="cwx-close" for="m5cmp-none">Close &times;</label></div>
+<div class="cwx-dg">
+      <p class="cwx-dg-cap"><b>Copilot Cowork</b> Click the composer &mdash; you delegate an outcome and the plan builds itself</p>
+      <input type="radio" name="m5cw2" id="m5cw2-0" class="cwx-sw-in" checked>
+      <input type="radio" name="m5cw2" id="m5cw2-1" class="cwx-sw-in">
+      <div class="cwx-cpui cwx-work">
+        <div class="cwx-rail">
+          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
+          <div class="cwx-segs"><span class="cwx-seg">Chat</span><span class="cwx-seg cwx-on">Cowork</span></div>
+          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New task</div>
+          <ul class="cwx-nav">
+            <li><span class="cwx-ic"></span>My tasks</li>
+            <li><span class="cwx-ic"></span>Automations</li>
+            <li><span class="cwx-ic cwx-r"></span>Customize</li>
+          </ul>
+          <p class="cwx-rail-h">Pinned</p>
+          <ul class="cwx-nav cwx-pin">
+            <li class="cwx-sel"><span class="cwx-ic cwx-v"></span>Weekly reset</li>
+            <li><span class="cwx-ic cwx-b"></span>Contoso account</li>
+            <li><span class="cwx-ic cwx-p"></span>Workshop prep</li>
+          </ul>
+        </div>
+        <div class="cwx-main">
+          <div class="cwx-topbar">
+            <span class="cwx-ttl">Weekly reset</span>
+            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
+          </div>
+          <div class="cwx-canvas">
+
+            <div class="cwx-cpane cwx-p0">
+              <p class="cwx-hero">Give me an outcome, not a step</p>
+              <label class="cwx-composer cwx-typed" for="m5cw2-1">
+                <span class="cwx-pl">+</span>
+                <span class="cwx-ph">Review last week, clean up my calendar, draft regrets and block focus time&hellip;</span>
+                <span class="cwx-send">&uarr;</span>
+              </label>
+              <p class="cwx-clickme">Click to start the task</p>
+            </div>
+
+            <div class="cwx-cpane cwx-p1">
+              <div class="cwx-thread">
+                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Review last week, clean up my calendar, draft regrets for the conflicts and block three hours of focus time on Tuesday. Then prep a briefing for the Contoso meeting.</span></div>
+                <div class="cwx-bub cwx-ai cwx-stg cwx-d3"><span class="cwx-t">I've broken this into six steps and started work. I'll check in before anything is sent.<small>Task running &middot; you can close this window</small></span></div>
+              </div>
+              <div class="cwx-foot">
+                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Cowork</span><span class="cwx-send">&uarr;</span></span>
+                <label class="cwx-reset" for="m5cw2-0">Reset</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cwx-wsp">
+          <p class="cwx-wh">Workspace<span class="cwx-x">&times;</span></p>
+
+          <div class="cwx-idleonly" style="flex-direction:column;gap:.5rem">
+            <p class="cwx-sh">Steps<span class="cwx-cnt">0 / 6</span></p>
+            <ul class="cwx-wl">
+              <li class="cwx-dim"><span class="cwx-ck"></span><span>Waiting for a task</span></li>
+            </ul>
+            <p class="cwx-sh">Output</p>
+            <ul class="cwx-wf"><li class="cwx-dim"><span class="cwx-ft cwx-m">&mdash;</span><span>Nothing yet</span></li></ul>
+          </div>
+
+          <div class="cwx-runonly" style="flex-direction:column;gap:.5rem">
+            <p class="cwx-sh">Steps<span class="cwx-cnt cwx-done">6 / 6</span></p>
+            <ul class="cwx-wl">
+              <li class="cwx-stg cwx-d2"><span class="cwx-ck cwx-ok">&#10003;</span><span>Review last week's calendar</span></li>
+              <li class="cwx-stg cwx-d3"><span class="cwx-ck cwx-ok">&#10003;</span><span>Identify conflicts and low-value meetings</span></li>
+              <li class="cwx-stg cwx-d4"><span class="cwx-ck cwx-ok">&#10003;</span><span>Draft regrets &mdash; awaiting approval</span></li>
+              <li class="cwx-stg cwx-d5"><span class="cwx-ck cwx-run"></span><span>Block focus time Tuesday</span></li>
+              <li class="cwx-stg cwx-d6"><span class="cwx-ck"></span><span>Pull Contoso emails and meeting notes</span></li>
+              <li class="cwx-stg cwx-d7"><span class="cwx-ck"></span><span>Produce the briefing document</span></li>
+            </ul>
+            <p class="cwx-sh">Output</p>
+            <ul class="cwx-wf">
+              <li class="cwx-stg cwx-d7"><span class="cwx-ft cwx-h">H</span><span>Contoso-briefing.docx</span></li>
+              <li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-z">X</span><span>calendar-changes.xlsx</span></li>
+            </ul>
+            <p class="cwx-sh">References</p>
+            <ul class="cwx-wf"><li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-m">M</span><span>Last week's meetings</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <p class="cwx-dg-foot">Multi-step workflows across tasks and sources, with an approval gate in front of anything consequential.</p>
+    </div>
+      </div>
     </div>
     <p style="font-weight:700;margin:18px 0 4px">Reach for Cowork when…</p>
     <ul style="margin:.2rem 0 .6rem;color:var(--ink-soft);font-size:14.5px;line-height:1.6">
