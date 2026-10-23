@@ -1,6 +1,6 @@
-# Microsoft 365 Copilot — End-User Coursework
+# Microsoft Copilot — End-User Coursework
 
-A self-paced course on Microsoft 365 Copilot, published as a static site.
+A self-paced course on Microsoft Copilot, published as a static site.
 
 ## Publish on GitHub Pages
 
