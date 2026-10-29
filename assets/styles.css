@@ -2346,6 +2346,15 @@ table.lbl-table th,table.lbl-table td{width:25%;white-space:normal!important;ove
 .bb-ics{display:inline-flex;gap:4px;margin-left:auto}
 .bb-globe{width:28px;height:28px;flex:none;display:grid;place-items:center}
 
+/* cover QR */
+.hero-inner{position:relative}
+.hero-qr{float:right;margin:0 0 16px 28px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 12px 8px;background:#fff;border:1px solid var(--line);border-radius:12px;text-decoration:none;box-shadow:var(--shadow)}
+.hero-qr .qr-svg{width:150px;height:150px;display:block}
+.hero-qr .hq-t{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.2px}
+.hero-qr .hq-s{font-size:11px;color:var(--ink-faint)}
+.hero .ms-disclaimer{clear:both}
+@media (max-width:760px){.hero-qr{float:none;margin:0 0 16px}}
+@media print{.hero-qr{box-shadow:none}}
 /* ================= Copilot one-pager theme ================= */
 :root{
   --bg:#eef2fc; --surface:#ffffff; --surface-alt:#f4f6fd;
@@ -2563,6 +2572,25 @@ table.cmptable td:last-child{border-right-color:var(--line);}
   .hero{background:linear-gradient(180deg,#f4eefc 0%,#f7f9fe 100%); -webkit-print-color-adjust:exact; print-color-adjust:exact;}
   .subhead,.lic-badge,table.cmptable th{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
 }
+
+
+/* ---- Cover QR card (Copilot theme) ---- */
+.hero .hero-inner .hero-qr{
+  position:absolute; top:206px; inset-inline-end:-6px; float:none; margin:0; z-index:2;
+  display:flex; flex-direction:column; align-items:center; gap:1px; padding:10px 12px 8px;
+  background:#fff; border:1px solid #c9cff0; border-radius:12px; text-decoration:none;
+  box-shadow:0 2px 4px rgba(22,25,58,.06),0 12px 30px rgba(60,50,160,.16);
+}
+.hero .hero-inner .hero-qr::before{content:""; position:absolute; inset-inline:12px; top:0; height:3px; border-radius:0 0 3px 3px; background:linear-gradient(90deg,#14b8d4,#2563eb,#7c4ddf,#c13fc0,#ff8a3d);}
+.hero-qr .qr-svg{width:136px !important; height:136px !important; display:block;}
+.hero-qr .qr-svg path{fill:#16193a;}
+.hero-qr .hq-t{font-size:13.5px; font-weight:700; color:#16193a !important; letter-spacing:.1px;}
+.hero-qr .hq-s{font-size:10.5px; color:#5f6688 !important;}
+.hero .hero-inner .hero-qr:hover{border-color:#7c4ddf;}
+@media screen and (max-width:1199px){
+  .hero .hero-inner .hero-qr{position:relative; top:auto; inset-inline-end:auto; display:flex; width:fit-content; margin:0 0 22px;}
+}
+@media screen and (max-width:1059px){ .hero{padding-top:74px;} }
 
 /* ---- multi-page site additions ---- */
 .sn-mod.on,.sn-top.on{color:var(--brand); border-inline-start-color:var(--brand); background:var(--surface-alt);}
