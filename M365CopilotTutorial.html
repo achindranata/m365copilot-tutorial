@@ -2759,6 +2759,21 @@ th .mi-set{vertical-align:-4px}
 .csx-pair .csx-win{flex:1}
 @media screen and (max-width:760px){.csx-pair{grid-template-columns:minmax(0,460px)}}
 
+/* 7.2 side-by-side comparison (.html vs .aspx) */
+.cx2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px;margin:14px 0 16px}
+.cx2-h{border:1px solid var(--line-2);border-radius:10px;padding:10px 14px;background:var(--cp-chip);border-block-start:4px solid #C98A12}
+.cx2-h.cx2-aspx{border-block-start-color:#2E8B57}
+.cx2-h b{display:block;font-size:15px}
+.cx2-h span.cx2-s{font-size:12.5px;color:var(--ink-soft)}
+.cx2-c{border:1px solid var(--line-2);border-inline-start:5px solid #C98A12;border-radius:10px;padding:7px 12px;background:var(--surface)}
+.cx2-c.cx2-aspx{border-inline-start-color:#2E8B57}
+.cx2-c.cx2-warn{background:#fff7e8}
+.cx2-c.cx2-ok{background:#effaf3}
+.cx2-k{margin:0;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.cx2-d{margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--ink)}
+@media (prefers-color-scheme:dark){.cx2-c.cx2-warn{background:rgba(201,138,18,.14)}.cx2-c.cx2-ok{background:rgba(46,139,87,.16)}}
+@media print{.cx2{break-inside:avoid}}
+
 /* ---------- Cowork illustrations (Module 6) ---------- */
 .cwx-dg { margin-block: 1.3rem 1.6rem; position: relative; }
   .cwx-dg-cap {
@@ -3143,7 +3158,7 @@ th .mi-set{vertical-align:-4px}
     <a class="sn-mod" href="#module7"><span class="sn-num">7</span>Build Your Dashboard</a>
     <ul class="sn-list">
       <li><a href="#m7-what">7.1 Anatomy of a Dashboard</a></li>
-      <li><a href="#m7-html-aspx">7.2 .html vs .aspx in OneDrive/SharePoint</a></li>
+      <li><a href="#m7-html-aspx">7.2 Comparison Table: .html vs .aspx in OneDrive/SharePoint</a></li>
       <li><a href="#m7-discussions">7.3 Discussions</a></li>
     </ul>
   </div>
@@ -3311,7 +3326,7 @@ th .mi-set{vertical-align:-4px}
         <div>
           <h3><a href="#module7">Build Your Dashboard with Microsoft Copilot</a></h3>
           <p>What a dashboard is, and where to keep it in Microsoft 365.</p>
-          <ul><li><a href="#m7-what"><span class="sec-no">7.1</span> Anatomy of a Dashboard</a></li><li><a href="#m7-html-aspx"><span class="sec-no">7.2</span> .html vs .aspx in OneDrive/SharePoint</a></li><li><a href="#m7-discussions"><span class="sec-no">7.3</span> Discussions</a></li><li class="ol-sub"><a href="#m7-graph">7.3.1 Why .html needs Graph API but .aspx does not</a> · <a href="#m7-dash-vs-app">7.3.2 App vs dashboard</a></li></ul>
+          <ul><li><a href="#m7-what"><span class="sec-no">7.1</span> Anatomy of a Dashboard</a></li><li><a href="#m7-html-aspx"><span class="sec-no">7.2</span> Comparison Table: .html vs .aspx in OneDrive/SharePoint</a></li><li><a href="#m7-discussions"><span class="sec-no">7.3</span> Discussions</a></li><li class="ol-sub"><a href="#m7-graph">7.3.1 Why .html needs Graph API but .aspx does not</a> · <a href="#m7-dash-vs-app">7.3.2 App vs dashboard</a></li></ul>
         </div>
       </div>
 
@@ -5219,13 +5234,10 @@ th .mi-set{vertical-align:-4px}
       <p><b>Layer 2 is the important one.</b> It decides if your dashboard shows live data or old data. It is also the layer where an .html file and an .aspx page are most different (see <a href="#m7-html-aspx">7.2</a>). <b>Dashboard or report?</b> In Power BI, a dashboard is one page and a report can have many pages. You cannot filter a dashboard. When you select a tile, Power BI opens the report behind it.</p>
     </div>
 <div class="page-src"><span class="ps-k">Source</span><a href="https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards" rel="noopener" target="_blank">Introduction to dashboards for Power BI designers</a> — Microsoft Learn<span class="ps-n">Module 7 · 2 of 4</span></div></div><div class="page">
-<div class="subhead" id="m7-html-aspx"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M7 3.5h7l4 4v13H7zM14 3.5v4h4M9.5 12h5M9.5 15.5h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> <span class="sec-no">7.2</span> .html vs .aspx in OneDrive/SharePoint</div>
+<div class="subhead" id="m7-html-aspx"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M7 3.5h7l4 4v13H7zM14 3.5v4h4M9.5 12h5M9.5 15.5h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> <span class="sec-no">7.2</span> Comparison Table: .html vs .aspx in OneDrive/SharePoint</div>
 <p class="m2-intro">You may have prompted Copilot to turn <b>[/your Excel file]</b> into an interactive <b>.html</b> dashboard. Copilot makes one .html file, and the dashboard works in the Copilot preview. Then you save the file to OneDrive or SharePoint and open it there. The file downloads, or it shows its code as text. Also, the data in the file is a snapshot. It does not change when the workbook changes. This section tells you why.</p>
 <ul class="hm-list"><li><b>.html</b> — a standalone web file. The markup, the styles and the script are in one file. SharePoint and OneDrive do not run its script. They download the file or show its raw content.</li><li><b>.aspx</b> — an ASP.NET page. The server runs the page and sends plain HTML to the browser. Modern SharePoint pages are .aspx files in the <b>Site Pages</b> library. You build them with <b>web parts</b>.</li></ul>
-<table class="cmptable">
-      <thead><tr><th>Aspect</th><th>.html in OneDrive/SharePoint</th><th>.aspx in SharePoint</th></tr></thead>
-      <tbody><tr><td>What it is</td><td>A standalone web file: markup, styles and script in one file.</td><td>A SharePoint page (an ASP.NET page) that you build from web parts.</td></tr><tr><td>How it becomes HTML</td><td>It is HTML. The browser reads it as it is.</td><td>SharePoint serves the page. Then the web parts show it in the browser.</td></tr><tr><td>Where the dashboard is</td><td>In the file, in a OneDrive or SharePoint library.</td><td>In the Site Pages library of a SharePoint site.</td></tr><tr><td>Where the logic runs</td><td>In the script of the file. SharePoint and OneDrive do not run this script.</td><td>In the web parts. They run in the browser, as the signed-in viewer.</td></tr><tr><td>Viewer sign-in</td><td>None. The file must sign viewers in itself.</td><td>None needed. SharePoint viewers are already signed in.</td></tr><tr><td>Live Excel data</td><td>The Microsoft Graph Excel API (.xlsx only). The file must do its own sign-in.</td><td>No code: the File and Media web part shows the workbook. Custom code: a SharePoint Framework (SPFx) web part calls Microsoft Graph.</td></tr><tr><td>Admin control</td><td>An app registration in Microsoft Entra, and Microsoft Graph permissions.</td><td>Site permissions. Admins approve SPFx Graph permission requests in the SharePoint admin center.</td></tr><tr><td>Best for</td><td>A portable snapshot that you can send or open anywhere.</td><td>A team dashboard that stays on the site and shows the workbook where it is.</td></tr></tbody>
-    </table>
+<div class="cx2" role="group" aria-label="Comparison: .html in OneDrive or SharePoint versus .aspx in SharePoint"><div class="cx2-h cx2-html"><b><span class="mi-set"><span class="mi mi-onedrive" role="img" aria-label="OneDrive" title="OneDrive"></span><span class="mi mi-sharepoint" role="img" aria-label="SharePoint" title="SharePoint"></span></span>.html in OneDrive/SharePoint</b><span class="cx2-s">A file in a library</span></div><div class="cx2-h cx2-aspx"><b><span class="mi-set"><span class="mi mi-sharepoint" role="img" aria-label="SharePoint" title="SharePoint"></span></span>.aspx in SharePoint</b><span class="cx2-s">A page in Site Pages</span></div><div class="cx2-c cx2-html"><p class="cx2-k">What it is</p><p class="cx2-d">A standalone web file: markup, styles and script in one file.</p></div><div class="cx2-c cx2-aspx"><p class="cx2-k">What it is</p><p class="cx2-d">A SharePoint page (an ASP.NET page) that you build from web parts.</p></div><div class="cx2-c cx2-html"><p class="cx2-k">How it becomes HTML</p><p class="cx2-d">It is HTML. The browser reads it as it is.</p></div><div class="cx2-c cx2-aspx"><p class="cx2-k">How it becomes HTML</p><p class="cx2-d">SharePoint serves the page. Then the web parts show it in the browser.</p></div><div class="cx2-c cx2-html"><p class="cx2-k">Where the dashboard is</p><p class="cx2-d">In the file, in a OneDrive or SharePoint library.</p></div><div class="cx2-c cx2-aspx"><p class="cx2-k">Where the dashboard is</p><p class="cx2-d">In the Site Pages library of a SharePoint site.</p></div><div class="cx2-c cx2-html cx2-warn"><p class="cx2-k">Where the logic runs</p><p class="cx2-d">In the script of the file. SharePoint and OneDrive do not run this script.</p></div><div class="cx2-c cx2-aspx cx2-ok"><p class="cx2-k">Where the logic runs</p><p class="cx2-d">In the web parts. They run in the browser, as the signed-in viewer.</p></div><div class="cx2-c cx2-html cx2-warn"><p class="cx2-k">Viewer sign-in</p><p class="cx2-d">None. The file must sign viewers in itself.</p></div><div class="cx2-c cx2-aspx cx2-ok"><p class="cx2-k">Viewer sign-in</p><p class="cx2-d">None needed. SharePoint viewers are already signed in.</p></div><div class="cx2-c cx2-html cx2-warn"><p class="cx2-k">Live Excel data</p><p class="cx2-d">The Microsoft Graph Excel API (.xlsx only). The file must do its own sign-in.</p></div><div class="cx2-c cx2-aspx cx2-ok"><p class="cx2-k">Live Excel data</p><p class="cx2-d">No code: the File and Media web part shows the workbook. Custom code: a SharePoint Framework (SPFx) web part calls Microsoft Graph.</p></div><div class="cx2-c cx2-html"><p class="cx2-k">Admin control</p><p class="cx2-d">An app registration in Microsoft Entra, and Microsoft Graph permissions.</p></div><div class="cx2-c cx2-aspx"><p class="cx2-k">Admin control</p><p class="cx2-d">Site permissions. Admins approve SPFx Graph permission requests in the SharePoint admin center.</p></div><div class="cx2-c cx2-html"><p class="cx2-k">Best for</p><p class="cx2-d">A portable snapshot that you can send or open anywhere.</p></div><div class="cx2-c cx2-aspx"><p class="cx2-k">Best for</p><p class="cx2-d">A team dashboard that stays on the site and shows the workbook where it is.</p></div></div>
 <div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>Rule of thumb.</b> Use an .html dashboard as a <b>snapshot</b>: the data is inside the file. To show <b>live</b> workbook data to a team, put the workbook on a SharePoint page (.aspx) with the File and Media web part.</p>

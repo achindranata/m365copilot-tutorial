@@ -2753,6 +2753,21 @@ th .mi-set{vertical-align:-4px}
 .csx-pair .csx-win{flex:1}
 @media screen and (max-width:760px){.csx-pair{grid-template-columns:minmax(0,460px)}}
 
+/* 7.2 side-by-side comparison (.html vs .aspx) */
+.cx2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px;margin:14px 0 16px}
+.cx2-h{border:1px solid var(--line-2);border-radius:10px;padding:10px 14px;background:var(--cp-chip);border-block-start:4px solid #C98A12}
+.cx2-h.cx2-aspx{border-block-start-color:#2E8B57}
+.cx2-h b{display:block;font-size:15px}
+.cx2-h span.cx2-s{font-size:12.5px;color:var(--ink-soft)}
+.cx2-c{border:1px solid var(--line-2);border-inline-start:5px solid #C98A12;border-radius:10px;padding:7px 12px;background:var(--surface)}
+.cx2-c.cx2-aspx{border-inline-start-color:#2E8B57}
+.cx2-c.cx2-warn{background:#fff7e8}
+.cx2-c.cx2-ok{background:#effaf3}
+.cx2-k{margin:0;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.cx2-d{margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--ink)}
+@media (prefers-color-scheme:dark){.cx2-c.cx2-warn{background:rgba(201,138,18,.14)}.cx2-c.cx2-ok{background:rgba(46,139,87,.16)}}
+@media print{.cx2{break-inside:avoid}}
+
 /* ---- multi-page site additions ---- */
 .sn-mod.on,.sn-top.on{color:var(--brand); border-inline-start-color:var(--brand); background:var(--surface-alt);}
 .pagenav{display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:34px 0 10px;
