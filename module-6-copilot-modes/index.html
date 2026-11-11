@@ -4,329 +4,15 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="light dark" name="color-scheme"/>
 <title>Microsoft Copilot Modes — Microsoft Copilot Coursework</title>
-<link rel="stylesheet" href="../assets/styles.css?v=dd68c59a48"/>
-<style>
-/* ---------- Cowork illustrations (Module 6) ---------- */
-.cwx-dg { margin-block: 1.3rem 1.6rem; position: relative; }
-  .cwx-dg-cap {
-    display: flex; align-items: baseline; gap: .55rem;
-    font-size: .72rem; font-weight: 600; color: var(--ink-soft);
-    margin-block-end: .75rem; padding-inline-start: .6rem;
-    
-  }
-  .cwx-dg-cap b {
-    font-size: .62rem; font-weight: 700; letter-spacing: .13em;
-    text-transform: uppercase; color: var(--ink-faint);
-  }
-  .cwx-dg-foot { margin-block-start: .6rem; font-size: .72rem; color: var(--ink-faint); }
-  .cwx-sw-in { position: absolute; opacity: 0; pointer-events: none; }
-  .cwx-bub { display: flex; margin-block: .4rem; }
-  .cwx-bub .cwx-t {
-    max-width: 82%; font-size: .78rem; line-height: 1.5;
-    padding: .5rem .75rem; border-radius: 14px;
-  }
-  .cwx-bub.cwx-me { justify-content: flex-end; }
-  .cwx-bub.cwx-me .cwx-t { background: var(--accent); color: #fff; border-end-end-radius: 5px; }
-  .cwx-bub.cwx-ai .cwx-t {
-    background: var(--surface-alt); color: var(--ink-soft);
-    border: 1px solid var(--line); border-end-start-radius: 5px;
-  }
-  .cwx-bub .cwx-t small { display: block; margin-block-start: .25rem; font-size: .66rem; opacity: .75; }
-
-  
-  .cwx-typing { display: inline-flex; gap: .2rem; align-items: center; }
-  .cwx-typing i {
-    width: .3rem; height: .3rem; border-radius: 50%; background: var(--ink-faint);
-    animation: cwx-tyb 1.3s infinite;
-  }
-  .cwx-typing i:nth-child(2) { animation-delay: .18s; }
-  .cwx-typing i:nth-child(3) { animation-delay: .36s; }
-  @keyframes cwx-tyb { 0%,60%,100% { opacity: .25; transform: translateY(0); }
-                   30% { opacity: 1; transform: translateY(-2px); } }
-
-  
-  .cwx-stg { opacity: 0; animation: cwx-stgIn .55s cubic-bezier(.22,1,.36,1) forwards; }
-  @keyframes cwx-stgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  .cwx-d1 { animation-delay: .25s; } .cwx-d2 { animation-delay: 1.0s; }
-  .cwx-d3 { animation-delay: 1.8s; } .cwx-d4 { animation-delay: 2.6s; }
-  .cwx-d5 { animation-delay: 3.4s; } .cwx-d6 { animation-delay: 4.2s; }
-  .cwx-d7 { animation-delay: 5.0s; } .cwx-d8 { animation-delay: 5.8s; }
-  
-  .cwx-cpui {
-    
-    --surface: #ffffff; --surface-alt: #fafafa; --surface-tint: #ffffff;
-    --accent: #1b1b1f; --accent-soft: #f0f0f0; --accent-deep: #1b1b1f;
-    --ink: #1b1b1f; --ink-soft: #424242; --ink-faint: #707070;
-    --line: rgba(0,0,0,.09); --line-strong: rgba(0,0,0,.20);
-    --c-vio: #616161; --c-tea: #8a8886; --c-mag: #8a8886;
-    --plum: #8a8886; --green: #424242; --amber: #8a8886;
-    display: grid; grid-template-columns: 11.5rem 1fr;
-    border: 1px solid var(--line-strong); border-radius: 10px; overflow: hidden;
-    background: var(--surface); box-shadow: 0 16px 42px rgba(30,20,80,.12);
-    min-height: 20rem; font-size: .75rem;
-  }
-  .cwx-cpui.cwx-work { grid-template-columns: 11.5rem 1fr 13rem; }
-
-  
-  .cwx-cpui .cwx-rail {
-    background: var(--surface-alt); border-inline-end: 1px solid var(--line);
-    padding: .6rem .5rem; display: flex; flex-direction: column; gap: .5rem;
-  }
-  .cwx-cpui .cwx-brand { display: flex; align-items: center; gap: .4rem; padding: .1rem .3rem .2rem; }
-  .cwx-cpui .cwx-brand .cwx-mk {
-    width: 1.15rem; height: 1.15rem; flex: none;
-    background-image: url(data:image/png;base64,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);
-    background-size: contain; background-repeat: no-repeat; background-position: center;
-  }
-  .cwx-cpui .cwx-brand b { font-size: .85rem; font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
-  .cwx-cpui .cwx-segs {
-    display: grid; grid-template-columns: 1fr 1fr; gap: .15rem; padding: .15rem;
-    background: var(--line); border-radius: 999px;
-  }
-  .cwx-cpui .cwx-seg {
-    text-align: center; padding: .22rem 0; border-radius: 999px;
-    font-size: .7rem; font-weight: 600; color: var(--ink-faint);
-  }
-  .cwx-cpui .cwx-seg.cwx-on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.10); }
-  .cwx-cpui .cwx-newbtn {
-    display: flex; align-items: center; gap: .4rem; padding: .35rem .5rem;
-    background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px;
-    font-weight: 600; color: var(--ink); font-size: .72rem;
-  }
-  .cwx-cpui .cwx-newbtn .cwx-pl {
-    width: .95rem; height: .95rem; border-radius: 50%; background: var(--ink);
-    color: var(--surface); font-size: .7rem; line-height: .9rem; text-align: center; flex: none;
-  }
-  .cwx-cpui .cwx-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .05rem; }
-  .cwx-cpui .cwx-nav li {
-    display: flex; align-items: center; gap: .4rem; padding: .26rem .5rem;
-    border-radius: 6px; color: var(--ink-soft); font-size: .72rem;
-  }
-  .cwx-cpui .cwx-nav li.cwx-sel { background: var(--accent-soft); color: var(--accent-deep); font-weight: 600; }
-  .cwx-cpui .cwx-nav li .cwx-ic {
-    width: .82rem; height: .82rem; flex: none; border-radius: 3px;
-    border: 1.4px solid var(--ink-faint); opacity: .8;
-  }
-  .cwx-cpui .cwx-nav li .cwx-ic.cwx-r { border-radius: 50%; }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic { border: none; border-radius: 4px; opacity: 1; }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-v { background: var(--accent); }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-m { background: var(--c-mag); }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-b { background: var(--c-vio); }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-t { background: var(--c-tea); }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-p { background: var(--plum); }
-  .cwx-cpui .cwx-rail-h {
-    margin: .3rem 0 0; padding-inline-start: .5rem;
-    font-size: .6rem; font-weight: 700; letter-spacing: .1em;
-    text-transform: uppercase; color: var(--ink-faint);
-  }
-  .cwx-cpui .cwx-rail .cwx-fade { margin-block-start: auto; }
-
-  
-  .cwx-cpui .cwx-main { display: flex; flex-direction: column; min-width: 0; }
-  .cwx-cpui .cwx-topbar {
-    display: flex; align-items: center; gap: .35rem;
-    padding: .45rem .7rem; border-block-end: 1px solid var(--line);
-  }
-  .cwx-cpui .cwx-tchip {
-    font-size: .66rem; font-weight: 600; border-radius: 6px; padding: .16rem .45rem;
-    background: var(--surface-alt); color: var(--ink-soft);
-  }
-  .cwx-cpui .cwx-tchip.cwx-iq { background: var(--accent-soft); color: var(--accent-deep); }
-  .cwx-cpui .cwx-topbar .cwx-ttl { font-size: .72rem; font-weight: 600; color: var(--ink); }
-  .cwx-cpui .cwx-topbar .cwx-rt { margin-inline-start: auto; display: flex; gap: .3rem; align-items: center; }
-  .cwx-cpui .cwx-topbar .cwx-rt i { width: .7rem; height: .7rem; border-radius: 50%; border: 1.4px solid var(--line-strong); }
-  .cwx-cpui .cwx-topbar .cwx-rt i.cwx-g { border-color: var(--green); }
-
-  .cwx-cpui .cwx-canvas { position: relative; flex: 1; display: flex; }
-  .cwx-cpui .cwx-cpane { display: none; flex: 1; flex-direction: column; padding: .85rem .9rem; min-width: 0; }
-
-  
-  .cwx-cpui .cwx-hero {
-    margin: auto auto .8rem; text-align: center; max-width: 24rem;
-    font-size: 1rem; font-weight: 400; letter-spacing: -.02em; color: var(--ink);
-  }
-  .cwx-cpui .cwx-composer {
-    display: flex; align-items: center; gap: .5rem; width: 100%;
-    border: 1px solid var(--line-strong); border-radius: 999px;
-    background: var(--surface); padding: .5rem .6rem .5rem .55rem;
-    cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .2s;
-  }
-  .cwx-cpui .cwx-composer:hover {
-    border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); transform: translateY(-1px);
-  }
-  .cwx-cpui .cwx-composer .cwx-pl { font-size: .95rem; color: var(--ink-faint); line-height: 1; flex: none; }
-  .cwx-cpui .cwx-composer .cwx-ph { flex: 1; color: var(--ink-faint); font-size: .74rem; }
-  .cwx-cpui .cwx-composer.cwx-typed .cwx-ph { color: var(--ink); }
-  .cwx-cpui .cwx-composer .cwx-send {
-    flex: none; width: 1.3rem; height: 1.3rem; border-radius: 50%;
-    background: var(--accent); color: #fff; font-size: .72rem;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .cwx-cpui .cwx-sugg { display: flex; flex-wrap: wrap; gap: .3rem; justify-content: center; margin-block-start: .55rem; }
-  .cwx-cpui .cwx-sugg .cwx-s {
-    display: inline-flex; align-items: center; gap: .3rem;
-    font-size: .68rem; border: 1px solid var(--line); border-radius: 6px;
-    padding: .22rem .5rem; color: var(--ink-soft); background: var(--surface);
-    cursor: pointer; transition: border-color .2s, color .2s, background .2s;
-  }
-  .cwx-cpui .cwx-sugg .cwx-s:hover { border-color: var(--accent); color: var(--accent-deep); background: var(--accent-soft); }
-  .cwx-cpui .cwx-sugg .cwx-ms {
-    width: .6rem; height: .6rem; flex: none;
-    background:
-      linear-gradient(#F25022 0 0) 0 0 / .26rem .26rem no-repeat,
-      linear-gradient(#7FBA00 0 0) 100% 0 / .26rem .26rem no-repeat,
-      linear-gradient(#00A4EF 0 0) 0 100% / .26rem .26rem no-repeat,
-      linear-gradient(#FFB900 0 0) 100% 100% / .26rem .26rem no-repeat;
-  }
-  .cwx-cpui .cwx-clickme {
-    margin: .7rem auto 0; font-size: .64rem; font-weight: 600; letter-spacing: .06em;
-    text-transform: uppercase; color: var(--accent-deep); display: flex; align-items: center; gap: .3rem;
-  }
-  .cwx-cpui .cwx-clickme::before {
-    content: ""; width: .4rem; height: .4rem; border-radius: 50%;
-    background: var(--accent); animation: cwx-pulse 1.8s ease-in-out infinite;
-  }
-  @keyframes cwx-pulse { 0%,100% { opacity: .35; transform: scale(.8);} 50% { opacity: 1; transform: scale(1.25);} }
-
-  
-  .cwx-cpui .cwx-thread { flex: 1; overflow: hidden; }
-  .cwx-cpui .cwx-foot { margin-block-start: .6rem; display: flex; align-items: center; gap: .5rem; }
-  .cwx-cpui .cwx-foot .cwx-composer { padding-block: .42rem; }
-  .cwx-cpui .cwx-reset {
-    font-size: .66rem; font-weight: 600; color: var(--ink-faint); cursor: pointer;
-    border: 1px solid var(--line); border-radius: 999px; padding: .28rem .6rem; flex: none;
-    transition: color .2s, border-color .2s;
-  }
-  .cwx-cpui .cwx-reset:hover { color: var(--accent-deep); border-color: var(--accent); }
-  .cwx-cpui .cwx-ref {
-    display: inline-flex; align-items: center; gap: .25rem; margin-block-start: .3rem;
-    font-size: .62rem; color: var(--ink-faint);
-  }
-  .cwx-cpui .cwx-ref b {
-    width: .8rem; height: .8rem; border-radius: 3px; background: var(--accent-soft);
-    color: var(--accent-deep); font-size: .55rem; display: flex; align-items: center; justify-content: center;
-  }
-
-  
-  .cwx-cpui .cwx-wsp {
-    border-inline-start: 1px solid var(--line); background: var(--surface-alt);
-    padding: .6rem .6rem .7rem; display: flex; flex-direction: column; gap: .5rem; min-width: 0;
-  }
-  .cwx-cpui .cwx-wsp .cwx-wh { display: flex; align-items: center; font-size: .72rem; font-weight: 600; color: var(--ink); }
-  .cwx-cpui .cwx-wsp .cwx-wh .cwx-x { margin-inline-start: auto; color: var(--ink-faint); font-weight: 400; }
-  .cwx-cpui .cwx-wsp .cwx-sh {
-    display: flex; align-items: center; gap: .35rem;
-    font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
-  }
-  .cwx-cpui .cwx-wsp .cwx-sh .cwx-cnt {
-    margin-inline-start: auto; letter-spacing: 0; text-transform: none;
-    font-size: .62rem; border: 1px solid var(--line-strong); border-radius: 999px;
-    padding: .04rem .38rem; color: var(--ink-soft); background: var(--surface);
-  }
-  .cwx-cpui .cwx-wsp .cwx-sh .cwx-cnt.cwx-done { border-color: var(--green); color: var(--green); }
-  .cwx-cpui .cwx-wl { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .3rem; }
-  .cwx-cpui .cwx-wl li { display: flex; gap: .4rem; font-size: .68rem; line-height: 1.35; color: var(--ink-soft); }
-  .cwx-cpui .cwx-wl li .cwx-ck {
-    flex: none; width: .78rem; height: .78rem; border-radius: 50%;
-    border: 1.4px solid var(--line-strong); color: transparent;
-    font-size: .52rem; display: flex; align-items: center; justify-content: center; margin-block-start: .08rem;
-  }
-  .cwx-cpui .cwx-wl li .cwx-ck.cwx-ok { border-color: var(--green); background: var(--green); color: #fff; }
-  .cwx-cpui .cwx-wl li .cwx-ck.cwx-run { border-color: var(--accent); border-block-start-color: transparent; animation: cwx-spin 1s linear infinite; }
-  @keyframes cwx-spin { to { transform: rotate(360deg); } }
-  .cwx-cpui .cwx-wl li.cwx-dim { color: var(--ink-faint); opacity: .7; }
-  .cwx-cpui .cwx-wf { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .28rem; }
-  .cwx-cpui .cwx-wf li { display: flex; gap: .4rem; align-items: center; font-size: .67rem; color: var(--ink-soft); }
-  .cwx-cpui .cwx-wf li .cwx-ft {
-    flex: none; width: .95rem; height: .95rem; border-radius: 3px;
-    font-size: .48rem; font-weight: 700; color: #fff;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .cwx-cpui .cwx-wf li .cwx-ft.cwx-h { background: var(--accent); }
-  .cwx-cpui .cwx-wf li .cwx-ft.cwx-z { background: var(--amber); }
-  .cwx-cpui .cwx-wf li .cwx-ft.cwx-m { background: var(--ink-faint); }
-
-  
-  .cwx-cpui { background: #fff; box-shadow: 0 16px 42px rgba(0,0,0,.10); }
-  .cwx-cpui .cwx-wsp { background: #fff; }
-  .cwx-cpui .cwx-bub.cwx-me .cwx-t { background: #f0f0f0; color: #1b1b1f; }
-  .cwx-cpui .cwx-bub.cwx-ai .cwx-t { background: #fff; border-color: rgba(0,0,0,.10); color: #424242; }
-  .cwx-cpui .cwx-composer .cwx-send { background: #1b1b1f; }
-  .cwx-cpui .cwx-composer:hover { border-color: #8a8886; box-shadow: 0 0 0 3px #f0f0f0; }
-  .cwx-cpui .cwx-sugg .cwx-s:hover { border-color: #8a8886; color: #1b1b1f; background: #f5f5f5; }
-  .cwx-cpui .cwx-reset:hover { color: #1b1b1f; border-color: #8a8886; }
-  .cwx-cpui .cwx-wl li .cwx-ck.cwx-ok { border-color: #424242; background: #424242; color: #fff; }
-  .cwx-cpui .cwx-wl li .cwx-ck.cwx-run { border-color: #616161; }
-  .cwx-cpui .cwx-wf li .cwx-ft.cwx-h, .cwx-cpui .cwx-wf li .cwx-ft.cwx-z, .cwx-cpui .cwx-wf li .cwx-ft.cwx-m { background: #8a8886; }
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-v, .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-m,
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-b, .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-t,
-  .cwx-cpui .cwx-nav.cwx-pin li .cwx-ic.cwx-p { background: #c8c6c4; }
-  .cwx-cpui .cwx-topbar .cwx-rt i.cwx-g { border-color: #8a8886; }
-
-  
-  
-
-  @media (max-width: 860px) {
-    .cwx-cpui, .cwx-cpui.cwx-work { grid-template-columns: 1fr; }
-    .cwx-cpui .cwx-rail { flex-direction: row; flex-wrap: wrap; align-items: center; border-inline-end: none; border-block-end: 1px solid var(--line); }
-    .cwx-cpui .cwx-rail .cwx-nav, .cwx-cpui .cwx-rail-h, .cwx-cpui .cwx-segs { width: 100%; }
-    .cwx-cpui .cwx-wsp { border-inline-start: none; border-block-start: 1px solid var(--line); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .cwx-cpui .cwx-clickme::before, .cwx-cpui .cwx-wl li .cwx-ck.cwx-run { animation: none; }
-  }
-  @media print {
-    .cwx-cpui { box-shadow: none; break-inside: avoid; }
-    .cwx-cpui .cwx-cpane { display: flex !important; }
-    .cwx-cpui .cwx-p0 { display: none !important; }
-    .cwx-cpui .cwx-wsp .cwx-idleonly { display: none !important; }
-    .cwx-cpui .cwx-wsp .cwx-runonly { display: flex !important; }
-    .cwx-cpui .cwx-rail, .cwx-cpui .cwx-wsp, .cwx-cpui .cwx-nav li.cwx-sel, .cwx-cpui .cwx-tchip, .cwx-cpui .cwx-seg.cwx-on,
-    .cwx-cpui .cwx-wl li .cwx-ck.cwx-ok, .cwx-cpui .cwx-wf li .cwx-ft, .cwx-cpui .cwx-composer .cwx-send
-      { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  }
-#m5cw-0:checked ~ .cwx-cpui .cwx-p0, #m5cw-1:checked ~ .cwx-cpui .cwx-p1 { display: flex; }
-#m5cw2-0:checked ~ .cwx-cpui .cwx-p0, #m5cw2-1:checked ~ .cwx-cpui .cwx-p1 { display: flex; }
-#m5cc2-0:checked ~ .cwx-cpui .cwx-p0, #m5cc2-1:checked ~ .cwx-cpui .cwx-p1 { display: flex; }
-#m5cw-0:checked ~ .cwx-cpui .cwx-wsp .cwx-idleonly { display: flex; }
-#m5cw-0:checked ~ .cwx-cpui .cwx-wsp .cwx-runonly, #m5cw-1:checked ~ .cwx-cpui .cwx-wsp .cwx-idleonly { display: none; }
-#m5cw-1:checked ~ .cwx-cpui .cwx-wsp .cwx-runonly { display: flex; }
-#m5cw2-0:checked ~ .cwx-cpui .cwx-wsp .cwx-idleonly { display: flex; }
-#m5cw2-0:checked ~ .cwx-cpui .cwx-wsp .cwx-runonly, #m5cw2-1:checked ~ .cwx-cpui .cwx-wsp .cwx-idleonly { display: none; }
-#m5cw2-1:checked ~ .cwx-cpui .cwx-wsp .cwx-runonly { display: flex; }
-
-@media (prefers-reduced-motion: reduce){ .cwx-stg{opacity:1;animation:none;} .cwx-typing i{animation:none;} }
-@media print{ .cwx-dg{break-inside:avoid;} .cwx-stg{opacity:1;animation:none;} .cwx-bub .cwx-t{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
-
-/* clickable Chat / Cowork cards */
-.cwx-pick{position:relative;}
-.cwx-pick .cwx-card{position:relative;cursor:pointer;transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s,border-color .2s;}
-.cwx-pick .cwx-card:hover{transform:translateY(-2px);border-color:var(--brand);}
-.cwx-pick .cwx-hit{position:absolute;inset:0;z-index:1;cursor:pointer;border-radius:inherit;}
-.cwx-pick .cwx-go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--brand);}
-.cwx-pick .cwx-go::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);animation:cwx-pulse 1.8s ease-in-out infinite;}
-.cwx-pick .cwx-show{display:none;margin-top:14px;animation:cwx-stgIn .55s cubic-bezier(.22,1,.36,1);}
-.cwx-pick .cwx-show .cwx-dg{margin-block:.4rem .4rem;}
-.cwx-pick .cwx-show-bar{position:relative;z-index:3;display:flex;justify-content:flex-end;margin-bottom:6px;}
-.cwx-pick .cwx-close{position:relative;z-index:3;display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--ink-faint);background:var(--surface);cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:4px 12px;user-select:none;}
-.cwx-pick .cwx-close:hover{color:var(--brand);border-color:var(--brand);}
-#m5cmp-chat:checked ~ .cmp2 .cwx-card-chat,
-#m5cmp-cw:checked ~ .cmp2 .cwx-card-cw{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft, rgba(15,108,189,.15)),var(--shadow);}
-#m5cmp-chat:checked ~ .cmp2 .cwx-card-chat .cwx-go,
-#m5cmp-cw:checked ~ .cmp2 .cwx-card-cw .cwx-go{visibility:hidden;}
-#m5cmp-chat:checked ~ .cwx-show-chat,
-#m5cmp-cw:checked ~ .cwx-show-cw{display:block;}
-#m5cmp-chat:focus-visible ~ .cmp2 .cwx-card-chat,
-#m5cmp-cw:focus-visible ~ .cmp2 .cwx-card-cw{outline:2px solid var(--brand);outline-offset:2px;}
-@media (prefers-reduced-motion: reduce){ .cwx-pick .cwx-show,.cwx-pick .cwx-go::before{animation:none;} .cwx-pick .cwx-card:hover{transform:none;} }
-@media print{ .cwx-pick .cwx-show{display:block;} .cwx-pick .cwx-go,.cwx-pick .cwx-show-bar{display:none;} }
-</style>
+<link rel="stylesheet" href="../assets/styles.css?v=7c247ed072"/>
 </head>
 <body>
 <input class="navtoggle-cb" id="navtoggle" type="checkbox"/>
+<input class="navcollapse-cb" id="navcollapse" type="checkbox" aria-label="Hide the course menu"/>
 <label class="navtoggle-btn" for="navtoggle" aria-label="Show or hide the course menu"><span class="nt-bars"><i></i><i></i><i></i></span>Menu</label>
+<label class="navcollapse-open" for="navcollapse" title="Show the course menu" aria-label="Show the course menu"><span class="nt-bars"><i></i><i></i><i></i></span><span class="nco-t">Menu</span></label>
 <nav id="sidenav" aria-label="Course navigation">
-  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft Copilot</div><div class="sn-sub">End-user coursework</div></div></div>
+  <div class="sn-head"><span class="cplogo" style="width:24px;height:22px"></span><div><div class="sn-title">Getting Started with Microsoft Copilot</div><div class="sn-sub">End-user coursework</div></div><label class="sn-collapse" for="navcollapse" title="Hide the course menu" aria-label="Hide the course menu"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M7.5 3 3.5 7l4 4M11 3 7 7l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></label></div>
   <div class="sn-eyebrow">Agenda</div>
   <a class="sn-top" href="../index.html">Course Outline</a>
   <div class="sn-group">
@@ -416,7 +102,7 @@
     </ul>
   </div>
   <div class="sn-group">
-    <a class="sn-mod" href="../module-10-agentic-workflows/"><span class="sn-num">10</span>Build Your Agentic Workflow</a>
+    <a class="sn-mod" href="../module-10-agentic-workflows/"><span class="sn-num">10</span>Build your Agentic Workflow</a>
     <ul class="sn-list">
       <li><a href="../module-10-agentic-workflows/#m10-what">10.1 Anatomy of an Agentic Workflow</a></li>
       <li><a href="../module-10-agentic-workflows/#m10-compare">10.2 Comparison Table: Agent Flows vs Workflows</a></li>
@@ -461,13 +147,8 @@
       <tbody><tr><td><b>Cowork</b> <a href="#m5-cowork">6.1</a></td><td>An outcome. For example: “Get me ready for Thursday’s review.”</td><td>Completed multistep work across your Microsoft 365 apps and files. Cowork asks for approval before it sends or changes anything.</td><td><b>Home</b> — select <b>Cowork</b> in the prompt box.</td></tr><tr><td><b>Code</b> <a href="#m6-code">6.2</a></td><td>A description of the software that you want.</td><td>Working software: apps, dashboards, internal tools, static websites, data transforms, automations and scripts.</td><td>The <b>Code</b> tab in the Microsoft Copilot app.</td></tr><tr><td><b>Autopilot</b> <a href="#m6-autopilot">6.3</a></td><td>A name, a role and a goal.</td><td>An agent that keeps working without a prompt each time. It keeps you informed and in control.</td><td>The <b>Autopilot</b> tab in the Microsoft Copilot app.</td></tr></tbody>
     </table>
 <div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/" rel="noopener" target="_blank">Introducing the new Copilot with Home, Code and Autopilot</a> — Official Microsoft Blog · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork</a> — Microsoft Learn</span><span class="ps-n">Module 6 · 1 of 8</span></div></div><div class="page">
-    
-    
-    
-    
-
-    <div class="lic-row"><span class="lic-badge prem">Microsoft Copilot (Premium)</span></div>
-    <div class="subhead" id="m5-cowork"><span class="sx" style="background:transparent"><span class="ic-cowork" style="width:24px;height:24px"></span></span> <span class="sec-no">6.1</span> Cowork</div><div class="agenthero">
+<div class="lic-row"><span class="lic-badge prem">Microsoft Copilot (Premium)</span></div>
+<div class="subhead" id="m5-cowork"><span class="sx" style="background:transparent"><span class="ic-cowork" style="width:24px;height:24px"></span></span> <span class="sec-no">6.1</span> Cowork</div><div class="agenthero">
 <span class="ic-cowork ah-logo"></span>
 <div>
 <h4>Cowork</h4>
@@ -479,304 +160,163 @@
 <div class="ahfact" style="--c:#8661c5"><div class="k">Trades</div><div class="v">A single reply for a <b>finished outcome</b> — minutes to hours, running on its own</div></div>
 <div class="ahfact" style="--c:#107c10"><div class="k">Gives you back</div><div class="v">Real files in your OneDrive, a task you can reopen, and an <b>approval gate</b> before it sends</div></div>
 </div>
-    <p class="m2-intro">Cowork is the <b>agentic</b> side of Microsoft Copilot — you describe an <b>outcome</b> and it <b>plans and carries out the steps</b> for you, across your apps. You don’t build it: it’s a ready-made agentic system — open it from the prompt box in <b>Home</b>.</p>
-    <div class="cwx-dg">
-      <p class="cwx-dg-cap"><b>Copilot Cowork</b> Click the composer &mdash; you delegate an outcome and the plan builds itself</p>
-      <input type="radio" name="m5cw" id="m5cw-0" class="cwx-sw-in" checked>
-      <input type="radio" name="m5cw" id="m5cw-1" class="cwx-sw-in">
-      <div class="cwx-cpui cwx-work">
-        <div class="cwx-rail">
-          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
-          <div class="cwx-segs"><span class="cwx-seg cwx-on">Home</span><span class="cwx-seg">Code</span><span class="cwx-seg">Autopilot</span></div>
-          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New task</div>
-          <ul class="cwx-nav">
-            <li><span class="cwx-ic"></span>My tasks</li>
-            <li><span class="cwx-ic"></span>Automations</li>
-            <li><span class="cwx-ic cwx-r"></span>Customize</li>
-          </ul>
-          <p class="cwx-rail-h">Pinned</p>
-          <ul class="cwx-nav cwx-pin">
-            <li class="cwx-sel"><span class="cwx-ic cwx-v"></span>Weekly reset</li>
-            <li><span class="cwx-ic cwx-b"></span>Contoso account</li>
-            <li><span class="cwx-ic cwx-p"></span>Workshop prep</li>
-          </ul>
-        </div>
-        <div class="cwx-main">
-          <div class="cwx-topbar">
-            <span class="cwx-ttl">Weekly reset</span>
-            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
-          </div>
-          <div class="cwx-canvas">
-
-            <div class="cwx-cpane cwx-p0">
-              <p class="cwx-hero">Give me an outcome, not a step</p>
-              <label class="cwx-composer cwx-typed" for="m5cw-1">
-                <span class="cwx-pl">+</span>
-                <span class="cwx-ph">Review last week, clean up my calendar, draft regrets and block focus time&hellip;</span>
-                <span class="cwx-send">&uarr;</span>
-              </label>
-              <p class="cwx-clickme">Click to start the task</p>
-            </div>
-
-            <div class="cwx-cpane cwx-p1">
-              <div class="cwx-thread">
-                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Review last week, clean up my calendar, draft regrets for the conflicts and block three hours of focus time on Tuesday. Then prep a briefing for the Contoso meeting.</span></div>
-                <div class="cwx-bub cwx-ai cwx-stg cwx-d3"><span class="cwx-t">I've broken this into six steps and started work. I'll check in before anything is sent.<small>Task running &middot; you can close this window</small></span></div>
-              </div>
-              <div class="cwx-foot">
-                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Cowork</span><span class="cwx-send">&uarr;</span></span>
-                <label class="cwx-reset" for="m5cw-0">Reset</label>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="cwx-wsp">
-          <p class="cwx-wh">Workspace<span class="cwx-x">&times;</span></p>
-
-          <div class="cwx-idleonly" style="flex-direction:column;gap:.5rem">
-            <p class="cwx-sh">Steps<span class="cwx-cnt">0 / 6</span></p>
-            <ul class="cwx-wl">
-              <li class="cwx-dim"><span class="cwx-ck"></span><span>Waiting for a task</span></li>
-            </ul>
-            <p class="cwx-sh">Output</p>
-            <ul class="cwx-wf"><li class="cwx-dim"><span class="cwx-ft cwx-m">&mdash;</span><span>Nothing yet</span></li></ul>
-          </div>
-
-          <div class="cwx-runonly" style="flex-direction:column;gap:.5rem">
-            <p class="cwx-sh">Steps<span class="cwx-cnt cwx-done">6 / 6</span></p>
-            <ul class="cwx-wl">
-              <li class="cwx-stg cwx-d2"><span class="cwx-ck cwx-ok">&#10003;</span><span>Review last week's calendar</span></li>
-              <li class="cwx-stg cwx-d3"><span class="cwx-ck cwx-ok">&#10003;</span><span>Identify conflicts and low-value meetings</span></li>
-              <li class="cwx-stg cwx-d4"><span class="cwx-ck cwx-ok">&#10003;</span><span>Draft regrets &mdash; awaiting approval</span></li>
-              <li class="cwx-stg cwx-d5"><span class="cwx-ck cwx-run"></span><span>Block focus time Tuesday</span></li>
-              <li class="cwx-stg cwx-d6"><span class="cwx-ck"></span><span>Pull Contoso emails and meeting notes</span></li>
-              <li class="cwx-stg cwx-d7"><span class="cwx-ck"></span><span>Produce the briefing document</span></li>
-            </ul>
-            <p class="cwx-sh">Output</p>
-            <ul class="cwx-wf">
-              <li class="cwx-stg cwx-d7"><span class="cwx-ft cwx-h">W</span><span>Contoso-briefing.docx</span></li>
-              <li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-z">X</span><span>calendar-changes.xlsx</span></li>
-            </ul>
-            <p class="cwx-sh">References</p>
-            <ul class="cwx-wf"><li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-m">M</span><span>Last week's meetings</span></li></ul>
-          </div>
-        </div>
-      </div>
-      <p class="cwx-dg-foot">Multi-step work across tasks and sources, with an approval gate in front of anything consequential.</p>
-    </div>
-    <div class="note">
+<p class="m2-intro">Cowork is the <b>agentic</b> side of Microsoft Copilot — you describe an <b>outcome</b> and it <b>plans and carries out the steps</b> for you, across your apps. You don’t build it: it’s a ready-made agentic system — open it from the prompt box in <b>Home</b>.</p>
+<h3 style="margin-top:26px">Example Use Case Prompt</h3>
+<div class="prompts"><div class="pchip"><span class="pc-ic"><span class="ic-cowork" style="width:18px;height:18px"></span></span><span class="pc-tx">Get me ready for Thursday’s quarterly review with Contoso: pull the last three months of email and Teams threads plus the files in <span class="mono">/Contoso FY26</span>, summarize the decisions and everything still open, draft a 10-slide deck ending on risks, put the follow-up actions in a table with owners, and save it all to my OneDrive — check with me before you send or share anything.</span></div></div>
+<p class="m2-intro cwd-lead"><b>See it run: from a use case to an agent design and a dashboard.</b> One prompt gives Cowork a Finance use case. Cowork reads the sources, builds an Excel workbook, an interactive solution architecture and an interactive finance dashboard, and then asks you before it emails the architecture.</p>
+<div class="cwd" role="group" aria-label="Click-through demo: a Cowork task that turns a use case into an Excel workbook, a solution architecture and a finance dashboard">
+<input class="ixcb cw-in" id="cwx-0" name="cwx" type="radio" checked aria-label="Cowork demo — waiting for a task"/><input class="ixcb cw-in" id="cwx-1" name="cwx" type="radio" aria-label="Cowork demo — run the task"/><input class="ixcb cw-in" id="cwx-2" name="cwx" type="radio" aria-label="Cowork demo — approve and send the email"/><input class="ixcb cw-in" id="cwdv-0" name="cwdv" type="radio" checked aria-label="No file preview open"/><input class="ixcb cw-in" id="cwdv-a" name="cwdv" type="radio" aria-label="Open Expense-Agent-Architecture.html"/><input class="ixcb cw-in" id="cwdv-d" name="cwdv" type="radio" aria-label="Open Finance-Dashboard.html"/>
+<div class="cwd-side">
+<div class="cwd-k">What happens</div>
+<ol class="cwd-steps">
+<li class="cwd-st" style="--a:.2s;--b:1.1s"><span class="cwd-sn">1</span><div><b>You give an outcome</b><span>One prompt with the goal, the context, three sources and the files you need.</span></div></li>
+<li class="cwd-st" style="--a:1.1s;--b:1.9s"><span class="cwd-sn">2</span><div><b>Cowork plans the job</b><span>It splits the work into six steps. You can close the window.</span></div></li>
+<li class="cwd-st" style="--a:1.9s;--b:3.6s"><span class="cwd-sn">3</span><div><b>It reads your sources</b><span>The meeting notes, Marco’s email thread and the policy file, through Work IQ.</span></div></li>
+<li class="cwd-st" style="--a:3.6s;--b:6.2s"><span class="cwd-sn">4</span><div><b>It builds three files</b><span>Excel data, an architecture HTML and a dashboard HTML. Click an HTML file to open it.</span></div></li>
+<li class="cwd-st" style="--a:6.7s"><span class="cwd-sn">5</span><div><b>You approve the email</b><span>Cowork drafts the email to Marco and waits for you. Click <b class="cwd-in">Send</b>.</span></div></li>
+<li class="cwd-st cwd-s6"><span class="cwd-sn">6</span><div><b>The task is complete</b><span>The email is sent. Open the task again at any time from <b class="cwd-in">My tasks</b>.</span></div></li>
+</ol>
+<div class="cwd-ctl"><label class="cwd-go" for="cwx-1"><span aria-hidden="true">▶</span> Run the demo</label><label class="cwd-reset" for="cwx-0"><span aria-hidden="true">↺</span> Reset</label></div>
+<p class="cwd-hint">Click <b>Run the demo</b>, open the HTML files, then click <b>Send</b> on the email card. Names, files and figures are illustrative.</p>
+</div>
+<div class="cwd-ui">
+<aside class="cwd-rail">
+<div class="cwd-brand"><span class="cplogo" style="width:18px;height:16px"></span>Copilot</div>
+<div class="cwd-segs"><span class="on">Home</span><span>Code</span><span>Autopilot</span></div>
+<div class="cwd-new"><span aria-hidden="true">+</span>New task</div>
+<ul class="cwd-nav"><li><i></i>My tasks</li><li><i></i>Automations</li><li><i></i>Customize</li></ul>
+<p class="cwd-rh">Pinned</p>
+<ul class="cwd-nav"><li class="sel"><i></i>Finance AI use case</li><li><i></i>Contoso account</li><li><i></i>Workshop prep</li></ul>
+</aside>
+<div class="cwd-main">
+<div class="cwd-top"><span class="cwd-ttl">Finance AI — agent and dashboard</span><span class="cwd-mode">Cowork</span><span class="cwd-state"><i class="s0">Ready</i><i class="s1">Working</i><i class="s2">Needs your input</i><i class="s3">Complete</i></span></div>
+<div class="cwd-cv">
+<div class="cwd-idle">
+<p class="cwd-hero">Give me an outcome, not a step</p>
+<label class="cwd-cmp" for="cwx-1"><span class="cwd-m">1</span><span class="cwd-pl" aria-hidden="true">+</span><span class="cwd-ph">Turn our month-end expense review use case into a solution design for Thursday’s Finance workshop. Use the notes from <span class="cwd-ref">Finance AI intake</span>, Marco’s email thread <span class="cwd-ref">Expense review pain points</span> and <span class="cwd-ref">Expense Policy FY26.docx</span>. Create: (1) an Excel workbook with 12 months of sample expense claims by cost center, category and status; (2) an interactive HTML solution architecture for an expense-review agent — users, channels, knowledge, actions and data; (3) an interactive HTML finance dashboard that uses the workbook. Save them to my OneDrive, then email the architecture to Marco Diaz for review — ask me before you send.</span><span class="cwd-snd" aria-hidden="true">↑</span></label>
+<p class="cwd-click"><i></i>Click the prompt to start the task</p>
+</div>
+<div class="cwd-thr" aria-live="polite">
+<div class="cwd-b cwd-me cwd-stg" style="--t:.2s"><span class="cwd-m">1</span>Turn our month-end expense review use case into a solution design for Thursday’s Finance workshop. Use the notes from <span class="cwd-ref">Finance AI intake</span>, Marco’s email thread <span class="cwd-ref">Expense review pain points</span> and <span class="cwd-ref">Expense Policy FY26.docx</span>. Create: (1) an Excel workbook with 12 months of sample expense claims by cost center, category and status; (2) an interactive HTML solution architecture for an expense-review agent — users, channels, knowledge, actions and data; (3) an interactive HTML finance dashboard that uses the workbook. Save them to my OneDrive, then email the architecture to Marco Diaz for review — ask me before you send.</div>
+<div class="cwd-b cwd-ai cwd-stg" style="--t:1.1s"><span class="cwd-m">2</span>Got it. I split this into six steps — follow them in <b>Progress</b>. I will ask you before I send anything.<small>Task running · you can close this window</small></div>
+<div class="cwd-b cwd-ai cwd-stg" style="--t:6.2s">The three files are in the <b>Output folder</b>: 1,240 sample claims in the workbook, a six-layer architecture, and a dashboard that flags 37 claims over policy.</div>
+<div class="cwd-apr cwd-stg" style="--t:6.7s"><span class="cwd-m">5</span>
+<div class="cwd-ah"><b>Send email?</b><em>Needs your approval</em></div>
+<div class="cwd-mail"><span>To</span><b>Marco Diaz</b><span>Subject</span><b>Expense review agent — solution architecture for review</b></div>
+<p class="cwd-msg">“Hi Marco, here is the interactive architecture for the expense-review agent. Can you check the approval rules before Thursday?”</p>
+<div class="cwd-af"><label class="cwd-att" for="cwdv-a" title="Open the attachment"><span class="cwd-ft h">H</span>Expense-Agent-Architecture.html</label>
+<div class="cwd-btns"><span class="cwd-split"><label class="cwd-send" for="cwx-2">Send</label><span class="cwd-more" aria-hidden="true">▾</span></span><span class="cwd-cancel">Cancel</span></div>
+<div class="cwd-sent"><span class="cwd-okc">✓</span>Sent to Marco Diaz</div></div>
+</div>
+<div class="cwd-b cwd-ai cwd-fin"><span class="cwd-m">6</span>Done — all six steps are complete. Open this task again at any time from <b>My tasks</b>.<small>Task complete · files in your OneDrive Cowork folder</small></div>
+</div>
+</div>
+</div>
+<aside class="cwd-wsp" aria-label="Side panel">
+<div class="cwd-sec"><p class="cwd-sh"><span class="cwd-m">3</span>Progress<span class="cwd-pct"><i class="a">Working</i><i class="b">5 / 6</i><i class="c">6 / 6</i></span></p>
+<p class="cwd-dim cwd-i">No task yet</p>
+<div class="cwd-r"><div class="cwd-bar"><i></i></div>
+<ul class="cwd-pl">
+<li style="--s:1.9s;--d:2.9s"><span class="cwd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Find and read the three sources</span></li>
+<li style="--s:2.9s;--d:3.6s"><span class="cwd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Map the use case — users, rules and data</span></li>
+<li style="--s:3.6s;--d:4.4s"><span class="cwd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Build the Excel workbook</span></li>
+<li style="--s:4.4s;--d:5.2s"><span class="cwd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Build the solution architecture</span></li>
+<li style="--s:5.2s;--d:6s"><span class="cwd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Build the finance dashboard</span></li>
+<li class="cwd-p6" style="--s:6s"><span class="cwd-ck"><i class="p"></i><i class="w">!</i><i class="k">✓</i></span><span>Email the architecture to Marco<b class="cwd-wait cwd-stg" style="--t:6s">Needs approval</b></span></li>
+</ul></div></div>
+<div class="cwd-sec"><p class="cwd-sh"><span class="cwd-m">4</span>Output folder</p>
+<p class="cwd-dim cwd-i">Nothing yet</p>
+<ul class="cwd-of cwd-r">
+<li class="cwd-stg" style="--t:4.4s"><span class="cwd-ft x">X</span><span><b>Expense-Claims-FY26.xlsx</b><span>12 months · 1,240 claims</span></span></li>
+<li class="cwd-stg" style="--t:5.2s"><label class="cwd-open" for="cwdv-a" title="Open the preview"><span class="cwd-ft h">H</span><span><b>Expense-Agent-Architecture.html</b><span>Interactive · <u>click to open</u></span></span></label></li>
+<li class="cwd-stg" style="--t:6s"><label class="cwd-open" for="cwdv-d" title="Open the preview"><span class="cwd-ft h">H</span><span><b>Finance-Dashboard.html</b><span>Interactive · <u>click to open</u></span></span></label></li>
+</ul></div>
+<div class="cwd-sec"><p class="cwd-sh">Skills</p>
+<p class="cwd-dim cwd-i">None loaded</p>
+<div class="cwd-sk cwd-r"><span class="cwd-stg" style="--t:1.9s">Enterprise Search</span><span class="cwd-stg" style="--t:3.6s">Excel</span><span class="cwd-stg" style="--t:6s">Email</span></div></div>
+</aside>
+<div class="cwp cwp-a" role="dialog" aria-label="Preview of Expense-Agent-Architecture.html"><label class="cwp-bg" for="cwdv-0" aria-label="Close the preview"></label><div class="cwp-win"><div class="cwp-bar"><span class="cwd-ft h">H</span><b>Expense-Agent-Architecture.html</b><span class="cwp-pv">Preview</span><span class="cwp-tl" aria-hidden="true"><i>⤢ Full screen</i><i>Open in browser</i></span><label class="cwp-x" for="cwdv-0" aria-label="Close the preview">×</label></div><div class="cwp-body"><div class="cwa">
+<input class="ixcb cw-in" type="radio" name="cwa" id="cwa-0" checked aria-label="Architecture overview"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-u1" aria-label="Show details: Employees"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-u2" aria-label="Show details: Approvers"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-c1" aria-label="Show details: Microsoft Teams"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-c2" aria-label="Show details: Microsoft 365 Copilot"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-a1" aria-label="Show details: Expense review agent"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-k1" aria-label="Show details: Expense Policy FY26"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-k2" aria-label="Show details: Limits table"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-x1" aria-label="Show details: Check against policy"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-x2" aria-label="Show details: Request receipt"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-x3" aria-label="Show details: Route for approval"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-d1" aria-label="Show details: Expense claims"/><input class="ixcb cw-in" type="radio" name="cwa" id="cwa-d2" aria-label="Show details: Finance dashboard"/><input class="ixcb cw-in" type="checkbox" id="cwa-tr" aria-label="Trace one claim through the architecture"/>
+<div class="cwa-head"><span class="cwa-logo" aria-hidden="true">EA</span><div class="cwa-ti"><b>Expense review agent — solution architecture</b><span>Finance AI use case · draft 1 · built by Cowork from 3 sources</span></div><label class="cwa-tog" for="cwa-tr"><i></i>Trace a claim</label></div>
+<div class="cwa-body"><div class="cwa-layers"><div class="cwa-l" style="--lc:#2563eb"><div class="cwa-ln"><i>1</i>Users</div><div class="cwa-cs"><label class="cwa-c k-u1 path" for="cwa-u1"><b>Employees</b><span>submit expense claims</span><em class="cwa-nb">1</em></label><label class="cwa-c k-u2" for="cwa-u2"><b>Approvers</b><span>line managers and Finance</span></label></div></div><div class="cwa-l" style="--lc:#0f7b6c"><div class="cwa-ln"><i>2</i>Channels</div><div class="cwa-cs"><label class="cwa-c k-c1 path" for="cwa-c1"><b>Microsoft Teams</b><span>chat with the agent</span><em class="cwa-nb">2</em></label><label class="cwa-c k-c2" for="cwa-c2"><b>Microsoft 365 Copilot</b><span>the same agent in Copilot</span></label></div></div><div class="cwa-l" style="--lc:#7c4ddf"><div class="cwa-ln"><i>3</i>Agent</div><div class="cwa-cs"><label class="cwa-c k-a1 path" for="cwa-a1"><b>Expense review agent</b><span>Copilot Studio agent</span><em class="cwa-nb">3</em></label></div></div><div class="cwa-l" style="--lc:#c58a00"><div class="cwa-ln"><i>4</i>Knowledge</div><div class="cwa-cs"><label class="cwa-c k-k1 path" for="cwa-k1"><b>Expense Policy FY26</b><span>SharePoint · Word</span><em class="cwa-nb">4</em></label><label class="cwa-c k-k2" for="cwa-k2"><b>Limits table</b><span>hotel caps and meal limits</span></label></div></div><div class="cwa-l" style="--lc:#c13fc0"><div class="cwa-ln"><i>5</i>Actions</div><div class="cwa-cs"><label class="cwa-c k-x1" for="cwa-x1"><b>Check against policy</b><span>agent action</span></label><label class="cwa-c k-x2" for="cwa-x2"><b>Request receipt</b><span>Outlook message</span></label><label class="cwa-c k-x3 path" for="cwa-x3"><b>Route for approval</b><span>agent flow</span><em class="cwa-nb">5</em></label></div></div><div class="cwa-l" style="--lc:#107c41"><div class="cwa-ln"><i>6</i>Data &amp; insight</div><div class="cwa-cs"><label class="cwa-c k-d1 path" for="cwa-d1"><b>Expense claims</b><span>Dataverse table</span><em class="cwa-nb">6</em></label><label class="cwa-c k-d2" for="cwa-d2"><b>Finance dashboard</b><span>interactive HTML</span></label></div></div></div><div class="cwa-det" aria-live="polite"><div class="cwa-d d-0"><span class="cwa-tag">Overview</span><b>12 components in 6 layers</b><p>Select any box to see what it does and which source it came from. Turn on <b>Trace a claim</b> to follow one claim from Teams to the dashboard.</p><p class="cwa-k">Built from</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span><span class="cwa-src e"><i>Email</i>Expense review pain points</span><span class="cwa-src p"><i>Policy</i>Expense Policy FY26.docx</span></div></div><div class="cwa-d d-u1" style="--lc:#2563eb"><span class="cwa-tag">Layer 1 · Users</span><b>Employees</b><span class="cwa-sub">submit expense claims</span><p>Submit a claim and ask the agent about the expense policy, in plain language.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span></div><p class="cwa-q">About 1,240 claims a year — most of them travel and meals.</p></div><div class="cwa-d d-u2" style="--lc:#2563eb"><span class="cwa-tag">Layer 1 · Users</span><b>Approvers</b><span class="cwa-sub">line managers and Finance</span><p>Get one approval card for each exception, with the reason and the receipt.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src e"><i>Email</i>Expense review pain points</span></div><p class="cwa-q">“Approvals sit in inboxes for up to five days.”</p></div><div class="cwa-d d-c1" style="--lc:#0f7b6c"><span class="cwa-tag">Layer 2 · Channels</span><b>Microsoft Teams</b><span class="cwa-sub">chat with the agent</span><p>Employees open the agent in a Teams chat to submit a claim or check its status.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span></div><p class="cwa-q">Staff already work in Teams all day.</p></div><div class="cwa-d d-c2" style="--lc:#0f7b6c"><span class="cwa-tag">Layer 2 · Channels</span><b>Microsoft 365 Copilot</b><span class="cwa-sub">the same agent in Copilot</span><p>The same agent is published to Microsoft 365 Copilot for people who work in Copilot Chat.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src c"><i>Cowork</i>Design choice</span></div><p class="cwa-q">One agent, two channels — nothing to install.</p></div><div class="cwa-d d-a1" style="--lc:#7c4ddf"><span class="cwa-tag">Layer 3 · Agent</span><b>Expense review agent</b><span class="cwa-sub">Copilot Studio agent</span><p>Reads each claim, checks it against the policy, explains the result and starts the right action.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span></div><p class="cwa-q">Goal: review every claim, not a 10% sample.</p></div><div class="cwa-d d-k1" style="--lc:#c58a00"><span class="cwa-tag">Layer 4 · Knowledge</span><b>Expense Policy FY26</b><span class="cwa-sub">SharePoint · Word</span><p>Grounds every answer and every check in the current policy text.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src p"><i>Policy</i>Expense Policy FY26.docx</span></div><p class="cwa-q">42 rules in six sections.</p></div><div class="cwa-d d-k2" style="--lc:#c58a00"><span class="cwa-tag">Layer 4 · Knowledge</span><b>Limits table</b><span class="cwa-sub">hotel caps and meal limits</span><p>City hotel caps and daily meal limits that the agent compares amounts with.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src p"><i>Policy</i>Expense Policy FY26.docx</span></div><p class="cwa-q">Appendix B, turned into a table by Cowork.</p></div><div class="cwa-d d-x1" style="--lc:#c13fc0"><span class="cwa-tag">Layer 5 · Actions</span><b>Check against policy</b><span class="cwa-sub">agent action</span><p>Compares amount, category, receipt and dates with the rules, then gives a pass or an exception.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src e"><i>Email</i>Expense review pain points</span></div><p class="cwa-q">“Most exceptions are hotel caps and missing receipts.”</p></div><div class="cwa-d d-x2" style="--lc:#c13fc0"><span class="cwa-tag">Layer 5 · Actions</span><b>Request receipt</b><span class="cwa-sub">Outlook message</span><p>Asks the employee for a missing receipt and puts the claim on hold.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span></div><p class="cwa-q">About 1 claim in 8 arrives without a receipt.</p></div><div class="cwa-d d-x3" style="--lc:#c13fc0"><span class="cwa-tag">Layer 5 · Actions</span><b>Route for approval</b><span class="cwa-sub">agent flow</span><p>Sends each exception to the approver as a Yes/No card and records the answer.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src e"><i>Email</i>Expense review pain points</span></div><p class="cwa-q">“We chase approvers by email every month-end.”</p></div><div class="cwa-d d-d1" style="--lc:#107c41"><span class="cwa-tag">Layer 6 · Data &amp; insight</span><b>Expense claims</b><span class="cwa-sub">Dataverse table</span><p>Stores each claim, check result and approval. Expense-Claims-FY26.xlsx holds the sample data.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src c"><i>Cowork</i>Design choice</span></div><p class="cwa-q">Workbook built by Cowork — 1,240 rows.</p></div><div class="cwa-d d-d2" style="--lc:#107c41"><span class="cwa-tag">Layer 6 · Data &amp; insight</span><b>Finance dashboard</b><span class="cwa-sub">interactive HTML</span><p>Shows spend, exceptions and approval time for the month-end review.</p><p class="cwa-k">Why it is here</p><div class="cwa-srcs"><span class="cwa-src m"><i>Meeting notes</i>Finance AI intake</span></div><p class="cwa-q">The CFO asked for one view for the month-end review.</p></div></div></div>
+<div class="cwa-foot"><span class="cwa-legend">Select a box for details · colors show the layer · numbers show one claim’s path when <b>Trace a claim</b> is on</span><span class="cwa-flow"><span><em>1</em>Employee submits a claim</span> <span class="cwa-ar">→</span> <span><em>2</em>in Teams</span> <span class="cwa-ar">→</span> <span><em>3</em>the agent reads it</span> <span class="cwa-ar">→</span> <span><em>4</em>checks Policy FY26</span> <span class="cwa-ar">→</span> <span><em>5</em>routes the exception</span> <span class="cwa-ar">→</span> <span><em>6</em>saves the result</span></span></div>
+</div></div></div></div>
+<div class="cwp cwp-d" role="dialog" aria-label="Preview of Finance-Dashboard.html"><label class="cwp-bg" for="cwdv-0" aria-label="Close the preview"></label><div class="cwp-win"><div class="cwp-bar"><span class="cwd-ft h">H</span><b>Finance-Dashboard.html</b><span class="cwp-pv">Preview</span><span class="cwp-tl" aria-hidden="true"><i>⤢ Full screen</i><i>Open in browser</i></span><label class="cwp-x" for="cwdv-0" aria-label="Close the preview">×</label></div><div class="cwp-body"><div class="cwf">
+<input class="ixcb cw-in" type="radio" name="cwf" id="cwf-all" checked aria-label="Dashboard filter: all categories"/><input class="ixcb cw-in" type="radio" name="cwf" id="cwf-tr" aria-label="Dashboard filter: travel"/><input class="ixcb cw-in" type="radio" name="cwf" id="cwf-me" aria-label="Dashboard filter: meals"/><input class="ixcb cw-in" type="radio" name="cwf" id="cwf-sw" aria-label="Dashboard filter: software"/><input class="ixcb cw-in" type="radio" name="cwf" id="cwf-ot" aria-label="Dashboard filter: other"/><input class="ixcb cw-in" type="checkbox" id="cwf-bud" aria-label="Show the monthly budget line"/>
+<div class="cwf-head"><span class="cwf-logo" aria-hidden="true">FD</span><div class="cwf-ti"><b>Expense review — FY26</b><span>Data: Expense-Claims-FY26.xlsx · 1,240 claims · illustrative</span></div>
+<div class="cwf-filters" role="group" aria-label="Category"><label for="cwf-all">All</label><label for="cwf-tr">Travel</label><label for="cwf-me">Meals</label><label for="cwf-sw">Software</label><label for="cwf-ot">Other</label></div><label class="cwf-tog" for="cwf-bud"><i></i>Budget line</label></div>
+<div class="cwf-kpis"><div class="cwf-k"><span class="cwf-kl">Total spend</span><b><i class="v s-all">$486.2k</i><i class="v s-tr">$284.6k</i><i class="v s-me">$62.4k</i><i class="v s-sw">$96.8k</i><i class="v s-ot">$42.4k</i></b><small><i class="v s-all">budget $492k</i><i class="v s-tr">58.5% of all spend</i><i class="v s-me">12.8% of all spend</i><i class="v s-sw">19.9% of all spend</i><i class="v s-ot">8.7% of all spend</i></small></div><div class="cwf-k"><span class="cwf-kl">Claims</span><b><i class="v s-all">1,240</i><i class="v s-tr">410</i><i class="v s-me">520</i><i class="v s-sw">120</i><i class="v s-ot">190</i></b><small><i class="v s-all">12 months · FY26</i><i class="v s-tr">12 months · FY26</i><i class="v s-me">12 months · FY26</i><i class="v s-sw">12 months · FY26</i><i class="v s-ot">12 months · FY26</i></small></div><div class="cwf-k"><span class="cwf-kl">Average claim</span><b><i class="v s-all">$392</i><i class="v s-tr">$694</i><i class="v s-me">$120</i><i class="v s-sw">$807</i><i class="v s-ot">$223</i></b><small><i class="v s-all">per claim</i><i class="v s-tr">per claim</i><i class="v s-me">per claim</i><i class="v s-sw">per claim</i><i class="v s-ot">per claim</i></small></div><div class="cwf-k warn"><span class="cwf-kl">Over policy</span><b><i class="v s-all">37</i><i class="v s-tr">19</i><i class="v s-me">11</i><i class="v s-sw">3</i><i class="v s-ot">4</i></b><small><i class="v s-all">3.0% of claims</i><i class="v s-tr">4.6% of claims</i><i class="v s-me">2.1% of claims</i><i class="v s-sw">2.5% of claims</i><i class="v s-ot">2.1% of claims</i></small></div><div class="cwf-k"><span class="cwf-kl">Approval time</span><b><i class="v s-all">2.3 days</i><i class="v s-tr">3.1 days</i><i class="v s-me">1.6 days</i><i class="v s-sw">2.9 days</i><i class="v s-ot">2.2 days</i></b><small><i class="v s-all">average, submit to decision</i><i class="v s-tr">average, submit to decision</i><i class="v s-me">average, submit to decision</i><i class="v s-sw">average, submit to decision</i><i class="v s-ot">average, submit to decision</i></small></div></div>
+<div class="cwf-share" aria-label="Spend by category — select a segment to filter"><label for="cwf-tr" style="flex-basis:58.5%;--c:#2563eb" title="Travel · $284.6k · 58.5%"><span>Travel 58%</span></label><label for="cwf-me" style="flex-basis:12.8%;--c:#0f7b6c" title="Meals · $62.4k · 12.8%"><span>Meals 13%</span></label><label for="cwf-sw" style="flex-basis:19.9%;--c:#7c4ddf" title="Software · $96.8k · 19.9%"><span>Software 20%</span></label><label for="cwf-ot" style="flex-basis:8.7%;--c:#c58a00" title="Other · $42.4k · 8.7%"><span>Other 9%</span></label></div>
+<div class="cwf-grid">
+<div class="cwf-pn"><h5>Monthly spend<span>Hover a bar for the value</span></h5>
+<div class="cwf-plot"><div class="cwf-y"><span><i class="v s-all">$70k</i><i class="v s-tr">$40k</i><i class="v s-me">$8k</i><i class="v s-sw">$20k</i><i class="v s-ot">$6k</i></span><span><i class="v s-all">$35k</i><i class="v s-tr">$20k</i><i class="v s-me">$4k</i><i class="v s-sw">$10k</i><i class="v s-ot">$3k</i></span><span><i class="v s-all">$0k</i><i class="v s-tr">$0k</i><i class="v s-me">$0k</i><i class="v s-sw">$0k</i><i class="v s-ot">$0k</i></span></div><div class="cwf-bars" style="--bl-all:58.6%;--bl-tr:60.0%;--bl-me:67.5%;--bl-sw:40.0%;--bl-ot:60.0%"><div class="cwf-b ob-sw" style="--all:55.0%;--tr:42.8%;--me:55.0%;--sw:68.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Jan · $38.5k</i><i class="v s-tr">Jan · $17.1k</i><i class="v s-me">Jan · $4.4k</i><i class="v s-sw">Jan · $13.6k</i><i class="v s-ot">Jan · $3.4k</i></span></div><div class="cwf-b " style="--all:47.9%;--tr:49.7%;--me:55.0%;--sw:29.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Feb · $33.5k</i><i class="v s-tr">Feb · $19.9k</i><i class="v s-me">Feb · $4.4k</i><i class="v s-sw">Feb · $5.8k</i><i class="v s-ot">Feb · $3.4k</i></span></div><div class="cwf-b ob-tr" style="--all:56.9%;--tr:64.0%;--me:62.5%;--sw:29.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Mar · $39.8k</i><i class="v s-tr">Mar · $25.6k</i><i class="v s-me">Mar · $5.0k</i><i class="v s-sw">Mar · $5.8k</i><i class="v s-ot">Mar · $3.4k</i></span></div><div class="cwf-b ob-ot" style="--all:54.9%;--tr:57.0%;--me:62.5%;--sw:34.0%;--ot:63.3%"><span class="cwf-tip"><i class="v s-all">Apr · $38.4k</i><i class="v s-tr">Apr · $22.8k</i><i class="v s-me">Apr · $5.0k</i><i class="v s-sw">Apr · $6.8k</i><i class="v s-ot">Apr · $3.8k</i></span></div><div class="cwf-b " style="--all:52.9%;--tr:57.0%;--me:62.5%;--sw:29.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">May · $37.0k</i><i class="v s-tr">May · $22.8k</i><i class="v s-me">May · $5.0k</i><i class="v s-sw">May · $5.8k</i><i class="v s-ot">May · $3.4k</i></span></div><div class="cwf-b ob-all ob-tr ob-me ob-ot" style="--all:65.1%;--tr:71.2%;--me:70.0%;--sw:38.5%;--ot:63.3%"><span class="cwf-tip"><i class="v s-all">Jun · $45.6k</i><i class="v s-tr">Jun · $28.5k</i><i class="v s-me">Jun · $5.6k</i><i class="v s-sw">Jun · $7.7k</i><i class="v s-ot">Jun · $3.8k</i></span></div><div class="cwf-b " style="--all:50.1%;--tr:49.7%;--me:62.5%;--sw:34.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Jul · $35.1k</i><i class="v s-tr">Jul · $19.9k</i><i class="v s-me">Jul · $5.0k</i><i class="v s-sw">Jul · $6.8k</i><i class="v s-ot">Jul · $3.4k</i></span></div><div class="cwf-b " style="--all:44.7%;--tr:42.8%;--me:62.5%;--sw:29.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Aug · $31.3k</i><i class="v s-tr">Aug · $17.1k</i><i class="v s-me">Aug · $5.0k</i><i class="v s-sw">Aug · $5.8k</i><i class="v s-ot">Aug · $3.4k</i></span></div><div class="cwf-b ob-tr" style="--all:58.3%;--tr:64.0%;--me:62.5%;--sw:34.0%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Sep · $40.8k</i><i class="v s-tr">Sep · $25.6k</i><i class="v s-me">Sep · $5.0k</i><i class="v s-sw">Sep · $6.8k</i><i class="v s-ot">Sep · $3.4k</i></span></div><div class="cwf-b ob-all ob-tr ob-me" style="--all:64.6%;--tr:71.2%;--me:70.0%;--sw:38.5%;--ot:56.7%"><span class="cwf-tip"><i class="v s-all">Oct · $45.2k</i><i class="v s-tr">Oct · $28.5k</i><i class="v s-me">Oct · $5.6k</i><i class="v s-sw">Oct · $7.7k</i><i class="v s-ot">Oct · $3.4k</i></span></div><div class="cwf-b ob-all ob-tr ob-me ob-ot" style="--all:59.7%;--tr:64.0%;--me:70.0%;--sw:34.0%;--ot:63.3%"><span class="cwf-tip"><i class="v s-all">Nov · $41.8k</i><i class="v s-tr">Nov · $25.6k</i><i class="v s-me">Nov · $5.6k</i><i class="v s-sw">Nov · $6.8k</i><i class="v s-ot">Nov · $3.8k</i></span></div><div class="cwf-b ob-all ob-tr ob-me ob-sw ob-ot" style="--all:84.6%;--tr:78.0%;--me:85.0%;--sw:87.0%;--ot:63.3%"><span class="cwf-tip"><i class="v s-all">Dec · $59.2k</i><i class="v s-tr">Dec · $31.2k</i><i class="v s-me">Dec · $6.8k</i><i class="v s-sw">Dec · $17.4k</i><i class="v s-ot">Dec · $3.8k</i></span></div><div class="cwf-bl"><span><i class="v s-all">Budget $41.0k / month · 4 months over</i><i class="v s-tr">Budget $24.0k / month · 6 months over</i><i class="v s-me">Budget $5.4k / month · 4 months over</i><i class="v s-sw">Budget $8.0k / month · 2 months over</i><i class="v s-ot">Budget $3.6k / month · 4 months over</i></span></div></div></div>
+<div class="cwf-x"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div></div>
+<div class="cwf-pn cwf-tb"><h5>Over-policy claims<span>Filter with the category buttons</span></h5>
+<table><thead><tr><th>Claim</th><th>Category</th><th class="num">Amount</th><th>Rule</th><th>Status</th></tr></thead><tbody><tr class="r s-tr s-all"><td><b>EXP-1187</b><span>R. Santoso</span></td><td><i class="cwf-cat" style="--c:#2563eb">Travel</i></td><td class="num">$4,860</td><td>Hotel above city cap</td><td><i class="cwf-st pend">Pending</i></td></tr><tr class="r s-sw s-all"><td><b>EXP-0942</b><span>L. Chen</span></td><td><i class="cwf-cat" style="--c:#7c4ddf">Software</i></td><td class="num">$3,200</td><td>No pre-approval</td><td><i class="cwf-st pend">Pending</i></td></tr><tr class="r s-tr s-all"><td><b>EXP-1033</b><span>A. Wijaya</span></td><td><i class="cwf-cat" style="--c:#2563eb">Travel</i></td><td class="num">$2,940</td><td>Business class on a short flight</td><td><i class="cwf-st esc">Escalated</i></td></tr><tr class="r s-tr s-all"><td><b>EXP-0890</b><span>J. Okafor</span></td><td><i class="cwf-cat" style="--c:#2563eb">Travel</i></td><td class="num">$1,620</td><td>Weekend stay not approved</td><td><i class="cwf-st ok">Approved</i></td></tr><tr class="r s-sw s-all"><td><b>EXP-1210</b><span>K. Haris</span></td><td><i class="cwf-cat" style="--c:#7c4ddf">Software</i></td><td class="num">$1,480</td><td>Personal license</td><td><i class="cwf-st pend">Pending</i></td></tr><tr class="r s-ot s-all"><td><b>EXP-0715</b><span>M. Rossi</span></td><td><i class="cwf-cat" style="--c:#c58a00">Other</i></td><td class="num">$1,150</td><td>Missing receipt</td><td><i class="cwf-st ask">Asked</i></td></tr><tr class="r s-me"><td><b>EXP-1102</b><span>S. Putri</span></td><td><i class="cwf-cat" style="--c:#0f7b6c">Meals</i></td><td class="num">$780</td><td>Over daily meal limit</td><td><i class="cwf-st pend">Pending</i></td></tr><tr class="r s-me"><td><b>EXP-0634</b><span>D. Lee</span></td><td><i class="cwf-cat" style="--c:#0f7b6c">Meals</i></td><td class="num">$640</td><td>Alcohol not covered</td><td><i class="cwf-st no">Rejected</i></td></tr><tr class="r s-me"><td><b>EXP-0977</b><span>P. Gomez</span></td><td><i class="cwf-cat" style="--c:#0f7b6c">Meals</i></td><td class="num">$560</td><td>Team dinner above limit</td><td><i class="cwf-st ok">Approved</i></td></tr><tr class="r s-ot"><td><b>EXP-0501</b><span>T. Nguyen</span></td><td><i class="cwf-cat" style="--c:#c58a00">Other</i></td><td class="num">$520</td><td>Duplicate claim</td><td><i class="cwf-st no">Rejected</i></td></tr></tbody></table>
+<p class="cwf-tf"><i class="v s-all">Top 6 of 37 over-policy claims</i><i class="v s-tr">Top 3 of 19 over-policy claims in Travel</i><i class="v s-me">Top 3 of 11 over-policy claims in Meals</i><i class="v s-sw">Top 2 of 3 over-policy claims in Software</i><i class="v s-ot">Top 2 of 4 over-policy claims in Other</i></p></div>
+</div>
+</div></div></div></div>
+</div>
+</div>
+<div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>How it’s designed.</b> Cowork is a <b>prebuilt, autonomous agentic system</b> that <b>takes action, not just chats</b>. Grounded in your emails, meetings, chats, files and data via <b>Work IQ</b>, it works through a multi-step job across Outlook, Teams, Word, Excel and PowerPoint. Where Copilot Chat answers in a single turn, Cowork works over <b>minutes to hours</b> — <b>asking for your approval before sensitive actions</b>, running in a <b>secure, isolated environment</b>, and acting only within <b>your own permissions</b>. <b>Getting access</b> takes two things, not one: an active <b>Microsoft Copilot license</b> <i>and</i> <b>usage-based (Cowork) billing enabled</b> — the spending policy is an access control, not just a budget. Without one, you’ll see <b>Request access</b>.</p>
     </div>
-    <p class="m2-intro" style="margin-top:14px"><b>Copilot Chat vs Cowork — which do you use?</b> Use <b>Copilot Chat</b> to think, draft and answer in the moment; reach for <b>Cowork</b> when you want work <i>carried out</i> across several apps and steps.</p>
-    <div class="cwx-pick">
-      <input type="radio" name="m5cmp" id="m5cmp-none" class="cwx-sw-in" checked aria-label="Hide illustration">
-      <input type="radio" name="m5cmp" id="m5cmp-chat" class="cwx-sw-in" aria-label="Show how Copilot Chat works">
-      <input type="radio" name="m5cmp" id="m5cmp-cw" class="cwx-sw-in" aria-label="Show how Cowork works">
-    <div class="dg dg-host"><div class="dg-sec"><p class="dg-hcap">One starting point, two lanes: Chat answers and you act; Cowork acts and you approve.</p><div class="dg-scroll" role="region" aria-label="Scrollable copilot chat vs cowork diagram" tabindex="0"><div class="dg-frame" style="width:920px"><div class="dg-canvas" data-canvas="copilot-chat-vs-cowork" style="width:920px;height:332px"><div class="dg-zone dg-tint-usr" data-zone="zc" data-head="52" style="left:176px;top:8px;width:736px;height:140px"><div class="dg-zh"><div><div class="dg-zt">Copilot Chat — think &amp; draft</div><div class="dg-zm">single-step, single session · seconds to minutes</div></div></div></div><div class="dg-zone dg-tint-svc" data-zone="zw" data-head="52" style="left:176px;top:164px;width:736px;height:160px"><div class="dg-zh"><div><div class="dg-zt">Cowork — get it done</div><div class="dg-zm">multi-step, across apps · minutes to hours</div></div></div></div><div class="dg-node dg-usr dg-on" data-id="cyou" style="left:8px;top:80px;width:130px;height:152px"><div class="dg-nh"><div><div class="dg-nt">You</div><div class="dg-nm">have a task or an outcome in mind</div></div></div></div><div class="dg-node dg-svc dg-on" data-id="c1" data-zone="zc" style="left:246px;top:60px;width:250px;height:78px"><div class="dg-nh"><img src="data:image/png;base64,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" alt=""><div><div class="dg-nt">Copilot Chat</div><div class="dg-nm">quick draft, answer or insight</div></div></div></div><div class="dg-node dg-out dg-on" data-id="c2" data-zone="zc" style="left:660px;top:60px;width:240px;height:78px"><div class="dg-nh"><div><div class="dg-nt">Draft or answer</div><div class="dg-nm">you act on the output</div></div></div></div><div class="dg-node dg-proc dg-on" data-id="w1" data-zone="zw" style="left:246px;top:216px;width:170px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Plans the steps</div><div class="dg-nm">research → draft → compile</div></div></div></div><div class="dg-node dg-svc dg-on" data-id="w2" data-zone="zw" style="left:506px;top:216px;width:170px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Acts across apps</div><div class="dg-nm">you approve each action</div></div></div></div><div class="dg-node dg-out dg-on" data-id="w3" data-zone="zw" style="left:760px;top:216px;width:140px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Finished outcome</div><div class="dg-nm">files, mail, meetings</div></div></div></div><div class="dg-wire dg-usr" data-from="cyou" data-to="c1"><div class="dg-seg dg-h" style="left:138px;top:99px;width:108px"></div><div class="dg-ah dg-r" style="left:246px;top:99px"></div><div class="dg-wl" style="left:150px;top:65px"><i>1</i>Ask</div></div><div class="dg-wire dg-svc" data-from="c1" data-to="c2"><div class="dg-seg dg-h" style="left:496px;top:99px;width:164px"></div><div class="dg-ah dg-r" style="left:660px;top:99px"></div><div class="dg-wl" style="left:530px;top:65px"><i>2</i>Answer</div></div><div class="dg-wire dg-usr" data-from="cyou" data-to="w1"><div class="dg-seg dg-h" style="left:138px;top:228px;width:108px"></div><div class="dg-ah dg-r" style="left:246px;top:228px"></div><div class="dg-wl" style="left:146px;top:238px"><i>3</i>Assign</div></div><div class="dg-wire dg-proc" data-from="w1" data-to="w2"><div class="dg-seg dg-h" style="left:416px;top:255px;width:90px"></div><div class="dg-ah dg-r" style="left:506px;top:255px"></div><div class="dg-wl" style="left:428px;top:221px"><i>4</i>Act</div></div><div class="dg-wire dg-svc" data-from="w2" data-to="w3"><div class="dg-seg dg-h" style="left:676px;top:255px;width:84px"></div><div class="dg-ah dg-r" style="left:760px;top:255px"></div><div class="dg-wl" style="left:682px;top:221px"><i>5</i>Done</div></div></div><div class="dg-legend"><span><i class="dg-sw dg-usr"></i>You</span><span><i class="dg-sw dg-svc"></i>Copilot Chat / Cowork</span><span><i class="dg-sw dg-proc"></i>Planning</span><span><i class="dg-sw dg-out"></i>Result</span><span><i class="dg-ln dg-ink"></i>Active path</span></div><p class="dg-foot">Arrows show the flow and take the colour of the box they start from. Checked against Microsoft Learn on 2026-10-23 — verify.</p><p class="dg-status">Status: Cowork needs Microsoft Copilot (Premium) and a spending policy</p></div></div><ol class="dg-steps dg-c5"><li><span class="dg-n dg-usr">1</span><span><b>Ask</b> — you ask Copilot Chat for a draft, answer or insight.</span></li><li><span class="dg-n dg-svc">2</span><span><b>Answer</b> — you act on the output yourself.</span></li><li><span class="dg-n dg-usr">3</span><span><b>Assign</b> — you hand Cowork an outcome.</span></li><li><span class="dg-n dg-proc">4</span><span><b>Act</b> — it plans and works across apps, asking before each action.</span></li><li><span class="dg-n dg-svc">5</span><span><b>Done</b> — a finished outcome — files, mail, meetings.</span></li></ol></div></div>
-<div class="cwx-btns"><label class="cwx-btn" for="m5cmp-chat">See how Copilot Chat works</label><label class="cwx-btn" for="m5cmp-cw">See how Cowork works</label></div>
-
-      <div class="cwx-show cwx-show-chat"><div class="cwx-show-bar"><label class="cwx-close" for="m5cmp-none">Close &times;</label></div>
-<div class="cwx-dg">
-      <p class="cwx-dg-cap"><b>Copilot Chat</b> Click the composer &mdash; you ask, it answers, you iterate</p>
-      <input type="radio" name="m5cc2" id="m5cc2-0" class="cwx-sw-in" checked>
-      <input type="radio" name="m5cc2" id="m5cc2-1" class="cwx-sw-in">
-      <div class="cwx-cpui">
-        <div class="cwx-rail">
-          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
-          <div class="cwx-segs"><span class="cwx-seg cwx-on">Home</span><span class="cwx-seg">Code</span><span class="cwx-seg">Autopilot</span></div>
-          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New chat</div>
-          <ul class="cwx-nav">
-            <li><span class="cwx-ic cwx-r"></span>Search</li>
-            <li><span class="cwx-ic"></span>Library</li>
-            <li><span class="cwx-ic"></span>Plugins</li>
-            <li><span class="cwx-ic"></span>Notebooks</li>
-          </ul>
-          <p class="cwx-rail-h">Pinned</p>
-          <ul class="cwx-nav cwx-pin">
-            <li><span class="cwx-ic cwx-v"></span>Researcher</li>
-            <li><span class="cwx-ic cwx-m"></span>Analyst</li>
-            <li><span class="cwx-ic cwx-b"></span>Sales</li>
-            <li><span class="cwx-ic cwx-t"></span>Know Your Customer</li>
-          </ul>
-        </div>
-        <div class="cwx-main">
-          <div class="cwx-topbar">
-            <span class="cwx-tchip cwx-iq">Work IQ</span><span class="cwx-tchip">Auto &#8964;</span>
-            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
-          </div>
-          <div class="cwx-canvas">
-
-            <div class="cwx-cpane cwx-p0">
-              <p class="cwx-hero">Hi, try asking me what's next on your calendar</p>
-              <label class="cwx-composer cwx-typed" for="m5cc2-1">
-                <span class="cwx-pl">+</span>
-                <span class="cwx-ph">Summarise the Contoso account for me</span>
-                <span class="cwx-send">&uarr;</span>
-              </label>
-              <div class="cwx-sugg">
-                <label class="cwx-s" for="m5cc2-1"><span class="cwx-ms"></span>Suggested</label>
-                <label class="cwx-s" for="m5cc2-1">File Insights</label>
-                <label class="cwx-s" for="m5cc2-1">Inbox Triage</label>
-                <label class="cwx-s" for="m5cc2-1">People Search</label>
-              </div>
-              <p class="cwx-clickme">Click to send</p>
-            </div>
-
-            <div class="cwx-cpane cwx-p1">
-              <div class="cwx-thread">
-                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Summarise the Contoso account for me</span></div>
-                <div class="cwx-bub cwx-ai cwx-stg cwx-d2"><span class="cwx-t">Here are the key points from recent emails and meetings&hellip;<small>3 references</small></span></div>
-                <div class="cwx-bub cwx-me cwx-stg cwx-d3"><span class="cwx-t">Now draft a follow-up email</span></div>
-                <div class="cwx-bub cwx-ai cwx-stg cwx-d4"><span class="cwx-t">Draft ready &mdash; review and send when you're happy.<small>You act on the output</small></span></div>
-                <div class="cwx-bub cwx-ai cwx-stg cwx-d5"><span class="cwx-t"><span class="cwx-typing"><i></i><i></i><i></i></span></span></div>
-              </div>
-              <div class="cwx-foot">
-                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Copilot</span><span class="cwx-send">&uarr;</span></span>
-                <label class="cwx-reset" for="m5cc2-0">Reset</label>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <p class="cwx-dg-foot">Single-step, single session. Close the window and the work stops.</p>
-    </div>
-      </div>
-      <div class="cwx-show cwx-show-cw"><div class="cwx-show-bar"><label class="cwx-close" for="m5cmp-none">Close &times;</label></div>
-<div class="cwx-dg">
-      <p class="cwx-dg-cap"><b>Copilot Cowork</b> Click the composer &mdash; you delegate an outcome and the plan builds itself</p>
-      <input type="radio" name="m5cw2" id="m5cw2-0" class="cwx-sw-in" checked>
-      <input type="radio" name="m5cw2" id="m5cw2-1" class="cwx-sw-in">
-      <div class="cwx-cpui cwx-work">
-        <div class="cwx-rail">
-          <div class="cwx-brand"><span class="cwx-mk"></span><b>Copilot</b></div>
-          <div class="cwx-segs"><span class="cwx-seg cwx-on">Home</span><span class="cwx-seg">Code</span><span class="cwx-seg">Autopilot</span></div>
-          <div class="cwx-newbtn"><span class="cwx-pl">+</span>New task</div>
-          <ul class="cwx-nav">
-            <li><span class="cwx-ic"></span>My tasks</li>
-            <li><span class="cwx-ic"></span>Automations</li>
-            <li><span class="cwx-ic cwx-r"></span>Customize</li>
-          </ul>
-          <p class="cwx-rail-h">Pinned</p>
-          <ul class="cwx-nav cwx-pin">
-            <li class="cwx-sel"><span class="cwx-ic cwx-v"></span>Weekly reset</li>
-            <li><span class="cwx-ic cwx-b"></span>Contoso account</li>
-            <li><span class="cwx-ic cwx-p"></span>Workshop prep</li>
-          </ul>
-        </div>
-        <div class="cwx-main">
-          <div class="cwx-topbar">
-            <span class="cwx-ttl">Weekly reset</span>
-            <span class="cwx-rt"><i class="cwx-g"></i><i></i></span>
-          </div>
-          <div class="cwx-canvas">
-
-            <div class="cwx-cpane cwx-p0">
-              <p class="cwx-hero">Give me an outcome, not a step</p>
-              <label class="cwx-composer cwx-typed" for="m5cw2-1">
-                <span class="cwx-pl">+</span>
-                <span class="cwx-ph">Review last week, clean up my calendar, draft regrets and block focus time&hellip;</span>
-                <span class="cwx-send">&uarr;</span>
-              </label>
-              <p class="cwx-clickme">Click to start the task</p>
-            </div>
-
-            <div class="cwx-cpane cwx-p1">
-              <div class="cwx-thread">
-                <div class="cwx-bub cwx-me cwx-stg cwx-d1"><span class="cwx-t">Review last week, clean up my calendar, draft regrets for the conflicts and block three hours of focus time on Tuesday. Then prep a briefing for the Contoso meeting.</span></div>
-                <div class="cwx-bub cwx-ai cwx-stg cwx-d3"><span class="cwx-t">I've broken this into six steps and started work. I'll check in before anything is sent.<small>Task running &middot; you can close this window</small></span></div>
-              </div>
-              <div class="cwx-foot">
-                <span class="cwx-composer"><span class="cwx-pl">+</span><span class="cwx-ph">Message Cowork</span><span class="cwx-send">&uarr;</span></span>
-                <label class="cwx-reset" for="m5cw2-0">Reset</label>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="cwx-wsp">
-          <p class="cwx-wh">Workspace<span class="cwx-x">&times;</span></p>
-
-          <div class="cwx-idleonly" style="flex-direction:column;gap:.5rem">
-            <p class="cwx-sh">Steps<span class="cwx-cnt">0 / 6</span></p>
-            <ul class="cwx-wl">
-              <li class="cwx-dim"><span class="cwx-ck"></span><span>Waiting for a task</span></li>
-            </ul>
-            <p class="cwx-sh">Output</p>
-            <ul class="cwx-wf"><li class="cwx-dim"><span class="cwx-ft cwx-m">&mdash;</span><span>Nothing yet</span></li></ul>
-          </div>
-
-          <div class="cwx-runonly" style="flex-direction:column;gap:.5rem">
-            <p class="cwx-sh">Steps<span class="cwx-cnt cwx-done">6 / 6</span></p>
-            <ul class="cwx-wl">
-              <li class="cwx-stg cwx-d2"><span class="cwx-ck cwx-ok">&#10003;</span><span>Review last week's calendar</span></li>
-              <li class="cwx-stg cwx-d3"><span class="cwx-ck cwx-ok">&#10003;</span><span>Identify conflicts and low-value meetings</span></li>
-              <li class="cwx-stg cwx-d4"><span class="cwx-ck cwx-ok">&#10003;</span><span>Draft regrets &mdash; awaiting approval</span></li>
-              <li class="cwx-stg cwx-d5"><span class="cwx-ck cwx-run"></span><span>Block focus time Tuesday</span></li>
-              <li class="cwx-stg cwx-d6"><span class="cwx-ck"></span><span>Pull Contoso emails and meeting notes</span></li>
-              <li class="cwx-stg cwx-d7"><span class="cwx-ck"></span><span>Produce the briefing document</span></li>
-            </ul>
-            <p class="cwx-sh">Output</p>
-            <ul class="cwx-wf">
-              <li class="cwx-stg cwx-d7"><span class="cwx-ft cwx-h">W</span><span>Contoso-briefing.docx</span></li>
-              <li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-z">X</span><span>calendar-changes.xlsx</span></li>
-            </ul>
-            <p class="cwx-sh">References</p>
-            <ul class="cwx-wf"><li class="cwx-stg cwx-d8"><span class="cwx-ft cwx-m">M</span><span>Last week's meetings</span></li></ul>
-          </div>
-        </div>
-      </div>
-      <p class="cwx-dg-foot">Multi-step work across tasks and sources, with an approval gate in front of anything consequential.</p>
-    </div>
-      </div>
-    </div>
-    <p style="font-weight:700;margin:18px 0 4px">Reach for Cowork when…</p>
-    <ul style="margin:.2rem 0 .6rem;color:var(--ink-soft);font-size:14.5px;line-height:1.6">
+<p style="font-weight:700;margin:18px 0 4px">Reach for Cowork when…</p>
+<ul style="margin:.2rem 0 .6rem;color:var(--ink-soft);font-size:14.5px;line-height:1.6">
       <li>the task is <b>multi-step and can run largely on its own</b> (e.g. research → draft → compile → follow-up), not a single prompt;</li>
       <li>it should work over your own Microsoft 365 data (<b>Work IQ</b>) and <b>take real actions</b> — send mail, post in Teams, build docs, manage files — each behind an approval;</li>
       <li>you want a <b>ready-made agent</b> you can extend with up to <b>50 custom skills</b> and Microsoft 365 App Store <b>plugins &amp; connectors</b>, rather than building one in Agent Builder or Copilot Studio;</li>
       <li>it should run <b>on a schedule</b> — recurring prompts such as a daily briefing or a follow-up sweep;</li>
       <li>the work stays within <b>one person’s identity and permissions</b>, with you reviewing the result.</li>
     </ul>
-    <div class="mockout">
-<div class="mo-top"><span class="ic-cowork" style="width:18px;height:18px"></span> Task · Quarterly review prep <span class="mo-badge" style="background:#fff8e6;color:#8a6f00">Needs your input</span></div>
-<div class="mo-body">
-<div class="cwsteps">
-<div class="cwstep"><span class="cwtick done">✓</span><span><b>Read three months of email and Teams</b> — 214 messages, 9 threads that matter</span></div>
-<div class="cwstep"><span class="cwtick done">✓</span><span><b>Summarized decisions and open items</b> — 6 decided, 4 still open</span></div>
-<div class="cwstep"><span class="cwtick run">•</span><span><b>Drafting the deck</b> — 10 slides, risks slide last</span></div>
-<div class="cwstep"><span class="cwtick wait">!</span><span><b>Waiting on you</b> — approval needed before the follow-up email goes out</span></div>
-</div>
-<div class="cwfiles">
-<span class="cwfile"><span class="ic-ppt" style="width:15px;height:15px"></span> Contoso QBR.pptx</span>
-<span class="cwfile"><span class="ic-excel" style="width:15px;height:15px"></span> Open actions.xlsx</span>
-<span class="cwfile"><span class="ic-word" style="width:15px;height:15px"></span> Decision log.docx</span>
-</div>
-<div class="cwappr">
-<span>Cowork wants to <b>send an email</b> to the Contoso team with the deck attached.</span>
-<span class="cwbtns"><span class="cwbtn no">Review</span><span class="cwbtn ok">Approve</span></span>
-</div>
-</div>
-</div>
-<p class="caption">The <b>task</b> is the unit of work — it keeps running when you close the laptop, and you reopen it to find the outcome. The files land in your OneDrive; the approval gate is the reason you can leave it alone.</p><h3 style="margin-top:26px">Example Use Case Prompt</h3><div class="prompts"><div class="pchip"><span class="pc-ic"><span class="ic-cowork" style="width:18px;height:18px"></span></span><span class="pc-tx">Get me ready for Thursday’s quarterly review with Contoso: pull the last three months of email and Teams threads plus the files in <span class="mono">/Contoso FY26</span>, summarize the decisions and everything still open, draft a 10-slide deck ending on risks, put the follow-up actions in a table with owners, and save it all to my OneDrive — check with me before you send or share anything.</span></div></div>
-    <p class="caption">Sources: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/" rel="noopener" target="_blank">Copilot Cowork overview</a> · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" rel="noopener" target="_blank">Cowork common questions</a> — Microsoft Learn.</p><div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork — sessions, files, approvals, skills</a> — Microsoft Learn · <a href="https://mc.merill.net/message/MC1479277" rel="noopener" target="_blank">MC1479277</a> — Microsoft 365 Message Center (archive)</span><span class="ps-n">Module 6 · 2 of 8</span></div></div><div class="page">
+<div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork — sessions, files, approvals, skills</a> — Microsoft Learn · <a href="https://mc.merill.net/message/MC1479277" rel="noopener" target="_blank">MC1479277</a> — Microsoft 365 Message Center (archive) · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/" rel="noopener" target="_blank">Copilot Cowork overview</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/best-practices" rel="noopener" target="_blank">Best practices for Copilot Cowork</a> — Microsoft Learn</span><span class="ps-n">Module 6 · 2 of 8</span></div>
+</div><div class="page">
 <div class="subsub" id="m5-cowork-more"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"></rect><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg></span> Where Cowork runs, how approvals work, and what else it can do</div>
 <div class="plg-grid">
 <div class="plg"><b>Where it runs</b><span>Your browser at copilot.cloud.microsoft, the Copilot desktop app for Windows and macOS, the Copilot mobile app, and Outlook and Teams. You need a Microsoft Copilot license and a spending policy — without one, you’ll see <b>Request access</b>.</span></div>
 <div class="plg"><b>Approvals</b><span>Cowork asks before sensitive actions. Approve once, use <b>Approve All</b> when several are waiting, or skip similar prompts for the rest of the session. Review or revoke these choices under <b>Permissions</b> in the side panel; automated tasks can be pre-authorized when you create them.</span></div>
 <div class="plg"><b>What else it can do</b><span>Edit an existing Word, Excel or PowerPoint file in OneDrive or SharePoint · start a task when a matching email or Teams message arrives · complete web tasks in Microsoft Edge on your device · generate images · run up to 25 scheduled prompts. Leave the model on <b>Auto</b>; reasoning effort defaults to Medium.</span></div>
 </div>
+<p class="m2-intro" style="margin-top:14px"><b>Copilot Chat vs Cowork — which do you use?</b> Use <b>Copilot Chat</b> to think, draft and answer in the moment; reach for <b>Cowork</b> when you want work <i>carried out</i> across several apps and steps.</p>
+<div class="dg dg-host"><div class="dg-sec"><p class="dg-hcap">One starting point, two lanes: Chat answers and you act; Cowork acts and you approve.</p><div class="dg-scroll" role="region" aria-label="Scrollable copilot chat vs cowork diagram" tabindex="0"><div class="dg-frame" style="width:920px"><div class="dg-canvas" data-canvas="copilot-chat-vs-cowork" style="width:920px;height:332px"><div class="dg-zone dg-tint-usr" data-zone="zc" data-head="52" style="left:176px;top:8px;width:736px;height:140px"><div class="dg-zh"><div><div class="dg-zt">Copilot Chat — think &amp; draft</div><div class="dg-zm">single-step, single session · seconds to minutes</div></div></div></div><div class="dg-zone dg-tint-svc" data-zone="zw" data-head="52" style="left:176px;top:164px;width:736px;height:160px"><div class="dg-zh"><div><div class="dg-zt">Cowork — get it done</div><div class="dg-zm">multi-step, across apps · minutes to hours</div></div></div></div><div class="dg-node dg-usr dg-on" data-id="cyou" style="left:8px;top:80px;width:130px;height:152px"><div class="dg-nh"><div><div class="dg-nt">You</div><div class="dg-nm">have a task or an outcome in mind</div></div></div></div><div class="dg-node dg-svc dg-on" data-id="c1" data-zone="zc" style="left:246px;top:60px;width:250px;height:78px"><div class="dg-nh"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAO2UlEQVR42u2ae6wtVX3HP7/fWrP3Pi/uvQL3IlYKrYgiVCs0kUCgN6ZaW7WxlfqWJrUP06AxFE3V1mg12FoVtcofYttE6wNBbIEiNS1S+/L9QGtralHUK1dALuee/ZqZ9fv1jzV79t7nsblesEkNc7KyZu09c/b6zPf3mjUDD24Pbv9vNvlhDn7sF3x353B9XhF4TojxuZYSOLh7PsDBgckwjz2PPf9au4+DCFYZw29vsPH1Qxz8+AGI9N3sT1WKT4w+c+4//Z9C/uyNgxcQw+8Uq51z08iwqmqhmDJmisnnE8BN4JNftnHi4LW30f/6IaxKaBEQAYk9RDgcdfy3UfT1d99y7n/eH8h4JAed9pH13y09votUyOiOQTtbXwA5O57jawZSKPfecoDDt96NdgJaBFRBgxC0RIOuhc7u53nqPwb88SD+I1PylA+s/6YWnXdbqoRk0y9mzXRWqRmznf3Qp/JCEMrv9lm//pv4KCFBMlwQQlBCA6sqiKppDBd997qz3vcjUfLEK+98elWHd3s5ElKasza2U3AbxTZ/7wAqjP7rELZRod1AjJoh4wQ0A2oQYmdFEfsl4H0PvJKvua13/Ilr10ssnujVeHvFmPW/zfC+LTAq2PqY0bXfRIEQJUPGRsUIsVFUFCQWOHZHcn/q7R8+63MPqJJ79i5dYdp9og03tqGYgfCdvvKtygO4YIcrxJzQDcQohKi5D9qoCQTFg2DqaG/3CcHrU4AHDnL1Td883Uz222jAxEy3xfQjiQW+xXjSp77fgmXIaa9B8Kh4UIiCqWKhJln9i+DXHE0A0m0/XFn9VS+6P2n1CPO0Y3NspqUd2qZj6oogEKM2yimxaRoVLwLWtBSbPhj0lp//U6+455ijUXIL5DFvvv0RXvb/2IeHGhUmze5/i4J/ZR3dqAmFtErGKGiheJEh29aJWCfmPladfv2D8x4Qc7VQXaChA2k8E5m87SfmJ7LVFAVfYLQCQTBNqOZomtOEIkGxpnlULObeY/6MINBZEVN9GXDD/Y6ux77t1q9I0XmMpLKZWgabQvkc/Ox/WAgpgg+c8pMlei8UPaUolNgqqFgR8BhInYC3vpn3LSjEAnd7yw9e97BLjhryxHd9+unufFBVlvDUwPkmAJ9TUbaPoVt/KEB1EPo3BjqrXYpOpCgE7QSsUKwTsBjwZjyWRJqARsU1R1vprVLZ6I3jV+z9g6My1+4y56iyZMP1FkSYQoo43pruNsptF/i8uRQKaaMgdPeg1LeKpwGIJI+4B5Il3ANukQ0Pg0cVenavKFZTAA8Z0lSgHiOxd4ledtcLo3Dw8mH87XETWyoK3OrgOrpt/2v33bFFyTPe/zf7ymG4XkNxNqlCsMb3fA52s5LM+eziBHLgQycjpd0UQ+fXDn78cf2drvztl/7PBXcF/aiGYnedHHfBUBzBEJyIS8BFQDtzl70IBYNyePOgHHz4aW85/oo5JUWLU5ZXOduGh5DgmwCZM935QLQTkswpXA93Ib5xjd5x3G8c/I8zdgT8xG998S++M6ovrF1Wy1TiKDZprhgBJ2VoV5xydoaA04u9/UFX91/9ooMPfeaV+/6oheyWd/yKFF0I5QxQo6AwDUAzIHKEeTl0Awc+bzfcfdP5zwMd73TcPz7nlieH2p493hgsVckxAskDSUIDqJgHjJAV9dyDzkQIZ0QfBZY7q3/4oRfedf0UcskuIq1DzAaxk7lKG1H9iFNHCB1OesI3PvSNBYAAx0hxkZf10no1zkbmAScCIfsr2oAFEgF3a8xXNzlN3huM10lWXhYBLrzwqnBnul00AjaNqvkU2xKEtvfLHaqNGEl1/8tFTDcvOu4zz/joL3fS4DkbVU1BRD2RPCIkaiLigZqQiwo3IGGEXM+4NLObhxQxOqqnRYD1Z33tkp7qCRnIQWbz485Kyo716dQnQ7fAO/6Njz7l9d9ZmGLUJJBQSQSXfLpM700nGMkdE0dcm1JRMNEJ1pwNRVHMqhx4er36tFBAPRozvSbWRP75PCnb5EdZEFWlVir3zyws4S+8KnzZy5e4a56QMLMYlOdiWA43YpgnVDSbbxOQtsZ4JxIwqYjPvPb3zpR075NUA1FrdOaqSeOT8kNCtoAiEPTw4Xu7ly+CPDC8p7u0vOucsVcEyeY3/V1IbfKw5k8RJpDS9rMRVoAgRvKKuLqmJ4cgP1H3B4hMT5OZAmAz5GYz3R5S0KCk5F89ae/x1dULIIer4XSrx50oBRDyb3oTAMUQN0wC5o2eoqiHdqY+Y67eWrkTJBCoiZ1yQNEJJCpUfUZFnwnOOdBsr+bORUDRjVSD9LrX7n9tvUjJFTqv9o52NqoqxwOfubjuqHhjrjmFOIpJVhRkB3OFgGNUxGVGzw6muKYsfKvcpgwkvkXF+4LsBiN1F/Jx+zPfvFT7xp7oSwSxmbMnsI2JuqKirblOUochBOaVnAgQpCaoEJdj/VxPiTAxVfEWUGb9U5q04b7p9mt7wFgEyuH4s2PrfHER5K5e91lB4vn3lAMioQ16gmETU8UwaSoeybkxq9eUeiJbHAmg0EiVqn+PPRuhaq37TkB1k9m2/0KPBFLodSMp+udfdf4N31sEWVUjigKipCYh0M5lotlUPcVIrYKTfrscAE5PIVj11tiTkiCbIHFUmItbMpuJZN4fZXOmFLB+XQXkHxanjtd0Dun4GWZChCb/NSbqRmqCUA442qqZfVKYC5O+VckOiqtVcVnLBg5UJq7cGEK+Q5oDlG3uIWXTSIPgQQ4+++dvvmqhQy6vPKSLPa2sS4JIjqiSTTVtShnWzDJNcuN0lpvsbTILoUylC1LFJUkzkE6YOO0kusokys6USzssK0zSd1Chqvxb91Xy3Vv0zw9WiCBoEsRA3ZuIOgk4M/6ItkWA+WzsV1zmzXUl9hhU5Z88+urnfiH2xJqgk8G0UW8WfAI5Z7JzleJ8mR6jMrb6DfcFudopXmoGo3HK114cN0PM8p2GW5sqpveTYea+UreLGnkOIkQtK4C4ojnxqmTI0IC1kO2YLf9KNlU4DpgLqx1BuuHORYB3Xnrp2mBjvNbVCIUjSXADMYHkBDfUNN87ujb1qTZLoTLnk20OyHISNVDW67f5+ugdALGgujOqHq/uBHGCQGgSsDa1qzqoMlMgbJ82HOh2lWpcf+zucmnh47ZuGZ/f7XFmVdVIkLz8Z4BN9gVRx60RwXSuGJ/4pM0lunzpO+IU6v19H3vpnQDx2NX40ii8f7hREaS5e9NG0aY4CDINRLOmO5syWjUrp679mv37b9lYBDk6fOjMtb17qawCUUiNuYrkmtcUb0DFBBcDF9Snqm2py6RRUoxRSp9tTXe4UX5yKcoXd6/o4+pxnZ9R4ESZmm6Y+OuMz86t1Ta22+0FDg/q60694EtXLgL8t7Oe+IZOR1489BFEEHPQDIYJbgLmiAueNK982qRvooLRgjZRpzXXrsBST1/fQu7f/+nvfOrmn3vKcCNdvbYkp690dY+aN6o6UWA8qhDPika8qXEbQMnRrTSqUusXn3zeV9+zE9xVFxL2fvWcy7oxXLp8wir1OCFR2gV2N298UhvoZgXQMzROvgA05gyIS+Mr2ZpUhMrquwpstO26663/8vgnR+NJhfg4AjGYq0lc6+++eLVXLNUpYWVCkyPJ8WRYDUGE8br/d/dLa29Hqh6VBMoKGxqjEvp96A9Jh/ucX4956q5H7OOkMx6O1UASvFUw95Pm3ux7o247bqAa5ZiAAmuxyzDVL1v5y1devu2665nnfv4m4Kb5J1cIH3jhX9PVrjL+q4icbusllIaMDR0ZXhq9yh6hu3g7ZQQx8EioDa3Bo+MBymis92tOPfUhSLSmTJSZxyXeAGoee7PvtLBt71lFn4EUhJGMcfH1o377w977jIdSxI9J5T9j/RpKgzJDMrZ2zDg3GxmDEfQHTn8IGwOn0oJH/8JP013uYnUz6aSNHzbrNQlwbcxT5xWcKNz4ZasksBQKkvsnun/+mv33+ehux0WpF1z7PTbS062029WBZJB8a7PczCCZkyx/VFfO3kfuZmlPBE1IsNxi2qEZutN3oUaK+c8qqRhT3nhEzycXgr7oI99iWF9P7VCDt3ATc5v2teVnuGa5peRoAdpxmIEjGhINYoKYkMKRIk3HTU9hUFiGK5rzC4Mi/4/QtXptdeU99xsSQCt5E5XhlZFhvSGZqugTBZtW187ysV2OPXUFJ6u0sLUqW6Po4uNXlgMS0hXyxlfefVTv8Wze+lU16pZ+IBonpsphtjUK1xVUFVQ1VCnvxzVleV8kjWoEaf1NzHPib33SwBSx7Jve+KIwDTre+qQQUYY2WkfsmiN+nH6fhfXL/+4OqextIJmgtrlmtVPXWb06QV1nNfc9dq1RMW3ypxm/DM14YpJFmt+fHB+mJttZUULHb1q+7K23HPUbWdtG2rFthCBQeg5AE7OtnaqGsumrOkMmEfac1kU04U2tKtIkd3FEhObuKRcEPs2T0hQD7k3KcWmLgCDKqB5+rY5y8f167WzbE0u5zqy6ODiPSqW1plqVMC5hVEJZ5TYcGMedtUKxnH1XJBcBqE8TvWWzzeNspmLMFQU6Afe89iwIsRcJZfXypd9/58Ef6u2PIwo+b/n7b9vYPkfpUDpeOeMShiWMx07ZwI7HTm2w65EdZNkg1o05WhNVZ4PQJvPdZLK0ppvQjtFZVcpq+E456fs33u8XCHc+ubrYxuHXpaYYNsqNS2+VHI9hNIKHXbDKcY/pQmVIzDXqRDl3QVIu0N3mi3H3SaHeVDxk1YMIWhTU4/Id3Uve/ZKjeo/niF84uOKf7xkO0qsPD/0wlZpXksHGMOg7w9KJxwQeds5y9tfJIljwaXAJaRsV62kQatU04hIUa4LFNKjr0Tvj3kMve8Bf6t1x1e2ss4pvn7D8Z9XYz/BaL3DRsHxyh5WHd9h19lK+97EFi7Q+LcrzflPWTepXBJKQRukWM7ktevUqfdEHD/xI3ly+r+3L5523p678Caxq53EXH+eyO+CH0pGdnPLCPpMF9xTzRwkCzY1tHf9VL3rv3Ty4Pbj9+G7/C+fwKoXaxy5iAAAAAElFTkSuQmCC" alt=""><div><div class="dg-nt">Copilot Chat</div><div class="dg-nm">quick draft, answer or insight</div></div></div></div><div class="dg-node dg-out dg-on" data-id="c2" data-zone="zc" style="left:660px;top:60px;width:240px;height:78px"><div class="dg-nh"><div><div class="dg-nt">Draft or answer</div><div class="dg-nm">you act on the output</div></div></div></div><div class="dg-node dg-proc dg-on" data-id="w1" data-zone="zw" style="left:246px;top:216px;width:170px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Plans the steps</div><div class="dg-nm">research → draft → compile</div></div></div></div><div class="dg-node dg-svc dg-on" data-id="w2" data-zone="zw" style="left:506px;top:216px;width:170px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Acts across apps</div><div class="dg-nm">you approve each action</div></div></div></div><div class="dg-node dg-out dg-on" data-id="w3" data-zone="zw" style="left:760px;top:216px;width:140px;height:98px"><div class="dg-nh"><div><div class="dg-nt">Finished outcome</div><div class="dg-nm">files, mail, meetings</div></div></div></div><div class="dg-wire dg-usr" data-from="cyou" data-to="c1"><div class="dg-seg dg-h" style="left:138px;top:99px;width:108px"></div><div class="dg-ah dg-r" style="left:246px;top:99px"></div><div class="dg-wl" style="left:150px;top:65px"><i>1</i>Ask</div></div><div class="dg-wire dg-svc" data-from="c1" data-to="c2"><div class="dg-seg dg-h" style="left:496px;top:99px;width:164px"></div><div class="dg-ah dg-r" style="left:660px;top:99px"></div><div class="dg-wl" style="left:530px;top:65px"><i>2</i>Answer</div></div><div class="dg-wire dg-usr" data-from="cyou" data-to="w1"><div class="dg-seg dg-h" style="left:138px;top:228px;width:108px"></div><div class="dg-ah dg-r" style="left:246px;top:228px"></div><div class="dg-wl" style="left:146px;top:238px"><i>3</i>Assign</div></div><div class="dg-wire dg-proc" data-from="w1" data-to="w2"><div class="dg-seg dg-h" style="left:416px;top:255px;width:90px"></div><div class="dg-ah dg-r" style="left:506px;top:255px"></div><div class="dg-wl" style="left:428px;top:221px"><i>4</i>Act</div></div><div class="dg-wire dg-svc" data-from="w2" data-to="w3"><div class="dg-seg dg-h" style="left:676px;top:255px;width:84px"></div><div class="dg-ah dg-r" style="left:760px;top:255px"></div><div class="dg-wl" style="left:682px;top:221px"><i>5</i>Done</div></div></div><div class="dg-legend"><span><i class="dg-sw dg-usr"></i>You</span><span><i class="dg-sw dg-svc"></i>Copilot Chat / Cowork</span><span><i class="dg-sw dg-proc"></i>Planning</span><span><i class="dg-sw dg-out"></i>Result</span><span><i class="dg-ln dg-ink"></i>Active path</span></div><p class="dg-foot">Arrows show the flow and take the colour of the box they start from. Checked against Microsoft Learn on 2026-10-23 — verify.</p><p class="dg-status">Status: Cowork needs Microsoft Copilot (Premium) and a spending policy</p></div></div><ol class="dg-steps dg-c5"><li><span class="dg-n dg-usr">1</span><span><b>Ask</b> — you ask Copilot Chat for a draft, answer or insight.</span></li><li><span class="dg-n dg-svc">2</span><span><b>Answer</b> — you act on the output yourself.</span></li><li><span class="dg-n dg-usr">3</span><span><b>Assign</b> — you hand Cowork an outcome.</span></li><li><span class="dg-n dg-proc">4</span><span><b>Act</b> — it plans and works across apps, asking before each action.</span></li><li><span class="dg-n dg-svc">5</span><span><b>Done</b> — a finished outcome — files, mail, meetings.</span></li></ol></div></div>
 <div class="note" style="margin-top:14px">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>Coming to Chat (Frontier).</b> Copilot Chat can also run long-running, multi-step work for users with a Microsoft Copilot license — track it in the <b>Tasks</b> view at the top right of the navigation pane; sensitive actions still need your approval. Cowork stays the choice for end-to-end work you delegate.</p>
     </div>
-<div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/get-started" rel="noopener" target="_blank">Get started with Copilot Cowork</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance" rel="noopener" target="_blank">Cowork admin governance</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" rel="noopener" target="_blank">Copilot Cowork common questions</a> — Microsoft Learn · <a href="https://mc.merill.net/message/MC1479277" rel="noopener" target="_blank">MC1479277</a> — Microsoft 365 Message Center (archive)</span><span class="ps-n">Module 6 · 3 of 8</span></div></div><div class="page">
+<div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/get-started" rel="noopener" target="_blank">Get started with Copilot Cowork</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork" rel="noopener" target="_blank">Use Copilot Cowork</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance" rel="noopener" target="_blank">Cowork admin governance</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq" rel="noopener" target="_blank">Copilot Cowork common questions</a> — Microsoft Learn · <a href="https://mc.merill.net/message/MC1479277" rel="noopener" target="_blank">MC1479277</a> — Microsoft 365 Message Center (archive)</span><span class="ps-n">Module 6 · 3 of 8</span></div>
+</div><div class="page">
 
     <div class="subsub" id="m5-cowork-skills"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 5l-4 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> Custom skills — teach Copilot a task once</div>
     <p class="m2-intro">A <b>skill</b> is a modular capability you hand a session so it performs one specific task reliably and repeatably. It isn’t more knowledge and it isn’t another tool — it’s a packaged <b>procedure</b>, with the assets and scripts that procedure needs travelling alongside it. The one-line distinction worth remembering: <b>an agent is the “who”; a skill is the “how”.</b> Add a skill when a task must be done the same way every single time — your report format, your naming convention, your review checklist.</p>
-    <div class="skd" role="img" aria-label="What a skill is: three ways to create it, a skill package stored in OneDrive, and how Cowork uses it"><div class="skd-col"><div class="skd-h">1 · Create it</div><div class="skd-n"><b>From the Customize page</b><span>Open Customize in Cowork and describe the task — e.g. a document format you produce every week.</span></div><div class="skd-n"><b>By asking in chat</b><span>Describe the procedure in plain language, ask Cowork to save it as a skill, then review it.</span></div><div class="skd-n"><b>By hand, or upload</b><span>Write a <span class="mono">SKILL.md</span> — or select Upload skill for a .md, .zip or .skill file.</span></div></div><div class="skd-ar" aria-hidden="true">→</div><div class="skd-col"><div class="skd-h">2 · The skill package — the “how”</div><div class="skd-pkg"><div class="skd-path mono">OneDrive › Documents › Cowork › skills</div><div class="skd-f req"><b>SKILL.md</b><span>Name and description (when to use it) + the step-by-step procedure · up to 1 MB</span></div><div class="skd-f"><b>Companion files</b><span>Templates, checklists, reference data, scripts · up to 20 files, 10 MB per skill</span></div><div class="skd-cap">Up to 50 custom skills</div></div></div><div class="skd-ar" aria-hidden="true">→</div><div class="skd-col"><div class="skd-h">3 · Cowork uses it</div><div class="skd-n"><b>Discovered at session start</b><span>A skill added mid-session loads in the next one.</span></div><div class="skd-n"><b>Applied when the task matches</b><span>The same procedure, every time — your format, naming or checklist.</span></div><div class="skd-n"><b>Checked for quality</b><span>A plain-language quality report when you create, update or validate it.</span></div></div></div>
+    <div class="skz" role="img" aria-label="What a skill is: three ways to create it, a .zip skill package that holds SKILL.md and companion files, and how Cowork uses it">
+<div class="skz-col" style="--c:#2563eb"><div class="skz-h"><i>1</i>Create it</div>
+<div class="skz-n"><b>From the Customize page</b><span>Open Customize in Cowork and describe the task — e.g. a document format you produce every week.</span></div>
+<div class="skz-n"><b>By asking in chat</b><span>Describe the procedure in plain language, ask Cowork to save it as a skill, then review it.</span></div>
+<div class="skz-n"><b>By hand, or upload</b><span>Write a <span class="mono">SKILL.md</span> — or select Upload skill for a .md, .zip or .skill file.</span></div>
+</div>
+<div class="skz-ar" aria-hidden="true"><i>→</i></div>
+<div class="skz-col" style="--c:#7c4ddf"><div class="skz-h"><i>2</i>The skill package — the “how”</div>
+<div class="skz-zip">
+<div class="skz-zh"><span class="skz-zi" aria-hidden="true">ZIP</span><b>weekly-report.zip</b><span>one skill</span></div>
+<ul class="skz-tree">
+<li class="req"><span class="skz-ft md">.md</span><span><code>SKILL.md</code><em>Required · name and description (when to use it), then the step-by-step procedure · up to 1 MB</em></span></li>
+<li><span class="skz-ft docx">.docx</span><span><code>templates/report.docx</code><em>Template</em></span></li>
+<li><span class="skz-ft md">.md</span><span><code>reference/checklist.md</code><em>Checklist</em></span></li>
+<li><span class="skz-ft xlsx">.xlsx</span><span><code>data/cost-centers.xlsx</code><em>Reference data</em></span></li>
+<li><span class="skz-ft py">.py</span><span><code>scripts/build_chart.py</code><em>Script</em></span></li>
+</ul>
+<div class="skz-zf">Companion files: up to 20 per skill, 10 MB in total</div>
+</div>
+<div class="skz-cap">Stored in <span class="mono">OneDrive › Documents › Cowork › skills</span> · up to 50 custom skills</div>
+</div>
+<div class="skz-ar" aria-hidden="true"><i>→</i></div>
+<div class="skz-col" style="--c:#0f7b6c"><div class="skz-h"><i>3</i>Cowork uses it</div>
+<div class="skz-n"><b>Discovered at session start</b><span>A skill added mid-session loads in the next one.</span></div>
+<div class="skz-n"><b>Applied when the task matches</b><span>The same procedure, every time — your format, naming or checklist.</span></div>
+<div class="skz-n"><b>Checked for quality</b><span>A plain-language quality report when you create, update or validate it.</span></div>
+</div>
+</div>
     <div class="note">
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>Where they live, and when they load.</b> Custom skills are stored as <span class="mono">SKILL.md</span> files in your OneDrive at <span class="mono">/Documents/Cowork/skills/</span> — up to <b>50</b> of them. Cowork discovers your skills at the <b>start of each session</b>, so a skill you add mid-session isn’t picked up until the next one. The same applies to plugins: removing one takes effect in the next session, never mid-flight. Skill scripts run in a <b>temporary, isolated environment inside the Microsoft 365 service boundary</b>, removed when the task finishes . When you create, update or validate a skill, Cowork returns a plain-language <b>quality report</b> — still review a new skill’s output like a colleague’s first draft. Each <span class="mono">SKILL.md</span> can be up to 1 MB, with up to 20 companion files (10 MB per skill); custom skills aren’t supported in Cowork on mobile. Skills you create in <b>Copilot Chat</b> also work in Cowork; Cowork skills appear in Chat when you share them.</p>
@@ -807,7 +347,34 @@
       <svg aria-hidden="true" class="n-ico" fill="none" height="22" viewBox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
       <p><b>License and status.</b> The Microsoft Copilot license controls access to Copilot Code. Usage counts against your Microsoft Copilot entitlement, and admins can set a spend limit for each user. Copilot Code is in the Frontier preview program. <b>Deep dive:</b> to build an app with Code, step by step, go to <a href="../module-11-build-your-app/#m11-code">11.4</a>.</p>
     </div>
-<div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/copilot/code/overview" rel="noopener" target="_blank">Copilot Code overview</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/copilot/code/code-admin" rel="noopener" target="_blank">Manage Copilot Code for your organization</a> — Microsoft Learn · <a href="https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/" rel="noopener" target="_blank">Introducing the new Copilot with Home, Code and Autopilot</a> — Official Microsoft Blog</span><span class="ps-n">Module 6 · 7 of 8</span></div></div><div class="page">
+<p class="m2-intro cwd-lead cdd-lead"><b>See it run: from a prompt to a live app.</b> One prompt in the Code tab builds an approval app on a SharePoint list. Code plans, asks before it uses the data, builds with a live preview, then publishes the app to Copilot Managed Runtime when you ask. Microsoft’s own introduction is the video <a href="https://www.youtube.com/watch?v=ax0lIBORCPs" rel="noopener" target="_blank">Meet Code in Copilot</a>.</p>
+<div class="cwd cdd" role="group" aria-label="Click-through demo: Copilot Code builds an approval app and publishes it to Copilot Managed Runtime">
+<input class="ixcb cw-in" id="cdx-0" name="cdx" type="radio" checked aria-label="Code demo — waiting"/><input class="ixcb cw-in" id="cdx-1" name="cdx" type="radio" aria-label="Code demo — send the prompt"/><input class="ixcb cw-in" id="cdx-2" name="cdx" type="radio" aria-label="Code demo — allow the data and build"/><input class="ixcb cw-in" id="cdx-3" name="cdx" type="radio" aria-label="Code demo — publish and share"/>
+<div class="cwd-side"><div class="cwd-k">What happens</div><ol class="cwd-steps"><li class="cwd-st st1"><span class="cwd-sn">1</span><div><b>You describe the app</b><span>One prompt: who uses it, what it shows and which data it uses.</span></div></li><li class="cwd-st st2"><span class="cwd-sn">2</span><div><b>Code plans it</b><span>It lists the screen, the data and the publish target before it builds.</span></div></li><li class="cwd-st st3"><span class="cwd-sn">3</span><div><b>You allow the data</b><span>Code asks before it uses the SharePoint list. Click <b class="cwd-in">Allow</b>.</span></div></li><li class="cwd-st st4"><span class="cwd-sn">4</span><div><b>It builds, with a live preview</b><span>The app appears on the canvas. Try the filters, the rows and <b class="cwd-in">Code</b> view.</span></div></li><li class="cwd-st st5"><span class="cwd-sn">5</span><div><b>You publish and share</b><span>Building is not publishing. Click <b class="cwd-in">Publish it</b>.</span></div></li><li class="cwd-st st6"><span class="cwd-sn">6</span><div><b>It runs on the runtime</b><span>Version 1 is live for Finance approvers, with Entra sign-in and your policies.</span></div></li></ol><div class="cwd-ctl"><label class="cwd-go" for="cdx-1"><span aria-hidden="true">▶</span> Run the demo</label><label class="cwd-reset" for="cdx-0"><span aria-hidden="true">↺</span> Reset</label></div><p class="cwd-hint">Click <b>Run the demo</b>, then <b>Allow</b> and <b>Publish it</b>. Use the app on the canvas at any time. Names and figures are illustrative.</p></div>
+<div class="cdd-ui"><div class="cdd-top"><span class="cdd-brand"><span class="cplogo" style="width:17px;height:15px"></span>Copilot</span><span class="cdd-tabs"><span>Home</span><span class="on">Code</span><span>Autopilot</span></span><span class="cdd-state"><i class="s0">Ready</i><i class="s1">Planning</i><i class="s2">Needs your OK</i><i class="s3">Building</i><i class="s4">Preview ready</i><i class="s5">Live</i></span></div><div class="cdd-body"><aside class="cdd-rail"><div class="cdd-new"><span aria-hidden="true">+</span>Create new</div><div class="cdd-srch">Search</div><p class="cdd-rh">Recents</p><ul><li class="cdd-newp">Expense exceptions app</li><li>Signups dashboard</li><li>Weekly report script</li><li>Offsite planner</li></ul></aside><div class="cdd-home"><p class="cdd-hero">What do you want to build?</p><label class="cdd-cmp" for="cdx-1"><span class="cwd-m">1</span><span class="cdd-ph">Build an app for the Finance approvers to review expense claims that break policy. Use the SharePoint list <span class="cwd-ref">Expense exceptions</span> on the Finance site. Show the claim, employee, rule, amount and status, with Open and All filters. Add a detail panel with Approve and Reject buttons that update the list.</span><span class="cdd-cr"><span class="cdd-chip">☁ Cloud ▾</span><span class="cdd-chip">Auto ▾</span><span class="cdd-chip">Interactive ▾</span><span class="cdd-snd" aria-hidden="true">↑</span></span></label><div class="cdd-sugs"><span>Build a dashboard</span><span>Automate a workflow</span><span>Build an internal tool</span></div><p class="cwd-click"><i></i>Click the prompt to start</p></div><div class="cdd-work"><div class="cdd-chat"><div class="cdd-g g1"><div class="cwd-b cwd-me cdd-stg" style="--t:.2s"><span class="cwd-m">1</span>Build an app for the Finance approvers to review expense claims that break policy. Use the SharePoint list <span class="cwd-ref">Expense exceptions</span> on the Finance site. Show the claim, employee, rule, amount and status, with Open and All filters. Add a detail panel with Approve and Reject buttons that update the list.</div><div class="cwd-b cwd-ai cdd-stg" style="--t:1.1s"><span class="cwd-m">2</span><b>Here is my plan.</b><ol class="cdd-plan"><li>One screen: a claim list with Open and All filters.</li><li>A detail panel with Approve and Reject.</li><li>Read and update <b>Expense exceptions</b> as the signed-in user.</li><li>An interactive app that you can publish to Copilot Managed Runtime.</li></ol><small>Cloud project · Interactive mode · Auto model</small></div><div class="cdd-perm cdd-stg" style="--t:2.2s"><span class="cwd-m">3</span><b>Allow access to data?</b><p>Code wants to use the SharePoint list <b>Expense exceptions</b> (Finance site) to build and test the app. It reads and updates items as you.</p><div class="cdd-pb"><label class="cdd-allow" for="cdx-2">Allow</label><span class="cdd-deny">Don’t allow</span></div></div></div><div class="cdd-g g2"><p class="cdd-up">↑ Your prompt and the plan</p><p class="cdd-done"><span class="cwd-okc">✓</span><span>You allowed <b>Expense exceptions</b> · SharePoint list</span></p><div class="cdd-log"><span class="cwd-m">4</span><b>Building in the cloud</b><ul><li style="--s:.3s;--d:.9s"><span class="cdd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Set up the project</span></li><li style="--s:.9s;--d:1.5s"><span class="cdd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Connect to Expense exceptions</span></li><li style="--s:1.5s;--d:2.3s"><span class="cdd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Build the list and the detail panel</span></li><li style="--s:2.3s;--d:3s"><span class="cdd-ck"><i class="p"></i><i class="r"></i><i class="k">✓</i></span><span>Run checks and start the preview</span></li></ul></div><div class="cwd-b cwd-ai cdd-stg" style="--t:3s"><span class="cwd-m">5</span>Your app is ready in the preview — try it on the canvas. Building doesn’t publish it. When you are ready, ask me to publish.</div><label class="cdd-sug cdd-stg" style="--t:3.3s" for="cdx-3">Publish it and share it with Finance approvers</label></div><div class="cdd-g g3"><p class="cdd-up">↑ Earlier messages</p><p class="cdd-done"><span class="cwd-okc">✓</span><span>Built and checked · preview ready</span></p><div class="cwd-b cwd-me cdd-stg" style="--t:.2s">Publish it and share it with Finance approvers.</div><div class="cwd-b cwd-ai cdd-stg" style="--t:1s"><span class="cwd-m">6</span><b>Done.</b> Version 1 is live on Copilot Managed Runtime, and the <b>Finance approvers</b> group can open it. Sharing the app doesn’t share the data — each person sees only the claims they can open.<span class="cdd-link"><i aria-hidden="true">↗</i>managedapps.cloud.microsoft · Expense exceptions</span><small>People sign in with Microsoft Entra ID</small></div></div></div><div class="cdd-canvas"><input class="ixcb cw-in" type="radio" name="cdv" id="cdv-p" checked aria-label="Preview"/><input class="ixcb cw-in" type="radio" name="cdv" id="cdv-c" aria-label="Code view"/><div class="cdd-tb"><span class="cdd-seg"><label for="cdv-p">Preview</label><label for="cdv-c">Code</label></span><span class="cdd-fn">expense-exceptions</span><span class="cdd-bad"><i class="n">Not built</i><i class="b">Building…</i><i class="p">Preview</i><i class="l">Live · v1</i></span><label class="cdd-pub cdd-stg2" style="--t:3.2s" for="cdx-3">Publish</label><span class="cdd-pubd">✓ Published</span></div><div class="cdd-wait"><div class="cdd-sk"><i></i><i></i><i></i><i></i></div><p>Waiting for your OK to use the data…</p></div><div class="cdd-prev"><div class="cda"><input class="ixcb cw-in" type="radio" name="cdf" id="cdf-o" checked aria-label="Show open claims"/><input class="ixcb cw-in" type="radio" name="cdf" id="cdf-a" aria-label="Show all claims"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-1" checked aria-label="Select claim EXP-1187"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-2" aria-label="Select claim EXP-0942"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-3" aria-label="Select claim EXP-1033"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-4" aria-label="Select claim EXP-1210"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-5" aria-label="Select claim EXP-1102"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-6" aria-label="Select claim EXP-0890"/><input class="ixcb cw-in" type="radio" name="cdr" id="cdr-7" aria-label="Select claim EXP-0634"/><input class="ixcb cw-in" type="radio" name="cds1" id="cds1-o" checked aria-label="Leave open: claim EXP-1187"/><input class="ixcb cw-in" type="radio" name="cds1" id="cds1-a" aria-label="Approve claim EXP-1187"/><input class="ixcb cw-in" type="radio" name="cds1" id="cds1-r" aria-label="Reject claim EXP-1187"/><input class="ixcb cw-in" type="radio" name="cds2" id="cds2-o" checked aria-label="Leave open: claim EXP-0942"/><input class="ixcb cw-in" type="radio" name="cds2" id="cds2-a" aria-label="Approve claim EXP-0942"/><input class="ixcb cw-in" type="radio" name="cds2" id="cds2-r" aria-label="Reject claim EXP-0942"/><input class="ixcb cw-in" type="radio" name="cds3" id="cds3-o" checked aria-label="Leave open: claim EXP-1033"/><input class="ixcb cw-in" type="radio" name="cds3" id="cds3-a" aria-label="Approve claim EXP-1033"/><input class="ixcb cw-in" type="radio" name="cds3" id="cds3-r" aria-label="Reject claim EXP-1033"/><input class="ixcb cw-in" type="radio" name="cds4" id="cds4-o" checked aria-label="Leave open: claim EXP-1210"/><input class="ixcb cw-in" type="radio" name="cds4" id="cds4-a" aria-label="Approve claim EXP-1210"/><input class="ixcb cw-in" type="radio" name="cds4" id="cds4-r" aria-label="Reject claim EXP-1210"/><input class="ixcb cw-in" type="radio" name="cds5" id="cds5-o" checked aria-label="Leave open: claim EXP-1102"/><input class="ixcb cw-in" type="radio" name="cds5" id="cds5-a" aria-label="Approve claim EXP-1102"/><input class="ixcb cw-in" type="radio" name="cds5" id="cds5-r" aria-label="Reject claim EXP-1102"/><div class="cda-hd cdd-stg2" style="--t:.9s"><span class="cda-logo" aria-hidden="true">EX</span><div><b>Expense exceptions</b><span>Finance approvers · 21 open of 37</span></div><span class="cda-me"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>Signed in · Microsoft Entra ID</span></div><div class="cda-tabs cdd-stg2" style="--t:1.3s"><label for="cdf-o">Open <i>21</i></label><label for="cdf-a">All <i>37</i></label><span class="cda-src">SharePoint · Expense exceptions</span></div><div class="cda-tbl cdd-stg2" style="--t:1.7s"><div class="cda-th"><span>Claim</span><span>Rule</span><span>Amount</span><span>Status</span></div><label class="cda-row r1" for="cdr-1"><span class="cda-id"><b>EXP-1187</b><small>R. Santoso</small></span><span class="cda-rule">Hotel above city cap</span><span class="cda-amt">$4,860</span><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span></label><label class="cda-row r2" for="cdr-2"><span class="cda-id"><b>EXP-0942</b><small>L. Chen</small></span><span class="cda-rule">No pre-approval</span><span class="cda-amt">$3,200</span><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span></label><label class="cda-row r3" for="cdr-3"><span class="cda-id"><b>EXP-1033</b><small>A. Wijaya</small></span><span class="cda-rule">Business class, short flight</span><span class="cda-amt">$2,940</span><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span></label><label class="cda-row r4" for="cdr-4"><span class="cda-id"><b>EXP-1210</b><small>K. Haris</small></span><span class="cda-rule">Personal license</span><span class="cda-amt">$1,480</span><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span></label><label class="cda-row r5" for="cdr-5"><span class="cda-id"><b>EXP-1102</b><small>S. Putri</small></span><span class="cda-rule">Over daily meal limit</span><span class="cda-amt">$780</span><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span></label><label class="cda-row r6 all-only" for="cdr-6"><span class="cda-id"><b>EXP-0890</b><small>J. Okafor</small></span><span class="cda-rule">Weekend stay not approved</span><span class="cda-amt">$1,620</span><span class="cda-bd"><i class="sa fixed">Approved</i></span></label><label class="cda-row r7 all-only" for="cdr-7"><span class="cda-id"><b>EXP-0634</b><small>D. Lee</small></span><span class="cda-rule">Alcohol not covered</span><span class="cda-amt">$640</span><span class="cda-bd"><i class="sr fixed">Rejected</i></span></label><p class="cda-more"><span class="o">Showing 5 of 21 open claims</span><span class="a">Showing 7 of 37 claims</span></p></div><div class="cda-det cdd-stg2" style="--t:2.4s"><div class="cda-d d1"><div class="cda-dh"><b>EXP-1187</b><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span><span>R. Santoso · Travel · $4,860</span></div><p class="cda-dr"><b>Hotel above city cap.</b> Three nights in Singapore at $405 a night. The city cap is $260 a night.</p><div class="cda-acts"><label class="cda-ok" for="cds1-a">✓ Approve</label><label class="cda-no" for="cds1-r">✕ Reject</label></div><div class="cda-saved"><span class="cda-sv sa">✓ Approved</span><span class="cda-sv sr">✕ Rejected</span><span>· saved to the SharePoint list</span><label class="cda-undo" for="cds1-o">Undo</label></div></div><div class="cda-d d2"><div class="cda-dh"><b>EXP-0942</b><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span><span>L. Chen · Software · $3,200</span></div><p class="cda-dr"><b>No pre-approval.</b> An annual design-tool license, bought without IT pre-approval.</p><div class="cda-acts"><label class="cda-ok" for="cds2-a">✓ Approve</label><label class="cda-no" for="cds2-r">✕ Reject</label></div><div class="cda-saved"><span class="cda-sv sa">✓ Approved</span><span class="cda-sv sr">✕ Rejected</span><span>· saved to the SharePoint list</span><label class="cda-undo" for="cds2-o">Undo</label></div></div><div class="cda-d d3"><div class="cda-dh"><b>EXP-1033</b><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span><span>A. Wijaya · Travel · $2,940</span></div><p class="cda-dr"><b>Business class, short flight.</b> A two-hour flight in business class. Economy is the rule under six hours.</p><div class="cda-acts"><label class="cda-ok" for="cds3-a">✓ Approve</label><label class="cda-no" for="cds3-r">✕ Reject</label></div><div class="cda-saved"><span class="cda-sv sa">✓ Approved</span><span class="cda-sv sr">✕ Rejected</span><span>· saved to the SharePoint list</span><label class="cda-undo" for="cds3-o">Undo</label></div></div><div class="cda-d d4"><div class="cda-dh"><b>EXP-1210</b><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span><span>K. Haris · Software · $1,480</span></div><p class="cda-dr"><b>Personal license.</b> The license is registered to a personal email address.</p><div class="cda-acts"><label class="cda-ok" for="cds4-a">✓ Approve</label><label class="cda-no" for="cds4-r">✕ Reject</label></div><div class="cda-saved"><span class="cda-sv sa">✓ Approved</span><span class="cda-sv sr">✕ Rejected</span><span>· saved to the SharePoint list</span><label class="cda-undo" for="cds4-o">Undo</label></div></div><div class="cda-d d5"><div class="cda-dh"><b>EXP-1102</b><span class="cda-bd"><i class="so">Open</i><i class="sa">Approved</i><i class="sr">Rejected</i></span><span>S. Putri · Meals · $780</span></div><p class="cda-dr"><b>Over daily meal limit.</b> A client dinner for six at $130 a person. The limit is $75.</p><div class="cda-acts"><label class="cda-ok" for="cds5-a">✓ Approve</label><label class="cda-no" for="cds5-r">✕ Reject</label></div><div class="cda-saved"><span class="cda-sv sa">✓ Approved</span><span class="cda-sv sr">✕ Rejected</span><span>· saved to the SharePoint list</span><label class="cda-undo" for="cds5-o">Undo</label></div></div><div class="cda-d d6"><div class="cda-dh"><b>EXP-0890</b><span class="cda-bd"><i class="sa fixed">Approved</i></span><span>J. Okafor · Travel · $1,620</span></div><p class="cda-dr"><b>Weekend stay not approved.</b> Approved with a note by M. Diaz on 2 Nov.</p><div class="cda-saved fixed"><span>Decision already saved to the SharePoint list</span></div></div><div class="cda-d d7"><div class="cda-dh"><b>EXP-0634</b><span class="cda-bd"><i class="sr fixed">Rejected</i></span><span>D. Lee · Meals · $640</span></div><p class="cda-dr"><b>Alcohol not covered.</b> Rejected by M. Diaz on 1 Nov.</p><div class="cda-saved fixed"><span>Decision already saved to the SharePoint list</span></div></div></div></div></div><div class="cdd-code"><div class="cdd-tree"><span class="on">src/App.tsx</span><span>components/ClaimList.tsx</span><span>components/ClaimDetail.tsx</span><span>data/expenseExceptions.ts</span><span>ms.config.json</span></div>
+<pre class="cdd-src" aria-label="App.tsx"><code><i>1</i><k>import</k> { useState } <k>from</k> <s>"react"</s>;
+<i>2</i><k>import</k> { ClaimList } <k>from</k> <s>"./components/ClaimList"</s>;
+<i>3</i><k>import</k> { ClaimDetail } <k>from</k> <s>"./components/ClaimDetail"</s>;
+<i>4</i><k>import</k> { useClaims } <k>from</k> <s>"./data/expenseExceptions"</s>;
+<i>5</i>
+<i>6</i><k>export default function</k> <f>App</f>() {
+<i>7</i>  <k>const</k> [filter, setFilter] = <f>useState</f>(<s>"Open"</s>);
+<i>8</i>  <c>// Reads the SharePoint list as the signed-in user</c>
+<i>9</i>  <k>const</k> { claims, setStatus } = <f>useClaims</f>(filter);
+<i>10</i>  <k>const</k> [selected, setSelected] = <f>useState</f>(<k>null</k>);
+<i>11</i>
+<i>12</i>  <k>return</k> (
+<i>13</i>    &lt;<t>main</t> className=<s>"app"</s>&gt;
+<i>14</i>      &lt;<t>ClaimList</t> claims={claims} filter={filter}
+<i>15</i>        onFilter={setFilter} onSelect={setSelected} /&gt;
+<i>16</i>      &lt;<t>ClaimDetail</t> claim={selected}
+<i>17</i>        onApprove={() =&gt; <f>setStatus</f>(selected, <s>"Approved"</s>)}
+<i>18</i>        onReject={() =&gt; <f>setStatus</f>(selected, <s>"Rejected"</s>)} /&gt;
+<i>19</i>    &lt;/<t>main</t>&gt;
+<i>20</i>  );
+<i>21</i>}</code></pre><p class="cdd-ro">View only in a cloud project. To edit the code, use a local project.</p></div></div></div></div></div>
+</div>
+<div class="page-src"><span class="ps-k">Source</span><span class="ps-l"><a href="https://learn.microsoft.com/en-us/copilot/code/overview" rel="noopener" target="_blank">Copilot Code overview</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/copilot/code/code-admin" rel="noopener" target="_blank">Manage Copilot Code for your organization</a> — Microsoft Learn · <a href="https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/" rel="noopener" target="_blank">Introducing the new Copilot with Home, Code and Autopilot</a> — Official Microsoft Blog · <a href="https://learn.microsoft.com/en-us/copilot/code/use-code" rel="noopener" target="_blank">Use Copilot Code</a> — Microsoft Learn · <a href="https://learn.microsoft.com/en-us/copilot/code/get-started" rel="noopener" target="_blank">Get started with Copilot Code</a> — Microsoft Learn · <a href="https://www.youtube.com/watch?v=ax0lIBORCPs" rel="noopener" target="_blank">Meet Code in Copilot</a> — Microsoft Copilot (video)</span><span class="ps-n">Module 6 · 7 of 8</span></div></div><div class="page">
 <div class="lic-row"><span class="lic-badge prem">Microsoft Copilot (Premium)</span><span class="t-chip">Preview · Frontier</span></div>
 <div class="subhead" id="m6-autopilot"><span class="sx"><svg aria-hidden="true" fill="none" height="18" viewBox="0 0 24 24" width="18"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 7.5V12l3.2 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span> <span class="sec-no">6.3</span> Autopilot</div>
 <p class="m2-intro"><b>Autopilot</b> (previously Scout) is a personal, proactive and persistent agent in the Microsoft Copilot app. Other modes wait for your prompt. Autopilot works without a prompt each time.</p>
