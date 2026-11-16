@@ -2544,7 +2544,10 @@ table.cmptable td:last-child{border-right-color:var(--line);}
 /* ---- Side pane ---- */
 #sidenav{background:linear-gradient(180deg,#f4eefc 0%,#f7f9fe 260px,#f7f9fe 100%); border-inline-end:1px solid var(--line);}
 @media (prefers-color-scheme: dark){ #sidenav{background:linear-gradient(180deg,#171437 0%,#121531 260px,#121531 100%);} }
-.sn-head{border-bottom:0; position:relative; padding-bottom:16px;}
+.sn-head{border-bottom:0; position:sticky; top:0; z-index:3; margin-bottom:0; padding-top:20px; padding-bottom:16px; background:#f4eefc;}
+@media (prefers-color-scheme: dark){ .sn-head{background:#171437;} }
+#sidenav{padding-top:0;}
+.sn-eyebrow{padding-top:16px;}
 .sn-head::after{content:""; position:absolute; inset-inline:18px; bottom:0; height:3px; border-radius:999px; background:var(--cp-prism);}
 .sn-title{font-family:var(--font-d); color:var(--ink);}
 .sn-sub,.sn-eyebrow{color:var(--cp-ink-accent);}
