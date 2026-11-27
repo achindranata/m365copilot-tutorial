@@ -17,10 +17,10 @@ To serve it from a `docs/` folder instead, put these files in `docs/` and choose
 | Path | Page |
 |---|---|
 | `index.html` | Course outline — the landing page |
-| `module-1-meet-copilot/` | Module 1 — Meet Copilot & Where to Access It |
+| `module-1-meet-copilot/` | Module 1 — Meet Microsoft Copilot |
 | `module-2-fundamentals/` | Module 2 — Copilot Fundamentals & Safe Use |
 | `module-3-prompting/` | Module 3 — Prompting Like a Pro |
-| `module-4-office-apps/` | Module 4 — Copilot in the Office Apps |
+| `module-4-copilot-and-office-applications/` | Module 4 — Copilot and Office Applications |
 | `module-5-first-party-agents/` | Module 5 — First-Party Agents |
 | `module-6-copilot-modes/` | Module 6 — Microsoft Copilot Modes: Cowork, Code, Autopilot |
 | `module-7-build-your-dashboard/` | Module 7 — Build Your Dashboard with Microsoft Copilot |
