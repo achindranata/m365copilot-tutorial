@@ -5501,6 +5501,10 @@ p.m2-intro.wr-now{margin:0 0 12px}
 .page .mx-pop::before{display:none}
 @media screen and (max-width:760px){.page .mx-side{grid-template-columns:1fr}.page .mx-pick{flex-direction:row}.page .mx-win{aspect-ratio:auto}}
 
+/* ---- side menu opens on the current module (no script): the menu scrolls to it on load,
+   so moving between module pages keeps the selected module in view, like the single-file course ---- */
+#sidenav .sn-group.on{position:relative}
+#sidenav .sn-pin{position:absolute;left:0;top:-104px;width:1px;height:1px;pointer-events:none;scroll-initial-target:nearest}
 /* ---- multi-page site additions ---- */
 .sn-mod.on,.sn-top.on{color:var(--brand); border-inline-start-color:var(--brand); background:var(--surface-alt);}
 .pagenav{display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:34px 0 10px;
